@@ -1,4 +1,6 @@
-﻿namespace Models.ApiRequestModels;
+﻿using System.Net.Http;
+
+namespace Models.ApiRequestModels;
 
 public class ApiRequest<T> : IApiRequestBase<T>
     where T:class 
