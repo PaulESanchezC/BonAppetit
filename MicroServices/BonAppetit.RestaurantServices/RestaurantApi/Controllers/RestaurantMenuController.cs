@@ -64,7 +64,7 @@ namespace RestaurantApi.Controllers
         public async Task<IActionResult> SetRestaurantMenuPublicValue(string menuId,
             bool? setPublic, CancellationToken cancellationToken)
         {
-            var menuIdValidation = string.IsNullOrEmpty(menuId);
+            var menuIdValidation = !string.IsNullOrEmpty(menuId);
             var setPublicValidation = setPublic != null;
             
             if (menuIdValidation is false)
