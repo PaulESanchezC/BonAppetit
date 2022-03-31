@@ -1,11 +1,13 @@
 ﻿using System.Linq.Expressions;
 using Castle.DynamicProxy.Generators.Emitters.SimpleAST;
 using Microsoft.AspNetCore.Mvc;
+using Models.MenuItemModels;
 using Models.MenuModels;
 using Models.ResponseModels;
 using Moq;
 using NUnit.Framework;
 using RestaurantApi.Controllers;
+using Services.Repository.MenuItemRepository;
 using Services.Repository.MenuRepository;
 
 namespace ApiControllersTest;
@@ -13,14 +15,16 @@ namespace ApiControllersTest;
 [TestFixture]
 public class RestaurantMenuControllerTest
 {
-    private Mock<IMenuService> _menuService;
     private RestaurantMenuController _restaurantMenuController;
+    private Mock<IMenuService> _menuService;
+    private Mock<IMenuItemService> _menuItemService;
 
     [SetUp]
     public void Setup()
     {
         _menuService = new Mock<IMenuService>();
-        _restaurantMenuController = new(_menuService.Object);
+        _menuItemService = new Mock<IMenuItemService>();
+        _restaurantMenuController = new(_menuService.Object, _menuItemService.Object);
     }
 
     [Test]
@@ -116,7 +120,7 @@ public class RestaurantMenuControllerTest
     }
 
     [Test]
-    public async Task CreateRestaurantMenu_InputValidRestaurantId_Verify_ReturnNotNull_ReturnType_MenuServiceCall()
+    public async Task CreateRestaurantMenu_Verify_ReturnNotNull_ReturnType_MenuServiceCall()
     {
         //Arrange
         _menuService.Setup(method => method.CreateAsync(
@@ -137,7 +141,7 @@ public class RestaurantMenuControllerTest
     }
 
     [Test]
-    public async Task CreateRestaurantMenu_InputInvalidRestaurantId_Verify_ReturnNotNull_ReturnType_NoMenuServiceCall()
+    public async Task CreateRestaurantMenu_InputInvalid_Verify_ReturnNotNull_ReturnType_NoMenuServiceCall()
     {
         //Arrange
         _menuService.Setup(method => method.CreateAsync(
@@ -155,6 +159,48 @@ public class RestaurantMenuControllerTest
         Assert.IsInstanceOf<BadRequestObjectResult>(result);
         _menuService.Verify(method => method.CreateAsync(
             It.IsAny<MenuCreate>(),
+            It.IsAny<CancellationToken>()), Times.Never);
+    }
+
+    [Test]
+    public async Task CreateMenuItem_Verify_ReturnNotNull_ReturnType_MenuServiceCall()
+    {
+        //Arrange
+        _menuItemService.Setup(method => method.CreateAsync(
+            It.IsAny<MenuItemsCreate>(),
+            It.IsAny<CancellationToken>()
+        )).ReturnsAsync(new Response<MenuItemsDto>()).Verifiable();
+        var menuItemToCreate = new MenuItemsCreate();
+
+        //Act
+        var result = await _restaurantMenuController.CreateMenuItem(menuItemToCreate, CancellationToken.None);
+
+        //Assert
+        Assert.NotNull(result);
+        Assert.AreEqual(typeof(ObjectResult), result.GetType());
+        _menuItemService.Verify(method => method.CreateAsync(
+            It.IsAny<MenuItemsCreate>(),
+            It.IsAny<CancellationToken>()), Times.Once);
+    }
+
+    [Test]
+    public async Task CreateMenuItem_InputInvalid_Verify_ReturnNotNull_ReturnType_NoMenuServiceCall()
+    {
+        //Arrange
+        _menuItemService.Setup(method => method.CreateAsync(
+            It.IsAny<MenuItemsCreate>(),
+            It.IsAny<CancellationToken>())).Verifiable();
+        _restaurantMenuController.ModelState.AddModelError("test", "test");
+        var menuItemToCreate = new MenuItemsCreate();
+
+        //Act
+        var result = await _restaurantMenuController.CreateMenuItem(menuItemToCreate, CancellationToken.None);
+
+        //Assert
+        Assert.NotNull(result);
+        Assert.IsInstanceOf<BadRequestObjectResult>(result);
+        _menuItemService.Verify(method => method.CreateAsync(
+            It.IsAny<MenuItemsCreate>(),
             It.IsAny<CancellationToken>()), Times.Never);
     }
 
@@ -248,6 +294,49 @@ public class RestaurantMenuControllerTest
     }
 
     [Test]
+    public async Task UpdateMenuItem_InputValidMenuItemDto_Verify_ReturnNotNull_ReturnType_MenuServiceCall()
+    {
+        //Arrange
+        _menuItemService.Setup(method => method.UpdateAsync(
+            It.IsAny<MenuItemsDto>(),
+            It.IsAny<CancellationToken>()
+        )).ReturnsAsync(new Response<MenuItemsDto>()).Verifiable();
+        var menuItemToUpdate = new MenuItemsDto();
+
+        //Act
+        var result = await _restaurantMenuController.UpdateMenuItem(menuItemToUpdate, CancellationToken.None);
+
+        //Assert
+        Assert.NotNull(result);
+        Assert.AreEqual(typeof(ObjectResult), result.GetType());
+        _menuItemService.Verify(method => method.UpdateAsync(
+            It.IsAny<MenuItemsDto>(),
+            It.IsAny<CancellationToken>()), Times.Once);
+    }
+
+    [Test]
+    public async Task UpdateMenuItem_InputInvalidMenuDto_Verify_ReturnNotNull_ReturnType_NoMenuServiceCall()
+    {
+        //Arrange
+        _menuItemService.Setup(method => method.UpdateAsync(
+            It.IsAny<MenuItemsDto>(),
+            It.IsAny<CancellationToken>()
+        )).ReturnsAsync(new Response<MenuItemsDto>()).Verifiable();
+        var menuItemToUpdate = new MenuItemsDto();
+        _restaurantMenuController.ModelState.AddModelError("test", "test");
+
+        //Act
+        var result = await _restaurantMenuController.UpdateMenuItem(menuItemToUpdate, CancellationToken.None);
+
+        //Assert
+        Assert.NotNull(result);
+        Assert.IsInstanceOf<BadRequestObjectResult>(result);
+        _menuItemService.Verify(method => method.UpdateAsync(
+            It.IsAny<MenuItemsDto>(),
+            It.IsAny<CancellationToken>()), Times.Never);
+    }
+
+    [Test]
     public async Task DeleteRestaurantMenu_InputValidMenuId_Verify_ReturnNotNull_ReturnType_MenuServiceCall()
     {
         //Arrange
@@ -284,6 +373,47 @@ public class RestaurantMenuControllerTest
         Assert.NotNull(result);
         Assert.IsInstanceOf<BadRequestObjectResult>(result);
         _menuService.Verify(method => method.DeleteAsync(
+            It.IsAny<string>(),
+            It.IsAny<CancellationToken>()), Times.Never);
+    }
+
+    [Test]
+    public async Task DeleteMenuItem_InputValidMenuItemId_Verify_ReturnNotNull_ReturnType_MenuServiceCall()
+    {
+        //Arrange
+        _menuItemService.Setup(method => method.DeleteAsync(
+            It.IsAny<string>(),
+            It.IsAny<CancellationToken>()
+        )).ReturnsAsync(new Response<MenuItemsDto>()).Verifiable();
+        const string menuItemId = "id";
+
+        //Act
+        var result = await _restaurantMenuController.DeleteMenuItem(menuItemId, CancellationToken.None);
+
+        //Assert
+        Assert.NotNull(result);
+        Assert.AreEqual(typeof(ObjectResult), result.GetType());
+        _menuItemService.Verify(method => method.DeleteAsync(
+            It.IsAny<string>(),
+            It.IsAny<CancellationToken>()), Times.Once);
+    }
+
+    [Test]
+    public async Task DeleteMenuItem_InputInvalidMenuItemId_Verify_ReturnNotNull_ReturnType_NoMenuServiceCall()
+    {
+        //Arrange
+        _menuItemService.Setup(method => method.DeleteAsync(
+            It.IsAny<string>(),
+            It.IsAny<CancellationToken>()
+        )).ReturnsAsync(new Response<MenuItemsDto>()).Verifiable();
+
+        //Act
+        var result = await _restaurantMenuController.DeleteMenuItem(string.Empty, CancellationToken.None);
+
+        //Assert
+        Assert.NotNull(result);
+        Assert.IsInstanceOf<BadRequestObjectResult>(result);
+        _menuItemService.Verify(method => method.DeleteAsync(
             It.IsAny<string>(),
             It.IsAny<CancellationToken>()), Times.Never);
     }

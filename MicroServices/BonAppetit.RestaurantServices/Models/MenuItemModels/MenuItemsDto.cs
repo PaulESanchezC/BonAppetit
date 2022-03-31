@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using Models.ImageModels;
+using Models.MenuModels;
 
 namespace Models.MenuItemModels;
 
@@ -20,5 +21,7 @@ public class MenuItemsDto
 
     public ImageDto Image { get; set; }
     public string ImageId { get; set; }
+    public MenuDto Menu { get; set; }
+    public string MenuId { get; set; }
     #endregion
 }

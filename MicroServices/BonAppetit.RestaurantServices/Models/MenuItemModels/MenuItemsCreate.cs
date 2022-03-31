@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using Models.ImageModels;
 
 namespace Models.MenuItemModels;
 
@@ -13,5 +14,9 @@ public class MenuItemsCreate
 
     [Required(AllowEmptyStrings = false)]
     public string CuisineType { get; set; }
+    
+    public ImageCreate Image { get; set; }
+    
+    public string MenuId { get; set; }
     #endregion
 }

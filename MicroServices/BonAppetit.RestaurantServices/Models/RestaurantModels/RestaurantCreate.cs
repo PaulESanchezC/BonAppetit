@@ -27,5 +27,7 @@ public class RestaurantCreate
 
     [Required(AllowEmptyStrings = false)]
     public string RestaurantCuisineType { get; set; }
+
+    public List<ImageCreate> RestaurantImages { get; set; }
     #endregion
 }

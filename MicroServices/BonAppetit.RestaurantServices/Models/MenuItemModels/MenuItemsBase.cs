@@ -1,4 +1,5 @@
 ﻿using Models.ImageModels;
+using Models.MenuModels;
 
 namespace Models.MenuItemModels;
 
@@ -12,6 +13,9 @@ public class MenuItemsBase
 
     public ImageBase Image { get; set; } = new();
     public string ImageId { get; set; } = "";
+
+    public MenuBase Menu { get; set; }
+    public string MenuId { get; set; }
     #endregion
 
     #region Bussines Properties
