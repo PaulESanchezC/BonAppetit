@@ -53,11 +53,6 @@ public class RestaurantControllerTests
             It.IsAny<Expression<Func<RestaurantBase, bool>>>(),
             It.IsAny<CancellationToken>(),
             It.IsAny<Expression<Func<RestaurantBase, object>>[]>()), Times.Once);
-        Assert.AreEqual(expectedResponse,
-            await _restaurantService.Object.GetAllByAsync(
-            It.IsAny<Expression<Func<RestaurantBase, bool>>>(),
-            It.IsAny<CancellationToken>(),
-            It.IsAny<Expression<Func<RestaurantBase, object>>[]>()));
     }
 
     [Test]
@@ -264,6 +259,7 @@ public class RestaurantControllerTests
             It.IsAny<string>(),
             It.IsAny<CancellationToken>()), Times.Once);
     }
+
     [Test]
     public async Task DeleteSingleRestaurant_InputNullOrWhiteSpaceId_ReturnBadRequest_Verify_RestaurantServiceNoCall_ReturnType()
     {
