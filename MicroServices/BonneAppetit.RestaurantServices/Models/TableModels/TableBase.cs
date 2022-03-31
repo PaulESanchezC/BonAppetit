@@ -5,7 +5,6 @@ namespace Models.TableModels;
 public class TableBase
 {
     #region Table Properties
-
     public string TableId { get; set; } = Guid.NewGuid().ToString();
     public string TableName { get; set; } = "";
     public double HoursOpenForReservation { get; set; } = 2;

@@ -1,8 +1,5 @@
-﻿using Models.MenuItemModels;
+﻿using Models.ScheduleModels;
 
 namespace Services.Repository.ScheduleRepository;
 
-public interface IScheduleService : IRepository<MenuItemsBase, MenuItemsDto, MenuItemsCreate>
-{
-    
-}
+public interface IScheduleService : IRepository<ScheduleBase, ScheduleDto, ScheduleCreate> { }

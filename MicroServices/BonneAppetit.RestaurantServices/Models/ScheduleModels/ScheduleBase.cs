@@ -30,6 +30,7 @@ public class ScheduleBase
     public int SaturdayCloseTime { get; set; }
 
     public RestaurantBase Restaurant { get; set; }
+    public string RestaurantId { get; set; }
     #endregion
 
 

@@ -26,7 +26,7 @@ public class RestaurantFluentApi : IEntityTypeConfiguration<RestaurantBase>
         builder.HasMany(fk => fk.RestaurantTables).WithOne(fk=>fk.Restaurant).HasForeignKey(fk=>fk.RestaurantId).OnDelete(DeleteBehavior.Cascade);
 
         builder.HasOne<ScheduleBase>(fk => fk.RestaurantSchedule).WithOne(fk => fk.Restaurant)
-            .HasForeignKey<RestaurantBase>(r => r.ScheduleId)
+            .HasForeignKey<RestaurantBase>(r => r.ScheduleId).HasForeignKey<ScheduleBase>(fk =>fk.RestaurantId)
             .OnDelete(DeleteBehavior.Cascade);
 
         builder.Property(p => p.DateCreated).HasDefaultValue(DateTime.Now);

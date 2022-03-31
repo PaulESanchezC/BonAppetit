@@ -1,32 +1,81 @@
-﻿using Models.RestaurantModels;
+﻿using System.ComponentModel.DataAnnotations;
+using Models.RestaurantModels;
 
 namespace Models.ScheduleModels;
 
 public class ScheduleDto
 {
     #region Schedule Properties
+
+    [Required(AllowEmptyStrings = false)]
     public string ScheduleId { get; set; }
+
+    [Required(AllowEmptyStrings = false)]
     public bool Sunday { get; set; }
-    public DateTime SundayOpenTime { get; set; }
-    public DateTime SundayCloseTime { get; set; }
+
+    [Required(AllowEmptyStrings = false)]
+    public int SundayOpenTime { get; set; }
+
+    [Required(AllowEmptyStrings = false)]
+    public int SundayCloseTime { get; set; }
+
+    [Required(AllowEmptyStrings = false)]
     public bool Monday { get; set; }
-    public DateTime MondayOpenTime { get; set; }
-    public DateTime MondayCloseTime { get; set; }
+
+    [Required(AllowEmptyStrings = false)]
+    public int MondayOpenTime { get; set; }
+
+    [Required(AllowEmptyStrings = false)]
+    public int MondayCloseTime { get; set; }
+
+    [Required(AllowEmptyStrings = false)]
     public bool Tuesday { get; set; }
-    public DateTime TuesdayOpenTime { get; set; }
-    public DateTime TuesdayCloseTime { get; set; }
+
+    [Required(AllowEmptyStrings = false)]
+    public int TuesdayOpenTime { get; set; }
+
+    [Required(AllowEmptyStrings = false)]
+    public int TuesdayCloseTime { get; set; }
+
+    [Required(AllowEmptyStrings = false)]
     public bool Wednesday { get; set; }
-    public DateTime WednesdayOpenTime { get; set; }
-    public DateTime WednesdayCloseTime { get; set; }
+
+    [Required(AllowEmptyStrings = false)]
+    public int WednesdayOpenTime { get; set; }
+
+    [Required(AllowEmptyStrings = false)]
+    public int WednesdayCloseTime { get; set; }
+
+    [Required(AllowEmptyStrings = false)]
     public bool Thursday { get; set; }
-    public DateTime ThursdayOpenTime { get; set; }
-    public DateTime ThursdayCloseTime { get; set; }
+
+    [Required(AllowEmptyStrings = false)]
+    public int ThursdayOpenTime { get; set; }
+
+    [Required(AllowEmptyStrings = false)]
+    public int ThursdayCloseTime { get; set; }
+
+    [Required(AllowEmptyStrings = false)]
     public bool Friday { get; set; }
-    public DateTime FridayOpenTime { get; set; }
-    public DateTime FridayCloseTime { get; set; }
+
+    [Required(AllowEmptyStrings = false)]
+    public int FridayOpenTime { get; set; }
+
+    [Required(AllowEmptyStrings = false)]
+    public int FridayCloseTime { get; set; }
+
+    [Required(AllowEmptyStrings = false)]
     public bool Saturday { get; set; }
-    public DateTime SaturdayOpenTime { get; set; }
-    public DateTime SaturdayCloseTime { get; set; }
-    public RestaurantDto Restaurant { get; set; } = new();
+
+    [Required(AllowEmptyStrings = false)]
+    public int SaturdayOpenTime { get; set; }
+
+    [Required(AllowEmptyStrings = false)]
+    public int SaturdayCloseTime { get; set; }
+
+    public RestaurantBase Restaurant { get; set; }
+
+    [Required(AllowEmptyStrings = false)]
+    public string RestaurantId { get; set; }
     #endregion
 }
