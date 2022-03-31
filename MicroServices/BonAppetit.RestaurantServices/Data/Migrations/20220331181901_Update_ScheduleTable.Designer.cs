@@ -4,6 +4,7 @@ using Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20220331181901_Update_ScheduleTable")]
+    partial class Update_ScheduleTable
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -32,7 +34,7 @@ namespace Data.Migrations
                     b.Property<DateTime>("DateCreated")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2022, 3, 31, 14, 51, 57, 283, DateTimeKind.Local).AddTicks(1211));
+                        .HasDefaultValue(new DateTime(2022, 3, 31, 14, 19, 1, 598, DateTimeKind.Local).AddTicks(5855));
 
                     b.Property<string>("Description")
                         .ValueGeneratedOnAdd()
@@ -75,7 +77,7 @@ namespace Data.Migrations
                     b.Property<DateTime>("DateCreated")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2022, 3, 31, 14, 51, 57, 284, DateTimeKind.Local).AddTicks(3286));
+                        .HasDefaultValue(new DateTime(2022, 3, 31, 14, 19, 1, 599, DateTimeKind.Local).AddTicks(8525));
 
                     b.Property<string>("Description")
                         .ValueGeneratedOnAdd()
@@ -121,7 +123,7 @@ namespace Data.Migrations
                     b.Property<DateTime>("DateCreated")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2022, 3, 31, 14, 51, 57, 283, DateTimeKind.Local).AddTicks(9884));
+                        .HasDefaultValue(new DateTime(2022, 3, 31, 14, 19, 1, 599, DateTimeKind.Local).AddTicks(4621));
 
                     b.Property<string>("MenuDescription")
                         .IsRequired()
@@ -161,7 +163,7 @@ namespace Data.Migrations
                     b.Property<DateTime>("DateCreated")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2022, 3, 31, 14, 51, 57, 286, DateTimeKind.Local).AddTicks(4685));
+                        .HasDefaultValue(new DateTime(2022, 3, 31, 14, 19, 1, 603, DateTimeKind.Local).AddTicks(520));
 
                     b.Property<bool>("IsDeleted")
                         .ValueGeneratedOnAdd()
@@ -200,7 +202,7 @@ namespace Data.Migrations
 
                     b.Property<string>("ScheduleId")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<int>("ZonePopularity")
                         .ValueGeneratedOnAdd()
@@ -208,6 +210,9 @@ namespace Data.Migrations
                         .HasDefaultValue(5);
 
                     b.HasKey("RestaurantId");
+
+                    b.HasIndex("ScheduleId")
+                        .IsUnique();
 
                     b.ToTable("Restaurants");
                 });
@@ -222,7 +227,7 @@ namespace Data.Migrations
                     b.Property<DateTime>("DateCreated")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2022, 3, 31, 14, 51, 57, 287, DateTimeKind.Local).AddTicks(272));
+                        .HasDefaultValue(new DateTime(2022, 3, 31, 14, 19, 1, 603, DateTimeKind.Local).AddTicks(6279));
 
                     b.Property<bool>("Friday")
                         .ValueGeneratedOnAdd()
@@ -256,7 +261,7 @@ namespace Data.Migrations
 
                     b.Property<string>("RestaurantId")
                         .IsRequired()
-                        .HasColumnType("nvarchar(450)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<bool>("Saturday")
                         .ValueGeneratedOnAdd()
@@ -334,9 +339,6 @@ namespace Data.Migrations
                         .HasDefaultValue(12);
 
                     b.HasKey("ScheduleId");
-
-                    b.HasIndex("RestaurantId")
-                        .IsUnique();
 
                     b.ToTable("Schedules");
                 });
@@ -418,15 +420,15 @@ namespace Data.Migrations
                     b.Navigation("Restaurant");
                 });
 
-            modelBuilder.Entity("Models.ScheduleModels.ScheduleBase", b =>
+            modelBuilder.Entity("Models.RestaurantModels.RestaurantBase", b =>
                 {
-                    b.HasOne("Models.RestaurantModels.RestaurantBase", "Restaurant")
-                        .WithOne("RestaurantSchedule")
-                        .HasForeignKey("Models.ScheduleModels.ScheduleBase", "RestaurantId")
+                    b.HasOne("Models.ScheduleModels.ScheduleBase", "RestaurantSchedule")
+                        .WithOne("Restaurant")
+                        .HasForeignKey("Models.RestaurantModels.RestaurantBase", "ScheduleId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("Restaurant");
+                    b.Navigation("RestaurantSchedule");
                 });
 
             modelBuilder.Entity("Models.TableModels.TableBase", b =>
@@ -451,10 +453,13 @@ namespace Data.Migrations
 
                     b.Navigation("RestaurantMenu");
 
-                    b.Navigation("RestaurantSchedule")
-                        .IsRequired();
-
                     b.Navigation("RestaurantTables");
+                });
+
+            modelBuilder.Entity("Models.ScheduleModels.ScheduleBase", b =>
+                {
+                    b.Navigation("Restaurant")
+                        .IsRequired();
                 });
 #pragma warning restore 612, 618
         }

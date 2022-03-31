@@ -21,7 +21,7 @@ public class RestaurantController : ControllerBase
             null,
             cancellationToken,
             include => include.RestaurantMenu, include => include.RestaurantImages,
-            include => include.RestaurantTables, include => include.RestaurantSchedule);
+            include => include.RestaurantTables);
         return StatusCode(request.StatusCode, request);
     }
 

@@ -102,6 +102,5 @@ namespace RestaurantApi.Controllers
             var request = await _menuService.DeleteAsync(menuId, cancellationToken);
             return StatusCode(request.StatusCode, request);
         }
-
     }
 }

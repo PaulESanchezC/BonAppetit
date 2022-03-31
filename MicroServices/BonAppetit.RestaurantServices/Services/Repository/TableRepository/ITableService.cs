@@ -1,8 +1,5 @@
-﻿using Models.MenuItemModels;
+﻿using Models.TableModels;
 
 namespace Services.Repository.TableRepository;
 
-public interface ITableService : IRepository<MenuItemsBase, MenuItemsDto, MenuItemsCreate>
-{
-    
-}
+public interface ITableService : IRepository<TableBase, TableDto, TableCreate> { }

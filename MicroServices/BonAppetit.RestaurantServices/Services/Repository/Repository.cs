@@ -133,8 +133,8 @@ public class Repository<T, TDto, TCreate> : IRepository<T, TDto, TCreate>
     {
         var responseObjectDto = new List<TDto>();
         if (responseObject != null)
-            responseObjectDto.AddRange(responseObject.Select(item => _mapper.Map<TDto>(responseObject)));
-        
+            responseObjectDto.AddRange(responseObject.Select(item => _mapper.Map<TDto>(item)));
+
         var response = new Response<TDto>
         {
             IsSuccessful = isSuccessful,

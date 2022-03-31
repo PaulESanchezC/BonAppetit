@@ -4,6 +4,7 @@ using Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20220331184814_Delete_ScheduleTable_Update")]
+    partial class Delete_ScheduleTable_Update
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -32,7 +34,7 @@ namespace Data.Migrations
                     b.Property<DateTime>("DateCreated")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2022, 3, 31, 14, 51, 57, 283, DateTimeKind.Local).AddTicks(1211));
+                        .HasDefaultValue(new DateTime(2022, 3, 31, 14, 48, 13, 959, DateTimeKind.Local).AddTicks(3345));
 
                     b.Property<string>("Description")
                         .ValueGeneratedOnAdd()
@@ -75,7 +77,7 @@ namespace Data.Migrations
                     b.Property<DateTime>("DateCreated")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2022, 3, 31, 14, 51, 57, 284, DateTimeKind.Local).AddTicks(3286));
+                        .HasDefaultValue(new DateTime(2022, 3, 31, 14, 48, 13, 961, DateTimeKind.Local).AddTicks(1075));
 
                     b.Property<string>("Description")
                         .ValueGeneratedOnAdd()
@@ -121,7 +123,7 @@ namespace Data.Migrations
                     b.Property<DateTime>("DateCreated")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2022, 3, 31, 14, 51, 57, 283, DateTimeKind.Local).AddTicks(9884));
+                        .HasDefaultValue(new DateTime(2022, 3, 31, 14, 48, 13, 960, DateTimeKind.Local).AddTicks(5561));
 
                     b.Property<string>("MenuDescription")
                         .IsRequired()
@@ -161,7 +163,7 @@ namespace Data.Migrations
                     b.Property<DateTime>("DateCreated")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2022, 3, 31, 14, 51, 57, 286, DateTimeKind.Local).AddTicks(4685));
+                        .HasDefaultValue(new DateTime(2022, 3, 31, 14, 48, 13, 962, DateTimeKind.Local).AddTicks(5805));
 
                     b.Property<bool>("IsDeleted")
                         .ValueGeneratedOnAdd()
@@ -210,135 +212,6 @@ namespace Data.Migrations
                     b.HasKey("RestaurantId");
 
                     b.ToTable("Restaurants");
-                });
-
-            modelBuilder.Entity("Models.ScheduleModels.ScheduleBase", b =>
-                {
-                    b.Property<string>("ScheduleId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("nvarchar(450)")
-                        .HasDefaultValue("NEWID()");
-
-                    b.Property<DateTime>("DateCreated")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2022, 3, 31, 14, 51, 57, 287, DateTimeKind.Local).AddTicks(272));
-
-                    b.Property<bool>("Friday")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("bit")
-                        .HasDefaultValue(false);
-
-                    b.Property<int>("FridayCloseTime")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasDefaultValue(22);
-
-                    b.Property<int>("FridayOpenTime")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasDefaultValue(12);
-
-                    b.Property<bool>("Monday")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("bit")
-                        .HasDefaultValue(false);
-
-                    b.Property<int>("MondayCloseTime")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasDefaultValue(22);
-
-                    b.Property<int>("MondayOpenTime")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasDefaultValue(12);
-
-                    b.Property<string>("RestaurantId")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(450)");
-
-                    b.Property<bool>("Saturday")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("bit")
-                        .HasDefaultValue(false);
-
-                    b.Property<int>("SaturdayCloseTime")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasDefaultValue(22);
-
-                    b.Property<int>("SaturdayOpenTime")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasDefaultValue(12);
-
-                    b.Property<bool>("Sunday")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("bit")
-                        .HasDefaultValue(false);
-
-                    b.Property<int>("SundayCloseTime")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasDefaultValue(22);
-
-                    b.Property<int>("SundayOpenTime")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasDefaultValue(12);
-
-                    b.Property<bool>("Thursday")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("bit")
-                        .HasDefaultValue(false);
-
-                    b.Property<int>("ThursdayCloseTime")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasDefaultValue(22);
-
-                    b.Property<int>("ThursdayOpenTime")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasDefaultValue(12);
-
-                    b.Property<bool>("Tuesday")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("bit")
-                        .HasDefaultValue(false);
-
-                    b.Property<int>("TuesdayCloseTime")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasDefaultValue(22);
-
-                    b.Property<int>("TuesdayOpenTime")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasDefaultValue(12);
-
-                    b.Property<bool>("Wednesday")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("bit")
-                        .HasDefaultValue(false);
-
-                    b.Property<int>("WednesdayCloseTime")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasDefaultValue(22);
-
-                    b.Property<int>("WednesdayOpenTime")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasDefaultValue(12);
-
-                    b.HasKey("ScheduleId");
-
-                    b.HasIndex("RestaurantId")
-                        .IsUnique();
-
-                    b.ToTable("Schedules");
                 });
 
             modelBuilder.Entity("Models.TableModels.TableBase", b =>
@@ -418,17 +291,6 @@ namespace Data.Migrations
                     b.Navigation("Restaurant");
                 });
 
-            modelBuilder.Entity("Models.ScheduleModels.ScheduleBase", b =>
-                {
-                    b.HasOne("Models.RestaurantModels.RestaurantBase", "Restaurant")
-                        .WithOne("RestaurantSchedule")
-                        .HasForeignKey("Models.ScheduleModels.ScheduleBase", "RestaurantId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Restaurant");
-                });
-
             modelBuilder.Entity("Models.TableModels.TableBase", b =>
                 {
                     b.HasOne("Models.RestaurantModels.RestaurantBase", "Restaurant")
@@ -450,9 +312,6 @@ namespace Data.Migrations
                     b.Navigation("RestaurantImages");
 
                     b.Navigation("RestaurantMenu");
-
-                    b.Navigation("RestaurantSchedule")
-                        .IsRequired();
 
                     b.Navigation("RestaurantTables");
                 });

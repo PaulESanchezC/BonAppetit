@@ -26,8 +26,7 @@ namespace RestaurantApi.Controllers
 
             var request = await _scheduleService.GetSingleByAsync(
             schedule => schedule.RestaurantId == restaurantId,
-            cancellationToken,
-            include=>include.Restaurant);
+            cancellationToken);
 
             return StatusCode(request.StatusCode, request);
         }
