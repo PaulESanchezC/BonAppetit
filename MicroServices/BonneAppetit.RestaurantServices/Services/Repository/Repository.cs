@@ -10,7 +10,7 @@ public class Repository<T, TDto, TCreate> : IRepository<T, TDto, TCreate>
     where TDto : class
     where TCreate : class
 {
-    private IMapper _mapper;
+    private readonly IMapper _mapper;
     private readonly ApplicationDbContext _db;
     public Repository(ApplicationDbContext db, IMapper mapper)
     {

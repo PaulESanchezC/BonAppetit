@@ -3,19 +3,19 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.1.32210.238
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RestaurantApi", "RestaurantApi\RestaurantApi.csproj", "{00A4BD54-5ECA-4651-91AC-2EC28AF1C436}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RestaurantApi", "RestaurantApi\RestaurantApi.csproj", "{00A4BD54-5ECA-4651-91AC-2EC28AF1C436}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Configurations", "Configurations\Configurations.csproj", "{5959661F-1621-48B3-963E-9D3759EACDA1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Configurations", "Configurations\Configurations.csproj", "{5959661F-1621-48B3-963E-9D3759EACDA1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Models", "Models\Models.csproj", "{92CFDCEA-190E-4757-B3D9-D3101140DAAA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Models", "Models\Models.csproj", "{92CFDCEA-190E-4757-B3D9-D3101140DAAA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Services", "Services\Services.csproj", "{DFF83782-64E7-4A31-8C54-9C4CDC0B631E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Services", "Services\Services.csproj", "{DFF83782-64E7-4A31-8C54-9C4CDC0B631E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Data", "Data\Data.csproj", "{F73FA168-0A46-457C-B89C-2575736F55CA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Data", "Data\Data.csproj", "{F73FA168-0A46-457C-B89C-2575736F55CA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StaticData", "StaticData\StaticData.csproj", "{402EEAE6-8E4A-4C8F-A1D4-B02D8751BE32}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StaticData", "StaticData\StaticData.csproj", "{402EEAE6-8E4A-4C8F-A1D4-B02D8751BE32}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApiControllersTest", "ApiControllersTest\ApiControllersTest.csproj", "{F05ED468-3838-4EC1-8A3B-45E946024BF3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ApiControllersTest", "ApiControllersTest\ApiControllersTest.csproj", "{F05ED468-3838-4EC1-8A3B-45E946024BF3}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{0191B211-CBE0-4B20-883A-64484FE83173}"
 EndProject
