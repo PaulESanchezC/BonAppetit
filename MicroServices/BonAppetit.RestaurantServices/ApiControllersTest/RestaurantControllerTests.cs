@@ -268,8 +268,7 @@ public class RestaurantControllerTests
             It.IsAny<string>(),
             It.IsAny<CancellationToken>()
         )).Verifiable();
-        _restaurantController.ModelState.AddModelError("test","test");
-
+        
         //Act
         var result = await _restaurantController.DeleteSingleRestaurant(string.Empty, CancellationToken.None);
 
