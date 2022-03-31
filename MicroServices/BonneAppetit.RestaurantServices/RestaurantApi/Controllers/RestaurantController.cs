@@ -27,8 +27,14 @@ public class RestaurantController : ControllerBase
     }
 
     [HttpGet("GetSingleRestaurantById/{restaurantId}")]
-    public async Task<IActionResult> GetSingleRestaurant([FromQuery] string restaurantId, CancellationToken cancellationToken)
+    public async Task<IActionResult> GetSingleRestaurant(string restaurantId, CancellationToken cancellationToken)
     {
+        if (string.IsNullOrEmpty(restaurantId))
+        {
+            ModelState.AddModelError("restaurantId", "The restaurantId field is required.");
+            return BadRequest(ModelState);
+        }
+
         var request = await _restaurantService.GetSingleByAsync(
             restaurant => restaurant.RestaurantId == restaurantId,
             cancellationToken,
@@ -60,8 +66,14 @@ public class RestaurantController : ControllerBase
     }
 
     [HttpDelete("DeleteSingleRestaurant/{restaurantId}")]
-    public async Task<IActionResult> DeleteSingleRestaurant([FromQuery] string restaurantId, CancellationToken cancellationToken)
+    public async Task<IActionResult> DeleteSingleRestaurant(string restaurantId, CancellationToken cancellationToken)
     {
+        if (string.IsNullOrEmpty(restaurantId))
+        {
+            ModelState.AddModelError("restaurantId", "The restaurantId field is required.");
+            return BadRequest(ModelState);
+        }
+
         var request = await _restaurantService.DeleteAsync(restaurantId, cancellationToken);
         return StatusCode(request.StatusCode, request);
     }

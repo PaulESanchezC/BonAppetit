@@ -10,3 +10,15 @@ C:\Users\Paulyglot\Desktop\Portoflio\BonneAppetit\MicroServices\BonneApetit.Rest
 C:\Users\Paulyglot\Desktop\Portoflio\BonneAppetit\MicroServices\BonneApetit.RestaurantServices\Models\obj\Debug\net5.0\refint\Models.dll
 C:\Users\Paulyglot\Desktop\Portoflio\BonneAppetit\MicroServices\BonneApetit.RestaurantServices\Models\obj\Debug\net5.0\Models.pdb
 C:\Users\Paulyglot\Desktop\Portoflio\BonneAppetit\MicroServices\BonneApetit.RestaurantServices\Models\obj\Debug\net5.0\ref\Models.dll
+C:\Users\Paulyglot\Desktop\Portoflio\BonneAppetit\MicroServices\BonneAppetit.RestaurantServices\Models\bin\Debug\net5.0\Models.deps.json
+C:\Users\Paulyglot\Desktop\Portoflio\BonneAppetit\MicroServices\BonneAppetit.RestaurantServices\Models\bin\Debug\net5.0\Models.dll
+C:\Users\Paulyglot\Desktop\Portoflio\BonneAppetit\MicroServices\BonneAppetit.RestaurantServices\Models\bin\Debug\net5.0\Models.pdb
+C:\Users\Paulyglot\Desktop\Portoflio\BonneAppetit\MicroServices\BonneAppetit.RestaurantServices\Models\obj\Debug\net5.0\Models.csproj.AssemblyReference.cache
+C:\Users\Paulyglot\Desktop\Portoflio\BonneAppetit\MicroServices\BonneAppetit.RestaurantServices\Models\obj\Debug\net5.0\Models.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Paulyglot\Desktop\Portoflio\BonneAppetit\MicroServices\BonneAppetit.RestaurantServices\Models\obj\Debug\net5.0\Models.AssemblyInfoInputs.cache
+C:\Users\Paulyglot\Desktop\Portoflio\BonneAppetit\MicroServices\BonneAppetit.RestaurantServices\Models\obj\Debug\net5.0\Models.AssemblyInfo.cs
+C:\Users\Paulyglot\Desktop\Portoflio\BonneAppetit\MicroServices\BonneAppetit.RestaurantServices\Models\obj\Debug\net5.0\Models.csproj.CoreCompileInputs.cache
+C:\Users\Paulyglot\Desktop\Portoflio\BonneAppetit\MicroServices\BonneAppetit.RestaurantServices\Models\obj\Debug\net5.0\Models.dll
+C:\Users\Paulyglot\Desktop\Portoflio\BonneAppetit\MicroServices\BonneAppetit.RestaurantServices\Models\obj\Debug\net5.0\refint\Models.dll
+C:\Users\Paulyglot\Desktop\Portoflio\BonneAppetit\MicroServices\BonneAppetit.RestaurantServices\Models\obj\Debug\net5.0\Models.pdb
+C:\Users\Paulyglot\Desktop\Portoflio\BonneAppetit\MicroServices\BonneAppetit.RestaurantServices\Models\obj\Debug\net5.0\ref\Models.dll
