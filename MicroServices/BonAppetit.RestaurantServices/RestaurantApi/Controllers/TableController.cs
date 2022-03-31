@@ -15,7 +15,7 @@ namespace RestaurantApi.Controllers
         }
 
 
-        [HttpGet("GetAllRestaurantTable/restaurantId={restaurantId}")]
+        [HttpGet("GetAllRestaurantTable/{restaurantId}")]
         public async Task<IActionResult> GetAllRestaurantTable(string restaurantId, CancellationToken cancellationToken)
         {
             if (string.IsNullOrEmpty(restaurantId))
@@ -32,7 +32,7 @@ namespace RestaurantApi.Controllers
             return StatusCode(request.StatusCode, request);
         }
 
-        [HttpGet("GetSingleRestaurantTable/tableId={tableId}")]
+        [HttpGet("GetSingleRestaurantTable/{tableId}")]
         public async Task<IActionResult> GetSingleRestaurantTable(string tableId, CancellationToken cancellationToken)
         {
             if (string.IsNullOrEmpty(tableId))
@@ -71,7 +71,7 @@ namespace RestaurantApi.Controllers
             return StatusCode(request.StatusCode, request);
         }
 
-        [HttpDelete("DeleteTable/tableId={tableId}")]
+        [HttpDelete("DeleteTable/{tableId}")]
         public async Task<IActionResult> DeleteTable(string tableId, CancellationToken cancellationToken)
         {
             if (string.IsNullOrEmpty(tableId))

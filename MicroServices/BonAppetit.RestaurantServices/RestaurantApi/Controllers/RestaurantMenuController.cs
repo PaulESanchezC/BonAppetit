@@ -60,7 +60,7 @@ namespace RestaurantApi.Controllers
             return StatusCode(request.StatusCode, request);
         }
 
-        [HttpPost("SetRestaurantMenuPublicValue/menuId={menuId}/setPublic={setPublic}")]
+        [HttpPost("SetRestaurantMenuPublicValue/{menuId}/{setPublic}")]
         public async Task<IActionResult> SetRestaurantMenuPublicValue(string menuId,
             bool? setPublic, CancellationToken cancellationToken)
         {
