@@ -12,7 +12,7 @@ public static class DbContextConfiguration
     {
         services.AddDbContext<ApplicationDbContext>(options =>
         {
-            options.UseSqlServer(ProxyConfiguration.Use.GetConnectionString("AuthenticationService"));
+            options.UseSqlServer(ProxyConfiguration.Use.GetConnectionString("AuthenticationServiceConnectionString"));
         });
         return services;
     }

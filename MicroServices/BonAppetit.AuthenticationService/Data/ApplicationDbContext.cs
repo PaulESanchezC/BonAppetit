@@ -6,9 +6,6 @@ namespace Data
 {
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
-        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options):base(options) { }
-
-        //Tables
-        public DbSet<ApplicationUser> ApplicationUsers { get; set; }
+        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options) { }
     }
 }

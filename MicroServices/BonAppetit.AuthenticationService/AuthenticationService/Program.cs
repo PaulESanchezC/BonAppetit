@@ -1,24 +1,33 @@
 using Configurations.ConfigurationsHelper;
 using Configurations.DataAccessConfigurations;
+using Configurations.IdentityConfigurations;
+
+#region WebAppBuilder
 
 var builder = WebApplication.CreateBuilder(args);
-
-// Add services to the container.
 builder.Services.AddRazorPages();
 var services = builder.Services;
-var app = builder.Build();
+
+#endregion
+
+#region Services Container
+
 //Configuration Helper
 ProxyConfiguration.Initialize(builder.Configuration);
 //Data Access Configurations
 services.AddDbContextOptions();
+//Identity Configurations
+services.AddIdentityConfigurationOptions();
 
+#endregion
 
+var app = builder.Build();
 
-// Configure the HTTP request pipeline.
+#region Http Pipeline
+
 if (!app.Environment.IsDevelopment())
 {
     app.UseExceptionHandler("/Error");
-    // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
     app.UseHsts();
 }
 
@@ -26,9 +35,10 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();
-
+app.UseIdentityServer();
 app.UseAuthorization();
 
 app.MapRazorPages();
+#endregion
 
 app.Run();
