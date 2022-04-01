@@ -196,13 +196,13 @@
       "mscorlib.dll": "sha256-tSv6NEbBsHuM5P3AUJGybafS0hxrXlzDmmcyG2eGk3I=",
       "netstandard.dll": "sha256-klcvWVyHimPfDxg6W1A076EKpCB5ySxjtc7sxJEsGgE=",
       "System.Private.CoreLib.dll": "sha256-Y8kdbfPQ0YoYLGbOgzRmoVsnuMYNlA1hvLvDWFTtzrk=",
-      "BonAppetitRestaurantManagerApp.dll": "sha256-nnZ12gJN5CndQL+spf41L1ixhShyLakaaZEWbiYM4og="
+      "BonAppetitRestaurantManagerApp.dll": "sha256-p2nzynqksE1pcEeDhol\/7vVptTz1HYgzC7dpzQ91FP0="
     },
     "extensions": null,
     "lazyAssembly": null,
     "libraryInitializers": null,
     "pdb": {
-      "BonAppetitRestaurantManagerApp.pdb": "sha256-yEovaJcIxaDr1VrNHU6573dAQNq3i6V9lYP8GM+13\/I="
+      "BonAppetitRestaurantManagerApp.pdb": "sha256-Ks0hKoyTFeNY3lQ9KmzrznAMEQ7H3i+Bp40R0EAkOeU="
     },
     "runtime": {
       "dotnet.6.0.3.8671elndkn.js": "sha256-pRmcHKZN4T\/YbX9dj6ITT4sNtkJ9w07OLcwl4645nPg=",
