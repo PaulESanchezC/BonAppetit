@@ -29,7 +29,6 @@ public class RestaurantFluentApi : IEntityTypeConfiguration<RestaurantBase>
             .HasForeignKey<ScheduleBase>(r => r.RestaurantId).HasPrincipalKey<RestaurantBase>(fk=>fk.RestaurantId)
             .OnDelete(DeleteBehavior.Cascade);
 
-        builder.Property(p => p.DateCreated).HasDefaultValue(DateTime.Now);
         builder.Property(p => p.ZonePopularity).HasDefaultValue(5);
         builder.Property(p => p.IsDeleted).HasDefaultValue(false);
     }

@@ -30,9 +30,7 @@ namespace Data.Migrations
                         .HasDefaultValue("NEWID()");
 
                     b.Property<DateTime>("DateCreated")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2022, 3, 31, 14, 51, 57, 283, DateTimeKind.Local).AddTicks(1211));
+                        .HasColumnType("datetime2");
 
                     b.Property<string>("Description")
                         .ValueGeneratedOnAdd()
@@ -56,7 +54,7 @@ namespace Data.Migrations
 
                     b.HasIndex("RestaurantBaseRestaurantId");
 
-                    b.ToTable("Images");
+                    b.ToTable("Images", (string)null);
                 });
 
             modelBuilder.Entity("Models.MenuItemModels.MenuItemsBase", b =>
@@ -73,9 +71,7 @@ namespace Data.Migrations
                         .HasDefaultValue("cuisine type");
 
                     b.Property<DateTime>("DateCreated")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2022, 3, 31, 14, 51, 57, 284, DateTimeKind.Local).AddTicks(3286));
+                        .HasColumnType("datetime2");
 
                     b.Property<string>("Description")
                         .ValueGeneratedOnAdd()
@@ -93,7 +89,8 @@ namespace Data.Migrations
                         .HasColumnType("nvarchar(50)")
                         .HasDefaultValue("menu item name: ");
 
-                    b.Property<string>("MenuBaseMenuId")
+                    b.Property<string>("MenuId")
+                        .IsRequired()
                         .HasColumnType("nvarchar(450)");
 
                     b.Property<bool>("Public")
@@ -106,9 +103,9 @@ namespace Data.Migrations
                     b.HasIndex("ImageId")
                         .IsUnique();
 
-                    b.HasIndex("MenuBaseMenuId");
+                    b.HasIndex("MenuId");
 
-                    b.ToTable("MenuItems");
+                    b.ToTable("MenuItems", (string)null);
                 });
 
             modelBuilder.Entity("Models.MenuModels.MenuBase", b =>
@@ -119,9 +116,7 @@ namespace Data.Migrations
                         .HasDefaultValue("NEWID()");
 
                     b.Property<DateTime>("DateCreated")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2022, 3, 31, 14, 51, 57, 283, DateTimeKind.Local).AddTicks(9884));
+                        .HasColumnType("datetime2");
 
                     b.Property<string>("MenuDescription")
                         .IsRequired()
@@ -148,7 +143,7 @@ namespace Data.Migrations
 
                     b.HasIndex("RestaurantId");
 
-                    b.ToTable("Menus");
+                    b.ToTable("Menus", (string)null);
                 });
 
             modelBuilder.Entity("Models.RestaurantModels.RestaurantBase", b =>
@@ -159,9 +154,7 @@ namespace Data.Migrations
                         .HasDefaultValue("NEWID()");
 
                     b.Property<DateTime>("DateCreated")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2022, 3, 31, 14, 51, 57, 286, DateTimeKind.Local).AddTicks(4685));
+                        .HasColumnType("datetime2");
 
                     b.Property<bool>("IsDeleted")
                         .ValueGeneratedOnAdd()
@@ -209,7 +202,7 @@ namespace Data.Migrations
 
                     b.HasKey("RestaurantId");
 
-                    b.ToTable("Restaurants");
+                    b.ToTable("Restaurants", (string)null);
                 });
 
             modelBuilder.Entity("Models.ScheduleModels.ScheduleBase", b =>
@@ -220,9 +213,7 @@ namespace Data.Migrations
                         .HasDefaultValue("NEWID()");
 
                     b.Property<DateTime>("DateCreated")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2022, 3, 31, 14, 51, 57, 287, DateTimeKind.Local).AddTicks(272));
+                        .HasColumnType("datetime2");
 
                     b.Property<bool>("Friday")
                         .ValueGeneratedOnAdd()
@@ -338,7 +329,7 @@ namespace Data.Migrations
                     b.HasIndex("RestaurantId")
                         .IsUnique();
 
-                    b.ToTable("Schedules");
+                    b.ToTable("Schedules", (string)null);
                 });
 
             modelBuilder.Entity("Models.TableModels.TableBase", b =>
@@ -380,7 +371,7 @@ namespace Data.Migrations
 
                     b.HasIndex("RestaurantId");
 
-                    b.ToTable("Tables");
+                    b.ToTable("Tables", (string)null);
                 });
 
             modelBuilder.Entity("Models.ImageModels.ImageBase", b =>
@@ -399,12 +390,15 @@ namespace Data.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Models.MenuModels.MenuBase", null)
+                    b.HasOne("Models.MenuModels.MenuBase", "Menu")
                         .WithMany("MenuItems")
-                        .HasForeignKey("MenuBaseMenuId")
-                        .OnDelete(DeleteBehavior.NoAction);
+                        .HasForeignKey("MenuId")
+                        .OnDelete(DeleteBehavior.NoAction)
+                        .IsRequired();
 
                     b.Navigation("Image");
+
+                    b.Navigation("Menu");
                 });
 
             modelBuilder.Entity("Models.MenuModels.MenuBase", b =>

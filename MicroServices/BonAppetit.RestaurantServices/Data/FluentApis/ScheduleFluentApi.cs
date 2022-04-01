@@ -33,6 +33,6 @@ public class ScheduleFluentApi : IEntityTypeConfiguration<ScheduleBase>
         builder.Property(p => p.SaturdayOpenTime).HasDefaultValue(12);
         builder.Property(p => p.SaturdayCloseTime).HasDefaultValue(22);
 
-        builder.Property(p => p.DateCreated).HasDefaultValue(DateTime.Now);
+        builder.Property(p => p.DateCreated);
     }
 }

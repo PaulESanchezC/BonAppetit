@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "k6dAsSTUPh+DiTakNd26VWRK2LB6euQeUgSQCZlxe3I=",
+  "Hash": "i+tH/QCYtDf8V0Ukk1G2FrTZy3GVUpQqjwegbk2OZsk=",
   "Source": "BonAppetitRestaurantManagerApp",
   "BasePath": "/",
   "Mode": "Root",
@@ -49,6 +49,23 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\Paulyglot\\.nuget\\packages\\microsoft.aspnetcore.components.webassembly\\6.0.3\\build\\net6.0\\blazor.webassembly.js"
+    },
+    {
+      "Identity": "C:\\Users\\Paulyglot\\Desktop\\Portoflio\\BonAppetit\\BonAppetitRestaurantManagerApp\\BonAppetitRestaurantManagerApp\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Blazored.LocalStorage.dll",
+      "SourceId": "BonAppetitRestaurantManagerApp",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\Paulyglot\\Desktop\\Portoflio\\BonAppetit\\BonAppetitRestaurantManagerApp\\BonAppetitRestaurantManagerApp\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Blazored.LocalStorage.dll",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "BlazorWebAssemblyResource",
+      "AssetTraitValue": "runtime",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\Paulyglot\\.nuget\\packages\\blazored.localstorage\\4.2.0\\lib\\net6.0\\Blazored.LocalStorage.dll"
     },
     {
       "Identity": "C:\\Users\\Paulyglot\\Desktop\\Portoflio\\BonAppetit\\BonAppetitRestaurantManagerApp\\BonAppetitRestaurantManagerApp\\bin\\Debug\\net6.0\\wwwroot\\_framework\\BonAppetitRestaurantManagerApp.dll",
@@ -661,6 +678,40 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\Paulyglot\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.browser-wasm\\6.0.3\\runtimes\\browser-wasm\\lib\\net6.0\\Microsoft.Win32.Registry.dll"
+    },
+    {
+      "Identity": "C:\\Users\\Paulyglot\\Desktop\\Portoflio\\BonAppetit\\BonAppetitRestaurantManagerApp\\BonAppetitRestaurantManagerApp\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Models.dll",
+      "SourceId": "BonAppetitRestaurantManagerApp",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\Paulyglot\\Desktop\\Portoflio\\BonAppetit\\BonAppetitRestaurantManagerApp\\BonAppetitRestaurantManagerApp\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Models.dll",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "BlazorWebAssemblyResource",
+      "AssetTraitValue": "runtime",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\Paulyglot\\Desktop\\Portoflio\\BonAppetit\\BonAppetitRestaurantManagerApp\\Models\\bin\\Debug\\net6.0\\Models.dll"
+    },
+    {
+      "Identity": "C:\\Users\\Paulyglot\\Desktop\\Portoflio\\BonAppetit\\BonAppetitRestaurantManagerApp\\BonAppetitRestaurantManagerApp\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Models.pdb",
+      "SourceId": "BonAppetitRestaurantManagerApp",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\Paulyglot\\Desktop\\Portoflio\\BonAppetit\\BonAppetitRestaurantManagerApp\\BonAppetitRestaurantManagerApp\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Models.pdb",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "BlazorWebAssemblyResource",
+      "AssetTraitValue": "symbol",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\Paulyglot\\Desktop\\Portoflio\\BonAppetit\\BonAppetitRestaurantManagerApp\\Models\\bin\\Debug\\net6.0\\Models.pdb"
     },
     {
       "Identity": "C:\\Users\\Paulyglot\\Desktop\\Portoflio\\BonAppetit\\BonAppetitRestaurantManagerApp\\BonAppetitRestaurantManagerApp\\bin\\Debug\\net6.0\\wwwroot\\_framework\\mscorlib.dll",
@@ -3740,6 +3791,23 @@
       "OriginalItemSpec": "C:\\Users\\Paulyglot\\Desktop\\Portoflio\\BonAppetit\\BonAppetitRestaurantManagerApp\\BonAppetitRestaurantManagerApp\\bin\\Debug\\net6.0\\wwwroot\\_framework\\System.Data.Common.dll"
     },
     {
+      "Identity": "C:\\Users\\Paulyglot\\Desktop\\Portoflio\\BonAppetit\\BonAppetitRestaurantManagerApp\\BonAppetitRestaurantManagerApp\\obj\\Debug\\net6.0\\build-gz\\5nYiWIVG.gz",
+      "SourceId": "BonAppetitRestaurantManagerApp",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\Paulyglot\\Desktop\\Portoflio\\BonAppetit\\BonAppetitRestaurantManagerApp\\BonAppetitRestaurantManagerApp\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Models.dll.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "RelatedAsset": "C:\\Users\\Paulyglot\\Desktop\\Portoflio\\BonAppetit\\BonAppetitRestaurantManagerApp\\BonAppetitRestaurantManagerApp\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Models.dll",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\Paulyglot\\Desktop\\Portoflio\\BonAppetit\\BonAppetitRestaurantManagerApp\\BonAppetitRestaurantManagerApp\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Models.dll"
+    },
+    {
       "Identity": "C:\\Users\\Paulyglot\\Desktop\\Portoflio\\BonAppetit\\BonAppetitRestaurantManagerApp\\BonAppetitRestaurantManagerApp\\obj\\Debug\\net6.0\\build-gz\\5Z3nREuF.gz",
       "SourceId": "BonAppetitRestaurantManagerApp",
       "SourceType": "Computed",
@@ -4537,6 +4605,23 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\Paulyglot\\Desktop\\Portoflio\\BonAppetit\\BonAppetitRestaurantManagerApp\\BonAppetitRestaurantManagerApp\\bin\\Debug\\net6.0\\wwwroot\\_framework\\System.Security.Claims.dll"
+    },
+    {
+      "Identity": "C:\\Users\\Paulyglot\\Desktop\\Portoflio\\BonAppetit\\BonAppetitRestaurantManagerApp\\BonAppetitRestaurantManagerApp\\obj\\Debug\\net6.0\\build-gz\\gFMm+pDp.gz",
+      "SourceId": "BonAppetitRestaurantManagerApp",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\Paulyglot\\Desktop\\Portoflio\\BonAppetit\\BonAppetitRestaurantManagerApp\\BonAppetitRestaurantManagerApp\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Blazored.LocalStorage.dll.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "RelatedAsset": "C:\\Users\\Paulyglot\\Desktop\\Portoflio\\BonAppetit\\BonAppetitRestaurantManagerApp\\BonAppetitRestaurantManagerApp\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Blazored.LocalStorage.dll",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\Paulyglot\\Desktop\\Portoflio\\BonAppetit\\BonAppetitRestaurantManagerApp\\BonAppetitRestaurantManagerApp\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Blazored.LocalStorage.dll"
     },
     {
       "Identity": "C:\\Users\\Paulyglot\\Desktop\\Portoflio\\BonAppetit\\BonAppetitRestaurantManagerApp\\BonAppetitRestaurantManagerApp\\obj\\Debug\\net6.0\\build-gz\\gk+sTiSX.gz",
@@ -6749,6 +6834,23 @@
       "OriginalItemSpec": "C:\\Users\\Paulyglot\\Desktop\\Portoflio\\BonAppetit\\BonAppetitRestaurantManagerApp\\BonAppetitRestaurantManagerApp\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.Extensions.Logging.dll"
     },
     {
+      "Identity": "C:\\Users\\Paulyglot\\Desktop\\Portoflio\\BonAppetit\\BonAppetitRestaurantManagerApp\\BonAppetitRestaurantManagerApp\\obj\\Debug\\net6.0\\build-gz\\zMTacwQP.gz",
+      "SourceId": "BonAppetitRestaurantManagerApp",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\Paulyglot\\Desktop\\Portoflio\\BonAppetit\\BonAppetitRestaurantManagerApp\\BonAppetitRestaurantManagerApp\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Models.pdb.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "RelatedAsset": "C:\\Users\\Paulyglot\\Desktop\\Portoflio\\BonAppetit\\BonAppetitRestaurantManagerApp\\BonAppetitRestaurantManagerApp\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Models.pdb",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\Paulyglot\\Desktop\\Portoflio\\BonAppetit\\BonAppetitRestaurantManagerApp\\BonAppetitRestaurantManagerApp\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Models.pdb"
+    },
+    {
       "Identity": "C:\\Users\\Paulyglot\\Desktop\\Portoflio\\BonAppetit\\BonAppetitRestaurantManagerApp\\BonAppetitRestaurantManagerApp\\obj\\Debug\\net6.0\\build-gz\\Zod3+M4G.gz",
       "SourceId": "BonAppetitRestaurantManagerApp",
       "SourceType": "Computed",
@@ -6851,12 +6953,12 @@
       "OriginalItemSpec": "wwwroot\\css\\app.css"
     },
     {
-      "Identity": "C:\\Users\\Paulyglot\\Desktop\\Portoflio\\BonAppetit\\BonAppetitRestaurantManagerApp\\BonAppetitRestaurantManagerApp\\wwwroot\\css\\grid_12-825-55-15.css",
+      "Identity": "C:\\Users\\Paulyglot\\Desktop\\Portoflio\\BonAppetit\\BonAppetitRestaurantManagerApp\\BonAppetitRestaurantManagerApp\\wwwroot\\css\\fontfaces.css",
       "SourceId": "BonAppetitRestaurantManagerApp",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Paulyglot\\Desktop\\Portoflio\\BonAppetit\\BonAppetitRestaurantManagerApp\\BonAppetitRestaurantManagerApp\\wwwroot\\",
       "BasePath": "/",
-      "RelativePath": "css/grid_12-825-55-15.css",
+      "RelativePath": "css/fontfaces.css",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -6865,15 +6967,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\css\\grid_12-825-55-15.css"
+      "OriginalItemSpec": "wwwroot\\css\\fontfaces.css"
     },
     {
-      "Identity": "C:\\Users\\Paulyglot\\Desktop\\Portoflio\\BonAppetit\\BonAppetitRestaurantManagerApp\\BonAppetitRestaurantManagerApp\\wwwroot\\css\\lobster-regular-webfont.woff",
+      "Identity": "C:\\Users\\Paulyglot\\Desktop\\Portoflio\\BonAppetit\\BonAppetitRestaurantManagerApp\\BonAppetitRestaurantManagerApp\\wwwroot\\css\\Fonts\\lobster-regular-webfont.woff",
       "SourceId": "BonAppetitRestaurantManagerApp",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Paulyglot\\Desktop\\Portoflio\\BonAppetit\\BonAppetitRestaurantManagerApp\\BonAppetitRestaurantManagerApp\\wwwroot\\",
       "BasePath": "/",
-      "RelativePath": "css/lobster-regular-webfont.woff",
+      "RelativePath": "css/Fonts/lobster-regular-webfont.woff",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -6882,15 +6984,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\css\\lobster-regular-webfont.woff"
+      "OriginalItemSpec": "wwwroot\\css\\Fonts\\lobster-regular-webfont.woff"
     },
     {
-      "Identity": "C:\\Users\\Paulyglot\\Desktop\\Portoflio\\BonAppetit\\BonAppetitRestaurantManagerApp\\BonAppetitRestaurantManagerApp\\wwwroot\\css\\lobster-regular-webfont.woff2",
+      "Identity": "C:\\Users\\Paulyglot\\Desktop\\Portoflio\\BonAppetit\\BonAppetitRestaurantManagerApp\\BonAppetitRestaurantManagerApp\\wwwroot\\css\\Fonts\\lobster-regular-webfont.woff2",
       "SourceId": "BonAppetitRestaurantManagerApp",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Paulyglot\\Desktop\\Portoflio\\BonAppetit\\BonAppetitRestaurantManagerApp\\BonAppetitRestaurantManagerApp\\wwwroot\\",
       "BasePath": "/",
-      "RelativePath": "css/lobster-regular-webfont.woff2",
+      "RelativePath": "css/Fonts/lobster-regular-webfont.woff2",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -6899,7 +7001,58 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\css\\lobster-regular-webfont.woff2"
+      "OriginalItemSpec": "wwwroot\\css\\Fonts\\lobster-regular-webfont.woff2"
+    },
+    {
+      "Identity": "C:\\Users\\Paulyglot\\Desktop\\Portoflio\\BonAppetit\\BonAppetitRestaurantManagerApp\\BonAppetitRestaurantManagerApp\\wwwroot\\css\\Fonts\\titilliumweb-light-webfont.woff",
+      "SourceId": "BonAppetitRestaurantManagerApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Paulyglot\\Desktop\\Portoflio\\BonAppetit\\BonAppetitRestaurantManagerApp\\BonAppetitRestaurantManagerApp\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "css/Fonts/titilliumweb-light-webfont.woff",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\Fonts\\titilliumweb-light-webfont.woff"
+    },
+    {
+      "Identity": "C:\\Users\\Paulyglot\\Desktop\\Portoflio\\BonAppetit\\BonAppetitRestaurantManagerApp\\BonAppetitRestaurantManagerApp\\wwwroot\\css\\Fonts\\titilliumweb-light-webfont.woff2",
+      "SourceId": "BonAppetitRestaurantManagerApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Paulyglot\\Desktop\\Portoflio\\BonAppetit\\BonAppetitRestaurantManagerApp\\BonAppetitRestaurantManagerApp\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "css/Fonts/titilliumweb-light-webfont.woff2",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\Fonts\\titilliumweb-light-webfont.woff2"
+    },
+    {
+      "Identity": "C:\\Users\\Paulyglot\\Desktop\\Portoflio\\BonAppetit\\BonAppetitRestaurantManagerApp\\BonAppetitRestaurantManagerApp\\wwwroot\\css\\login.css",
+      "SourceId": "BonAppetitRestaurantManagerApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Paulyglot\\Desktop\\Portoflio\\BonAppetit\\BonAppetitRestaurantManagerApp\\BonAppetitRestaurantManagerApp\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "css/login.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\login.css"
     },
     {
       "Identity": "C:\\Users\\Paulyglot\\Desktop\\Portoflio\\BonAppetit\\BonAppetitRestaurantManagerApp\\BonAppetitRestaurantManagerApp\\wwwroot\\css\\navbar.css",
@@ -6919,12 +7072,12 @@
       "OriginalItemSpec": "wwwroot\\css\\navbar.css"
     },
     {
-      "Identity": "C:\\Users\\Paulyglot\\Desktop\\Portoflio\\BonAppetit\\BonAppetitRestaurantManagerApp\\BonAppetitRestaurantManagerApp\\wwwroot\\css\\specimen_stylesheet.css",
+      "Identity": "C:\\Users\\Paulyglot\\Desktop\\Portoflio\\BonAppetit\\BonAppetitRestaurantManagerApp\\BonAppetitRestaurantManagerApp\\wwwroot\\css\\register.css",
       "SourceId": "BonAppetitRestaurantManagerApp",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Paulyglot\\Desktop\\Portoflio\\BonAppetit\\BonAppetitRestaurantManagerApp\\BonAppetitRestaurantManagerApp\\wwwroot\\",
       "BasePath": "/",
-      "RelativePath": "css/specimen_stylesheet.css",
+      "RelativePath": "css/register.css",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -6933,24 +7086,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\css\\specimen_stylesheet.css"
-    },
-    {
-      "Identity": "C:\\Users\\Paulyglot\\Desktop\\Portoflio\\BonAppetit\\BonAppetitRestaurantManagerApp\\BonAppetitRestaurantManagerApp\\wwwroot\\css\\stylesheet.css",
-      "SourceId": "BonAppetitRestaurantManagerApp",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Paulyglot\\Desktop\\Portoflio\\BonAppetit\\BonAppetitRestaurantManagerApp\\BonAppetitRestaurantManagerApp\\wwwroot\\",
-      "BasePath": "/",
-      "RelativePath": "css/stylesheet.css",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\css\\stylesheet.css"
+      "OriginalItemSpec": "wwwroot\\css\\register.css"
     },
     {
       "Identity": "C:\\Users\\Paulyglot\\Desktop\\Portoflio\\BonAppetit\\BonAppetitRestaurantManagerApp\\BonAppetitRestaurantManagerApp\\wwwroot\\favicon.ico",

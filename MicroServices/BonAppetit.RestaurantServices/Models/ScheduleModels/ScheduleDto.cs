@@ -73,7 +73,7 @@ public class ScheduleDto
     [Required(AllowEmptyStrings = false)]
     public int SaturdayCloseTime { get; set; }
 
-    public RestaurantBase Restaurant { get; set; }
+    public RestaurantDto Restaurant { get; set; }
 
     [Required(AllowEmptyStrings = false)]
     public string RestaurantId { get; set; }

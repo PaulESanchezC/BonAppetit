@@ -1,8 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using Models.ImageModels;
-using Models.MenuModels;
-using Models.ScheduleModels;
-using Models.TableModels;
 
 namespace Models.RestaurantModels;
 
@@ -27,7 +24,5 @@ public class RestaurantCreate
 
     [Required(AllowEmptyStrings = false)]
     public string RestaurantCuisineType { get; set; }
-
-    public List<ImageCreate> RestaurantImages { get; set; }
     #endregion
 }

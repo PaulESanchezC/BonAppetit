@@ -16,9 +16,9 @@ public class RestaurantBase
     public string RestaurantWebsite { get; set; } = "";
     public string RestaurantCiy { get; set; } = "";
     public string RestaurantCuisineType { get; set; } = "";
-    public List<ImageBase> RestaurantImages { get; set; } = new();
-    public List<MenuBase> RestaurantMenu { get; set; } = new();
-    public List<TableBase> RestaurantTables { get; set; } = new();
+    public List<ImageBase> RestaurantImages { get; set; }
+    public List<MenuBase> RestaurantMenu { get; set; }
+    public List<TableBase> RestaurantTables { get; set; }
     public ScheduleBase RestaurantSchedule { get; set; } = new();
     public string ScheduleId { get; set; } = "";
     #endregion

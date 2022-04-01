@@ -1,3 +1,15 @@
 ﻿* {
-    font-size: 28px;
+    font-family: 'titillium', Arial, sans-serif;
+    font-size: 24px;
 }
+
+.titillium {
+    font-family: 'titillium', Arial, sans-serif !important;
+}
+
+.lobster {
+    font-family: 'lobster', Arial, sans-serif !important;
+}
+
+
+
