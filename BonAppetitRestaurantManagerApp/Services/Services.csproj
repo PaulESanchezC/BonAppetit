@@ -16,6 +16,9 @@
 
   <ItemGroup>
     <Folder Include="AuthenticationServices\" />
+    <Folder Include="ApiRouteProvider\" />
+    <Folder Include="MenuServices\" />
+    <Folder Include="RestaurantServices\" />
   </ItemGroup>
 
 </Project>

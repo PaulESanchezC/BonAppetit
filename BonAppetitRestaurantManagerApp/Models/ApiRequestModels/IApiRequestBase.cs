@@ -1,11 +1,11 @@
 ﻿namespace Models.ApiRequestModels;
 
-public interface IApiRequestBase<T>
-where T: class
+public interface IApiRequestBase
 {
-    string ApiUrl { get; set; }
+    string RouteName { get; set; }
     HttpMethod HttpMethod { get; set; }
-    T Data { get; set; }
+    object? PostBody { get; set; }
+    List<string> GetQueries { get; set; }
     string? RestaurantServiceIdToken { get; set; }
     string? JwtToken { get; set; }
 }

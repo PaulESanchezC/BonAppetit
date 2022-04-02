@@ -2,13 +2,9 @@ using Configurations.ConfigurationsHelper;
 using Configurations.DataAccessConfigurations;
 using Configurations.IdentityConfigurations;
 
-#region WebAppBuilder
-
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddRazorPages();
 var services = builder.Services;
-
-#endregion
 
 #region Services Container
 
@@ -18,7 +14,6 @@ ProxyConfiguration.Initialize(builder.Configuration);
 services.AddDbContextOptions();
 //Identity Configurations
 services.AddIdentityConfigurationOptions();
-
 
 #endregion
 

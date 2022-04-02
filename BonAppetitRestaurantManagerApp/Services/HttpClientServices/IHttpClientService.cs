@@ -1,7 +1,13 @@
-﻿namespace Services.HttpClientServices;
+﻿using Models.ApiRequestModels;
+using Models.ResponseModels;
+
+namespace Services.HttpClientServices;
 
 public interface IHttpClientService<T>
-where T:class
+    where T : class
 {
-    String GetBaseUrl();
+    Task<Response<T>> SendAsync(ApiRequest apiRequest);
+
+    Task<Response<T>> ResponseSingleBuilderTask(bool isSuccessful, int statusCode, string title, string message,
+        T? responseObject);
 }

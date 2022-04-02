@@ -418,6 +418,22 @@
           "buildTransitive/netcoreapp3.1/_._": {}
         }
       },
+      "Configurations/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Microsoft.Extensions.Configuration.Abstractions": "6.0.0",
+          "Microsoft.Extensions.DependencyInjection": "6.0.0",
+          "Microsoft.Extensions.Http": "6.0.0",
+          "Services": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Configurations.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Configurations.dll": {}
+        }
+      },
       "Models/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
@@ -426,6 +442,20 @@
         },
         "runtime": {
           "bin/placeholder/Models.dll": {}
+        }
+      },
+      "Services/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Microsoft.Extensions.Http": "6.0.0",
+          "Models": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Services.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Services.dll": {}
         }
       }
     },
@@ -840,6 +870,22 @@
           "buildTransitive/netcoreapp3.1/_._": {}
         }
       },
+      "Configurations/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Microsoft.Extensions.Configuration.Abstractions": "6.0.0",
+          "Microsoft.Extensions.DependencyInjection": "6.0.0",
+          "Microsoft.Extensions.Http": "6.0.0",
+          "Services": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Configurations.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Configurations.dll": {}
+        }
+      },
       "Models/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
@@ -848,6 +894,20 @@
         },
         "runtime": {
           "bin/placeholder/Models.dll": {}
+        }
+      },
+      "Services/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Microsoft.Extensions.Http": "6.0.0",
+          "Models": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Services.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Services.dll": {}
         }
       }
     }
@@ -1646,15 +1706,26 @@
         "useSharedDesignerContext.txt"
       ]
     },
+    "Configurations/1.0.0": {
+      "type": "project",
+      "path": "../Configurations/Configurations.csproj",
+      "msbuildProject": "../Configurations/Configurations.csproj"
+    },
     "Models/1.0.0": {
       "type": "project",
       "path": "../Models/Models.csproj",
       "msbuildProject": "../Models/Models.csproj"
+    },
+    "Services/1.0.0": {
+      "type": "project",
+      "path": "../Services/Services.csproj",
+      "msbuildProject": "../Services/Services.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
       "Blazored.LocalStorage >= 4.2.0",
+      "Configurations >= 1.0.0",
       "Microsoft.AspNetCore.Components.WebAssembly >= 6.0.3",
       "Microsoft.AspNetCore.Components.WebAssembly.DevServer >= 6.0.3",
       "Microsoft.Extensions.Http >= 6.0.0",
@@ -1688,6 +1759,9 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
+            "C:\\Users\\Paulyglot\\Desktop\\Portoflio\\BonAppetit\\BonAppetitRestaurantManagerApp\\Configurations\\Configurations.csproj": {
+              "projectPath": "C:\\Users\\Paulyglot\\Desktop\\Portoflio\\BonAppetit\\BonAppetitRestaurantManagerApp\\Configurations\\Configurations.csproj"
+            },
             "C:\\Users\\Paulyglot\\Desktop\\Portoflio\\BonAppetit\\BonAppetitRestaurantManagerApp\\Models\\Models.csproj": {
               "projectPath": "C:\\Users\\Paulyglot\\Desktop\\Portoflio\\BonAppetit\\BonAppetitRestaurantManagerApp\\Models\\Models.csproj"
             }

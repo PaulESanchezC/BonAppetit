@@ -1,9 +1,10 @@
 {
-  "RestaurantServices": { "RestaurantServiceApiBaseUrl": "https://localhost:44310/",
+  "RestaurantServices": {
+    "BaseUrl": "https://localhost:44310/",
 
     "Restaurant": {
       "GetAllRestaurants": "api/Restaurant/GetAllRestaurants",
-      "GetRestaurantById": "api/Restaurant/GetSingleRestaurantById/{0}",
+      "GetSingleRestaurantById": "api/Restaurant/GetSingleRestaurantById/{0}",
       "CreateSingleRestaurant": "api/Restaurant/CreateSingleRestaurant",
       "UpdateSingleRestaurant": "api/Restaurant/UpdateSingleRestaurant",
       "DeleteSingleRestaurant": "api/Restaurant/DeleteSingleRestaurant/{0}"
