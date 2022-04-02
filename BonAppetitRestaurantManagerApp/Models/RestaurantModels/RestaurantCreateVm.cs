@@ -30,8 +30,6 @@ public class RestaurantCreateVm
     [Required(AllowEmptyStrings = false)]
     [Display(Name = "Cuisine")]
     public string RestaurantCuisineType { get; set; }
-
-    [Display(Name = "Images")]
-    public List<ImageCreateVm> RestaurantImages { get; set; }
+     
     #endregion
 }

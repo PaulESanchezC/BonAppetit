@@ -1,6 +1,8 @@
 {
   "cacheBootResources": true,
-  "config": [ ],
+  "config": [
+    "appsettings.json"
+  ],
   "debugBuild": true,
   "entryAssembly": "BonAppetitRestaurantManagerApp",
   "icuDataMode": 0,
@@ -24,6 +26,7 @@
       "Microsoft.Extensions.FileProviders.Abstractions.dll": "sha256-7PzvEcQvpK1c8tTX9VPI8AF+XrekqbAytNBQXJjvTvQ=",
       "Microsoft.Extensions.FileProviders.Physical.dll": "sha256-sXujvGMZDgBBZ9HqfcEq9XsM0pvwyhPt60NA9qLDzGI=",
       "Microsoft.Extensions.FileSystemGlobbing.dll": "sha256-viiXOG0fwhWobT0TQ1ZOJiZBdRvYRlWbDtjz+6d8sQI=",
+      "Microsoft.Extensions.Http.dll": "sha256-K5\/O91dt69IHKav69ftn+7DKPmnzkipTvwM4Sd4Zres=",
       "Microsoft.Extensions.Logging.dll": "sha256-GDZQCBtVHfrZZ6fL95lGoinLeUWLjQShLbfESwO7mrc=",
       "Microsoft.Extensions.Logging.Abstractions.dll": "sha256-w+c+xfLh8QIAwluhugyPc8sPvAmmIC\/UTxnugT7Oido=",
       "Microsoft.Extensions.Options.dll": "sha256-eGESyy9mRu8RcCGajAu4E8nxSmeB5nxiZkFPVaZ5Vl0=",
@@ -197,15 +200,15 @@
       "mscorlib.dll": "sha256-tSv6NEbBsHuM5P3AUJGybafS0hxrXlzDmmcyG2eGk3I=",
       "netstandard.dll": "sha256-klcvWVyHimPfDxg6W1A076EKpCB5ySxjtc7sxJEsGgE=",
       "System.Private.CoreLib.dll": "sha256-Y8kdbfPQ0YoYLGbOgzRmoVsnuMYNlA1hvLvDWFTtzrk=",
-      "Models.dll": "sha256-qzJF+2TUj8UrG9tX0AIZcfdn4v+GzeWIvM2iuTU8ozQ=",
-      "BonAppetitRestaurantManagerApp.dll": "sha256-uFQt0T75zTtGRo9+QtuuLyZ0YmST0Qk1Iia4ikVNk6A="
+      "Models.dll": "sha256-uWvoKym38wEWGDaPIZ1ftuinjjwxqHwxrd\/HaV7qpc4=",
+      "BonAppetitRestaurantManagerApp.dll": "sha256-JroMj2Gfh8gZXWvq\/WMlGLLfbJ\/YKVGNTu9c4oRueJw="
     },
     "extensions": null,
     "lazyAssembly": null,
     "libraryInitializers": null,
     "pdb": {
-      "Models.pdb": "sha256-Jng3gqa5PVM3NiuYE5s5MMiu3SrJLDOzTDEZLMsGBCU=",
-      "BonAppetitRestaurantManagerApp.pdb": "sha256-EBaUYCIyvJI88NyceesFsBNVfE2wsn2HS812liivq5k="
+      "Models.pdb": "sha256-3OKBgkjF2hVdy2ZlHE\/6W24EFah7nRk\/7nPMrbF0wUM=",
+      "BonAppetitRestaurantManagerApp.pdb": "sha256-psHUn\/jZxySli0654Yv7qcsTp1w9l56sFqF+nWjxcSE="
     },
     "runtime": {
       "dotnet.6.0.3.8671elndkn.js": "sha256-pRmcHKZN4T\/YbX9dj6ITT4sNtkJ9w07OLcwl4645nPg=",

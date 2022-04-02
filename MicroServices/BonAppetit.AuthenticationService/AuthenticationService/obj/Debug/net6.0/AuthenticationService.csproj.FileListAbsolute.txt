@@ -79,3 +79,4 @@ C:\Users\Paulyglot\Desktop\Portoflio\BonAppetit\MicroServices\BonAppetit.Authent
 C:\Users\Paulyglot\Desktop\Portoflio\BonAppetit\MicroServices\BonAppetit.AuthenticationService\AuthenticationService\bin\Debug\net6.0\appsettings.json
 C:\Users\Paulyglot\Desktop\Portoflio\BonAppetit\MicroServices\BonAppetit.AuthenticationService\AuthenticationService\bin\Debug\net6.0\Humanizer.dll
 C:\Users\Paulyglot\Desktop\Portoflio\BonAppetit\MicroServices\BonAppetit.AuthenticationService\AuthenticationService\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\Paulyglot\Desktop\Portoflio\BonAppetit\MicroServices\BonAppetit.AuthenticationService\AuthenticationService\bin\Debug\net6.0\keys\is-signing-key-5F31B5D9D835D6BC06EA997C67E998C2.json

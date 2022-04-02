@@ -1141,11 +1141,14 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
+          "IdentityModel": "6.0.0",
           "Microsoft.AspNetCore.Identity": "2.2.0",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "6.0.3",
+          "Microsoft.EntityFrameworkCore": "6.0.3",
           "Microsoft.EntityFrameworkCore.SqlServer": "6.0.3",
           "Microsoft.Extensions.Identity.Stores": "6.0.3",
-          "Models": "1.0.0"
+          "Models": "1.0.0",
+          "StaticData": "1.0.0"
         },
         "compile": {
           "bin/placeholder/Data.dll": {}

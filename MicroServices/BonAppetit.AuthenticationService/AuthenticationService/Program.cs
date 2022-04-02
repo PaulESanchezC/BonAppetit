@@ -19,6 +19,7 @@ services.AddDbContextOptions();
 //Identity Configurations
 services.AddIdentityConfigurationOptions();
 
+
 #endregion
 
 var app = builder.Build();
@@ -37,7 +38,6 @@ app.UseStaticFiles();
 app.UseRouting();
 app.UseIdentityServer();
 app.UseAuthorization();
-
 app.MapRazorPages();
 #endregion
 

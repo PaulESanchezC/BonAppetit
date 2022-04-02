@@ -1,6 +1,6 @@
 ﻿namespace BonAppetitRestaurantManagerApp.Pages;
 
-public class Login_razor
+public partial class Login_razor
 {
     
 }

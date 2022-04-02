@@ -826,4 +826,7 @@ C:\Users\Paulyglot\Desktop\Portoflio\BonAppetit\BonAppetitRestaurantManagerApp\B
 C:\Users\Paulyglot\Desktop\Portoflio\BonAppetit\BonAppetitRestaurantManagerApp\BonAppetitRestaurantManagerApp\bin\Debug\net6.0\Models.pdb
 C:\Users\Paulyglot\Desktop\Portoflio\BonAppetit\BonAppetitRestaurantManagerApp\BonAppetitRestaurantManagerApp\obj\Debug\net6.0\build-gz\5nYiWIVG.gz
 C:\Users\Paulyglot\Desktop\Portoflio\BonAppetit\BonAppetitRestaurantManagerApp\BonAppetitRestaurantManagerApp\obj\Debug\net6.0\build-gz\zMTacwQP.gz
-C:\Users\Paulyglot\Desktop\Portoflio\BonAppetit\BonAppetitRestaurantManagerApp\BonAppetitRestaurantManagerApp\bin\Debug\net6.0\appsettings.json
+C:\Users\Paulyglot\Desktop\Portoflio\BonAppetit\BonAppetitRestaurantManagerApp\BonAppetitRestaurantManagerApp\bin\Debug\net6.0\wwwroot\_framework\Microsoft.Extensions.Http.dll
+C:\Users\Paulyglot\Desktop\Portoflio\BonAppetit\BonAppetitRestaurantManagerApp\BonAppetitRestaurantManagerApp\bin\Debug\net6.0\wwwroot\_framework\Microsoft.Extensions.Http.dll.gz
+C:\Users\Paulyglot\Desktop\Portoflio\BonAppetit\BonAppetitRestaurantManagerApp\BonAppetitRestaurantManagerApp\bin\Debug\net6.0\Microsoft.Extensions.Http.dll
+C:\Users\Paulyglot\Desktop\Portoflio\BonAppetit\BonAppetitRestaurantManagerApp\BonAppetitRestaurantManagerApp\obj\Debug\net6.0\build-gz\8JR5tHVD.gz
