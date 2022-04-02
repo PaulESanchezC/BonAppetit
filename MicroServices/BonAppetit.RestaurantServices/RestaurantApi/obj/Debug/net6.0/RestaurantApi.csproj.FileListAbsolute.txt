@@ -293,3 +293,6 @@ C:\Users\Paulyglot\Desktop\Portoflio\BonAppetit\MicroServices\BonAppetit.Restaur
 C:\Users\Paulyglot\Desktop\Portoflio\BonAppetit\MicroServices\BonAppetit.RestaurantServices\RestaurantApi\obj\Debug\net6.0\RestaurantApi.pdb
 C:\Users\Paulyglot\Desktop\Portoflio\BonAppetit\MicroServices\BonAppetit.RestaurantServices\RestaurantApi\obj\Debug\net6.0\RestaurantApi.genruntimeconfig.cache
 C:\Users\Paulyglot\Desktop\Portoflio\BonAppetit\MicroServices\BonAppetit.RestaurantServices\RestaurantApi\obj\Debug\net6.0\ref\RestaurantApi.dll
+C:\Users\Paulyglot\Desktop\Portoflio\BonAppetit\MicroServices\BonAppetit.RestaurantServices\RestaurantApi\bin\Debug\net6.0\StaticData.dll
+C:\Users\Paulyglot\Desktop\Portoflio\BonAppetit\MicroServices\BonAppetit.RestaurantServices\RestaurantApi\bin\Debug\net6.0\StaticData.pdb
+C:\Users\Paulyglot\Desktop\Portoflio\BonAppetit\MicroServices\BonAppetit.RestaurantServices\RestaurantApi\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll

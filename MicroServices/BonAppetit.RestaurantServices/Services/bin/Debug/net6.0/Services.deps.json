@@ -11,7 +11,8 @@
           "AutoMapper": "11.0.1",
           "Data": "1.0.0",
           "Microsoft.AspNetCore.Mvc.NewtonsoftJson": "6.0.3",
-          "Models": "1.0.0"
+          "Models": "1.0.0",
+          "StaticData": "1.0.0"
         },
         "runtime": {
           "Services.dll": {}
@@ -478,6 +479,11 @@
         "runtime": {
           "Models.dll": {}
         }
+      },
+      "StaticData/1.0.0": {
+        "runtime": {
+          "StaticData.dll": {}
+        }
       }
     }
   },
@@ -808,6 +814,11 @@
       "sha512": ""
     },
     "Models/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "StaticData/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

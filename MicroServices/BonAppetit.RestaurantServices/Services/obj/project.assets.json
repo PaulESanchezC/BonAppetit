@@ -682,6 +682,16 @@
         "runtime": {
           "bin/placeholder/Models.dll": {}
         }
+      },
+      "StaticData/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/StaticData.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/StaticData.dll": {}
+        }
       }
     }
   },
@@ -1954,6 +1964,11 @@
       "type": "project",
       "path": "../Models/Models.csproj",
       "msbuildProject": "../Models/Models.csproj"
+    },
+    "StaticData/1.0.0": {
+      "type": "project",
+      "path": "../StaticData/StaticData.csproj",
+      "msbuildProject": "../StaticData/StaticData.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -1961,7 +1976,8 @@
       "AutoMapper >= 11.0.1",
       "Data >= 1.0.0",
       "Microsoft.AspNetCore.Mvc.NewtonsoftJson >= 6.0.3",
-      "Models >= 1.0.0"
+      "Models >= 1.0.0",
+      "StaticData >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -1996,6 +2012,9 @@
             },
             "C:\\Users\\Paulyglot\\Desktop\\Portoflio\\BonAppetit\\MicroServices\\BonAppetit.RestaurantServices\\Models\\Models.csproj": {
               "projectPath": "C:\\Users\\Paulyglot\\Desktop\\Portoflio\\BonAppetit\\MicroServices\\BonAppetit.RestaurantServices\\Models\\Models.csproj"
+            },
+            "C:\\Users\\Paulyglot\\Desktop\\Portoflio\\BonAppetit\\MicroServices\\BonAppetit.RestaurantServices\\StaticData\\StaticData.csproj": {
+              "projectPath": "C:\\Users\\Paulyglot\\Desktop\\Portoflio\\BonAppetit\\MicroServices\\BonAppetit.RestaurantServices\\StaticData\\StaticData.csproj"
             }
           }
         }

@@ -74,3 +74,5 @@ C:\Users\Paulyglot\Desktop\Portoflio\BonAppetit\MicroServices\BonAppetit.Restaur
 C:\Users\Paulyglot\Desktop\Portoflio\BonAppetit\MicroServices\BonAppetit.RestaurantServices\Configurations\obj\Debug\net6.0\refint\Configurations.dll
 C:\Users\Paulyglot\Desktop\Portoflio\BonAppetit\MicroServices\BonAppetit.RestaurantServices\Configurations\obj\Debug\net6.0\Configurations.pdb
 C:\Users\Paulyglot\Desktop\Portoflio\BonAppetit\MicroServices\BonAppetit.RestaurantServices\Configurations\obj\Debug\net6.0\ref\Configurations.dll
+C:\Users\Paulyglot\Desktop\Portoflio\BonAppetit\MicroServices\BonAppetit.RestaurantServices\Configurations\bin\Debug\net6.0\StaticData.dll
+C:\Users\Paulyglot\Desktop\Portoflio\BonAppetit\MicroServices\BonAppetit.RestaurantServices\Configurations\bin\Debug\net6.0\StaticData.pdb
