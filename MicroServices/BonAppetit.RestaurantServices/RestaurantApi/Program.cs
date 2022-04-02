@@ -1,6 +1,7 @@
 using Configurations.AuthorizationConfigurations;
 using Configurations.AutoMapperConfigurations;
 using Configurations.ConfigurationsHelper;
+using Configurations.CorsConfigurations;
 using Configurations.DataAccessConfigurations;
 using Configurations.JsonConfigurations;
 using Configurations.PolicyAuthorizationConfigurations;
@@ -33,14 +34,13 @@ services.AddServicesConfigurations();
 services.AddPolicyServiceConfiguration();
 //Authentication Configurations
 services.AddAuthenticationConfigurations();
+//Cors Configurations
+services.AddCorsConfiguration();
+//
 
 #endregion
 
-services.AddCors(opt => 
-    opt.AddPolicy("AllowAnonymous", build =>
-        build.AllowAnyHeader()
-            .AllowAnyMethod()
-            .AllowAnyOrigin()));
+
 
 var app = builder.Build();
 
