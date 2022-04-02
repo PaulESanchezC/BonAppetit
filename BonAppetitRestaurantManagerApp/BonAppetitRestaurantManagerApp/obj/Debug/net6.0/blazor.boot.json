@@ -1,14 +1,14 @@
 {
   "cacheBootResources": true,
-  "config": [
-    "appsettings.json"
-  ],
+  "config": [ ],
   "debugBuild": true,
   "entryAssembly": "BonAppetitRestaurantManagerApp",
   "icuDataMode": 0,
   "linkerEnabled": false,
   "resources": {
     "assembly": {
+      "AutoMapper.dll": "sha256-uNYyaL9rpjmA2uF9zP55k5t9afAfIQUk0oArKTAeAS0=",
+      "AutoMapper.Extensions.Microsoft.DependencyInjection.dll": "sha256-o+ciZOc+lg+enKIuHnXAnocXep\/1rkNZ0wj+RhtAqyI=",
       "Blazored.LocalStorage.dll": "sha256-6RRoYeDP3d0xabXmcCMF66wXeJlXVPem28Trs8sQiis=",
       "Microsoft.AspNetCore.Authorization.dll": "sha256-Ha5fdCPDxEzQSfpAqMldZhxAZGSoQpwYh8Onk\/zR2Bc=",
       "Microsoft.AspNetCore.Components.dll": "sha256-4niu36Ua\/a0Tb++kk0BPETzMKL79X97WKKAHwXyA54M=",
@@ -33,6 +33,7 @@
       "Microsoft.Extensions.Primitives.dll": "sha256-jOmoWSfsdQexH\/6QCA56gR1RMEqeix2iDDUBWbpAOQI=",
       "Microsoft.JSInterop.dll": "sha256-5Gw6JvdCXQHIlpy\/MeI8ekhyIJD4ovwAiwXu+AwG6F8=",
       "Microsoft.JSInterop.WebAssembly.dll": "sha256-jjvkA2MkUDycoIIikuTOZFtCe2gJtIJl1sT7Vif+dgM=",
+      "Newtonsoft.Json.dll": "sha256-cs8pHUurDt0IqbB8YXPh560au3q3J\/1wRL9jBddRVmE=",
       "System.IO.Pipelines.dll": "sha256-OXr1SqT\/FRQmnxVa6n811yUyJraU4tzQs5skNCiDmiM=",
       "Microsoft.CSharp.dll": "sha256-bhhqi8sRBx1N8jw2O6V+Z3nkVobmjj2csZa2TXF9pS4=",
       "Microsoft.VisualBasic.Core.dll": "sha256-E7+QttmvONEAnNyUzmOR+lGf6ISeYZNBpRDS3D3ArXI=",
@@ -200,15 +201,21 @@
       "mscorlib.dll": "sha256-tSv6NEbBsHuM5P3AUJGybafS0hxrXlzDmmcyG2eGk3I=",
       "netstandard.dll": "sha256-klcvWVyHimPfDxg6W1A076EKpCB5ySxjtc7sxJEsGgE=",
       "System.Private.CoreLib.dll": "sha256-Y8kdbfPQ0YoYLGbOgzRmoVsnuMYNlA1hvLvDWFTtzrk=",
-      "Models.dll": "sha256-+sZoIc5FE3lNeKDyFJ1Hkb7APbDNpBaejON4SVNVRyY=",
-      "BonAppetitRestaurantManagerApp.dll": "sha256-lyg8RQjvysei4U\/SVhyTDEOK5F+\/+zYw5emnFpOKIME="
+      "Configurations.dll": "sha256-IomF\/sQQqnqkgr7eLgpQYZxbWps3yca\/jmSStnJCVt8=",
+      "Models.dll": "sha256-ixWLqBQSysMpgP+17nZftcxUmb0ZjjjJfFgkQW+Aw\/k=",
+      "Services.dll": "sha256-F9Ai3rUxXFT\/39\/29HRBKdjDOteJLavIi3ZEGVA8xzE=",
+      "StaticData.dll": "sha256-MlS82Wc3DgRLpSllCNMD8vy70hzQYwyWgLKPzX1T90k=",
+      "BonAppetitRestaurantManagerApp.dll": "sha256-Kdz9leY5I2MxFFakzOs+aXCwxaK4G3oS27M8bGAud\/E="
     },
     "extensions": null,
     "lazyAssembly": null,
     "libraryInitializers": null,
     "pdb": {
-      "Models.pdb": "sha256-JisEePeXsFCfSKyV7FRpBVVLEqhg1TRdNpRD7XySWss=",
-      "BonAppetitRestaurantManagerApp.pdb": "sha256-PT9EvD0xee1RTfWiTsaQIunSyRuI0NS4\/firg96rIKo="
+      "Configurations.pdb": "sha256-yEAg9HkMcUASTt2jUHou0BtGP\/PWHC68QjIrixFURg0=",
+      "Models.pdb": "sha256-6T7CEIgX63Q86RdDWPCJ\/Oa2soSAfTjKXgJk1COApxI=",
+      "Services.pdb": "sha256-msWlorSilCRtG11GoMXBmPJi4u1ylTdXMeusHXQUwyA=",
+      "StaticData.pdb": "sha256-vRvpleHY9kEEhuPcBxtItKaQxl8XHZX8JXNXjblsVPM=",
+      "BonAppetitRestaurantManagerApp.pdb": "sha256-dU7yMUEQNNRzzbFm8nJCx665BpW85Yw4dPiaT5UuhoU="
     },
     "runtime": {
       "dotnet.6.0.3.8671elndkn.js": "sha256-pRmcHKZN4T\/YbX9dj6ITT4sNtkJ9w07OLcwl4645nPg=",

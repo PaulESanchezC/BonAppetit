@@ -2,7 +2,7 @@
 
 public class ApiRequest : IApiRequestBase
 {
-    public string RouteName { get; set; }
+    public string ApiUrl { get; set; }
     public HttpMethod HttpMethod { get; set; }
     public object? PostBody { get; set; }
     public List<string> GetQueries { get; set; }

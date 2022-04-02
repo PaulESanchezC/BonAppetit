@@ -1,0 +1,8 @@
+{
+  "BaseUrl": "https://localhost:44310/",
+  "GetAllRestaurants": "api/Restaurant/GetAllRestaurants",
+  "GetSingleRestaurantById": "api/Restaurant/GetSingleRestaurantById/{0}",
+  "CreateSingleRestaurant": "api/Restaurant/CreateSingleRestaurant",
+  "UpdateSingleRestaurant": "api/Restaurant/UpdateSingleRestaurant",
+  "DeleteSingleRestaurant": "api/Restaurant/DeleteSingleRestaurant/{0}"
+}

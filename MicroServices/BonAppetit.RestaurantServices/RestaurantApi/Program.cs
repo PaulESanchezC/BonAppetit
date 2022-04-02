@@ -36,6 +36,12 @@ services.AddAuthenticationConfigurations();
 
 #endregion
 
+services.AddCors(opt => 
+    opt.AddPolicy("AllowAnonymous", build =>
+        build.AllowAnyHeader()
+            .AllowAnyMethod()
+            .AllowAnyOrigin()));
+
 var app = builder.Build();
 
 #region Http Pipeline
@@ -46,7 +52,12 @@ app.UseSwagger();
 app.UseSwaggerUI();
 
 app.UseHttpsRedirection();
-
+app.UseCors(options =>
+{
+    options.AllowAnyHeader();
+    options.AllowAnyMethod();
+    options.AllowAnyOrigin();
+});
 app.UseAuthentication();
 app.UseAuthorization();
 app.MapControllers();

@@ -2,7 +2,7 @@
 
 public interface IApiRequestBase
 {
-    string RouteName { get; set; }
+    string ApiUrl { get; set; }
     HttpMethod HttpMethod { get; set; }
     object? PostBody { get; set; }
     List<string> GetQueries { get; set; }

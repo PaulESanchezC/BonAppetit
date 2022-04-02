@@ -1,20 +1,39 @@
-﻿using System.Net.Http.Json;
+﻿using System.Net.Http.Headers;
+using Blazored.LocalStorage;
 using Models.ResponseModels;
 using Models.RestaurantModels;
-using Services.ApiRouteProvider;
-using Services.HttpClientServices;
+using Newtonsoft.Json;
+using StaticData;
 
 namespace Services.RestaurantServices;
 
-public class RestaurantService : HttpClientService<Restaurant>, IRestaurantService
+public class RestaurantService : IRestaurantService
 {
-    public RestaurantService(HttpClient httpClient) : base(httpClient) { }
-    
+    private readonly ILocalStorageService _localStorage;
+    private readonly HttpClient _httpClient;
+
+    public RestaurantService(ILocalStorageService localStorage, HttpClient httpClient)
+    {
+        _localStorage = localStorage;
+        _httpClient = httpClient;
+    }
+
     #region IRestaurantService
 
-    public async Task<Response<Restaurant>> GetRestaurantByIdAsync(string restaurantId)
+    public async Task<Response<Restaurant>?> GetRestaurantByIdAsync(string restaurantId)
     {
-        throw new NotImplementedException();
+        var route = "https://localhost:44310/api/Restaurant/GetSingleRestaurantById/{0}";
+        route = string.Format(route, restaurantId);
+        var request = new HttpRequestMessage(HttpMethod.Get, route);
+
+        var jwtToken = await _localStorage.GetItemAsync<string>(LocalStorage.JwtToken);
+        if (jwtToken is not null)
+            request.Headers.Authorization = new AuthenticationHeaderValue(JwtBearerOptions.AuthenticationScheme, jwtToken);
+
+        var responseMessage = await _httpClient.SendAsync(request);
+        var responseString = await responseMessage.Content.ReadAsStringAsync();
+        var response = JsonConvert.DeserializeObject<Response<Restaurant>>(responseString);
+        return response;
     }
 
     public async Task<Response<Restaurant>> CreateSingleRestaurant(RestaurantCreateVm restaurantToCreate)
@@ -33,6 +52,4 @@ public class RestaurantService : HttpClientService<Restaurant>, IRestaurantServi
     }
 
     #endregion
-
-    
 }
