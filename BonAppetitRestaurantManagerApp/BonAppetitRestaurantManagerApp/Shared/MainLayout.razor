@@ -3,7 +3,11 @@
 
 <NavMenu />
 <main>
-    <div class="page">
-        @Body
-    </div>
+    <AuthorizeView>
+        <Authorized>
+            <div class="page">
+                @Body
+            </div>
+        </Authorized>
+    </AuthorizeView>
 </main>
