@@ -5,12 +5,12 @@
     <AuthorizeView>
         <Authorized>
             <button @onclick="Logout">Logout</button>
+            <div class="page">
+                @Body
+            </div>
         </Authorized>
         <NotAuthorized>
-            <NavLink href="/Authentication/login">Login!</NavLink> 
-        </NotAuthorized>
+            <NavLink href="https://localhost:44352/Account/Login" target="_blank">Login!</NavLink>
+            </NotAuthorized>
     </AuthorizeView>
-    <div class="page">
-        @Body
-    </div>
 </main>

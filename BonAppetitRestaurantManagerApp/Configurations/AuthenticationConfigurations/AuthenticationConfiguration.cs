@@ -9,7 +9,7 @@ public static class AuthenticationConfiguration
         services.AddOidcAuthentication(options =>
         {
             options.ProviderOptions.Authority = "https://localhost:44352/";
-            options.ProviderOptions.ClientId = "747b58cac0f7";
+            options.ProviderOptions.ClientId = "c5d220ab-8dfd-49d6-bbc9-66015eda915c";
             options.ProviderOptions.ResponseType = "code";
             options.ProviderOptions.DefaultScopes.Add("profile");
             options.ProviderOptions.DefaultScopes.Add("email");

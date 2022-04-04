@@ -16,7 +16,8 @@ public class RestaurantController : ControllerBase
     {
         _restaurantService = restaurantService;
     }
-    [AllowAnonymous]
+
+
     [HttpGet("GetAllRestaurants")]
     public async Task<IActionResult> GetAllRestaurants(CancellationToken cancellationToken)
     {
@@ -28,7 +29,6 @@ public class RestaurantController : ControllerBase
         return StatusCode(request.StatusCode, request);
     }
 
-    [AllowAnonymous]
     [HttpGet("GetSingleRestaurantById/{restaurantId}")]
     public async Task<IActionResult> GetSingleRestaurant(string restaurantId, CancellationToken cancellationToken)
     {

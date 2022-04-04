@@ -7,30 +7,12 @@ namespace Configurations.IdentityConfigurations.DuendeAuthenticationData;
 
 public class AuthenticationClients
 {
-    private static string ClientSecret { get; set; } = ProxyConfiguration.Use.GetSection("Clients").GetSection("RestaurantService")
+    private static string ClientSecret { get; set; } = ProxyConfiguration.Use.GetSection("Clients").GetSection("RestaurantManager")
         .GetValue<string>("ClientId");
     public static IEnumerable<Client> Clients =>
         new List<Client>
         {
-            new()
-            {
-                ClientName = ProxyConfiguration.Use.GetSection("Clients").GetSection("RestaurantService").GetValue<string>("ClientName"),
-                ClientId = ProxyConfiguration.Use.GetSection("Clients").GetSection("RestaurantService").GetValue<string>("ClientId"),
-                ClientSecrets = {new Secret(ClientSecret.Sha256()) },
-                AllowedGrantTypes = GrantTypes.Code,
-                RedirectUris = { ProxyConfiguration.Use.GetSection("Clients").GetSection("RestaurantService").GetValue<string>("RedirectUris"), },
-                PostLogoutRedirectUris = { ProxyConfiguration.Use.GetSection("Clients").GetSection("RestaurantService").GetValue<string>("PostLogoutRedirectUris"), },
-                AllowedScopes = new List<string>
-                {
-                    IdentityServerConstants.StandardScopes.Profile,
-                    IdentityServerConstants.StandardScopes.Email,
-                    IdentityServerConstants.StandardScopes.OpenId,
-                    IdentityServerConstants.StandardScopes.Phone,
-                    Scopes.bonAppetit
-                }
-
-            },
-            new()
+           new()
             {
                 ClientName = ProxyConfiguration.Use.GetSection("Clients").GetSection("RestaurantManager").GetValue<string>("ClientName"),
                 ClientId = ProxyConfiguration.Use.GetSection("Clients").GetSection("RestaurantManager").GetValue<string>("ClientId"),
@@ -40,9 +22,9 @@ public class AuthenticationClients
                 PostLogoutRedirectUris = { ProxyConfiguration.Use.GetSection("Clients").GetSection("RestaurantManager").GetValue<string>("PostLogoutRedirectUris"), },
                 AllowedScopes = new List<string>
                 {
+                    IdentityServerConstants.StandardScopes.OpenId,
                     IdentityServerConstants.StandardScopes.Profile,
                     IdentityServerConstants.StandardScopes.Email,
-                    IdentityServerConstants.StandardScopes.OpenId,
                     IdentityServerConstants.StandardScopes.Phone,
                     Scopes.bonAppetit
                 }

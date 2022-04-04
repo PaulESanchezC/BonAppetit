@@ -14,6 +14,8 @@ ProxyConfiguration.Initialize(builder.Configuration);
 services.AddDbContextOptions();
 //Identity Configurations
 services.AddIdentityConfigurationOptions();
+//Razor pages
+services.AddRazorPages();
 
 #endregion
 
