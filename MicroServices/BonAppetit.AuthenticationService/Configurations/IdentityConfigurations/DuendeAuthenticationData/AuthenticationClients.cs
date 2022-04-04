@@ -29,6 +29,23 @@ public class AuthenticationClients
                     Scopes.bonAppetit
                 }
 
+            },
+            new()
+            {
+                ClientName = ProxyConfiguration.Use.GetSection("Clients").GetSection("RestaurantManager").GetValue<string>("ClientName"),
+                ClientId = ProxyConfiguration.Use.GetSection("Clients").GetSection("RestaurantManager").GetValue<string>("ClientId"),
+                ClientSecrets = {new Secret(ClientSecret.Sha256()) },
+                AllowedGrantTypes = GrantTypes.Code,
+                RedirectUris = { ProxyConfiguration.Use.GetSection("Clients").GetSection("RestaurantManager").GetValue<string>("RedirectUris"), },
+                PostLogoutRedirectUris = { ProxyConfiguration.Use.GetSection("Clients").GetSection("RestaurantManager").GetValue<string>("PostLogoutRedirectUris"), },
+                AllowedScopes = new List<string>
+                {
+                    IdentityServerConstants.StandardScopes.Profile,
+                    IdentityServerConstants.StandardScopes.Email,
+                    IdentityServerConstants.StandardScopes.OpenId,
+                    IdentityServerConstants.StandardScopes.Phone,
+                    Scopes.bonAppetit
+                }
             }
         };
 }

@@ -1,13 +1,16 @@
 ﻿@inherits LayoutComponentBase
 
-
 <NavMenu />
 <main>
     <AuthorizeView>
         <Authorized>
-            <div class="page">
-                @Body
-            </div>
+            <button @onclick="Logout">Logout</button>
         </Authorized>
+        <NotAuthorized>
+            <NavLink href="/Authentication/login">Login!</NavLink> 
+        </NotAuthorized>
     </AuthorizeView>
+    <div class="page">
+        @Body
+    </div>
 </main>
