@@ -41,6 +41,11 @@ app.UseRouting();
 app.UseIdentityServer();
 app.UseAuthorization();
 app.MapRazorPages();
+
+app.MapControllers()
+    .RequireAuthorization()
+    .AsBffApiEndpoint();
+
 #endregion
 
 app.Run();
