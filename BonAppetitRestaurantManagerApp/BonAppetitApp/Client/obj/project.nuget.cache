@@ -1,15 +1,17 @@
 {
   "version": 2,
-  "dgSpecHash": "STntrngYlae3172uMUSmt6TODnh5R4kpVr7jTQ2AMm9vsZZG8QcS+01TujqdIRQVxDM2MoMuHx9B3g5EjqRqMA==",
+  "dgSpecHash": "qUNBwlgcZJzr5kksXE25Mur3JfpEeUyUmnvrY2i/sgp0Yu6AR130XmbkkGiBLZuWJVbdCOfkxUPkvLGUe7d3gA==",
   "success": true,
   "projectFilePath": "C:\\Users\\Paulyglot\\Desktop\\Portoflio\\BonAppetit\\BonAppetitRestaurantManagerApp\\BonAppetitApp\\Client\\BonAppetitApp.Client.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Paulyglot\\.nuget\\packages\\microsoft.aspnetcore.authorization\\6.0.3\\microsoft.aspnetcore.authorization.6.0.3.nupkg.sha512",
     "C:\\Users\\Paulyglot\\.nuget\\packages\\microsoft.aspnetcore.components\\6.0.3\\microsoft.aspnetcore.components.6.0.3.nupkg.sha512",
     "C:\\Users\\Paulyglot\\.nuget\\packages\\microsoft.aspnetcore.components.analyzers\\6.0.3\\microsoft.aspnetcore.components.analyzers.6.0.3.nupkg.sha512",
+    "C:\\Users\\Paulyglot\\.nuget\\packages\\microsoft.aspnetcore.components.authorization\\6.0.0\\microsoft.aspnetcore.components.authorization.6.0.0.nupkg.sha512",
     "C:\\Users\\Paulyglot\\.nuget\\packages\\microsoft.aspnetcore.components.forms\\6.0.3\\microsoft.aspnetcore.components.forms.6.0.3.nupkg.sha512",
     "C:\\Users\\Paulyglot\\.nuget\\packages\\microsoft.aspnetcore.components.web\\6.0.3\\microsoft.aspnetcore.components.web.6.0.3.nupkg.sha512",
     "C:\\Users\\Paulyglot\\.nuget\\packages\\microsoft.aspnetcore.components.webassembly\\6.0.3\\microsoft.aspnetcore.components.webassembly.6.0.3.nupkg.sha512",
+    "C:\\Users\\Paulyglot\\.nuget\\packages\\microsoft.aspnetcore.components.webassembly.authentication\\6.0.0\\microsoft.aspnetcore.components.webassembly.authentication.6.0.0.nupkg.sha512",
     "C:\\Users\\Paulyglot\\.nuget\\packages\\microsoft.aspnetcore.components.webassembly.devserver\\6.0.3\\microsoft.aspnetcore.components.webassembly.devserver.6.0.3.nupkg.sha512",
     "C:\\Users\\Paulyglot\\.nuget\\packages\\microsoft.aspnetcore.metadata\\6.0.3\\microsoft.aspnetcore.metadata.6.0.3.nupkg.sha512",
     "C:\\Users\\Paulyglot\\.nuget\\packages\\microsoft.extensions.configuration\\6.0.0\\microsoft.extensions.configuration.6.0.0.nupkg.sha512",

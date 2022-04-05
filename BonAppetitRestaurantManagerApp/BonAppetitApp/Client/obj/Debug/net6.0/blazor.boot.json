@@ -9,9 +9,11 @@
     "assembly": {
       "Microsoft.AspNetCore.Authorization.dll": "sha256-Ha5fdCPDxEzQSfpAqMldZhxAZGSoQpwYh8Onk\/zR2Bc=",
       "Microsoft.AspNetCore.Components.dll": "sha256-4niu36Ua\/a0Tb++kk0BPETzMKL79X97WKKAHwXyA54M=",
+      "Microsoft.AspNetCore.Components.Authorization.dll": "sha256-xbEcMmsZVcvk5fX+1SeXPguS4wF3qoU0hqW3MlQa6O0=",
       "Microsoft.AspNetCore.Components.Forms.dll": "sha256-1PZMkDLrAl6RLFr\/EMxNeUbUlRv3yJgimVzqANb9PMU=",
       "Microsoft.AspNetCore.Components.Web.dll": "sha256-hkBwjTfIX83yKHGloNqJk4dwTFk3VWKGdA5OtOyERqM=",
       "Microsoft.AspNetCore.Components.WebAssembly.dll": "sha256-XwPAlBNXw8oEUY4SlFxHYJVJEQWyCNt9P2vWVP\/DuiU=",
+      "Microsoft.AspNetCore.Components.WebAssembly.Authentication.dll": "sha256-RW+xmniLxj\/WJzMgJkrEx0PPE8Mfx8uaUUOxRee8UkQ=",
       "Microsoft.AspNetCore.Metadata.dll": "sha256-Jq8wtjEX7PqZ9ANb4u0dR0yU0Oz8dC1tYaXemaoDdoQ=",
       "Microsoft.Extensions.Configuration.dll": "sha256-c8yYhfrOBLEnOBglLTu9peXSbJDwFpuT4UQiXSv28Og=",
       "Microsoft.Extensions.Configuration.Abstractions.dll": "sha256-5Otet+KKVUjNkE\/hqcNWmt75H1K2VNuKPFagpRd6Ces=",
@@ -197,14 +199,14 @@
       "netstandard.dll": "sha256-klcvWVyHimPfDxg6W1A076EKpCB5ySxjtc7sxJEsGgE=",
       "System.Private.CoreLib.dll": "sha256-Y8kdbfPQ0YoYLGbOgzRmoVsnuMYNlA1hvLvDWFTtzrk=",
       "BonAppetitApp.Shared.dll": "sha256-0afsQ14sW3NaHIVBwJXFQCEikmhI5ItpV6wQwUdEFN8=",
-      "BonAppetitApp.Client.dll": "sha256-SSDjUFOEzZYo6VzuzyX4od3Nij2+dUYb41Nji1OCF7A="
+      "BonAppetitApp.Client.dll": "sha256-tVz7C8YOfHwhWukcQsasIvQS3y\/V3fHPglaYjAEj4+Y="
     },
     "extensions": null,
     "lazyAssembly": null,
     "libraryInitializers": null,
     "pdb": {
       "BonAppetitApp.Shared.pdb": "sha256-pFOo+CGBG\/k5M++vJ1rxeARNUt0WDVB8vV0MQ0kzZ8I=",
-      "BonAppetitApp.Client.pdb": "sha256-bWt1YWdHJGfVjIY57J8+n+\/6WNP\/cZ3LBuSAgaU6rxo="
+      "BonAppetitApp.Client.pdb": "sha256-GDP3XUeh61wiBRg+CrJ+wBokrbTeX09GopvUMnxZNqU="
     },
     "runtime": {
       "dotnet.6.0.3.8671elndkn.js": "sha256-pRmcHKZN4T\/YbX9dj6ITT4sNtkJ9w07OLcwl4645nPg=",

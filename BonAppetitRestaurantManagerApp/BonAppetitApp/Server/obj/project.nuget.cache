@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "4kIJ7QpKF84IUZDmjhk1vP4WY1JtTuMSara8yJ5FOp2AR2HWgI1TfplDArSJJKJUz+fkYEg9+F0TN2HuNWpfGQ==",
+  "dgSpecHash": "q10BllnsR1INzYOCnCpJDVQss6eA8YG/uuX10Q94+FgknAhTSFw83XOv1eH8RYbm8ZYsvl3gvibJx0kf3JgSmg==",
   "success": true,
   "projectFilePath": "C:\\Users\\Paulyglot\\Desktop\\Portoflio\\BonAppetit\\BonAppetitRestaurantManagerApp\\BonAppetitApp\\Server\\BonAppetitApp.Server.csproj",
   "expectedPackageFiles": [
@@ -11,9 +11,11 @@
     "C:\\Users\\Paulyglot\\.nuget\\packages\\microsoft.aspnetcore.authorization\\6.0.3\\microsoft.aspnetcore.authorization.6.0.3.nupkg.sha512",
     "C:\\Users\\Paulyglot\\.nuget\\packages\\microsoft.aspnetcore.components\\6.0.3\\microsoft.aspnetcore.components.6.0.3.nupkg.sha512",
     "C:\\Users\\Paulyglot\\.nuget\\packages\\microsoft.aspnetcore.components.analyzers\\6.0.3\\microsoft.aspnetcore.components.analyzers.6.0.3.nupkg.sha512",
+    "C:\\Users\\Paulyglot\\.nuget\\packages\\microsoft.aspnetcore.components.authorization\\6.0.0\\microsoft.aspnetcore.components.authorization.6.0.0.nupkg.sha512",
     "C:\\Users\\Paulyglot\\.nuget\\packages\\microsoft.aspnetcore.components.forms\\6.0.3\\microsoft.aspnetcore.components.forms.6.0.3.nupkg.sha512",
     "C:\\Users\\Paulyglot\\.nuget\\packages\\microsoft.aspnetcore.components.web\\6.0.3\\microsoft.aspnetcore.components.web.6.0.3.nupkg.sha512",
     "C:\\Users\\Paulyglot\\.nuget\\packages\\microsoft.aspnetcore.components.webassembly\\6.0.3\\microsoft.aspnetcore.components.webassembly.6.0.3.nupkg.sha512",
+    "C:\\Users\\Paulyglot\\.nuget\\packages\\microsoft.aspnetcore.components.webassembly.authentication\\6.0.0\\microsoft.aspnetcore.components.webassembly.authentication.6.0.0.nupkg.sha512",
     "C:\\Users\\Paulyglot\\.nuget\\packages\\microsoft.aspnetcore.components.webassembly.server\\6.0.3\\microsoft.aspnetcore.components.webassembly.server.6.0.3.nupkg.sha512",
     "C:\\Users\\Paulyglot\\.nuget\\packages\\microsoft.aspnetcore.metadata\\6.0.3\\microsoft.aspnetcore.metadata.6.0.3.nupkg.sha512",
     "C:\\Users\\Paulyglot\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",

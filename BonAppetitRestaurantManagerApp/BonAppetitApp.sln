@@ -5,8 +5,6 @@ VisualStudioVersion = 17.1.32319.34
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BonAppetitRestaurantManagerApp", "BonAppetitRestaurantManagerApp\BonAppetitRestaurantManagerApp.csproj", "{7707C44C-D13B-44D2-B94F-3844EA02AB16}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Configurations", "Configurations\Configurations.csproj", "{2D0B51F5-0DD0-47B1-B855-7DCC806D3630}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BonAppetitApp.Server", "BonAppetitApp\Server\BonAppetitApp.Server.csproj", "{8D564E8C-7096-4E1C-8FCE-AFCB4E60874F}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BonAppetitApp.Client", "BonAppetitApp\Client\BonAppetitApp.Client.csproj", "{C4BB6045-0402-498E-97A9-A5BFDC97606C}"
@@ -14,6 +12,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BonAppetitApp.Shared", "BonAppetitApp\Shared\BonAppetitApp.Shared.csproj", "{7F622196-A06B-488D-982A-42B52D23C1FF}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServerConfigurations", "ServerConfigurations\ServerConfigurations.csproj", "{BCACB9E7-503F-451B-A64F-041AFA6A2D85}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClientConfigurations", "ClientConfigurations\ClientConfigurations.csproj", "{AB799922-7F94-4BE6-BF69-3D69AB0D0ECF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -25,10 +25,6 @@ Global
 		{7707C44C-D13B-44D2-B94F-3844EA02AB16}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7707C44C-D13B-44D2-B94F-3844EA02AB16}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7707C44C-D13B-44D2-B94F-3844EA02AB16}.Release|Any CPU.Build.0 = Release|Any CPU
-		{2D0B51F5-0DD0-47B1-B855-7DCC806D3630}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{2D0B51F5-0DD0-47B1-B855-7DCC806D3630}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{2D0B51F5-0DD0-47B1-B855-7DCC806D3630}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{2D0B51F5-0DD0-47B1-B855-7DCC806D3630}.Release|Any CPU.Build.0 = Release|Any CPU
 		{8D564E8C-7096-4E1C-8FCE-AFCB4E60874F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{8D564E8C-7096-4E1C-8FCE-AFCB4E60874F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8D564E8C-7096-4E1C-8FCE-AFCB4E60874F}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -45,6 +41,10 @@ Global
 		{BCACB9E7-503F-451B-A64F-041AFA6A2D85}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BCACB9E7-503F-451B-A64F-041AFA6A2D85}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BCACB9E7-503F-451B-A64F-041AFA6A2D85}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AB799922-7F94-4BE6-BF69-3D69AB0D0ECF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AB799922-7F94-4BE6-BF69-3D69AB0D0ECF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AB799922-7F94-4BE6-BF69-3D69AB0D0ECF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AB799922-7F94-4BE6-BF69-3D69AB0D0ECF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

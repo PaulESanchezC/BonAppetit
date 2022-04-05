@@ -87,6 +87,12 @@
         }
       },
       "Microsoft.AspNetCore.Components.Analyzers/6.0.3": {},
+      "Microsoft.AspNetCore.Components.Authorization/6.0.0": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Authorization": "6.0.3",
+          "Microsoft.AspNetCore.Components": "6.0.3"
+        }
+      },
       "Microsoft.AspNetCore.Components.Forms/6.0.3": {
         "dependencies": {
           "Microsoft.AspNetCore.Components": "6.0.3"
@@ -125,6 +131,18 @@
           "lib/net6.0/Microsoft.AspNetCore.Components.WebAssembly.dll": {
             "assemblyVersion": "6.0.3.0",
             "fileVersion": "6.0.322.12401"
+          }
+        }
+      },
+      "Microsoft.AspNetCore.Components.WebAssembly.Authentication/6.0.0": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Components.Authorization": "6.0.0",
+          "Microsoft.AspNetCore.Components.Web": "6.0.3"
+        },
+        "runtime": {
+          "lib/net6.0/Microsoft.AspNetCore.Components.WebAssembly.Authentication.dll": {
+            "assemblyVersion": "6.0.0.0",
+            "fileVersion": "6.0.21.52608"
           }
         }
       },
@@ -343,7 +361,8 @@
       "BonAppetitApp.Client/1.0.0": {
         "dependencies": {
           "BonAppetitApp.Shared": "1.0.0",
-          "Microsoft.AspNetCore.Components.WebAssembly": "6.0.3"
+          "Microsoft.AspNetCore.Components.WebAssembly": "6.0.3",
+          "Microsoft.AspNetCore.Components.WebAssembly.Authentication": "6.0.0"
         },
         "runtime": {
           "BonAppetitApp.Client.dll": {}
@@ -421,6 +440,13 @@
       "path": "microsoft.aspnetcore.components.analyzers/6.0.3",
       "hashPath": "microsoft.aspnetcore.components.analyzers.6.0.3.nupkg.sha512"
     },
+    "Microsoft.AspNetCore.Components.Authorization/6.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-AdrLj0S71GgcGUm7MMzwjzpkmAO044nFhzmvT+x/acB0HNyolWo6jMZBXxEm93iQDSeFlfRQGsw+bD+6mdMhYg==",
+      "path": "microsoft.aspnetcore.components.authorization/6.0.0",
+      "hashPath": "microsoft.aspnetcore.components.authorization.6.0.0.nupkg.sha512"
+    },
     "Microsoft.AspNetCore.Components.Forms/6.0.3": {
       "type": "package",
       "serviceable": true,
@@ -441,6 +467,13 @@
       "sha512": "sha512-wq1g0bU6UrxGDWpwlduM42eEtGN5CspmoFEVZciVN53aon+kG8r0mV57Gn0TFuHdqzXa1qdj26pBRbWb0Mgn2A==",
       "path": "microsoft.aspnetcore.components.webassembly/6.0.3",
       "hashPath": "microsoft.aspnetcore.components.webassembly.6.0.3.nupkg.sha512"
+    },
+    "Microsoft.AspNetCore.Components.WebAssembly.Authentication/6.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-S0Asj9Bdj5bqmmX8nR8wGzVNJo8UiKLKkg7UJm58BUOMCXKcL0rvU8lYcX1sB/wxyZ2f7Y+YznLTCQ0doMkZmg==",
+      "path": "microsoft.aspnetcore.components.webassembly.authentication/6.0.0",
+      "hashPath": "microsoft.aspnetcore.components.webassembly.authentication.6.0.0.nupkg.sha512"
     },
     "Microsoft.AspNetCore.Components.WebAssembly.Server/6.0.3": {
       "type": "package",
