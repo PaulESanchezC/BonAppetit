@@ -7,6 +7,7 @@
   "linkerEnabled": false,
   "resources": {
     "assembly": {
+      "Blazored.LocalStorage.dll": "sha256-6RRoYeDP3d0xabXmcCMF66wXeJlXVPem28Trs8sQiis=",
       "Microsoft.AspNetCore.Authorization.dll": "sha256-Ha5fdCPDxEzQSfpAqMldZhxAZGSoQpwYh8Onk\/zR2Bc=",
       "Microsoft.AspNetCore.Components.dll": "sha256-4niu36Ua\/a0Tb++kk0BPETzMKL79X97WKKAHwXyA54M=",
       "Microsoft.AspNetCore.Components.Authorization.dll": "sha256-xbEcMmsZVcvk5fX+1SeXPguS4wF3qoU0hqW3MlQa6O0=",
@@ -25,6 +26,7 @@
       "Microsoft.Extensions.FileProviders.Abstractions.dll": "sha256-7PzvEcQvpK1c8tTX9VPI8AF+XrekqbAytNBQXJjvTvQ=",
       "Microsoft.Extensions.FileProviders.Physical.dll": "sha256-sXujvGMZDgBBZ9HqfcEq9XsM0pvwyhPt60NA9qLDzGI=",
       "Microsoft.Extensions.FileSystemGlobbing.dll": "sha256-viiXOG0fwhWobT0TQ1ZOJiZBdRvYRlWbDtjz+6d8sQI=",
+      "Microsoft.Extensions.Http.dll": "sha256-K5\/O91dt69IHKav69ftn+7DKPmnzkipTvwM4Sd4Zres=",
       "Microsoft.Extensions.Logging.dll": "sha256-GDZQCBtVHfrZZ6fL95lGoinLeUWLjQShLbfESwO7mrc=",
       "Microsoft.Extensions.Logging.Abstractions.dll": "sha256-w+c+xfLh8QIAwluhugyPc8sPvAmmIC\/UTxnugT7Oido=",
       "Microsoft.Extensions.Options.dll": "sha256-eGESyy9mRu8RcCGajAu4E8nxSmeB5nxiZkFPVaZ5Vl0=",
@@ -199,14 +201,16 @@
       "netstandard.dll": "sha256-klcvWVyHimPfDxg6W1A076EKpCB5ySxjtc7sxJEsGgE=",
       "System.Private.CoreLib.dll": "sha256-Y8kdbfPQ0YoYLGbOgzRmoVsnuMYNlA1hvLvDWFTtzrk=",
       "BonAppetitApp.Shared.dll": "sha256-0afsQ14sW3NaHIVBwJXFQCEikmhI5ItpV6wQwUdEFN8=",
-      "BonAppetitApp.Client.dll": "sha256-FZ0JaUn1IbBGbud4b12Wz8FkaOiYEQ00DF91B3WKyaI="
+      "ClientConfigurations.dll": "sha256-9107BSxOk7aA+H7VDTS3do1\/4RwHU1bNRrt2gT3\/KJY=",
+      "BonAppetitApp.Client.dll": "sha256-oMt6rhFIP2fi5Ii9FZVbu5SqcHkqYNVYs1TMzvx\/xx4="
     },
     "extensions": null,
     "lazyAssembly": null,
     "libraryInitializers": null,
     "pdb": {
+      "ClientConfigurations.pdb": "sha256-oQtUYmONKal2zvl6uZmRAtDrq3YLOTVuif8TfNB01Xg=",
       "BonAppetitApp.Shared.pdb": "sha256-pFOo+CGBG\/k5M++vJ1rxeARNUt0WDVB8vV0MQ0kzZ8I=",
-      "BonAppetitApp.Client.pdb": "sha256-SUguT4zi2PkCuJifob\/brwxn+uVRL8nfeRbx7UgqN74="
+      "BonAppetitApp.Client.pdb": "sha256-1ASjBg1ZtXcBGA150Ft+nviK8dJu1YsqEDUtjISWLME="
     },
     "runtime": {
       "dotnet.6.0.3.8671elndkn.js": "sha256-pRmcHKZN4T\/YbX9dj6ITT4sNtkJ9w07OLcwl4645nPg=",

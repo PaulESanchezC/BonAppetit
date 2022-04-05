@@ -58,3 +58,6 @@ C:\Users\Paulyglot\Desktop\Portoflio\BonAppetit\BonAppetitRestaurantManagerApp\B
 C:\Users\Paulyglot\Desktop\Portoflio\BonAppetit\BonAppetitRestaurantManagerApp\BonAppetitApp\Server\obj\Debug\net6.0\BonAppetitApp.Server.genruntimeconfig.cache
 C:\Users\Paulyglot\Desktop\Portoflio\BonAppetit\BonAppetitRestaurantManagerApp\BonAppetitApp\Server\obj\Debug\net6.0\ref\BonAppetitApp.Server.dll
 C:\Users\Paulyglot\Desktop\Portoflio\BonAppetit\BonAppetitRestaurantManagerApp\BonAppetitApp\Server\bin\Debug\net6.0\Microsoft.AspNetCore.Components.WebAssembly.Authentication.dll
+C:\Users\Paulyglot\Desktop\Portoflio\BonAppetit\BonAppetitRestaurantManagerApp\BonAppetitApp\Server\bin\Debug\net6.0\ClientConfigurations.dll
+C:\Users\Paulyglot\Desktop\Portoflio\BonAppetit\BonAppetitRestaurantManagerApp\BonAppetitApp\Server\bin\Debug\net6.0\ClientConfigurations.pdb
+C:\Users\Paulyglot\Desktop\Portoflio\BonAppetit\BonAppetitRestaurantManagerApp\BonAppetitApp\Server\bin\Debug\net6.0\Blazored.LocalStorage.dll
