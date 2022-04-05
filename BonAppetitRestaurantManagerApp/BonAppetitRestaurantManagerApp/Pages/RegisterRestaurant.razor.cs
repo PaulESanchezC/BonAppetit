@@ -13,5 +13,4 @@ public partial class RegisterRestaurant
     {
         //Service call to restaurant service!
     }
-
 }

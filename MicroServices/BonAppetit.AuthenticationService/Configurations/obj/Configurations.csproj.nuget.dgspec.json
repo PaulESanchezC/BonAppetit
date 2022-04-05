@@ -47,6 +47,10 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "Duende.BFF": {
+              "target": "Package",
+              "version": "[1.1.0, )"
+            },
             "Duende.IdentityServer": {
               "target": "Package",
               "version": "[6.0.4, )"
@@ -54,6 +58,10 @@
             "Duende.IdentityServer.AspNetIdentity": {
               "target": "Package",
               "version": "[6.0.4, )"
+            },
+            "Microsoft.AspNetCore.Authentication.OpenIdConnect": {
+              "target": "Package",
+              "version": "[6.0.0, )"
             },
             "Microsoft.AspNetCore.Identity": {
               "target": "Package",

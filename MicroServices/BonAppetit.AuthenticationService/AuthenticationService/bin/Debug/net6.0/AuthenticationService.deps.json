@@ -20,6 +20,17 @@
           "AuthenticationService.dll": {}
         }
       },
+      "Duende.BFF/1.1.0": {
+        "dependencies": {
+          "IdentityModel.AspNetCore": "4.1.2"
+        },
+        "runtime": {
+          "lib/net6.0/Duende.BFF.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.1.0.0"
+          }
+        }
+      },
       "Duende.IdentityServer/6.0.4": {
         "dependencies": {
           "Duende.IdentityServer.Storage": "6.0.4",
@@ -68,6 +79,18 @@
           "lib/net6.0/IdentityModel.dll": {
             "assemblyVersion": "6.0.0.0",
             "fileVersion": "6.0.0.0"
+          }
+        }
+      },
+      "IdentityModel.AspNetCore/4.1.2": {
+        "dependencies": {
+          "IdentityModel": "6.0.0",
+          "Microsoft.AspNetCore.Authentication.OpenIdConnect": "6.0.0"
+        },
+        "runtime": {
+          "lib/net6.0/IdentityModel.AspNetCore.dll": {
+            "assemblyVersion": "4.0.0.0",
+            "fileVersion": "4.1.2.0"
           }
         }
       },
@@ -713,8 +736,10 @@
       "Configurations/1.0.0": {
         "dependencies": {
           "Data": "1.0.0",
+          "Duende.BFF": "1.1.0",
           "Duende.IdentityServer": "6.0.4",
           "Duende.IdentityServer.AspNetIdentity": "6.0.4",
+          "Microsoft.AspNetCore.Authentication.OpenIdConnect": "6.0.0",
           "Microsoft.AspNetCore.Identity": "2.2.0",
           "Microsoft.AspNetCore.Identity.UI": "6.0.3",
           "Microsoft.EntityFrameworkCore.SqlServer": "6.0.3",
@@ -762,6 +787,13 @@
       "serviceable": false,
       "sha512": ""
     },
+    "Duende.BFF/1.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-lPfzjQ12HA2nrdCf2f5UBhsANA8Xmz9ASg+tEkV6nfRwdbwqoKAb3HMI6s4bGOO4si2T//yu5+jtChgNyZ8woQ==",
+      "path": "duende.bff/1.1.0",
+      "hashPath": "duende.bff.1.1.0.nupkg.sha512"
+    },
     "Duende.IdentityServer/6.0.4": {
       "type": "package",
       "serviceable": true,
@@ -796,6 +828,13 @@
       "sha512": "sha512-eVHCR7a6m/dm5RFcBzE3qs/Jg5j9R5Rjpu8aTOv9e4AFvaQtBXb5ah7kmwU+YwA0ufRwz4wf1hnIvsD2hSnI4g==",
       "path": "identitymodel/6.0.0",
       "hashPath": "identitymodel.6.0.0.nupkg.sha512"
+    },
+    "IdentityModel.AspNetCore/4.1.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-o3L11ZWaQ13240aLzTy618kYneXpQ0vSV2+f7sj9BH4oe46Zl8WIZGpHwDC7g7X0GlqpYbH0e4QmhdUk3MD0nA==",
+      "path": "identitymodel.aspnetcore/4.1.2",
+      "hashPath": "identitymodel.aspnetcore.4.1.2.nupkg.sha512"
     },
     "Microsoft.AspNetCore.Authentication/2.2.0": {
       "type": "package",

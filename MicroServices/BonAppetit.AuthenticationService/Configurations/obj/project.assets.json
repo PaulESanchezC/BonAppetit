@@ -2,6 +2,21 @@
   "version": 3,
   "targets": {
     "net6.0": {
+      "Duende.BFF/1.1.0": {
+        "type": "package",
+        "dependencies": {
+          "IdentityModel.AspNetCore": "4.1.2"
+        },
+        "compile": {
+          "lib/net6.0/Duende.BFF.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/Duende.BFF.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
+      },
       "Duende.IdentityServer/6.0.4": {
         "type": "package",
         "dependencies": {
@@ -54,6 +69,22 @@
         "runtime": {
           "lib/net6.0/IdentityModel.dll": {}
         }
+      },
+      "IdentityModel.AspNetCore/4.1.2": {
+        "type": "package",
+        "dependencies": {
+          "IdentityModel": "5.2.0",
+          "Microsoft.AspNetCore.Authentication.OpenIdConnect": "6.0.0"
+        },
+        "compile": {
+          "lib/net6.0/IdentityModel.AspNetCore.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/IdentityModel.AspNetCore.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
       },
       "Microsoft.AspNetCore.Authentication/2.2.0": {
         "type": "package",
@@ -1125,6 +1156,25 @@
     }
   },
   "libraries": {
+    "Duende.BFF/1.1.0": {
+      "sha512": "lPfzjQ12HA2nrdCf2f5UBhsANA8Xmz9ASg+tEkV6nfRwdbwqoKAb3HMI6s4bGOO4si2T//yu5+jtChgNyZ8woQ==",
+      "type": "package",
+      "path": "duende.bff/1.1.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "duende.bff.1.1.0.nupkg.sha512",
+        "duende.bff.nuspec",
+        "icon.png",
+        "lib/net5.0/Duende.BFF.dll",
+        "lib/net5.0/Duende.BFF.xml",
+        "lib/net6.0/Duende.BFF.dll",
+        "lib/net6.0/Duende.BFF.xml",
+        "lib/netcoreapp3.1/Duende.BFF.dll",
+        "lib/netcoreapp3.1/Duende.BFF.xml"
+      ]
+    },
     "Duende.IdentityServer/6.0.4": {
       "sha512": "4HVjzx1F8v5J+U7oa8RGAQGj2QzmzNSu87r18Sh+dlh10uyZZL8teAaT/FaVLDObnfItGdPFvN8mwpF/HkI3Xw==",
       "type": "package",
@@ -1195,6 +1245,24 @@
         "lib/netstandard2.0/IdentityModel.dll",
         "lib/netstandard2.0/IdentityModel.pdb",
         "lib/netstandard2.0/IdentityModel.xml"
+      ]
+    },
+    "IdentityModel.AspNetCore/4.1.2": {
+      "sha512": "o3L11ZWaQ13240aLzTy618kYneXpQ0vSV2+f7sj9BH4oe46Zl8WIZGpHwDC7g7X0GlqpYbH0e4QmhdUk3MD0nA==",
+      "type": "package",
+      "path": "identitymodel.aspnetcore/4.1.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "icon.jpg",
+        "identitymodel.aspnetcore.4.1.2.nupkg.sha512",
+        "identitymodel.aspnetcore.nuspec",
+        "lib/net5.0/IdentityModel.AspNetCore.dll",
+        "lib/net5.0/IdentityModel.AspNetCore.xml",
+        "lib/net6.0/IdentityModel.AspNetCore.dll",
+        "lib/net6.0/IdentityModel.AspNetCore.xml",
+        "lib/netcoreapp3.1/IdentityModel.AspNetCore.dll",
+        "lib/netcoreapp3.1/IdentityModel.AspNetCore.xml"
       ]
     },
     "Microsoft.AspNetCore.Authentication/2.2.0": {
@@ -3001,8 +3069,10 @@
   "projectFileDependencyGroups": {
     "net6.0": [
       "Data >= 1.0.0",
+      "Duende.BFF >= 1.1.0",
       "Duende.IdentityServer >= 6.0.4",
       "Duende.IdentityServer.AspNetIdentity >= 6.0.4",
+      "Microsoft.AspNetCore.Authentication.OpenIdConnect >= 6.0.0",
       "Microsoft.AspNetCore.Identity >= 2.2.0",
       "Microsoft.AspNetCore.Identity.UI >= 6.0.3",
       "Microsoft.EntityFrameworkCore.SqlServer >= 6.0.3",
@@ -3057,6 +3127,10 @@
       "net6.0": {
         "targetAlias": "net6.0",
         "dependencies": {
+          "Duende.BFF": {
+            "target": "Package",
+            "version": "[1.1.0, )"
+          },
           "Duende.IdentityServer": {
             "target": "Package",
             "version": "[6.0.4, )"
@@ -3064,6 +3138,10 @@
           "Duende.IdentityServer.AspNetIdentity": {
             "target": "Package",
             "version": "[6.0.4, )"
+          },
+          "Microsoft.AspNetCore.Authentication.OpenIdConnect": {
+            "target": "Package",
+            "version": "[6.0.0, )"
           },
           "Microsoft.AspNetCore.Identity": {
             "target": "Package",

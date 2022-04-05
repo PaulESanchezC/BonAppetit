@@ -1,6 +1,8 @@
 using Configurations.ConfigurationsHelper;
+using Configurations.CorsConfigurations;
 using Configurations.DataAccessConfigurations;
 using Configurations.IdentityConfigurations;
+using Duende.IdentityServer.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddRazorPages();
@@ -16,6 +18,8 @@ services.AddDbContextOptions();
 services.AddIdentityConfigurationOptions();
 //Razor pages
 services.AddRazorPages();
+//CorsConfigurations
+services.AddCorsConfiguration();
 
 #endregion
 
@@ -27,6 +31,7 @@ if (!app.Environment.IsDevelopment())
 {
     app.UseExceptionHandler("/Error");
     app.UseHsts();
+    app.UseCors("Allow Anonymous");
 }
 
 app.UseHttpsRedirection();

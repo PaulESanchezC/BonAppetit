@@ -14,12 +14,11 @@ public class AuthenticationClients
         {
            new()
             {
-                ClientName = ProxyConfiguration.Use.GetSection("Clients").GetSection("RestaurantManager").GetValue<string>("ClientName"),
-                ClientId = ProxyConfiguration.Use.GetSection("Clients").GetSection("RestaurantManager").GetValue<string>("ClientId"),
-                ClientSecrets = {new Secret(ClientSecret.Sha256()) },
-                AllowedGrantTypes = GrantTypes.Code,
-                RedirectUris = { ProxyConfiguration.Use.GetSection("Clients").GetSection("RestaurantManager").GetValue<string>("RedirectUris"), },
-                PostLogoutRedirectUris = { ProxyConfiguration.Use.GetSection("Clients").GetSection("RestaurantManager").GetValue<string>("PostLogoutRedirectUris"), },
+                Enabled = true,
+                ClientId = "Restaurant Manager",
+                ClientSecrets = {new Secret("secret".Sha256()) },
+                RedirectUris = { "https://localhost:44324/signin-oidc" },
+                PostLogoutRedirectUris = { "https://localhost:44324/signout-callback-oidc" },
                 AllowedScopes = new List<string>
                 {
                     IdentityServerConstants.StandardScopes.OpenId,
@@ -27,7 +26,9 @@ public class AuthenticationClients
                     IdentityServerConstants.StandardScopes.Email,
                     IdentityServerConstants.StandardScopes.Phone,
                     Scopes.bonAppetit
-                }
+                },
+                AllowedCorsOrigins = { "https://localhost:44324" },
+                AllowedGrantTypes = GrantTypes.Code
             }
         };
 }

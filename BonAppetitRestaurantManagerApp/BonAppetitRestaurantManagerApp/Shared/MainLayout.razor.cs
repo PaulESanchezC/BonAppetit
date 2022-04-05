@@ -11,7 +11,7 @@ public partial class MainLayout
     [Inject]
     private SignOutSessionStateManager _SignOutManager { get; set; }
 
-    private async Task Logout()
+    private async Task BeginSignOut()
     {
         await _SignOutManager.SetSignOutState();
         _navigationManager.NavigateTo("Authorization/Logout");

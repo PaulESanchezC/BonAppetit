@@ -11,14 +11,15 @@ builder.RootComponents.Add<HeadOutlet>("head::after");
 
 
 #region Services
+
+//Blazor Local Storage
+builder.Services.AddBlazoredLocalStorage();
 //Services Configuration
 builder.Services.AddServicesConfigurations();
 //Authentication Configurations
 builder.Services.AddAuthenticationConfiguration();
-
 //Http Client
 builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
 
 #endregion
-builder.Services.AddBlazoredLocalStorage();
 await builder.Build().RunAsync();

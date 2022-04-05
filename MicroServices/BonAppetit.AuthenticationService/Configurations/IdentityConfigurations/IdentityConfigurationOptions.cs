@@ -1,5 +1,6 @@
 ﻿using Configurations.IdentityConfigurations.DuendeAuthenticationData;
 using Data;
+using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.DependencyInjection;
 using Models.ApplicationUserModels;

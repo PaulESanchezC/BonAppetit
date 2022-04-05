@@ -1,14 +1,16 @@
 {
   "version": 2,
-  "dgSpecHash": "vY0lSMrrnMytOsvXoVCoXcwm1OVPU51KNFn0s/SQoJlwXy30suesXQZ//MQ/Aj9muRR60HAazCvTXB3I1jLcvw==",
+  "dgSpecHash": "0uysRmLjuIYmIT9O8O+3gHdD0HFfHZQZs0VcSF1a2VThZx4Lx3WwJ6ptRhMD8CFZFOnp2hauo5XuFn6UqhFv3Q==",
   "success": true,
   "projectFilePath": "C:\\Users\\Paulyglot\\Desktop\\Portoflio\\BonAppetit\\MicroServices\\BonAppetit.AuthenticationService\\AuthenticationService\\AuthenticationService.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Paulyglot\\.nuget\\packages\\duende.bff\\1.1.0\\duende.bff.1.1.0.nupkg.sha512",
     "C:\\Users\\Paulyglot\\.nuget\\packages\\duende.identityserver\\6.0.4\\duende.identityserver.6.0.4.nupkg.sha512",
     "C:\\Users\\Paulyglot\\.nuget\\packages\\duende.identityserver.aspnetidentity\\6.0.4\\duende.identityserver.aspnetidentity.6.0.4.nupkg.sha512",
     "C:\\Users\\Paulyglot\\.nuget\\packages\\duende.identityserver.storage\\6.0.4\\duende.identityserver.storage.6.0.4.nupkg.sha512",
     "C:\\Users\\Paulyglot\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Paulyglot\\.nuget\\packages\\identitymodel\\6.0.0\\identitymodel.6.0.0.nupkg.sha512",
+    "C:\\Users\\Paulyglot\\.nuget\\packages\\identitymodel.aspnetcore\\4.1.2\\identitymodel.aspnetcore.4.1.2.nupkg.sha512",
     "C:\\Users\\Paulyglot\\.nuget\\packages\\microsoft.aspnetcore.authentication\\2.2.0\\microsoft.aspnetcore.authentication.2.2.0.nupkg.sha512",
     "C:\\Users\\Paulyglot\\.nuget\\packages\\microsoft.aspnetcore.authentication.abstractions\\2.2.0\\microsoft.aspnetcore.authentication.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\Paulyglot\\.nuget\\packages\\microsoft.aspnetcore.authentication.cookies\\2.2.0\\microsoft.aspnetcore.authentication.cookies.2.2.0.nupkg.sha512",

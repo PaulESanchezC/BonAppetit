@@ -36,7 +36,6 @@ C:\Users\Paulyglot\Desktop\Portoflio\BonAppetit\MicroServices\BonAppetit.Authent
 C:\Users\Paulyglot\Desktop\Portoflio\BonAppetit\MicroServices\BonAppetit.AuthenticationService\AuthenticationService\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
 C:\Users\Paulyglot\Desktop\Portoflio\BonAppetit\MicroServices\BonAppetit.AuthenticationService\AuthenticationService\obj\Debug\net6.0\staticwebassets.build.json
 C:\Users\Paulyglot\Desktop\Portoflio\BonAppetit\MicroServices\BonAppetit.AuthenticationService\AuthenticationService\obj\Debug\net6.0\staticwebassets.development.json
-C:\Users\Paulyglot\Desktop\Portoflio\BonAppetit\MicroServices\BonAppetit.AuthenticationService\AuthenticationService\obj\Debug\net6.0\scopedcss\Pages\Shared\_Layout.cshtml.rz.scp.css
 C:\Users\Paulyglot\Desktop\Portoflio\BonAppetit\MicroServices\BonAppetit.AuthenticationService\AuthenticationService\obj\Debug\net6.0\scopedcss\bundle\AuthenticationService.styles.css
 C:\Users\Paulyglot\Desktop\Portoflio\BonAppetit\MicroServices\BonAppetit.AuthenticationService\AuthenticationService\obj\Debug\net6.0\scopedcss\projectbundle\AuthenticationService.bundle.scp.css
 C:\Users\Paulyglot\Desktop\Portoflio\BonAppetit\MicroServices\BonAppetit.AuthenticationService\AuthenticationService\obj\Debug\net6.0\AuthenticationService.csproj.CopyComplete
@@ -80,3 +79,6 @@ C:\Users\Paulyglot\Desktop\Portoflio\BonAppetit\MicroServices\BonAppetit.Authent
 C:\Users\Paulyglot\Desktop\Portoflio\BonAppetit\MicroServices\BonAppetit.AuthenticationService\AuthenticationService\bin\Debug\net6.0\Humanizer.dll
 C:\Users\Paulyglot\Desktop\Portoflio\BonAppetit\MicroServices\BonAppetit.AuthenticationService\AuthenticationService\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll
 C:\Users\Paulyglot\Desktop\Portoflio\BonAppetit\MicroServices\BonAppetit.AuthenticationService\AuthenticationService\bin\Debug\net6.0\keys\is-signing-key-5F31B5D9D835D6BC06EA997C67E998C2.json
+C:\Users\Paulyglot\Desktop\Portoflio\BonAppetit\MicroServices\BonAppetit.AuthenticationService\AuthenticationService\bin\Debug\net6.0\Duende.BFF.dll
+C:\Users\Paulyglot\Desktop\Portoflio\BonAppetit\MicroServices\BonAppetit.AuthenticationService\AuthenticationService\bin\Debug\net6.0\IdentityModel.AspNetCore.dll
+C:\Users\Paulyglot\Desktop\Portoflio\BonAppetit\MicroServices\BonAppetit.AuthenticationService\AuthenticationService\obj\Debug\net6.0\scopedcss\Pages\Shared\_Layout.cshtml.rz.scp.css
