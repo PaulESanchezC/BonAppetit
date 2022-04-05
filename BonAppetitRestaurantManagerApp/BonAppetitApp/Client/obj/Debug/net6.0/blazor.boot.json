@@ -199,14 +199,14 @@
       "netstandard.dll": "sha256-klcvWVyHimPfDxg6W1A076EKpCB5ySxjtc7sxJEsGgE=",
       "System.Private.CoreLib.dll": "sha256-Y8kdbfPQ0YoYLGbOgzRmoVsnuMYNlA1hvLvDWFTtzrk=",
       "BonAppetitApp.Shared.dll": "sha256-0afsQ14sW3NaHIVBwJXFQCEikmhI5ItpV6wQwUdEFN8=",
-      "BonAppetitApp.Client.dll": "sha256-tVz7C8YOfHwhWukcQsasIvQS3y\/V3fHPglaYjAEj4+Y="
+      "BonAppetitApp.Client.dll": "sha256-FZ0JaUn1IbBGbud4b12Wz8FkaOiYEQ00DF91B3WKyaI="
     },
     "extensions": null,
     "lazyAssembly": null,
     "libraryInitializers": null,
     "pdb": {
       "BonAppetitApp.Shared.pdb": "sha256-pFOo+CGBG\/k5M++vJ1rxeARNUt0WDVB8vV0MQ0kzZ8I=",
-      "BonAppetitApp.Client.pdb": "sha256-GDP3XUeh61wiBRg+CrJ+wBokrbTeX09GopvUMnxZNqU="
+      "BonAppetitApp.Client.pdb": "sha256-SUguT4zi2PkCuJifob\/brwxn+uVRL8nfeRbx7UgqN74="
     },
     "runtime": {
       "dotnet.6.0.3.8671elndkn.js": "sha256-pRmcHKZN4T\/YbX9dj6ITT4sNtkJ9w07OLcwl4645nPg=",
