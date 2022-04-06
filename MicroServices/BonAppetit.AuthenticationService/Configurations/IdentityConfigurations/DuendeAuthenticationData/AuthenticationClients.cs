@@ -7,18 +7,32 @@ namespace Configurations.IdentityConfigurations.DuendeAuthenticationData;
 
 public class AuthenticationClients
 {
-    private static string ClientSecret { get; set; } = ProxyConfiguration.Use.GetSection("Clients").GetSection("RestaurantManager")
+
+    #region Bon Appetit App Options
+    private static Secret ClientSecret { get;  } = new (ProxyConfiguration.Use.GetSection("Clients").GetSection("RestaurantManager")
+        .GetValue<string>("ClientSecrets").Sha256());
+    private static string ClientId { get; set; } = ProxyConfiguration.Use.GetSection("Clients").GetSection("RestaurantManager")
         .GetValue<string>("ClientId");
+    private static string RedirectUris { get; set; } = ProxyConfiguration.Use.GetSection("Clients").GetSection("RestaurantManager")
+        .GetValue<string>("RedirectUris");
+    private static string PostLogoutRedirectUris { get; set; } = ProxyConfiguration.Use.GetSection("Clients").GetSection("RestaurantManager")
+        .GetValue<string>("PostLogoutRedirectUris");
+    private static string AllowedCorsOrigins { get; set; } = ProxyConfiguration.Use.GetSection("Clients").GetSection("RestaurantManager")
+        .GetValue<string>("AllowedCorsOrigins");
+
+    #endregion
+
+
     public static IEnumerable<Client> Clients =>
         new List<Client>
         {
            new()
             {
                 Enabled = true,
-                ClientId = "Restaurant Manager",
-                ClientSecrets = {new Secret("secret".Sha256()) },
-                RedirectUris = { "https://localhost:44324/signin-oidc" },
-                PostLogoutRedirectUris = { "https://localhost:44324/signout-callback-oidc" },
+                ClientId = ClientId,
+                ClientSecrets = {ClientSecret},
+                RedirectUris = { RedirectUris },
+                PostLogoutRedirectUris = { PostLogoutRedirectUris },
                 AllowedScopes = new List<string>
                 {
                     IdentityServerConstants.StandardScopes.OpenId,
@@ -27,7 +41,7 @@ public class AuthenticationClients
                     IdentityServerConstants.StandardScopes.Phone,
                     Scopes.bonAppetit
                 },
-                AllowedCorsOrigins = { "https://localhost:44324" },
+                AllowedCorsOrigins = { AllowedCorsOrigins },
                 AllowedGrantTypes = GrantTypes.Code
             }
         };

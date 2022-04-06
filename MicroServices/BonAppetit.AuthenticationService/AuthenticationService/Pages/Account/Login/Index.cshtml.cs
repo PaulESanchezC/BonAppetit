@@ -1,21 +1,17 @@
-using System;
-using System.Linq;
-using System.Threading.Tasks;
-using Duende.IdentityServer;
+using BonAppetit.AuthenticationService.Pages;
+using BonAppetit.AuthenticationService.Pages.Login;
 using Duende.IdentityServer.Events;
 using Duende.IdentityServer.Models;
 using Duende.IdentityServer.Services;
 using Duende.IdentityServer.Stores;
-using Duende.IdentityServer.Test;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Models.ApplicationUserModels;
 
-namespace BonAppetit.AuthenticationService.Pages.Login;
+namespace AuthenticationService.Pages.Account.Login;
 
 [SecurityHeaders]
 [AllowAnonymous]

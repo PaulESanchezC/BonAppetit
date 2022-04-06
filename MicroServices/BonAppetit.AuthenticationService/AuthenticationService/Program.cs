@@ -42,9 +42,7 @@ app.UseIdentityServer();
 app.UseAuthorization();
 app.MapRazorPages();
 
-app.MapControllers()
-    .RequireAuthorization()
-    .AsBffApiEndpoint();
+app.MapControllers();
 
 #endregion
 

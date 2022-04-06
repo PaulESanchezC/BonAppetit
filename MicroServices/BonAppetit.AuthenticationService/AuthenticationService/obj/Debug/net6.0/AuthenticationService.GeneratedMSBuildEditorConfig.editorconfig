@@ -87,6 +87,22 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSG9tZVxFcnJvclxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/Paulyglot/Desktop/Portoflio/BonAppetit/MicroServices/BonAppetit.AuthenticationService/AuthenticationService/Pages/Identity/Account/AccessDenied.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSWRlbnRpdHlcQWNjb3VudFxBY2Nlc3NEZW5pZWQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Paulyglot/Desktop/Portoflio/BonAppetit/MicroServices/BonAppetit.AuthenticationService/AuthenticationService/Pages/Identity/Account/Login/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSWRlbnRpdHlcQWNjb3VudFxMb2dpblxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Paulyglot/Desktop/Portoflio/BonAppetit/MicroServices/BonAppetit.AuthenticationService/AuthenticationService/Pages/Identity/Account/Logout/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSWRlbnRpdHlcQWNjb3VudFxMb2dvdXRcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Paulyglot/Desktop/Portoflio/BonAppetit/MicroServices/BonAppetit.AuthenticationService/AuthenticationService/Pages/Identity/Account/Logout/LoggedOut.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSWRlbnRpdHlcQWNjb3VudFxMb2dvdXRcTG9nZ2VkT3V0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Paulyglot/Desktop/Portoflio/BonAppetit/MicroServices/BonAppetit.AuthenticationService/AuthenticationService/Pages/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
