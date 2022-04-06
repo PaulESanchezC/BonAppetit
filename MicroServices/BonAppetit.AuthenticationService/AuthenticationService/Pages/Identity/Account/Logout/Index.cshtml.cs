@@ -1,4 +1,3 @@
-using BonAppetit.AuthenticationService.Pages;
 using Duende.IdentityServer.Events;
 using Duende.IdentityServer.Extensions;
 using Duende.IdentityServer.Services;
@@ -34,7 +33,7 @@ public class Index : PageModel
     {
         LogoutId = logoutId;
 
-        var showLogoutPrompt = BonAppetit.AuthenticationService.Pages.Logout.LogoutOptions.ShowLogoutPrompt;
+        var showLogoutPrompt = LogoutOptions.ShowLogoutPrompt;
 
         if (User?.Identity.IsAuthenticated != true)
         {
@@ -88,7 +87,7 @@ public class Index : PageModel
                     // build a return URL so the upstream provider will redirect back
                     // to us after the user has logged out. this allows us to then
                     // complete our single sign-out processing.
-                    string url = Url.Page("/Account/Logout/Loggedout", new { logoutId = LogoutId });
+                    string? url = Url.Page("Account/Logout/Loggedout", new { logoutId = LogoutId });
 
                     // this triggers a redirect to the external provider for sign-out
                     return SignOut(new AuthenticationProperties { RedirectUri = url }, idp);
@@ -96,6 +95,6 @@ public class Index : PageModel
             }
         }
 
-        return RedirectToPage("/Account/Logout/LoggedOut", new { logoutId = LogoutId });
+        return RedirectToPage("Account/Logout/LoggedOut", new { logoutId = LogoutId });
     }
 }

@@ -1,5 +1,5 @@
 @page
-@model BonAppetit.AuthenticationService.Pages.Logout.Index
+@model AuthenticationService.Pages.Identity.Account.Logout.Index
 
 <div class="logout-page">
     <div class="lead">
@@ -7,7 +7,7 @@
         <p>Would you like to logout of IdentityServer?</p>
     </div>
 
-    <form asp-page="/Account/Logout/Index">
+    <form asp-page="Identity/Account/Logout/Index" method="post">
         <input type="hidden" name="logoutId" value="@Model.LogoutId"  />
         
         <div class="form-group">

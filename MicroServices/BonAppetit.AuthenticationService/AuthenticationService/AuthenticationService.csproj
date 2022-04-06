@@ -26,4 +26,8 @@
     <ProjectReference Include="..\Configurations\Configurations.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Pages\Account\" />
+  </ItemGroup>
+
 </Project>

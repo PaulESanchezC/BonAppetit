@@ -2,7 +2,7 @@ using System.Reflection;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace BonAppetit.AuthenticationService.Pages.Home;
+namespace AuthenticationService.Pages;
 
 [AllowAnonymous]
 public class Index : PageModel

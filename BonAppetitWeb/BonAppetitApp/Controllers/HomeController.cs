@@ -22,7 +22,7 @@ namespace BonAppetitApp.Controllers
 
         public IActionResult Logout()
         {
-            return RedirectToAction(nameof(Index));
+            return SignOut("Cookies", "oidc");
         }
     }
 }

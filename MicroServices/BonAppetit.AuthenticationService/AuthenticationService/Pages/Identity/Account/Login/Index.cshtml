@@ -1,5 +1,5 @@
 @page
-@model BonAppetit.AuthenticationService.Pages.Login.Index
+@model AuthenticationService.Pages.Identity.Account.Login.Index
 
 <div class="login-page">
     <div class="lead">
@@ -20,7 +20,7 @@
                     </div>
 
                     <div class="card-body">
-                        <form asp-page="/Account/Login/Index">
+                        <form asp-page="/Identity/Account/Login/Index">
                             <input type="hidden" asp-for="Input.ReturnUrl" />
 
                             <div class="form-group">

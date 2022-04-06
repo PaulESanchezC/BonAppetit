@@ -1,4 +1,3 @@
-using BonAppetit.AuthenticationService.Pages;
 using Duende.IdentityServer.Services;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc.RazorPages;
@@ -11,7 +10,7 @@ public class LoggedOut : PageModel
 {
     private readonly IIdentityServerInteractionService _interactionService;
         
-    public BonAppetit.AuthenticationService.Pages.Logout.LoggedOutViewModel View { get; set; }
+    public LoggedOutViewModel View { get; set; }
 
     public LoggedOut(IIdentityServerInteractionService interactionService)
     {
@@ -23,9 +22,9 @@ public class LoggedOut : PageModel
         // get context information (client name, post logout redirect URI and iframe for federated signout)
         var logout = await _interactionService.GetLogoutContextAsync(logoutId);
 
-        View = new BonAppetit.AuthenticationService.Pages.Logout.LoggedOutViewModel
+        View = new LoggedOutViewModel
         {
-            AutomaticRedirectAfterSignOut = BonAppetit.AuthenticationService.Pages.Logout.LogoutOptions.AutomaticRedirectAfterSignOut,
+            AutomaticRedirectAfterSignOut = LogoutOptions.AutomaticRedirectAfterSignOut,
             PostLogoutRedirectUri = logout?.PostLogoutRedirectUri,
             ClientName = String.IsNullOrEmpty(logout?.ClientName) ? logout?.ClientId : logout?.ClientName,
             SignOutIframeUrl = logout?.SignOutIFrameUrl

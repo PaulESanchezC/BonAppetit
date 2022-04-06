@@ -9,15 +9,15 @@ public class AuthenticationClients
 {
 
     #region Bon Appetit App Options
-    private static Secret ClientSecret { get;  } = new (ProxyConfiguration.Use.GetSection("Clients").GetSection("RestaurantManager")
+    private static Secret ClientSecret { get;  } = new (ProxyConfiguration.Use.GetSection("Clients").GetSection("BonAppetitApp")
         .GetValue<string>("ClientSecrets").Sha256());
-    private static string ClientId { get; set; } = ProxyConfiguration.Use.GetSection("Clients").GetSection("RestaurantManager")
+    private static string ClientId { get; set; } = ProxyConfiguration.Use.GetSection("Clients").GetSection("BonAppetitApp")
         .GetValue<string>("ClientId");
-    private static string RedirectUris { get; set; } = ProxyConfiguration.Use.GetSection("Clients").GetSection("RestaurantManager")
+    private static string RedirectUris { get; set; } = ProxyConfiguration.Use.GetSection("Clients").GetSection("BonAppetitApp")
         .GetValue<string>("RedirectUris");
-    private static string PostLogoutRedirectUris { get; set; } = ProxyConfiguration.Use.GetSection("Clients").GetSection("RestaurantManager")
+    private static string PostLogoutRedirectUris { get; set; } = ProxyConfiguration.Use.GetSection("Clients").GetSection("BonAppetitApp")
         .GetValue<string>("PostLogoutRedirectUris");
-    private static string AllowedCorsOrigins { get; set; } = ProxyConfiguration.Use.GetSection("Clients").GetSection("RestaurantManager")
+    private static string AllowedCorsOrigins { get; set; } = ProxyConfiguration.Use.GetSection("Clients").GetSection("BonAppetitApp")
         .GetValue<string>("AllowedCorsOrigins");
 
     #endregion

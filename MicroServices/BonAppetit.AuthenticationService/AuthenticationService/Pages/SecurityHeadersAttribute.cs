@@ -5,7 +5,7 @@
 using Microsoft.AspNetCore.Mvc.Filters;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace BonAppetit.AuthenticationService.Pages;
+namespace AuthenticationService.Pages;
 
 public class SecurityHeadersAttribute : ActionFilterAttribute
 {
