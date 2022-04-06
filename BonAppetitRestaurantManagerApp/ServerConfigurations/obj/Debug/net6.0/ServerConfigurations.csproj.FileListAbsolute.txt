@@ -1,0 +1,12 @@
+C:\Users\Paulyglot\Desktop\Portoflio\BonAppetit\BonAppetitRestaurantManagerApp\ServerConfigurations\bin\Debug\net6.0\ServerConfigurations.deps.json
+C:\Users\Paulyglot\Desktop\Portoflio\BonAppetit\BonAppetitRestaurantManagerApp\ServerConfigurations\bin\Debug\net6.0\ServerConfigurations.dll
+C:\Users\Paulyglot\Desktop\Portoflio\BonAppetit\BonAppetitRestaurantManagerApp\ServerConfigurations\bin\Debug\net6.0\ServerConfigurations.pdb
+C:\Users\Paulyglot\Desktop\Portoflio\BonAppetit\BonAppetitRestaurantManagerApp\ServerConfigurations\obj\Debug\net6.0\ServerConfigurations.csproj.AssemblyReference.cache
+C:\Users\Paulyglot\Desktop\Portoflio\BonAppetit\BonAppetitRestaurantManagerApp\ServerConfigurations\obj\Debug\net6.0\ServerConfigurations.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Paulyglot\Desktop\Portoflio\BonAppetit\BonAppetitRestaurantManagerApp\ServerConfigurations\obj\Debug\net6.0\ServerConfigurations.AssemblyInfoInputs.cache
+C:\Users\Paulyglot\Desktop\Portoflio\BonAppetit\BonAppetitRestaurantManagerApp\ServerConfigurations\obj\Debug\net6.0\ServerConfigurations.AssemblyInfo.cs
+C:\Users\Paulyglot\Desktop\Portoflio\BonAppetit\BonAppetitRestaurantManagerApp\ServerConfigurations\obj\Debug\net6.0\ServerConfigurations.csproj.CoreCompileInputs.cache
+C:\Users\Paulyglot\Desktop\Portoflio\BonAppetit\BonAppetitRestaurantManagerApp\ServerConfigurations\obj\Debug\net6.0\ServerConfigurations.dll
+C:\Users\Paulyglot\Desktop\Portoflio\BonAppetit\BonAppetitRestaurantManagerApp\ServerConfigurations\obj\Debug\net6.0\refint\ServerConfigurations.dll
+C:\Users\Paulyglot\Desktop\Portoflio\BonAppetit\BonAppetitRestaurantManagerApp\ServerConfigurations\obj\Debug\net6.0\ServerConfigurations.pdb
+C:\Users\Paulyglot\Desktop\Portoflio\BonAppetit\BonAppetitRestaurantManagerApp\ServerConfigurations\obj\Debug\net6.0\ref\ServerConfigurations.dll

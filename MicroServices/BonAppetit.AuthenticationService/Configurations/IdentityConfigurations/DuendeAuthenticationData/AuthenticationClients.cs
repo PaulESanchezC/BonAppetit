@@ -7,17 +7,18 @@ namespace Configurations.IdentityConfigurations.DuendeAuthenticationData;
 
 public class AuthenticationClients
 {
+    //App Secrets For Bon Appetit Web App (clients WebApp)
+    #region BonAppetitWebApp
 
-    #region Bon Appetit App Options
-    private static Secret ClientSecret { get;  } = new (ProxyConfiguration.Use.GetSection("Clients").GetSection("BonAppetitApp")
+    private static Secret ClientSecret { get; } = new(ProxyConfiguration.Use.GetSection("BonAppetitWebApp")
         .GetValue<string>("ClientSecrets").Sha256());
-    private static string ClientId { get; set; } = ProxyConfiguration.Use.GetSection("Clients").GetSection("BonAppetitApp")
+    private static string ClientId { get; } = ProxyConfiguration.Use.GetSection("BonAppetitWebApp")
         .GetValue<string>("ClientId");
-    private static string RedirectUris { get; set; } = ProxyConfiguration.Use.GetSection("Clients").GetSection("BonAppetitApp")
+    private static string RedirectUris { get; } = ProxyConfiguration.Use.GetSection("BonAppetitWebApp")
         .GetValue<string>("RedirectUris");
-    private static string PostLogoutRedirectUris { get; set; } = ProxyConfiguration.Use.GetSection("Clients").GetSection("BonAppetitApp")
+    private static string PostLogoutRedirectUris { get; } = ProxyConfiguration.Use.GetSection("BonAppetitWebApp")
         .GetValue<string>("PostLogoutRedirectUris");
-    private static string AllowedCorsOrigins { get; set; } = ProxyConfiguration.Use.GetSection("Clients").GetSection("BonAppetitApp")
+    private static string AllowedCorsOrigins { get; } = ProxyConfiguration.Use.GetSection("BonAppetitWebApp")
         .GetValue<string>("AllowedCorsOrigins");
 
     #endregion
@@ -26,23 +27,23 @@ public class AuthenticationClients
     public static IEnumerable<Client> Clients =>
         new List<Client>
         {
-           new()
-            {
-                Enabled = true,
-                ClientId = ClientId,
-                ClientSecrets = {ClientSecret},
-                RedirectUris = { RedirectUris },
-                PostLogoutRedirectUris = { PostLogoutRedirectUris },
-                AllowedScopes = new List<string>
-                {
-                    IdentityServerConstants.StandardScopes.OpenId,
-                    IdentityServerConstants.StandardScopes.Profile,
-                    IdentityServerConstants.StandardScopes.Email,
-                    IdentityServerConstants.StandardScopes.Phone,
-                    Scopes.bonAppetit
-                },
-                AllowedCorsOrigins = { AllowedCorsOrigins },
-                AllowedGrantTypes = GrantTypes.Code
-            }
+            new()
+           {
+               Enabled = true,
+               ClientId = ClientId,
+               ClientSecrets = {ClientSecret},
+               RedirectUris = { RedirectUris },
+               PostLogoutRedirectUris = { PostLogoutRedirectUris },
+               AllowedScopes = new List<string>
+               {
+                   IdentityServerConstants.StandardScopes.OpenId,
+                   IdentityServerConstants.StandardScopes.Profile,
+                   IdentityServerConstants.StandardScopes.Email,
+                   IdentityServerConstants.StandardScopes.Phone,
+                   Scopes.bonAppetit
+               },
+               AllowedCorsOrigins = { AllowedCorsOrigins },
+               AllowedGrantTypes = GrantTypes.Code,
+           }
         };
 }

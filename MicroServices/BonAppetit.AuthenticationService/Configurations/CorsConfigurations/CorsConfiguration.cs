@@ -8,9 +8,9 @@ public static class CorsConfiguration
 {
     public static IServiceCollection AddCorsConfiguration(this IServiceCollection services)
     {
-        services.AddCors(opttions =>
+        services.AddCors(options =>
         {
-            opttions.AddPolicy("Allow Anonymous", policy =>
+            options.AddPolicy("AllowAnonymous", policy =>
             {
                 policy.AllowAnyOrigin();
                 policy.AllowAnyHeader();

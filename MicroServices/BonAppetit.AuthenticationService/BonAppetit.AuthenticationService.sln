@@ -3,15 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.1.32319.34
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuthenticationService", "AuthenticationService\AuthenticationService.csproj", "{FD50E2DE-52E5-40C5-83C3-B91DA3229E1C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Data", "Data\Data.csproj", "{052E93A1-AFD5-43BE-BCD5-E078309035CA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Data", "Data\Data.csproj", "{052E93A1-AFD5-43BE-BCD5-E078309035CA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Models", "Models\Models.csproj", "{7B4CD398-3B4C-482D-8560-0A44DCDCD725}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Models", "Models\Models.csproj", "{7B4CD398-3B4C-482D-8560-0A44DCDCD725}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Configurations", "Configurations\Configurations.csproj", "{9A5D7F78-7BD2-49EC-AD71-0AC292947E9F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Configurations", "Configurations\Configurations.csproj", "{9A5D7F78-7BD2-49EC-AD71-0AC292947E9F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StaticData", "StaticData\StaticData.csproj", "{4BFE4E6E-AC11-4472-9CEF-5F7E06B8746C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StaticData", "StaticData\StaticData.csproj", "{4BFE4E6E-AC11-4472-9CEF-5F7E06B8746C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BonAppetitAuthentication", "BonAppetitAuthentication\BonAppetitAuthentication.csproj", "{43777F51-03AC-4E93-B062-F4A4AC71E51D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,10 +19,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{FD50E2DE-52E5-40C5-83C3-B91DA3229E1C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{FD50E2DE-52E5-40C5-83C3-B91DA3229E1C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{FD50E2DE-52E5-40C5-83C3-B91DA3229E1C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{FD50E2DE-52E5-40C5-83C3-B91DA3229E1C}.Release|Any CPU.Build.0 = Release|Any CPU
 		{052E93A1-AFD5-43BE-BCD5-E078309035CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{052E93A1-AFD5-43BE-BCD5-E078309035CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{052E93A1-AFD5-43BE-BCD5-E078309035CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -39,6 +35,10 @@ Global
 		{4BFE4E6E-AC11-4472-9CEF-5F7E06B8746C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4BFE4E6E-AC11-4472-9CEF-5F7E06B8746C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4BFE4E6E-AC11-4472-9CEF-5F7E06B8746C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{43777F51-03AC-4E93-B062-F4A4AC71E51D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{43777F51-03AC-4E93-B062-F4A4AC71E51D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{43777F51-03AC-4E93-B062-F4A4AC71E51D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{43777F51-03AC-4E93-B062-F4A4AC71E51D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
