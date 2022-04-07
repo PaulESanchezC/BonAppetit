@@ -3,19 +3,19 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.1.32319.34
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReservationService", "ReservationService\ReservationService.csproj", "{4D1EBDFB-A639-4D98-AF26-ACC614725F6F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ReservationService", "ReservationService\ReservationService.csproj", "{4D1EBDFB-A639-4D98-AF26-ACC614725F6F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Configurations", "Configurations\Configurations.csproj", "{0038BC1F-6D68-442C-B8BA-5F6290F2BB23}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Configurations", "Configurations\Configurations.csproj", "{0038BC1F-6D68-442C-B8BA-5F6290F2BB23}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Models", "Models\Models.csproj", "{FB6C479C-BEE0-487F-9941-016121084704}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Models", "Models\Models.csproj", "{FB6C479C-BEE0-487F-9941-016121084704}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Data", "Data\Data.csproj", "{D8530A6D-39BD-479B-9C5D-3EB7DF7D07A0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Data", "Data\Data.csproj", "{D8530A6D-39BD-479B-9C5D-3EB7DF7D07A0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Services", "Services\Services.csproj", "{8296DC5E-430A-45BA-9B21-0CF23C8BD249}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Services", "Services\Services.csproj", "{8296DC5E-430A-45BA-9B21-0CF23C8BD249}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StaticData", "StaticData\StaticData.csproj", "{74A85A75-CB6D-43C2-AD43-FF49C5C47A2F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StaticData", "StaticData\StaticData.csproj", "{74A85A75-CB6D-43C2-AD43-FF49C5C47A2F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "Tests\Tests.csproj", "{8998FBE2-B1E7-4C3A-94D3-941EBBFFBFD1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tests", "Tests\Tests.csproj", "{8998FBE2-B1E7-4C3A-94D3-941EBBFFBFD1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

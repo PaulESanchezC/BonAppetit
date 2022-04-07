@@ -45,7 +45,7 @@ public class RestaurantController : ControllerBase
             include => include.RestaurantTables, include => include.RestaurantSchedule);
         return StatusCode(request.StatusCode, request);
     }
-    
+
     [Authorize(Policy = PolicyAuthNames.ScopeRequirements)]
     [HttpPost("CreateSingleRestaurant")]
     public async Task<IActionResult> CreateSingleRestaurant([FromBody] RestaurantCreate restaurantToCreate,

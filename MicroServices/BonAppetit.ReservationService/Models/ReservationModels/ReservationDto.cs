@@ -18,7 +18,7 @@ public class ReservationDto
     public int OrderId { get; set; }
     [Required]
     public string ApplicationUserId { get; set; }
-    [Required]
+
     public bool IsUserAnonymous { get; set; }
     public string Phone { get; set; }
     public string Email { get; set; }

@@ -9,9 +9,6 @@ public class TableCreate
     public string TableName { get; set; }
 
     [Required(AllowEmptyStrings = false)]
-    public double HoursOpenForReservation { get; set; }
-
-    [Required(AllowEmptyStrings = false)]
     public int FrequencyOfReservation { get; set; }
 
     [Required(AllowEmptyStrings = false)]

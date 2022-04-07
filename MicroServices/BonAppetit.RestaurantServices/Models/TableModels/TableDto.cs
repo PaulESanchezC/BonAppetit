@@ -13,15 +13,12 @@ public class TableDto
     public string TableName { get; set; }
 
     [Required(AllowEmptyStrings = false)]
-    public double HoursOpenForReservation { get; set; }
-
-    [Required(AllowEmptyStrings = false)]
     public int FrequencyOfReservation { get; set; }
 
     [Required(AllowEmptyStrings = false)]
     public int AmountOfSeats { get; set; }
 
-    public RestaurantBase Restaurant { get; set; } = new();
+    public RestaurantDto Restaurant { get; set; } = new();
 
     [Required(AllowEmptyStrings = false)]
     public string RestaurantId { get; set; }

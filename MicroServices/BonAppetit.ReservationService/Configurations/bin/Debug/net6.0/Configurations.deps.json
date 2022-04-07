@@ -556,7 +556,8 @@
         "dependencies": {
           "AutoMapper": "11.0.0",
           "Data": "1.0.0",
-          "Models": "1.0.0"
+          "Models": "1.0.0",
+          "Newtonsoft.Json": "13.0.1"
         },
         "runtime": {
           "Services.dll": {}

@@ -18,7 +18,7 @@ public class Repository<T, TDto> : IRepository<T, TDto>
         _mapper = mapper;
     }
 
-    public async Task<Response<TDto>> GetAllByAsync(Expression<Func<T, bool>>? predicate, CancellationToken cancellationToken)
+    public async Task<Response<TDto>> GetByAsync(Expression<Func<T, bool>>? predicate, CancellationToken cancellationToken)
     {
         var query = _db.Set<T>().AsQueryable().AsNoTracking();
 
@@ -30,21 +30,6 @@ public class Repository<T, TDto> : IRepository<T, TDto>
 
         return await ResponseManyBuilderTask(true, 200, "Ok", "Ok", await query.ToListAsync(cancellationToken));
     }
-
-    public async Task<Response<TDto>> GetSingleByAsync(Expression<Func<T, bool>> predicate, CancellationToken cancellationToken)
-    {
-        var query = _db.Set<T>().AsQueryable().AsNoTracking();
-
-        var result = query.Where(predicate);
-
-        if (!result.Any())
-            return await ResponseSingleBuilderTask(false, 400, "Empty Result", "The operation returned an empty result", null);
-        if (result.Count() > 1)
-            return await ResponseSingleBuilderTask(false, 300, "Multiple Results", "The operation returned an more than one result", null);
-
-        return await ResponseSingleBuilderTask(true, 200, "Ok", "Ok", await result.FirstOrDefaultAsync(cancellationToken));
-    }
-
     public async Task<Response<TDto>> CreateAsync(TDto objectToCreate, CancellationToken cancellationToken)
     {
         var objectToCreateT = _mapper.Map<T>(objectToCreate);
@@ -59,13 +44,13 @@ public class Repository<T, TDto> : IRepository<T, TDto>
         }
         catch (DbUpdateException e)
         {
+            Console.WriteLine(e);
             return await ResponseSingleBuilderTask(false, 409, "Operation Failed", $"Could not save the {typeof(T).Name}", null);
         }
 
         return await ResponseSingleBuilderTask(true, 201, "Ok", "Ok", objectToCreateT);
     }
 
-    
     public Task<Response<TDto>> ResponseSingleBuilderTask(bool isSuccessful, int statusCode, string title, string message, T? responseObject)
     {
         var responseObjectDto = new List<TDto> { _mapper.Map<TDto>(responseObject) };
@@ -80,7 +65,6 @@ public class Repository<T, TDto> : IRepository<T, TDto>
         };
         return Task.FromResult(response);
     }
-
     public Task<Response<TDto>> ResponseManyBuilderTask(bool isSuccessful, int statusCode, string title, string message, List<T>? responseObject)
     {
         var responseObjectDto = new List<TDto>();
