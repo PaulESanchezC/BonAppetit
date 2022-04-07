@@ -42,7 +42,7 @@ if (app.Environment.IsDevelopment())
 { }
 
 app.UseSwagger();
-app.UseSwaggerUI();
+app.UseSwaggerUI(options=> options.SwaggerEndpoint("/swagger/BonAppetitOpenApi/swagger.json", "Bon Appetit Reservatition Service"));
 
 app.UseHttpsRedirection();
 app.UseCors(options =>

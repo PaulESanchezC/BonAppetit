@@ -74,3 +74,5 @@ C:\Users\Paulyglot\Desktop\Portoflio\BonAppetit\MicroServices\BonAppetit.Reserva
 C:\Users\Paulyglot\Desktop\Portoflio\BonAppetit\MicroServices\BonAppetit.ReservationService\ReservationService\obj\Debug\net6.0\ref\ReservationService.dll
 C:\Users\Paulyglot\Desktop\Portoflio\BonAppetit\MicroServices\BonAppetit.ReservationService\ReservationService\bin\Debug\net6.0\Humanizer.dll
 C:\Users\Paulyglot\Desktop\Portoflio\BonAppetit\MicroServices\BonAppetit.ReservationService\ReservationService\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\Paulyglot\Desktop\Portoflio\BonAppetit\MicroServices\BonAppetit.ReservationService\ReservationService\bin\Debug\net6.0\Services.dll
+C:\Users\Paulyglot\Desktop\Portoflio\BonAppetit\MicroServices\BonAppetit.ReservationService\ReservationService\bin\Debug\net6.0\Services.pdb

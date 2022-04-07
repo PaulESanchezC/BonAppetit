@@ -559,6 +559,7 @@
           "Data": "1.0.0",
           "Microsoft.AspNetCore.Authentication.JwtBearer": "6.0.3",
           "Microsoft.AspNetCore.Mvc.NewtonsoftJson": "6.0.3",
+          "Services": "1.0.0",
           "StaticData": "1.0.0",
           "Swashbuckle.AspNetCore": "6.3.0"
         },
@@ -579,6 +580,16 @@
       "Models/1.0.0": {
         "runtime": {
           "Models.dll": {}
+        }
+      },
+      "Services/1.0.0": {
+        "dependencies": {
+          "AutoMapper": "11.0.0",
+          "Data": "1.0.0",
+          "Models": "1.0.0"
+        },
+        "runtime": {
+          "Services.dll": {}
         }
       },
       "StaticData/1.0.0": {
@@ -990,6 +1001,11 @@
       "sha512": ""
     },
     "Models/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Services/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
