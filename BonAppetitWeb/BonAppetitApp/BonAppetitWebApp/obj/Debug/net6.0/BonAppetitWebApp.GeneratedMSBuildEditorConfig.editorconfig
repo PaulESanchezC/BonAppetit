@@ -26,16 +26,12 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXV0aGVudGljYXRpb24ucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Paulyglot/Desktop/Portoflio/BonAppetit/BonAppetitWeb/BonAppetitApp/BonAppetitWebApp/Pages/Counter.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ291bnRlci5yYXpvcg==
+[C:/Users/Paulyglot/Desktop/Portoflio/BonAppetit/BonAppetitWeb/BonAppetitApp/BonAppetitWebApp/Pages/About.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWJvdXQucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Paulyglot/Desktop/Portoflio/BonAppetit/BonAppetitWeb/BonAppetitApp/BonAppetitWebApp/Pages/FetchData.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRmV0Y2hEYXRhLnJhem9y
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/Paulyglot/Desktop/Portoflio/BonAppetit/BonAppetitWeb/BonAppetitApp/BonAppetitWebApp/Pages/Index.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXgucmF6b3I=
+[C:/Users/Paulyglot/Desktop/Portoflio/BonAppetit/BonAppetitWeb/BonAppetitApp/BonAppetitWebApp/Shared/NavMenu.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE5hdk1lbnUucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Paulyglot/Desktop/Portoflio/BonAppetit/BonAppetitWeb/BonAppetitApp/BonAppetitWebApp/Shared/SurveyPrompt.razor]
@@ -46,10 +42,18 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/Paulyglot/Desktop/Portoflio/BonAppetit/BonAppetitWeb/BonAppetitApp/BonAppetitWebApp/Pages/Index.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXgucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-uyy2nzlkd2
+
+[C:/Users/Paulyglot/Desktop/Portoflio/BonAppetit/BonAppetitWeb/BonAppetitApp/BonAppetitWebApp/Pages/RestaurantComponents/IndexRestaurantComponent.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmVzdGF1cmFudENvbXBvbmVudHNcSW5kZXhSZXN0YXVyYW50Q29tcG9uZW50LnJhem9y
+build_metadata.AdditionalFiles.CssScope = b-w9x60jmlnr
+
+[C:/Users/Paulyglot/Desktop/Portoflio/BonAppetit/BonAppetitWeb/BonAppetitApp/BonAppetitWebApp/Pages/RestaurantComponents/RestaurantDetails.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmVzdGF1cmFudENvbXBvbmVudHNcUmVzdGF1cmFudERldGFpbHMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-gn2y0mpt6u
+
 [C:/Users/Paulyglot/Desktop/Portoflio/BonAppetit/BonAppetitWeb/BonAppetitApp/BonAppetitWebApp/Shared/MainLayout.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE1haW5MYXlvdXQucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-nsinc8ilsh
-
-[C:/Users/Paulyglot/Desktop/Portoflio/BonAppetit/BonAppetitWeb/BonAppetitApp/BonAppetitWebApp/Shared/NavMenu.razor]
-build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE5hdk1lbnUucmF6b3I=
-build_metadata.AdditionalFiles.CssScope = b-2ad3d597cx

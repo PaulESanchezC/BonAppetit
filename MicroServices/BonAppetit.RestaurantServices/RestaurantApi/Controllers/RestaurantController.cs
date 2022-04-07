@@ -8,7 +8,7 @@ namespace RestaurantApi.Controllers;
 
 [Route("api/[controller]")]
 [ApiController]
-[Authorize(Policy = PolicyAuthNames.ScopeRequirements)]
+
 public class RestaurantController : ControllerBase
 {
     private readonly IRestaurantService _restaurantService;
@@ -45,7 +45,8 @@ public class RestaurantController : ControllerBase
             include => include.RestaurantTables, include => include.RestaurantSchedule);
         return StatusCode(request.StatusCode, request);
     }
-
+    
+    [Authorize(Policy = PolicyAuthNames.ScopeRequirements)]
     [HttpPost("CreateSingleRestaurant")]
     public async Task<IActionResult> CreateSingleRestaurant([FromBody] RestaurantCreate restaurantToCreate,
         CancellationToken cancellationToken)
@@ -57,6 +58,7 @@ public class RestaurantController : ControllerBase
         return StatusCode(request.StatusCode, request);
     }
 
+    [Authorize(Policy = PolicyAuthNames.ScopeRequirements)]
     [HttpPut("UpdateSingleRestaurant")]
     public async Task<IActionResult> UpdateSingleRestaurant([FromBody] RestaurantDto restaurantToUpdate,
         CancellationToken cancellationToken)
@@ -68,6 +70,7 @@ public class RestaurantController : ControllerBase
         return StatusCode(request.StatusCode, request);
     }
 
+    [Authorize(Policy = PolicyAuthNames.ScopeRequirements)]
     [HttpDelete("DeleteSingleRestaurant/{restaurantId}")]
     public async Task<IActionResult> DeleteSingleRestaurant(string restaurantId, CancellationToken cancellationToken)
     {

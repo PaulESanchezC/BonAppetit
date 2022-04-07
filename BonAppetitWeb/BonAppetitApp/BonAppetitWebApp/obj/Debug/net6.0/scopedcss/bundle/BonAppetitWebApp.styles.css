@@ -1,3 +1,28 @@
+/* /Pages/Index.razor.rz.scp.css */
+.index-restaurants[b-uyy2nzlkd2] {
+    position: relative;
+    margin: 15px;
+    padding: 5px;
+}
+/* /Pages/RestaurantComponents/IndexRestaurantComponent.razor.rz.scp.css */
+.restaurant-box[b-w9x60jmlnr] {
+    position: relative;
+    margin: 5px;
+    border: 1px solid #525759;
+    border-radius: 5px;
+    width: 100%;
+}
+/* /Pages/RestaurantComponents/RestaurantDetails.razor.rz.scp.css */
+.restaurant-details-box[b-gn2y0mpt6u] {
+    position: relative;
+    margin: 15px;
+    padding: 15px;
+}
+
+.restaurant-carousel[b-gn2y0mpt6u] {
+    margin: 0 !important;
+    padding: 0 !important;
+}
 /* /Shared/MainLayout.razor.rz.scp.css */
 .page[b-nsinc8ilsh] {
     position: relative;
@@ -78,68 +103,5 @@ main[b-nsinc8ilsh] {
     .top-row[b-nsinc8ilsh], article[b-nsinc8ilsh] {
         padding-left: 2rem !important;
         padding-right: 1.5rem !important;
-    }
-}
-/* /Shared/NavMenu.razor.rz.scp.css */
-.navbar-toggler[b-2ad3d597cx] {
-    background-color: rgba(255, 255, 255, 0.1);
-}
-
-.top-row[b-2ad3d597cx] {
-    height: 3.5rem;
-    background-color: rgba(0,0,0,0.4);
-}
-
-.navbar-brand[b-2ad3d597cx] {
-    font-size: 1.1rem;
-}
-
-.oi[b-2ad3d597cx] {
-    width: 2rem;
-    font-size: 1.1rem;
-    vertical-align: text-top;
-    top: -2px;
-}
-
-.nav-item[b-2ad3d597cx] {
-    font-size: 0.9rem;
-    padding-bottom: 0.5rem;
-}
-
-    .nav-item:first-of-type[b-2ad3d597cx] {
-        padding-top: 1rem;
-    }
-
-    .nav-item:last-of-type[b-2ad3d597cx] {
-        padding-bottom: 1rem;
-    }
-
-    .nav-item[b-2ad3d597cx]  a {
-        color: #d7d7d7;
-        border-radius: 4px;
-        height: 3rem;
-        display: flex;
-        align-items: center;
-        line-height: 3rem;
-    }
-
-.nav-item[b-2ad3d597cx]  a.active {
-    background-color: rgba(255,255,255,0.25);
-    color: white;
-}
-
-.nav-item[b-2ad3d597cx]  a:hover {
-    background-color: rgba(255,255,255,0.1);
-    color: white;
-}
-
-@media (min-width: 641px) {
-    .navbar-toggler[b-2ad3d597cx] {
-        display: none;
-    }
-
-    .collapse[b-2ad3d597cx] {
-        /* Never collapse the sidebar for wide screens */
-        display: block;
     }
 }

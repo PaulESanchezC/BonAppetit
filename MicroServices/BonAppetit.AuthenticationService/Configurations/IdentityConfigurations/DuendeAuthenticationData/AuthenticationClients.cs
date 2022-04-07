@@ -23,7 +23,6 @@ public class AuthenticationClients
 
     #endregion
 
-
     public static IEnumerable<Client> Clients =>
         new List<Client>
         {
@@ -31,7 +30,7 @@ public class AuthenticationClients
            {
                Enabled = true,
                ClientId = ClientId,
-               ClientSecrets = {ClientSecret},
+               RequireClientSecret = false,
                RedirectUris = { RedirectUris },
                PostLogoutRedirectUris = { PostLogoutRedirectUris },
                AllowedScopes = new List<string>

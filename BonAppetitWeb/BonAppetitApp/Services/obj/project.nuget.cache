@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "HuKDlE/8NVEKl/fkonMNVu4sC4ILf0jcyDs1Z9VMsi47AoLJYDY+tLbDcXvwEqknwsUP/Rm51Hjy6RIOf38Q8Q==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Paulyglot\\Desktop\\Portoflio\\BonAppetit\\BonAppetitWeb\\BonAppetitApp\\Services\\Services.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Paulyglot\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512"
+  ],
+  "logs": []
+}

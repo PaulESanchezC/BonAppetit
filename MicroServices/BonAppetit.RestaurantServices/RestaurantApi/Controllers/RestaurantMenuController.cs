@@ -1,8 +1,10 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Models.MenuItemModels;
 using Models.MenuModels;
 using Services.Repository.MenuItemRepository;
 using Services.Repository.MenuRepository;
+using StaticData;
 
 namespace RestaurantApi.Controllers;
 
@@ -52,6 +54,7 @@ public class RestaurantMenuController : ControllerBase
         return StatusCode(request.StatusCode, request);
     }
 
+    [Authorize(Policy = PolicyAuthNames.ScopeRequirements)]
     [HttpPost("CreateRestaurantMenu")]
     public async Task<IActionResult> CreateRestaurantMenu([FromBody] MenuCreate menuToCreate,
         CancellationToken cancellationToken)
@@ -64,6 +67,7 @@ public class RestaurantMenuController : ControllerBase
         return StatusCode(request.StatusCode, request);
     }
 
+    [Authorize(Policy = PolicyAuthNames.ScopeRequirements)]
     [HttpPost("CreateMenuItem")]
     public async Task<IActionResult> CreateMenuItem([FromBody] MenuItemsCreate menuItemToCreate,
         CancellationToken cancellationToken)
@@ -75,6 +79,7 @@ public class RestaurantMenuController : ControllerBase
         return StatusCode(request.StatusCode, request);
     }
 
+    [Authorize(Policy = PolicyAuthNames.ScopeRequirements)]
     [HttpPost("SetRestaurantMenuPublicValue/{menuId}/{setPublic}")]
     public async Task<IActionResult> SetRestaurantMenuPublicValue(string menuId,
         bool? setPublic, CancellationToken cancellationToken)
@@ -94,6 +99,7 @@ public class RestaurantMenuController : ControllerBase
         return StatusCode(request.StatusCode, request);
     }
 
+    [Authorize(Policy = PolicyAuthNames.ScopeRequirements)]
     [HttpPut("UpdateRestaurantMenu")]
     public async Task<IActionResult> UpdateRestaurantMenu([FromBody] MenuDto menuToUpdate,
         CancellationToken cancellationToken)
@@ -105,6 +111,7 @@ public class RestaurantMenuController : ControllerBase
         return StatusCode(request.StatusCode, request);
     }
 
+    [Authorize(Policy = PolicyAuthNames.ScopeRequirements)]
     [HttpPut("UpdateMenuItem")]
     public async Task<IActionResult> UpdateMenuItem([FromBody] MenuItemsDto menuItemToUpdate, CancellationToken cancellationToken)
     {
@@ -115,6 +122,7 @@ public class RestaurantMenuController : ControllerBase
         return StatusCode(request.StatusCode, request);
     }
 
+    [Authorize(Policy = PolicyAuthNames.ScopeRequirements)]
     [HttpDelete("DeleteRestaurantMenu/{menuId}")]
     public async Task<IActionResult> DeleteRestaurantMenu(string menuId, CancellationToken cancellationToken)
     {
@@ -127,6 +135,7 @@ public class RestaurantMenuController : ControllerBase
         return StatusCode(request.StatusCode, request);
     }
 
+    [Authorize(Policy = PolicyAuthNames.ScopeRequirements)]
     [HttpDelete("DeleteMenuItem/{menuItemId}")]
     public async Task<IActionResult> DeleteMenuItem(string menuItemId, CancellationToken cancellationToken)
     {

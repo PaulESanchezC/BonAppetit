@@ -1,9 +1,19 @@
 ﻿@page "/"
 
 <PageTitle>Index</PageTitle>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12 page-title">
+            <h4>Welcome To Bon Appetit</h4>
+        </div>
 
-<h1>Hello, world!</h1>
-
-Welcome to your new app.
-
-<SurveyPrompt Title="How is Blazor working for you?" />
+        <div class="index-restaurants">
+            <div class="row">
+                @foreach (var restaurant in IndexRestaurants)
+                {
+                    <IndexRestaurantComponent Restaurant="restaurant" />
+                }
+            </div>
+        </div>
+    </div>
+</div>

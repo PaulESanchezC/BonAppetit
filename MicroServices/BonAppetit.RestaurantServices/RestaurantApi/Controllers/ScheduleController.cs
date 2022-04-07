@@ -1,6 +1,8 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Models.ScheduleModels;
 using Services.Repository.ScheduleRepository;
+using StaticData;
 
 namespace RestaurantApi.Controllers
 {
@@ -31,6 +33,7 @@ namespace RestaurantApi.Controllers
             return StatusCode(request.StatusCode, request);
         }
 
+        [Authorize(Policy = PolicyAuthNames.ScopeRequirements)]
         [HttpPost("CreateSingleRestaurantSchedule")]
         public async Task<IActionResult> CreateSingleRestaurantSchedule([FromBody] ScheduleCreate scheduleToCreate,
             CancellationToken cancellationToken)
@@ -42,6 +45,7 @@ namespace RestaurantApi.Controllers
             return StatusCode(request.StatusCode, request);
         }
 
+        [Authorize(Policy = PolicyAuthNames.ScopeRequirements)]
         [HttpPut("UpdateSingleRestaurantSchedule")]
         public async Task<IActionResult> UpdateSingleRestaurantSchedule([FromBody] ScheduleDto scheduleToUpdate,
             CancellationToken cancellationToken)
@@ -53,6 +57,7 @@ namespace RestaurantApi.Controllers
             return StatusCode(request.StatusCode, request);
         }
 
+        [Authorize(Policy = PolicyAuthNames.ScopeRequirements)]
         [HttpDelete("DeleteSingleRestaurantSchedule/{scheduleId}")]
         public async Task<IActionResult> DeleteSingleRestaurantSchedule(string scheduleId,
             CancellationToken cancellationToken)

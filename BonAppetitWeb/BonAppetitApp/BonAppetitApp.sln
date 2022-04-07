@@ -7,6 +7,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BonAppetitWebApp", "BonAppe
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Configurations", "Configurations\Configurations.csproj", "{2CD21C3A-4C02-4D42-B488-C5D32F8E2AF4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Services", "Services\Services.csproj", "{2C83A719-1E31-4822-AAAF-FBD906E08D44}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Models", "Models\Models.csproj", "{67CA8810-FC89-46AA-A48C-FA6FA4D1C87E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{2CD21C3A-4C02-4D42-B488-C5D32F8E2AF4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2CD21C3A-4C02-4D42-B488-C5D32F8E2AF4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2CD21C3A-4C02-4D42-B488-C5D32F8E2AF4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2C83A719-1E31-4822-AAAF-FBD906E08D44}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2C83A719-1E31-4822-AAAF-FBD906E08D44}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2C83A719-1E31-4822-AAAF-FBD906E08D44}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2C83A719-1E31-4822-AAAF-FBD906E08D44}.Release|Any CPU.Build.0 = Release|Any CPU
+		{67CA8810-FC89-46AA-A48C-FA6FA4D1C87E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{67CA8810-FC89-46AA-A48C-FA6FA4D1C87E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{67CA8810-FC89-46AA-A48C-FA6FA4D1C87E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{67CA8810-FC89-46AA-A48C-FA6FA4D1C87E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

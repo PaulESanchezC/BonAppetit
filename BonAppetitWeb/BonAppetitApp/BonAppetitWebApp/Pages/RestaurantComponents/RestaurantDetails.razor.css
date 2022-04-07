@@ -1,0 +1,10 @@
+﻿.restaurant-details-box {
+    position: relative;
+    margin: 15px;
+    padding: 15px;
+}
+
+.restaurant-carousel {
+    margin: 0 !important;
+    padding: 0 !important;
+}
