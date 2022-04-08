@@ -10,6 +10,21 @@ public static class SwaggerGenConfiguration
     {
         services.AddSwaggerGen(options =>
         {
+            options.SwaggerDoc("BonAppetitOpenApi",
+                new OpenApiInfo()
+                {
+                    Title = "Bon Appetit Restaurant Service API",
+                    Version = "V1.0",
+                    Description = @"Bon Appetit Web App <br/> 
+                                    Other Services APIs:<br/> 
+                                   <a href='https://localhost:44314/swagger/index.html'>Reservation Service</a> <br/> 
+                                    <a href='https://localhost:44352/swagger/index.html'>Identity Service</a> <br/> ",
+                    Contact = new OpenApiContact()
+                    {
+                        Name = "Paul Sanchez",
+                        Email = "PaulESanchezC@outlook.com"
+                    }
+                });
             options.AddSecurityDefinition(JwtBearerOptions.AuthenticationScheme, new OpenApiSecurityScheme
             {
                 Description = @"Enter 'Bearer' [space] Token value",

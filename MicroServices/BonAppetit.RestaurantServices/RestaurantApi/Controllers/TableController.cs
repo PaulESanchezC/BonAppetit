@@ -28,8 +28,7 @@ namespace RestaurantApi.Controllers
 
             var request = await _tableService.GetAllByAsync(
                 table=>table.RestaurantId == restaurantId,
-                cancellationToken,
-                include=>include.Restaurant);
+                cancellationToken);
 
             return StatusCode(request.StatusCode, request);
         }
@@ -45,13 +44,12 @@ namespace RestaurantApi.Controllers
 
             var request = await _tableService.GetSingleByAsync(
                 table => table.TableId == tableId,
-                cancellationToken,
-                include => include.Restaurant);
+                cancellationToken);
 
             return StatusCode(request.StatusCode, request);
         }
 
-        [Authorize(Policy = PolicyAuthNames.ScopeRequirements)]
+        //[Authorize(Policy = PolicyAuthNames.ScopeRequirements)]
         [HttpPost("CreateTable")]
         public async Task<IActionResult> CreateTable([FromBody] TableCreate tableToCreate,
             CancellationToken cancellationToken)
@@ -65,7 +63,7 @@ namespace RestaurantApi.Controllers
 
         [Authorize(Policy = PolicyAuthNames.ScopeRequirements)]
         [HttpPut("UpdateTable")]
-        public async Task<IActionResult> UpdateTable([FromBody] TableDto tableToUpdate,
+        public async Task<IActionResult> UpdateTable([FromBody] TableUpdate tableToUpdate,
             CancellationToken cancellationToken)
         {
             if (!ModelState.IsValid)

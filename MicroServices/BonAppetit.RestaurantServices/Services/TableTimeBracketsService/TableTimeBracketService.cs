@@ -3,6 +3,7 @@ using Data;
 using Microsoft.EntityFrameworkCore;
 using Models.ReservationModels;
 using Models.ResponseModels;
+using Models.ScheduleModels;
 using Models.TableModels;
 using Models.TableReservationBracketsModels;
 using Newtonsoft.Json;
@@ -25,12 +26,11 @@ public class TableTimeBracketService : ITableTimeBracketService
     public async Task<Response<TableReservationBracketDto>> GetAllTableReservationBracketsForRestaurantAsync(
         string restaurantId, DateTime dateOfRequest, CancellationToken cancellationToken)
     {
-
         var tableReservationsRequest = await GetTableReservationsAsync(restaurantId, dateOfRequest, cancellationToken);
         if (!tableReservationsRequest.IsSuccessful)
             return new Response<TableReservationBracketDto>
             {
-                IsSuccessful = tableReservationsRequest.IsSuccessful,
+                IsSuccessful = tableReservationsRequest!.IsSuccessful,
                 StatusCode = tableReservationsRequest.StatusCode,
                 Title = tableReservationsRequest.Title,
                 Message = tableReservationsRequest.Message,
@@ -62,120 +62,45 @@ public class TableTimeBracketService : ITableTimeBracketService
             };
 
         var restaurantSchedule = restaurant.RestaurantSchedule;
+        var (openingHours, closingHours) = await GetDayOfTheWeekOpeningAndClosingHoursAsync(restaurantSchedule, dateOfRequest);
+        var reservationsBracketsDto = await BuildTableReservationBracketDtoAsync(tables, tableReservations,openingHours, closingHours);
 
-        var day = DateTime.Now;
-        if (dateOfRequest > DateTime.Now)
-            day = dateOfRequest;
-
-        var openingHours = 0;
-        var closingHours = 0;
-        switch (day.DayOfWeek)
+        return new Response<TableReservationBracketDto>
         {
-            case DayOfWeek.Sunday:
-                if (!restaurantSchedule.Sunday)
-                    return new Response<TableReservationBracketDto>()
-                    {
-                        IsSuccessful = false,
-                        StatusCode = 400,
-                        Title = "Restaurant Closed",
-                        Message = "Restaurant Closed",
-                        ResponseObject = null,
-                    };
-                openingHours = restaurantSchedule.SundayOpenTime;
-                closingHours = restaurantSchedule.SundayCloseTime;
-                break;
-            case DayOfWeek.Monday:
-                if (!restaurantSchedule.Monday)
-                    return new Response<TableReservationBracketDto>()
-                    {
-                        IsSuccessful = false,
-                        StatusCode = 400,
-                        Title = "Restaurant Closed",
-                        Message = "Restaurant Closed",
-                        ResponseObject = null,
-                    };
-                openingHours = restaurantSchedule.MondayOpenTime;
-                closingHours = restaurantSchedule.MondayCloseTime;
-                break;
-            case DayOfWeek.Tuesday:
-                if (!restaurantSchedule.Tuesday)
-                    return new Response<TableReservationBracketDto>()
-                    {
-                        IsSuccessful = false,
-                        StatusCode = 400,
-                        Title = "Restaurant Closed",
-                        Message = "Restaurant Closed",
-                        ResponseObject = null,
-                    };
-                openingHours = restaurantSchedule.TuesdayOpenTime;
-                closingHours = restaurantSchedule.TuesdayCloseTime;
-                break;
-            case DayOfWeek.Wednesday:
-                if (!restaurantSchedule.Wednesday)
-                    return new Response<TableReservationBracketDto>()
-                    {
-                        IsSuccessful = false,
-                        StatusCode = 400,
-                        Title = "Restaurant Closed",
-                        Message = "Restaurant Closed",
-                        ResponseObject = null,
-                    };
-                openingHours = restaurantSchedule.WednesdayOpenTime;
-                closingHours = restaurantSchedule.WednesdayCloseTime;
-                break;
-            case DayOfWeek.Thursday:
-                if (!restaurantSchedule.Thursday)
-                    return new Response<TableReservationBracketDto>()
-                    {
-                        IsSuccessful = false,
-                        StatusCode = 400,
-                        Title = "Restaurant Closed",
-                        Message = "Restaurant Closed",
-                        ResponseObject = null,
-                    };
-                openingHours = restaurantSchedule.ThursdayCloseTime;
-                closingHours = restaurantSchedule.ThursdayCloseTime;
-                break;
-            case DayOfWeek.Friday:
-                if (!restaurantSchedule.Friday)
-                    return new Response<TableReservationBracketDto>()
-                    {
-                        IsSuccessful = false,
-                        StatusCode = 400,
-                        Title = "Restaurant Closed",
-                        Message = "Restaurant Closed",
-                        ResponseObject = null,
-                    };
-                openingHours = restaurantSchedule.FridayOpenTime;
-                closingHours = restaurantSchedule.FridayCloseTime;
-                break;
-            case DayOfWeek.Saturday:
-                if (!restaurantSchedule.Saturday)
-                    return new Response<TableReservationBracketDto>()
-                    {
-                        IsSuccessful = false,
-                        StatusCode = 400,
-                        Title = "Restaurant Closed",
-                        Message = "Restaurant Closed",
-                        ResponseObject = null,
-                    };
-                openingHours = restaurantSchedule.SaturdayOpenTime;
-                closingHours = restaurantSchedule.SaturdayCloseTime;
-                break;
-        }
+            IsSuccessful = true,
+            StatusCode = 200,
+            Title = "Ok",
+            Message = "Ok",
+            ResponseObject = reservationsBracketsDto
+        };
+    }
 
+    #region Helper Methods
+
+    private async Task<Response<ReservationDto>> GetTableReservationsAsync(string restaurantId, DateTime dateOfRequest, CancellationToken cancellationToken)
+    {
+        var request = new HttpRequestMessage(HttpMethod.Get, $"https://localhost:44314/api/Reservation/GetAllReservationsForRestaurantByDate/{restaurantId}/{dateOfRequest:MM-dd-yyyy}");
+        var client = await _httpClientFactory.CreateClient().SendAsync(request, cancellationToken);
+        var responseString = await client.Content.ReadAsStringAsync(cancellationToken);
+        var reservationsResponse = JsonConvert.DeserializeObject<Response<ReservationDto>>(responseString);
+        return reservationsResponse!;
+    }
+
+    private Task<List<TableReservationBracketDto>> BuildTableReservationBracketDtoAsync(List<TableBase> tables, List<ReservationDto>? reservations, int openingHour, int closeHour)
+    {
         var tableBrackets = new List<TableReservationBracketDto>();
         var timeBrackets = new List<TableTimeBracketDto>();
+
         foreach (var table in tables)
         {
             var freqOfRsvp = table.FrequencyOfReservation;
-            for (var i = openingHours; i < closingHours; i += freqOfRsvp)
+            for (var i = openingHour; i < closeHour; i += freqOfRsvp)
             {
-                var isReserved = tableReservations.Where(rsvp => rsvp.StartTime == i );
+                var isReserved = reservations.Where(rsvp => rsvp.StartTime == i);
                 timeBrackets.Add(new()
                 {
                     StartTime = i,
-                    EndTime = i+freqOfRsvp,
+                    EndTime = i + freqOfRsvp,
                     IsAvailable = isReserved.Any(),
                     Reservation = isReserved.FirstOrDefault()
                 });
@@ -187,25 +112,50 @@ public class TableTimeBracketService : ITableTimeBracketService
             });
         }
 
-        return new Response<TableReservationBracketDto>
-        {
-            IsSuccessful = true,
-            StatusCode = 200,
-            Title = "Ok",
-            Message = "Ok",
-            ResponseObject = tableBrackets
-        };
+        return Task.FromResult(tableBrackets);
     }
 
-    #region Helper Methods
-
-    private async Task<Response<ReservationDto>> GetTableReservationsAsync(string restaurantId, DateTime dateOfRequest, CancellationToken cancellationToken)
+    private Task<(int openingHour, int closingHour)> GetDayOfTheWeekOpeningAndClosingHoursAsync(ScheduleBase schedule, DateTime dateOfRequest)
     {
-        var request = new HttpRequestMessage(HttpMethod.Get, $"https://localhost:44314/api/Reservation/GetAllReservationsForRestaurantByDate/{restaurantId}/{dateOfRequest}");
-        var client = await _httpClientFactory.CreateClient().SendAsync(request, cancellationToken);
-        var responseString = await client.Content.ReadAsStringAsync(cancellationToken);
-        var reservationsResponse = JsonConvert.DeserializeObject<Response<ReservationDto>>(responseString);
-        return reservationsResponse!;
+        var day = DateTime.Now.Date;
+        if (dateOfRequest.Date > day)
+            day = dateOfRequest.Date;
+
+        var openingHours = 0;
+        var closingHours = 0;
+        var hours = (openingHours, closingHours);
+        switch (day.DayOfWeek)
+        {
+            case DayOfWeek.Sunday:
+                if (schedule.Sunday)
+                    hours = (schedule.SundayOpenTime, schedule.SundayCloseTime);
+                break;
+            case DayOfWeek.Monday:
+                if (schedule.Monday)
+                    hours = (schedule.MondayOpenTime, schedule.MondayCloseTime);
+                break;
+            case DayOfWeek.Tuesday:
+                if (schedule.Tuesday)
+                    hours = (schedule.TuesdayOpenTime, schedule.TuesdayCloseTime);
+                break;
+            case DayOfWeek.Wednesday:
+                if (schedule.Wednesday)
+                    hours = (schedule.WednesdayOpenTime, schedule.WednesdayCloseTime);
+                break;
+            case DayOfWeek.Thursday:
+                if (schedule.Thursday)
+                    hours = (schedule.ThursdayOpenTime, schedule.ThursdayCloseTime);
+                break;
+            case DayOfWeek.Friday:
+                if (schedule.Friday)
+                    hours = (schedule.FridayOpenTime, schedule.FridayCloseTime);
+                break;
+            case DayOfWeek.Saturday:
+                if (schedule.Saturday)
+                    hours = (schedule.SaturdayOpenTime, schedule.SaturdayCloseTime);
+                break;
+        }
+        return Task.FromResult(hours);
     }
 
     #endregion

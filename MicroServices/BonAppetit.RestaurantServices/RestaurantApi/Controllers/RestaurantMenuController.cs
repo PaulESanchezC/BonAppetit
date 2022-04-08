@@ -101,7 +101,7 @@ public class RestaurantMenuController : ControllerBase
 
     [Authorize(Policy = PolicyAuthNames.ScopeRequirements)]
     [HttpPut("UpdateRestaurantMenu")]
-    public async Task<IActionResult> UpdateRestaurantMenu([FromBody] MenuDto menuToUpdate,
+    public async Task<IActionResult> UpdateRestaurantMenu([FromBody] MenuUpdate menuToUpdate,
         CancellationToken cancellationToken)
     {
         if (!ModelState.IsValid)
@@ -113,7 +113,7 @@ public class RestaurantMenuController : ControllerBase
 
     [Authorize(Policy = PolicyAuthNames.ScopeRequirements)]
     [HttpPut("UpdateMenuItem")]
-    public async Task<IActionResult> UpdateMenuItem([FromBody] MenuItemsDto menuItemToUpdate, CancellationToken cancellationToken)
+    public async Task<IActionResult> UpdateMenuItem([FromBody] MenuItemsUpdate menuItemToUpdate, CancellationToken cancellationToken)
     {
         if (!ModelState.IsValid)
             return BadRequest(ModelState);

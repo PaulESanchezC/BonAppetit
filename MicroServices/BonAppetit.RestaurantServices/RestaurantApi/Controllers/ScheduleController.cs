@@ -45,9 +45,9 @@ namespace RestaurantApi.Controllers
             return StatusCode(request.StatusCode, request);
         }
 
-        [Authorize(Policy = PolicyAuthNames.ScopeRequirements)]
+        //[Authorize(Policy = PolicyAuthNames.ScopeRequirements)]
         [HttpPut("UpdateSingleRestaurantSchedule")]
-        public async Task<IActionResult> UpdateSingleRestaurantSchedule([FromBody] ScheduleDto scheduleToUpdate,
+        public async Task<IActionResult> UpdateSingleRestaurantSchedule([FromBody] ScheduleUpdate scheduleToUpdate,
             CancellationToken cancellationToken)
         {
             if (!ModelState.IsValid)

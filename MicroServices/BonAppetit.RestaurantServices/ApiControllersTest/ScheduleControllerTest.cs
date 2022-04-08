@@ -114,20 +114,19 @@ public class ScheduleControllerTest
     public async Task UpdateSingleRestaurantSchedule_Verify_ReturnNotNull_ReturnType_ScheduleServiceCall()
     {
         //Arrange
-        var objectToUpdate = new ScheduleDto();
         _scheduleService.Setup(method => method.UpdateAsync(
-                It.IsAny<ScheduleDto>(),
+                It.IsAny<ScheduleUpdate>(),
                 It.IsAny<CancellationToken>()))
             .ReturnsAsync(new Response<ScheduleDto>()).Verifiable();
 
         //Act
-        var result = await _scheduleController.UpdateSingleRestaurantSchedule(objectToUpdate, CancellationToken.None);
+        var result = await _scheduleController.UpdateSingleRestaurantSchedule(new ScheduleUpdate(), CancellationToken.None);
 
         //Assert
         Assert.NotNull(result);
         Assert.AreEqual(typeof(ObjectResult),result.GetType());
         _scheduleService.Verify(method => method.UpdateAsync(
-            It.IsAny<ScheduleDto>(),
+            It.IsAny<ScheduleUpdate>(),
             It.IsAny<CancellationToken>()),Times.Once);
     }
 
@@ -135,21 +134,20 @@ public class ScheduleControllerTest
     public async Task UpdateSingleRestaurantSchedule_InputInvalidScheduleDto_ReturnBadRequest_Verify_ScheduleServiceNoCall()
     {
         //Arrange
-        var objectToUpdate = new ScheduleDto();
         _scheduleService.Setup(method => method.UpdateAsync(
-                It.IsAny<ScheduleDto>(),
+                It.IsAny<ScheduleUpdate>(),
                 It.IsAny<CancellationToken>()))
             .ReturnsAsync(new Response<ScheduleDto>()).Verifiable();
         _scheduleController.ModelState.AddModelError("test","test");
 
         //Act
-        var result = await _scheduleController.UpdateSingleRestaurantSchedule(objectToUpdate, CancellationToken.None);
+        var result = await _scheduleController.UpdateSingleRestaurantSchedule(new ScheduleUpdate(), CancellationToken.None);
 
         //Assert
         Assert.NotNull(result);
         Assert.IsInstanceOf<BadRequestObjectResult>(result);
         _scheduleService.Verify(method => method.UpdateAsync(
-            It.IsAny<ScheduleDto>(),
+            It.IsAny<ScheduleUpdate>(),
             It.IsAny<CancellationToken>()), Times.Never);
     }
 

@@ -13,7 +13,7 @@ public static class SwaggerGenConfiguration
             options.SwaggerDoc("BonAppetitOpenApi",
                 new OpenApiInfo()
                 {
-                    Title = "Bon Appetit",
+                    Title = "Bon Appetit Reservation Service Api",
                     Version = "V1.0",
                     Description = "Bon Appetit Web App",
                     Contact = new OpenApiContact()

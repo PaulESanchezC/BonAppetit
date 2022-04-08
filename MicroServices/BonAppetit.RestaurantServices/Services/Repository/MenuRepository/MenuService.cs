@@ -6,7 +6,7 @@ using Models.ResponseModels;
 
 namespace Services.Repository.MenuRepository;
 
-public class MenuService : Repository<MenuBase,MenuDto,MenuCreate>, IMenuService
+public class MenuService : Repository<MenuBase,MenuDto,MenuCreate, MenuUpdate>, IMenuService
 {
     private readonly ApplicationDbContext _db;
     private readonly IMapper _mapper;

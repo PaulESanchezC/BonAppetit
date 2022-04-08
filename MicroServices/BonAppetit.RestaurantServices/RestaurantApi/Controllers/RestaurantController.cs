@@ -60,7 +60,7 @@ public class RestaurantController : ControllerBase
 
     [Authorize(Policy = PolicyAuthNames.ScopeRequirements)]
     [HttpPut("UpdateSingleRestaurant")]
-    public async Task<IActionResult> UpdateSingleRestaurant([FromBody] RestaurantDto restaurantToUpdate,
+    public async Task<IActionResult> UpdateSingleRestaurant([FromBody] RestaurantUpdate restaurantToUpdate,
         CancellationToken cancellationToken)
     {
         if (!ModelState.IsValid)

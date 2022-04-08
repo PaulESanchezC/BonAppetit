@@ -255,19 +255,18 @@ public class RestaurantMenuControllerTest
     {
         //Arrange
         _menuService.Setup(method => method.UpdateAsync(
-            It.IsAny<MenuDto>(),
+            It.IsAny<MenuUpdate>(),
             It.IsAny<CancellationToken>()
         )).ReturnsAsync(new Response<MenuDto>()).Verifiable();
-        var menuToUpdate = new MenuDto();
-
+        
         //Act
-        var result = await _restaurantMenuController.UpdateRestaurantMenu(menuToUpdate,CancellationToken.None);
+        var result = await _restaurantMenuController.UpdateRestaurantMenu(new MenuUpdate(),CancellationToken.None);
 
         //Assert
         Assert.NotNull(result);
         Assert.AreEqual(typeof(ObjectResult), result.GetType());
         _menuService.Verify(method => method.UpdateAsync(
-            It.IsAny<MenuDto>(),
+            It.IsAny<MenuUpdate>(),
             It.IsAny<CancellationToken>()), Times.Once);
     }
 
@@ -276,20 +275,19 @@ public class RestaurantMenuControllerTest
     {
         //Arrange
         _menuService.Setup(method => method.UpdateAsync(
-            It.IsAny<MenuDto>(),
+            It.IsAny<MenuUpdate>(),
             It.IsAny<CancellationToken>()
         )).ReturnsAsync(new Response<MenuDto>()).Verifiable();
-        var menuToUpdate = new MenuDto();
         _restaurantMenuController.ModelState.AddModelError("test","test");
 
         //Act
-        var result = await _restaurantMenuController.UpdateRestaurantMenu(menuToUpdate, CancellationToken.None);
+        var result = await _restaurantMenuController.UpdateRestaurantMenu(new MenuUpdate(), CancellationToken.None);
 
         //Assert
         Assert.NotNull(result);
         Assert.IsInstanceOf<BadRequestObjectResult>(result);
         _menuService.Verify(method => method.UpdateAsync(
-            It.IsAny<MenuDto>(),
+            It.IsAny<MenuUpdate>(),
             It.IsAny<CancellationToken>()), Times.Never);
     }
 
@@ -298,19 +296,18 @@ public class RestaurantMenuControllerTest
     {
         //Arrange
         _menuItemService.Setup(method => method.UpdateAsync(
-            It.IsAny<MenuItemsDto>(),
+            It.IsAny<MenuItemsUpdate>(),
             It.IsAny<CancellationToken>()
         )).ReturnsAsync(new Response<MenuItemsDto>()).Verifiable();
-        var menuItemToUpdate = new MenuItemsDto();
-
+        
         //Act
-        var result = await _restaurantMenuController.UpdateMenuItem(menuItemToUpdate, CancellationToken.None);
+        var result = await _restaurantMenuController.UpdateMenuItem(new MenuItemsUpdate(), CancellationToken.None);
 
         //Assert
         Assert.NotNull(result);
         Assert.AreEqual(typeof(ObjectResult), result.GetType());
         _menuItemService.Verify(method => method.UpdateAsync(
-            It.IsAny<MenuItemsDto>(),
+            It.IsAny<MenuItemsUpdate>(),
             It.IsAny<CancellationToken>()), Times.Once);
     }
 
@@ -319,20 +316,19 @@ public class RestaurantMenuControllerTest
     {
         //Arrange
         _menuItemService.Setup(method => method.UpdateAsync(
-            It.IsAny<MenuItemsDto>(),
+            It.IsAny<MenuItemsUpdate>(),
             It.IsAny<CancellationToken>()
         )).ReturnsAsync(new Response<MenuItemsDto>()).Verifiable();
-        var menuItemToUpdate = new MenuItemsDto();
         _restaurantMenuController.ModelState.AddModelError("test", "test");
 
         //Act
-        var result = await _restaurantMenuController.UpdateMenuItem(menuItemToUpdate, CancellationToken.None);
+        var result = await _restaurantMenuController.UpdateMenuItem(new MenuItemsUpdate(), CancellationToken.None);
 
         //Assert
         Assert.NotNull(result);
         Assert.IsInstanceOf<BadRequestObjectResult>(result);
         _menuItemService.Verify(method => method.UpdateAsync(
-            It.IsAny<MenuItemsDto>(),
+            It.IsAny<MenuItemsUpdate>(),
             It.IsAny<CancellationToken>()), Times.Never);
     }
 

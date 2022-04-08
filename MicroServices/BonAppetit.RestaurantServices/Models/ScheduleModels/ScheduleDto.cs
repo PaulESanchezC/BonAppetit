@@ -8,6 +8,9 @@ public class ScheduleDto
     #region Schedule Properties
 
     [Required(AllowEmptyStrings = false)]
+    public string RestaurantId { get; set; }
+
+    [Required(AllowEmptyStrings = false)]
     public string ScheduleId { get; set; }
 
     [Required(AllowEmptyStrings = false)]
@@ -72,10 +75,7 @@ public class ScheduleDto
 
     [Required(AllowEmptyStrings = false)]
     public int SaturdayCloseTime { get; set; }
-
     public RestaurantDto Restaurant { get; set; }
-
-    [Required(AllowEmptyStrings = false)]
-    public string RestaurantId { get; set; }
+    
     #endregion
 }

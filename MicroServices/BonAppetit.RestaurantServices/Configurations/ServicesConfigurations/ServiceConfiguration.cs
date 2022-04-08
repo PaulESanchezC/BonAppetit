@@ -5,6 +5,7 @@ using Services.Repository.MenuRepository;
 using Services.Repository.RestaurantRepository;
 using Services.Repository.ScheduleRepository;
 using Services.Repository.TableRepository;
+using Services.TableTimeBracketsService;
 
 namespace Configurations.ServicesConfigurations;
 
@@ -18,7 +19,7 @@ public static class ServiceConfiguration
         services.AddScoped<IRestaurantService, RestaurantService>();
         services.AddScoped<IScheduleService, ScheduleService>();
         services.AddScoped<ITableService, TableService>();
-
+        services.AddScoped<ITableTimeBracketService, TableTimeBracketService>();
         return services;
     }
 }

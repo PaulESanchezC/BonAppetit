@@ -179,37 +179,19 @@ public class RestaurantControllerTests
     {
         //Arrange
         //Expected Result
-        var expectedResponse = new Response<RestaurantDto>
-        {
-            StatusCode = 200,
-            IsSuccessful = true,
-            Title = "Ok",
-            Message = "Ok",
-            ResponseObject = new()
-        };
-        var objectToUpdateFromBody = new RestaurantDto()
-        {
-            RestaurantId = "id",
-            RestaurantName = "name",
-            RestaurantAddress = "address",
-            RestaurantCiy = "city",
-            RestaurantCuisineType = "cuisine",
-            RestaurantPhone = "phone",
-            RestaurantWebsite = "website"
-        };
         _restaurantService.Setup(method => method.UpdateAsync(
-            It.IsAny<RestaurantDto>(),
+            It.IsAny<RestaurantUpdate>(),
             It.IsAny<CancellationToken>()
-        )).ReturnsAsync(expectedResponse).Verifiable();
+        )).ReturnsAsync(new Response<RestaurantDto>()).Verifiable();
 
         //Act
-        var result = await _restaurantController.UpdateSingleRestaurant(objectToUpdateFromBody, CancellationToken.None);
+        var result = await _restaurantController.UpdateSingleRestaurant(new RestaurantUpdate(), CancellationToken.None);
 
         //Assert
         Assert.NotNull(result);
         Assert.AreEqual(typeof(ObjectResult), result.GetType());
         _restaurantService.Verify(method => method.UpdateAsync(
-            It.IsAny<RestaurantDto>(),
+            It.IsAny<RestaurantUpdate>(),
             It.IsAny<CancellationToken>()), Times.Once);
     }
 
@@ -217,24 +199,21 @@ public class RestaurantControllerTests
     public async Task UpdateSingleRestaurant_InputInvalidModelState_ReturnBadRequest_Verify_RestaurantServiceNoCall_ReturnType()
     {
         //Arrange
-        var objectToUpdateFromBody = new RestaurantDto();
-
-        _restaurantController.ModelState.AddModelError("test", "test");
         _restaurantService.Setup(method => method.UpdateAsync(
-            It.IsAny<RestaurantDto>(),
+            It.IsAny<RestaurantUpdate>(),
             It.IsAny<CancellationToken>()
         )).Verifiable();
+        _restaurantController.ModelState.AddModelError("test", "test");
 
         //Act
-        var result = await _restaurantController.UpdateSingleRestaurant(objectToUpdateFromBody, CancellationToken.None);
+        var result = await _restaurantController.UpdateSingleRestaurant(new RestaurantUpdate(), CancellationToken.None);
 
         //Assert
         Assert.IsInstanceOf<BadRequestObjectResult>(result);
         Assert.NotNull(result);
         _restaurantService.Verify(method => method.UpdateAsync(
-            It.IsAny<RestaurantDto>(),
+            It.IsAny<RestaurantUpdate>(),
             It.IsAny<CancellationToken>()), Times.Never);
-
     }
 
     [Test]

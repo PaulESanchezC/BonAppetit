@@ -2,4 +2,4 @@
 
 namespace Services.Repository.ScheduleRepository;
 
-public interface IScheduleService : IRepository<ScheduleBase, ScheduleDto, ScheduleCreate> { }
+public interface IScheduleService : IRepository<ScheduleBase, ScheduleDto, ScheduleCreate,ScheduleUpdate> { }

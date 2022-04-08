@@ -2,4 +2,4 @@
 
 namespace Services.Repository.ImageRepository;
 
-public interface IImageService : IRepository<ImageBase,ImageDto,ImageCreate> { }
+public interface IImageService : IRepository<ImageBase,ImageDto,ImageCreate,ImageUpdate> { }

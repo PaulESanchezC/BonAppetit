@@ -5,7 +5,7 @@ using Models.ScheduleModels;
 
 namespace Services.Repository.ScheduleRepository;
 
-public class ScheduleService :Repository<ScheduleBase, ScheduleDto, ScheduleCreate>, IScheduleService
+public class ScheduleService :Repository<ScheduleBase, ScheduleDto, ScheduleCreate,ScheduleUpdate>, IScheduleService
 {
     public ScheduleService(ApplicationDbContext db, IMapper mapper) : base(db, mapper) { }
 }

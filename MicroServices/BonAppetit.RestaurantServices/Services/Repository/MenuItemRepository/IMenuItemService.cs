@@ -2,7 +2,4 @@
 
 namespace Services.Repository.MenuItemRepository;
 
-public interface IMenuItemService : IRepository<MenuItemsBase,MenuItemsDto,MenuItemsCreate>
-{
-    
-}
+public interface IMenuItemService : IRepository<MenuItemsBase,MenuItemsDto,MenuItemsCreate,MenuItemsUpdate> { }

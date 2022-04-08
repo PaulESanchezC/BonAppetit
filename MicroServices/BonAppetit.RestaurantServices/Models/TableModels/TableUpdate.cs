@@ -2,9 +2,10 @@
 
 namespace Models.TableModels;
 
-public class TableCreate
+public class TableUpdate
 {
     #region Table Properties
+
     [Required(AllowEmptyStrings = false)]
     public string TableName { get; set; }
 

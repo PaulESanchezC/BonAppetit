@@ -3,12 +3,14 @@
 
 namespace Models.ScheduleModels;
 
-public class ScheduleCreate
+public class ScheduleUpdate
 {
     #region Schedule Properties
 
     [Required(AllowEmptyStrings = false)]
     public string RestaurantId { get; set; }
+    [Required(AllowEmptyStrings = false)]
+    public string ScheduleId { get; set; }
     [Required(AllowEmptyStrings = false)]
     public bool Sunday { get; set; }
 

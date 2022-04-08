@@ -26,7 +26,7 @@ public class Repository<T, TDto> : IRepository<T, TDto>
             query = query.Where(predicate);
 
         if (!query.Any())
-            return await ResponseSingleBuilderTask(false, 400, "Empty Result", "The operation returned an empty result", null);
+            return await ResponseSingleBuilderTask(true, 200, "Empty Result", "The operation returned an empty result", null);
 
         return await ResponseManyBuilderTask(true, 200, "Ok", "Ok", await query.ToListAsync(cancellationToken));
     }

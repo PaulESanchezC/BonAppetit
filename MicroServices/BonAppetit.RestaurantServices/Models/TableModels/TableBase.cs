@@ -10,8 +10,9 @@ public class TableBase
     public int FrequencyOfReservation { get; set; } = 2;
     public int AmountOfSeats { get; set; } = 2;
 
-    public RestaurantBase Restaurant { get; set; } = new();
-    public string RestaurantId { get; set; } = "";
+    public RestaurantBase Restaurant { get; set; }
+    public string RestaurantId { get; set; }
+
     #endregion
 
 

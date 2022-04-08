@@ -49,8 +49,7 @@ var app = builder.Build();
 if (app.Environment.IsDevelopment())
 { }
 app.UseSwagger();
-app.UseSwaggerUI();
-
+app.UseSwaggerUI(options => options.SwaggerEndpoint("/swagger/BonAppetitOpenApi/swagger.json", "Bon Appetit Restaurant Service"));
 app.UseHttpsRedirection();
 app.UseCors(options =>
 {

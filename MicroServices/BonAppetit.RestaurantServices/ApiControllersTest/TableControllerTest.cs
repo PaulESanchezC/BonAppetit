@@ -160,19 +160,19 @@ public class TableControllerTest
     {
         //Arrange
         _tableService.Setup(method => method.UpdateAsync(
-                It.IsAny<TableDto>(),
+                It.IsAny<TableUpdate>(),
                 It.IsAny<CancellationToken>()))
             .ReturnsAsync(new Response<TableDto>()).Verifiable();
-        var tableToUpdate = new TableDto();
+        
 
         //Act
-        var result = await _tableController.UpdateTable(tableToUpdate, CancellationToken.None);
+        var result = await _tableController.UpdateTable(new TableUpdate(), CancellationToken.None);
 
         //Arrange
         Assert.NotNull(result);
         Assert.AreEqual(typeof(ObjectResult), result.GetType());
         _tableService.Verify(method => method.UpdateAsync(
-            It.IsAny<TableDto>(),
+            It.IsAny<TableUpdate>(),
             It.IsAny<CancellationToken>()), Times.Once);
     }
 
@@ -181,23 +181,22 @@ public class TableControllerTest
     {
         //Arrange
         _tableService.Setup(method => method.UpdateAsync(
-                It.IsAny<TableDto>(),
+                It.IsAny<TableUpdate>(),
                 It.IsAny<CancellationToken>()))
             .ReturnsAsync(new Response<TableDto>()).Verifiable();
-        var tableToUpdate = new TableDto();
         _tableController.ModelState.AddModelError("test", "test");
 
         //Act
-        var result = await _tableController.UpdateTable(tableToUpdate, CancellationToken.None);
+        var result = await _tableController.UpdateTable(new TableUpdate(), CancellationToken.None);
 
         //Arrange
         Assert.NotNull(result);
         Assert.IsInstanceOf<BadRequestObjectResult>(result);
         _tableService.Verify(method => method.UpdateAsync(
-            It.IsAny<TableDto>(),
+            It.IsAny<TableUpdate>(),
             It.IsAny<CancellationToken>()), Times.Never);
     }
-    
+
     [Test]
     public async Task DeleteTable_InputValidTableId_ReturnNotNull_ReturnType_ScheduleServiceCall()
     {
