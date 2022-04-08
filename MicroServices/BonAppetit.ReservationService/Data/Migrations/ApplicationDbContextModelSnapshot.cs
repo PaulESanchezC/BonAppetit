@@ -70,6 +70,9 @@ namespace Data.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int>("StartTime")
+                        .HasColumnType("int");
+
                     b.Property<string>("TableId")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");

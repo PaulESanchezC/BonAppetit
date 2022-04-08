@@ -54,7 +54,7 @@ namespace Data.Migrations
 
                     b.HasIndex("RestaurantBaseRestaurantId");
 
-                    b.ToTable("Images", (string)null);
+                    b.ToTable("Images");
                 });
 
             modelBuilder.Entity("Models.MenuItemModels.MenuItemsBase", b =>
@@ -105,7 +105,7 @@ namespace Data.Migrations
 
                     b.HasIndex("MenuId");
 
-                    b.ToTable("MenuItems", (string)null);
+                    b.ToTable("MenuItems");
                 });
 
             modelBuilder.Entity("Models.MenuModels.MenuBase", b =>
@@ -143,7 +143,7 @@ namespace Data.Migrations
 
                     b.HasIndex("RestaurantId");
 
-                    b.ToTable("Menus", (string)null);
+                    b.ToTable("Menus");
                 });
 
             modelBuilder.Entity("Models.RestaurantModels.RestaurantBase", b =>
@@ -202,7 +202,7 @@ namespace Data.Migrations
 
                     b.HasKey("RestaurantId");
 
-                    b.ToTable("Restaurants", (string)null);
+                    b.ToTable("Restaurants");
                 });
 
             modelBuilder.Entity("Models.ScheduleModels.ScheduleBase", b =>
@@ -329,7 +329,7 @@ namespace Data.Migrations
                     b.HasIndex("RestaurantId")
                         .IsUnique();
 
-                    b.ToTable("Schedules", (string)null);
+                    b.ToTable("Schedules");
                 });
 
             modelBuilder.Entity("Models.TableModels.TableBase", b =>
@@ -352,11 +352,6 @@ namespace Data.Migrations
                         .HasColumnType("int")
                         .HasDefaultValue(2);
 
-                    b.Property<double>("HoursOpenForReservation")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("float")
-                        .HasDefaultValue(10.0);
-
                     b.Property<string>("RestaurantId")
                         .IsRequired()
                         .HasColumnType("nvarchar(450)");
@@ -371,7 +366,7 @@ namespace Data.Migrations
 
                     b.HasIndex("RestaurantId");
 
-                    b.ToTable("Tables", (string)null);
+                    b.ToTable("Tables");
                 });
 
             modelBuilder.Entity("Models.ImageModels.ImageBase", b =>

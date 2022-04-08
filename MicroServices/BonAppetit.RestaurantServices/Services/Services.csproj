@@ -18,6 +18,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="TableTimeBracketsService\" />
     <Folder Include="Repository\ImageRepository\" />
     <Folder Include="Repository\MenuItemRepository\" />
     <Folder Include="Repository\ScheduleRepository\" />
