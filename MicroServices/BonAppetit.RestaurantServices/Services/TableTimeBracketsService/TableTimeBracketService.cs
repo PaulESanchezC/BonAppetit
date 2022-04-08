@@ -44,8 +44,8 @@ public class TableTimeBracketService : ITableTimeBracketService
             {
                 IsSuccessful = false,
                 StatusCode = 400,
-                Title = "Empty Result",
-                Message = "The operation returned an empty result",
+                Title = "No Tables",
+                Message = $"The Restaurant has no tables registered",
                 ResponseObject = null
             };
 
@@ -56,8 +56,8 @@ public class TableTimeBracketService : ITableTimeBracketService
             {
                 IsSuccessful = false,
                 StatusCode = 400,
-                Title = "Empty Result",
-                Message = "The operation returned an empty result",
+                Title = "Invalid restaurantId",
+                Message = $"No restaurant is registered by the Id:{restaurantId}",
                 ResponseObject = null
             };
 
@@ -85,37 +85,7 @@ public class TableTimeBracketService : ITableTimeBracketService
         var reservationsResponse = JsonConvert.DeserializeObject<Response<ReservationDto>>(responseString);
         return reservationsResponse!;
     }
-
-    private Task<List<TableReservationBracketDto>> BuildTableReservationBracketDtoAsync(List<TableBase> tables, List<ReservationDto>? reservations, int openingHour, int closeHour)
-    {
-        var tableBrackets = new List<TableReservationBracketDto>();
-        var timeBrackets = new List<TableTimeBracketDto>();
-
-        foreach (var table in tables)
-        {
-            var freqOfRsvp = table.FrequencyOfReservation;
-            for (var i = openingHour; i < closeHour; i += freqOfRsvp)
-            {
-                var isReserved = reservations.Where(rsvp => rsvp.StartTime == i);
-                timeBrackets.Add(new()
-                {
-                    StartTime = i,
-                    EndTime = i + freqOfRsvp,
-                    IsAvailable = isReserved.Any(),
-                    Reservation = isReserved.FirstOrDefault()
-                });
-            }
-            tableBrackets.Add(new()
-            {
-                Table = _mapper.Map<TableDto>(table),
-                TablesTimeBrackets = timeBrackets
-            });
-        }
-
-        return Task.FromResult(tableBrackets);
-    }
-
-    private Task<(int openingHour, int closingHour)> GetDayOfTheWeekOpeningAndClosingHoursAsync(ScheduleBase schedule, DateTime dateOfRequest)
+    private static Task<(int openingHour, int closingHour)> GetDayOfTheWeekOpeningAndClosingHoursAsync(ScheduleBase schedule, DateTime dateOfRequest)
     {
         var day = DateTime.Now.Date;
         if (dateOfRequest.Date > day)
@@ -156,6 +126,38 @@ public class TableTimeBracketService : ITableTimeBracketService
                 break;
         }
         return Task.FromResult(hours);
+    }
+    private Task<List<TableReservationBracketDto>> BuildTableReservationBracketDtoAsync(List<TableBase> tables, List<ReservationDto>? reservations, int openingHour, int closeHour)
+    {
+        var tableBrackets = new List<TableReservationBracketDto>();
+        var timeBrackets = new List<TableTimeBracketDto>();
+
+        foreach (var table in tables)
+        {
+            var freqOfRsvp = table.FrequencyOfReservation;
+            for (var i = openingHour; i < closeHour; i += freqOfRsvp)
+            {
+                var reservation = reservations?.Where(rsvp => rsvp.StartTime == i).FirstOrDefault();
+                timeBrackets.Add(new()
+                {
+                    StartTime = i,
+                    EndTime = i + freqOfRsvp,
+                    IsAvailable = reservation is null,
+                    Reservation = reservation
+                });
+            }
+
+            var tableDto = _mapper.Map<TableDto>(table);
+            tableDto.Restaurant = null;
+            tableBrackets.Add(new()
+            {
+                Table = tableDto,
+                TablesTimeBrackets = timeBrackets
+            });
+            timeBrackets = new();
+        }
+
+        return Task.FromResult(tableBrackets);
     }
 
     #endregion

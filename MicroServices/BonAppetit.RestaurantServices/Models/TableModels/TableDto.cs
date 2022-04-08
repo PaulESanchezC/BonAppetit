@@ -18,7 +18,7 @@ public class TableDto
     [Required(AllowEmptyStrings = false)]
     public int AmountOfSeats { get; set; }
 
-    public RestaurantDto Restaurant { get; set; } = new();
+    public RestaurantDto? Restaurant { get; set; } = new();
 
     [Required(AllowEmptyStrings = false)]
     public string RestaurantId { get; set; }

@@ -53,7 +53,9 @@ public class Repository<T, TDto> : IRepository<T, TDto>
 
     public Task<Response<TDto>> ResponseSingleBuilderTask(bool isSuccessful, int statusCode, string title, string message, T? responseObject)
     {
-        var responseObjectDto = new List<TDto> { _mapper.Map<TDto>(responseObject) };
+        var responseObjectDto = new List<TDto>();
+        if (responseObject is not null)
+            responseObjectDto.Add(_mapper.Map<TDto>(responseObject));
 
         var response = new Response<TDto>
         {
