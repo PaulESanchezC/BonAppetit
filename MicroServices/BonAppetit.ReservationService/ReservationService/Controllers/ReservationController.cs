@@ -15,6 +15,22 @@ namespace ReservationService.Controllers
             _reservationService = reservationService;
         }
 
+        [HttpGet("GetAllReservationsForRestaurantByDate/{restaurantId}/{dateOfRequest:datetime}")]
+        public async Task<IActionResult> GetAllReservationsForRestaurant(string restaurantId, DateTime dateOfRequest,
+            CancellationToken cancellationToken)
+        {
+            if (string.IsNullOrEmpty(restaurantId))
+            {
+                ModelState.AddModelError("restaurantId", "The restaurantId field is required.");
+                return BadRequest(ModelState);
+            }
+
+            var request = await _reservationService.GetByAsync(
+                rsvp => rsvp.RestaurantId == restaurantId && rsvp.DateOfReservation.Date == dateOfRequest.Date,
+                cancellationToken);
+            return StatusCode(request.StatusCode, request);
+        }
+
         [HttpGet("GetAllValidReservationsForRestaurant/{restaurantId}")]
         public async Task<IActionResult> GetAllReservationsForRestaurant(string restaurantId,
             CancellationToken cancellationToken)

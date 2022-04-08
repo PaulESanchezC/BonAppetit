@@ -26,7 +26,7 @@ public class TableTimeBracketService : ITableTimeBracketService
         string restaurantId, DateTime dateOfRequest, CancellationToken cancellationToken)
     {
 
-        var tableReservationsRequest = await GetTableReservationsAsync(restaurantId, cancellationToken);
+        var tableReservationsRequest = await GetTableReservationsAsync(restaurantId, dateOfRequest, cancellationToken);
         if (!tableReservationsRequest.IsSuccessful)
             return new Response<TableReservationBracketDto>
             {
@@ -199,9 +199,9 @@ public class TableTimeBracketService : ITableTimeBracketService
 
     #region Helper Methods
 
-    private async Task<Response<ReservationDto>> GetTableReservationsAsync(string restaurantId, CancellationToken cancellationToken)
+    private async Task<Response<ReservationDto>> GetTableReservationsAsync(string restaurantId, DateTime dateOfRequest, CancellationToken cancellationToken)
     {
-        var request = new HttpRequestMessage(HttpMethod.Get, $"https://localhost:44314/api/Reservation/GetAllValidReservationsForRestaurant/{restaurantId}");
+        var request = new HttpRequestMessage(HttpMethod.Get, $"https://localhost:44314/api/Reservation/GetAllReservationsForRestaurantByDate/{restaurantId}/{dateOfRequest}");
         var client = await _httpClientFactory.CreateClient().SendAsync(request, cancellationToken);
         var responseString = await client.Content.ReadAsStringAsync(cancellationToken);
         var reservationsResponse = JsonConvert.DeserializeObject<Response<ReservationDto>>(responseString);
