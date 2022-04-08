@@ -2,30 +2,38 @@
 
 namespace Models.ReservationModels;
 
-public class ReservationDto
+public class ReservationCreate
 {
     #region Reservation Properties
 
-    
-    public string ReservationId { get; set; }
-    
+    [Required]
     public string RestaurantId { get; set; }
-    
+
+    [Required]
     public string TableId { get; set; }
-    
+
+    [Required]
     public DateTime DateOfReservation { get; set; }
-    
+
+    [Required]
     public int StartTime { get; set; }
-    
-    public int OrderId { get; set; }
-    
+
     public string ApplicationUserId { get; set; }
 
-    public bool IsUserAnonymous { get; set; } = false;
+    [Required(AllowEmptyStrings = false)]
     public string Phone { get; set; }
+
+    [Required(AllowEmptyStrings = false)]
+    [EmailAddress]
     public string Email { get; set; }
+
+    [Required(AllowEmptyStrings = false)]
     public string FirstName { get; set; }
+
+    [Required(AllowEmptyStrings = false)]
     public string LastName { get; set; }
 
+    [Required(AllowEmptyStrings = false)]
+    public string PaymentTransaction { get; set; }
     #endregion
 }

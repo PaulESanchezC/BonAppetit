@@ -6,9 +6,10 @@ using Models.ResponseModels;
 
 namespace Services.Repository;
 
-public class Repository<T, TDto> : IRepository<T, TDto>
+public class Repository<T, TDto, TCreate> : IRepository<T, TDto, TCreate>
     where T : class
     where TDto : class
+    where TCreate : class
 {
     private readonly IMapper _mapper;
     private readonly ApplicationDbContext _db;
@@ -30,27 +31,6 @@ public class Repository<T, TDto> : IRepository<T, TDto>
 
         return await ResponseManyBuilderTask(true, 200, "Ok", "Ok", await query.ToListAsync(cancellationToken));
     }
-    public async Task<Response<TDto>> CreateAsync(TDto objectToCreate, CancellationToken cancellationToken)
-    {
-        var objectToCreateT = _mapper.Map<T>(objectToCreate);
-
-        var entity = await _db.AddAsync<T>(objectToCreateT, cancellationToken);
-        if (entity.State != EntityState.Added)
-            return await ResponseSingleBuilderTask(false, 409, "Operation Failed", $"Could not add the {typeof(T).Name}", null);
-
-        try
-        {
-            await _db.SaveChangesAsync(cancellationToken);
-        }
-        catch (DbUpdateException e)
-        {
-            Console.WriteLine(e);
-            return await ResponseSingleBuilderTask(false, 409, "Operation Failed", $"Could not save the {typeof(T).Name}", null);
-        }
-
-        return await ResponseSingleBuilderTask(true, 201, "Ok", "Ok", objectToCreateT);
-    }
-
     public Task<Response<TDto>> ResponseSingleBuilderTask(bool isSuccessful, int statusCode, string title, string message, T? responseObject)
     {
         var responseObjectDto = new List<TDto>();

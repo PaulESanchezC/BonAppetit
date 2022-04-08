@@ -137,7 +137,8 @@ public class TableTimeBracketService : ITableTimeBracketService
             var freqOfRsvp = table.FrequencyOfReservation;
             for (var i = openingHour; i < closeHour; i += freqOfRsvp)
             {
-                var reservation = reservations?.Where(rsvp => rsvp.StartTime == i).FirstOrDefault();
+                var reservation = reservations?.Where(rsvp => rsvp.StartTime == i
+                                                && rsvp.TableId == table.TableId).FirstOrDefault();
                 timeBrackets.Add(new()
                 {
                     StartTime = i,

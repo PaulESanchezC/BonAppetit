@@ -128,15 +128,15 @@ namespace ReservationService.Controllers
             return StatusCode(request.StatusCode, request);
         }
 
-        [Authorize]//TODO: Implement Tests once this endpoint and methods dependent are complete
+        //[Authorize]//TODO: Implement Tests once this endpoint and methods dependent are complete
         [HttpPost("MakeReservation")]
-        public async Task<IActionResult> MakeReservation([FromBody] ReservationDto reservationToMake,
+        public async Task<IActionResult> MakeReservation([FromBody] ReservationCreate reservationToMake,
             CancellationToken cancellationToken)
         {
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
 
-            var request = await _reservationService.CreateAsync(reservationToMake, cancellationToken);
+            var request = await _reservationService.MakeReservationAsync(reservationToMake, cancellationToken);
             return StatusCode(request.StatusCode, request);
         }
     }

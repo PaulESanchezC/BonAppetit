@@ -9,5 +9,6 @@ public class AutoMapperOptionsConfigurations : Profile
     public AutoMapperOptionsConfigurations()
     {
         CreateMap<ReservationDto, ReservationBase>().ReverseMap();
+        CreateMap<ReservationCreate, ReservationBase>().ReverseMap();
     }
 }
