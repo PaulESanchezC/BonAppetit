@@ -2,7 +2,7 @@
 using Models.TableReservationBracketsModels;
 
 namespace Services.TableTimeBracketsService;
-
+//TODO: Separate this to another service
 public interface ITableTimeBracketService
 {
     Task<Response<TableReservationBracketDto>> GetAllTableReservationBracketsForRestaurantAsync

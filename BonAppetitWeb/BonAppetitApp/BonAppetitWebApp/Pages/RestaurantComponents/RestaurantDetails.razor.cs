@@ -12,7 +12,7 @@ public partial class RestaurantDetails
     [Inject]
     private IRestaurantService _restaurantService { get; set; }
 
-    public Restaurant Restaurant { get; set; }
+    public Restaurant Restaurant { get; set; } = new();
     protected override async Task OnInitializedAsync()
     {
         var request = await _restaurantService.GetSingleRestaurantAsync(RestaurantId);

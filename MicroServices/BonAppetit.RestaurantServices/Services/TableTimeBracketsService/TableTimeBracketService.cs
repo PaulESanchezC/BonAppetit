@@ -9,7 +9,7 @@ using Models.TableReservationBracketsModels;
 using Newtonsoft.Json;
 
 namespace Services.TableTimeBracketsService;
-
+//TODO: Separate this to another service
 public class TableTimeBracketService : ITableTimeBracketService
 {
     private readonly ApplicationDbContext _db;
@@ -63,7 +63,7 @@ public class TableTimeBracketService : ITableTimeBracketService
 
         var restaurantSchedule = restaurant.RestaurantSchedule;
         var (openingHours, closingHours) = await GetDayOfTheWeekOpeningAndClosingHoursAsync(restaurantSchedule, dateOfRequest);
-        var reservationsBracketsDto = await BuildTableReservationBracketDtoAsync(tables, tableReservations,openingHours, closingHours);
+        var reservationsBracketsDto = await BuildTableReservationBracketDtoAsync(tables, tableReservations, openingHours, closingHours);
 
         return new Response<TableReservationBracketDto>
         {
@@ -139,13 +139,12 @@ public class TableTimeBracketService : ITableTimeBracketService
             {
                 var reservation = reservations?.Where(rsvp => rsvp.StartTime == i
                                                 && rsvp.TableId == table.TableId).FirstOrDefault();
-                timeBrackets.Add(new()
-                {
-                    StartTime = i,
-                    EndTime = i + freqOfRsvp,
-                    IsAvailable = reservation is null,
-                    Reservation = reservation
-                });
+                if (reservation is null)
+                    timeBrackets.Add(new()
+                    {
+                        StartTime = i,
+                        EndTime = i + freqOfRsvp
+                    });
             }
 
             var tableDto = _mapper.Map<TableDto>(table);

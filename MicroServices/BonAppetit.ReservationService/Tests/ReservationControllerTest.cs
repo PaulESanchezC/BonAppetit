@@ -158,7 +158,7 @@ public class ReservationControllerTest
             It.IsAny<Expression<Func<ReservationBase, bool>>>(),
             It.IsAny<CancellationToken>()), Times.Never);
     }
-    
+
     [Test]
     public async Task GetReservationsForSingleTable_InputValidRestaurantId_Verify_ReturnType_RestaurantServiceCall()
     {
@@ -193,5 +193,47 @@ public class ReservationControllerTest
             It.IsAny<CancellationToken>()), Times.Never);
     }
 
+    [Test]
+    public async Task MakeReservation_InputValidReservationCreateModel_Verify_ReturnNotNull_ServiceCall()
+    {
+        //Arrange
+        var reservationToMake = new ReservationCreate();
+        _reservationService.Setup(method => method.MakeReservationAsync(
+                It.IsAny<ReservationCreate>(),
+                It.IsAny<CancellationToken>()
+                )).ReturnsAsync(new Response<ReservationDto>()).Verifiable();
 
+        //Act
+        var result = await _reservationController.MakeReservation(reservationToMake, CancellationToken.None);
+
+        //Assert
+        Assert.NotNull(result);
+        Assert.AreEqual(typeof(ObjectResult),result.GetType());
+        _reservationService.Verify(method => method.MakeReservationAsync(
+            It.IsAny<ReservationCreate>(),
+            It.IsAny<CancellationToken>()
+        ),Times.Once);
+    }
+
+    [Test]
+    public async Task MakeReservation_InputInvalidReservationCreateModel_Verify_ReturnNotNull_NoServiceCall()
+    {
+        //Arrange
+        _reservationService.Setup(method => method.MakeReservationAsync(
+            It.IsAny<ReservationCreate>(),
+            It.IsAny<CancellationToken>()
+        )).ReturnsAsync(new Response<ReservationDto>()).Verifiable();
+        var reservationToMake = new ReservationCreate();
+        _reservationController.ModelState.AddModelError("test","test");
+
+        //Act
+        var result = await _reservationController.MakeReservation(reservationToMake, CancellationToken.None);
+
+        //Assert
+        Assert.IsInstanceOf<BadRequestObjectResult>(result);
+        _reservationService.Verify(method => method.MakeReservationAsync(
+            It.IsAny<ReservationCreate>(),
+            It.IsAny<CancellationToken>()
+        ), Times.Never);
+    }
 }

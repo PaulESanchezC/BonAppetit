@@ -10,7 +10,6 @@
     <Folder Include="ImageModels\" />
     <Folder Include="MenuModels\" />
     <Folder Include="ScheduleModels\" />
-    <Folder Include="TableModels\" />
     <Folder Include="ResponseModels\" />
     <Folder Include="RestaurantModels\" />
   </ItemGroup>

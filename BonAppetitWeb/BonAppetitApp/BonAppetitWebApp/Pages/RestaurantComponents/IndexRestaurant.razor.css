@@ -1,7 +1,8 @@
-.restaurant-box[b-w9x60jmlnr] {
+﻿.restaurant-box {
     position: relative;
     margin: 5px;
     border: 1px solid #525759;
     border-radius: 5px;
     width: 100%;
 }
+

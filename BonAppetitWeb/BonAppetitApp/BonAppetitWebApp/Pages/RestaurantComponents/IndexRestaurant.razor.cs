@@ -3,7 +3,7 @@ using Models.RestaurantModels;
 
 namespace BonAppetitWebApp.Pages.RestaurantComponents;
 
-public partial class IndexRestaurantComponent
+public partial class IndexRestaurant
 {
     [Parameter]
     public Restaurant Restaurant { get; set; }

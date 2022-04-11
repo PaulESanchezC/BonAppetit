@@ -16,17 +16,16 @@ where T : class
     {
         _httpClientFactory = httpClientFactory;
     }
-    //TODO: When the Authentication service is built, implement this to authenticate users, clients, requests. Register Service in the DIC /ServicesConfigurations
     public async Task<Response<T>> SendAsync(ApiRequest<T> apiRequest)
     {
         var request = new HttpRequestMessage(apiRequest.HttpMethod, apiRequest.ApiUrl);
         if (apiRequest.HttpMethod == HttpMethod.Post)
             request.Content = new StringContent(JsonConvert.SerializeObject(apiRequest.Data), Encoding.UTF8,
                 "application/json");
-        //TODO: change the scheme when created
+
         if (apiRequest.JwtToken is not null)
             request.Headers.Authorization = new AuthenticationHeaderValue("bearer", apiRequest.JwtToken);
-        //TODO: change the scheme when created
+        
         if (apiRequest.RestaurantServiceIdToken is not null)
             request.Headers.Authorization = new AuthenticationHeaderValue("serviceIdToken", apiRequest.JwtToken);
 

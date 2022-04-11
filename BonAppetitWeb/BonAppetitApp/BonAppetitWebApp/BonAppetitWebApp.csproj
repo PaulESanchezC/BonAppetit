@@ -40,4 +40,8 @@
     </Content>
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Pages\ReservationComponents\ViewModel\" />
+  </ItemGroup>
+
 </Project>

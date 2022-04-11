@@ -1,0 +1,39 @@
+﻿<div class="container-fluid mb-5">
+    <div class="row">
+
+        <div class="col-12">
+            <div class="row">
+
+                <EditForm Model="BracketsVm" OnValidSubmit="GetBracketsAsync">
+                    <div class="col-6">
+                        <label>For how many?</label>
+                        <InputSelect @bind-Value="BracketsVm.ForHowMany">
+                            @foreach (var value in BracketsVm.SeatsAvailable)
+                            {
+                                <option value="@value">@value</option>
+                            }
+                        </InputSelect>
+
+                        &nbsp;
+
+                        <label>Date</label>
+                        <InputDate @bind-Value="BracketsVm.DateOfRequest"></InputDate>
+                        
+                        &nbsp;
+                        <button type="submit">search!</button>
+                    </div>
+                </EditForm>
+                
+                <div class="col-12">
+                    @foreach (var bracket in BracketsVm.AvailableBrackets)
+                    {
+                        <button class="btn-danger btn m-2 p-2">@bracket.ToString()h</button>
+                    }
+                </div>
+
+
+
+            </div>
+        </div>
+    </div>
+</div>
