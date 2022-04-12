@@ -5,9 +5,9 @@
             <div class="row">
 
                 <EditForm Model="BracketsVm" OnValidSubmit="GetBracketsAsync">
-                    <div class="col-6">
+                    <div class="col-12">
                         <label>For how many?</label>
-                        <InputSelect @bind-Value="BracketsVm.ForHowMany">
+                        <InputSelect @bind-Value="BracketsVm.ForHowManyTemp">
                             @foreach (var value in BracketsVm.SeatsAvailable)
                             {
                                 <option value="@value">@value</option>
@@ -27,12 +27,9 @@
                 <div class="col-12">
                     @foreach (var bracket in BracketsVm.AvailableBrackets)
                     {
-                        <button class="btn-danger btn m-2 p-2">@bracket.ToString()h</button>
+                        <button class="btn-danger btn m-2 p-2" @onclick="()=> ConfirmReservation(bracket)" >@bracket.ToString()h</button>
                     }
                 </div>
-
-
-
             </div>
         </div>
     </div>

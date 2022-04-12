@@ -1,0 +1,100 @@
+﻿@page "/ConfirmReservation/{RestaurantId}/{TableId}/{DateOfRequest}/{ReservationTime:int}"
+
+<div class="container">
+    <div class="row">
+        <div class="col-12 page-title">
+            <h4>Confirm Reservation</h4>
+        </div>
+
+
+        <EditForm Model="Reservation" OnValidSubmit="MakeReservation">
+            <ValidationSummary></ValidationSummary>
+            <div class="row">
+                <div class="col-6">
+                    <div class="row">
+                        <div class="col-12">
+                            <label>Restaurant</label>
+                        </div>
+                        <div class="col-12">
+                            <input type="text" disabled="" value="@Restaurant.RestaurantName"/>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <label>Date</label>
+                        </div>
+                        <div class="col-12">
+                            <input type="text" disabled="" value="@DateOfRequest"/>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <label>Available seats:</label>
+                        </div>
+                        <div class="col-12">
+                            <input type="text" disabled="" value="@Table.AmountOfSeats"/>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <label>Time</label>
+                        </div>
+                        <div class="col-12">
+                            <input type="number" disabled="" value="@ReservationTime"/>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-6">
+                    <div class="row">
+                        <div class="col-12">
+                            <label>First name</label>
+                        </div>
+                        <div class="col-12">
+                            <input type="text" @bind-value="@Reservation.FirstName" placeholder="First name"/>
+                            <ValidationMessage For="() => Reservation.FirstName"></ValidationMessage>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <label>Last name</label>
+                        </div>
+                        <div class="col-12">
+                            <input type="text" @bind-value="@Reservation.LastName" placeholder="Last name"/>
+                            <ValidationMessage For="() => Reservation.LastName"></ValidationMessage>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <label>Phone</label>
+                        </div>
+                        <div class="col-12">
+                            <input type="text" @bind-value="@Reservation.Phone" placeholder="Phone"/>
+                            <ValidationMessage For="() => Reservation.Phone"></ValidationMessage>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <label>Email</label>
+                        </div>
+                        <div class="col-12">
+                            <input type="email" @bind-value="@Reservation.Email" placeholder="E-mail"/>
+                            <ValidationMessage For="() => Reservation.Email"></ValidationMessage>
+                        </div>
+                    </div>
+
+                    <div class="row mt-3">
+                        <div class="col-12">
+                            <button type="submit">
+                                Proceed to Payment!
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </EditForm>
+
+
+    </div>
+</div>

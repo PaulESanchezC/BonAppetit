@@ -7,9 +7,8 @@ using Models.ScheduleModels;
 using Models.TableModels;
 using Models.TableReservationBracketsModels;
 using Newtonsoft.Json;
-
 namespace Services.TableTimeBracketsService;
-//TODO: Separate this to another service
+
 public class TableTimeBracketService : ITableTimeBracketService
 {
     private readonly ApplicationDbContext _db;
