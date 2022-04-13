@@ -36,7 +36,6 @@ services.AddPolicyServiceConfiguration();
 services.AddAuthenticationConfigurations();
 //Cors Configurations
 services.AddCorsConfiguration();
-//
 
 #endregion
 

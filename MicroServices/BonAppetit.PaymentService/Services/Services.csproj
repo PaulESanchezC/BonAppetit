@@ -1,0 +1,26 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+	
+	<ItemGroup>
+		<PackageReference Include="AutoMapper" Version="11.0.1" />
+		<PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="6.0.3" />
+		<PackageReference Include="Stripe.net" Version="39.104.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\Data\Data.csproj" />
+		<ProjectReference Include="..\Models\Models.csproj" />
+		<ProjectReference Include="..\StaticData\StaticData.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Folder Include="PaymentServices\" />
+	</ItemGroup>
+
+
+</Project>

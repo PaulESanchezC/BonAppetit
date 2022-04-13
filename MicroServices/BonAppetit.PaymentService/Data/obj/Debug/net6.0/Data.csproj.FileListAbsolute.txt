@@ -12,3 +12,6 @@ C:\Users\Paulyglot\Desktop\Portoflio\BonAppetit\MicroServices\BonAppetit.Payment
 C:\Users\Paulyglot\Desktop\Portoflio\BonAppetit\MicroServices\BonAppetit.PaymentService\Data\obj\Debug\net6.0\Data.pdb
 C:\Users\Paulyglot\Desktop\Portoflio\BonAppetit\MicroServices\BonAppetit.PaymentService\Data\obj\Debug\net6.0\Data.genruntimeconfig.cache
 C:\Users\Paulyglot\Desktop\Portoflio\BonAppetit\MicroServices\BonAppetit.PaymentService\Data\obj\Debug\net6.0\ref\Data.dll
+C:\Users\Paulyglot\Desktop\Portoflio\BonAppetit\MicroServices\BonAppetit.PaymentService\Data\bin\Debug\net6.0\Models.dll
+C:\Users\Paulyglot\Desktop\Portoflio\BonAppetit\MicroServices\BonAppetit.PaymentService\Data\bin\Debug\net6.0\Models.pdb
+C:\Users\Paulyglot\Desktop\Portoflio\BonAppetit\MicroServices\BonAppetit.PaymentService\Data\obj\Debug\net6.0\Data.csproj.CopyComplete

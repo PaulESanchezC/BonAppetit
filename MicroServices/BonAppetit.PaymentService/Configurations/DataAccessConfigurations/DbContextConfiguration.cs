@@ -12,7 +12,7 @@ public static class DbContextConfiguration
     {
         services.AddDbContext<ApplicationDbContext>(options =>
         {
-            options.UseSqlServer(ProxyConfiguration.Use.GetConnectionString("Reservations_ConnectionString"));
+            options.UseSqlServer(ProxyConfiguration.Use.GetConnectionString("PaymentService_ConnectionString"));
         });
         return services;
     }

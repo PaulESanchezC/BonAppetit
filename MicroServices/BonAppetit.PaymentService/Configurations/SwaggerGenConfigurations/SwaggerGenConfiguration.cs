@@ -13,9 +13,12 @@ public static class SwaggerGenConfiguration
             options.SwaggerDoc("BonAppetitOpenApi",
                 new OpenApiInfo()
                 {
-                    Title = "Bon Appetit Payment Service Api",
+                    Title = "Bon Appetit Payment Service API",
                     Version = "V1.0",
-                    Description = "Bon Appetit Web App",
+                    Description = @"Bon Appetit Web App <br/> 
+                                    Other Services APIs:<br/> 
+                                   <a href='https://localhost:44314/swagger/index.html'>Reservation Service</a> <br/> 
+                                    <a href='https://localhost:44352/swagger/index.html'>Identity Service</a> <br/> ",
                     Contact = new OpenApiContact()
                     {
                         Name = "Paul Sanchez",
