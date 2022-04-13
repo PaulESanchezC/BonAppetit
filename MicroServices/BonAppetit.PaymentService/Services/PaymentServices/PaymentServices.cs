@@ -120,7 +120,7 @@ public class PaymentServices : IPaymentServices
                 ResponseObject = null
             };
 
-        var payment = await _db.Payments.FindAsync(paymentToConfirm.PaymentId, cancellationToken);
+        var payment = await _db.Payments.FirstOrDefaultAsync(payment =>payment.PaymentId == paymentToConfirm.PaymentId, cancellationToken);
         if (payment is null)
             return new Response<PaymentDto>
             {
