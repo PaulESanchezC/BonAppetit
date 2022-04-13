@@ -1683,3 +1683,15 @@ C:\Users\Paulyglot\Desktop\Portoflio\BonAppetit\BonAppetitWeb\BonAppetitApp\BonA
 C:\Users\Paulyglot\Desktop\Portoflio\BonAppetit\BonAppetitWeb\BonAppetitApp\BonAppetitWebApp\obj\Debug\net6.0\scopedcss\Pages\RestaurantComponents\RestaurantDetails.razor.rz.scp.css
 C:\Users\Paulyglot\Desktop\Portoflio\BonAppetit\BonAppetitWeb\BonAppetitApp\BonAppetitWebApp\obj\Debug\net6.0\scopedcss\Pages\ReservationComponents\AvailableTablesTimeBrackets.razor.rz.scp.css
 C:\Users\Paulyglot\Desktop\Portoflio\BonAppetit\BonAppetitWeb\BonAppetitApp\BonAppetitWebApp\obj\Debug\net6.0\scopedcss\Pages\RestaurantComponents\IndexRestaurant.razor.rz.scp.css
+C:\Users\Paulyglot\Desktop\Portoflio\BonAppetit\BonAppetitWeb\BonAppetitApp\BonAppetitWebApp\bin\Debug\net6.0\wwwroot\_framework\Blazored.LocalStorage.dll
+C:\Users\Paulyglot\Desktop\Portoflio\BonAppetit\BonAppetitWeb\BonAppetitApp\BonAppetitWebApp\bin\Debug\net6.0\wwwroot\_framework\StaticData.dll
+C:\Users\Paulyglot\Desktop\Portoflio\BonAppetit\BonAppetitWeb\BonAppetitApp\BonAppetitWebApp\bin\Debug\net6.0\wwwroot\_framework\StaticData.pdb
+C:\Users\Paulyglot\Desktop\Portoflio\BonAppetit\BonAppetitWeb\BonAppetitApp\BonAppetitWebApp\bin\Debug\net6.0\wwwroot\_framework\StaticData.dll.gz
+C:\Users\Paulyglot\Desktop\Portoflio\BonAppetit\BonAppetitWeb\BonAppetitApp\BonAppetitWebApp\bin\Debug\net6.0\wwwroot\_framework\Blazored.LocalStorage.dll.gz
+C:\Users\Paulyglot\Desktop\Portoflio\BonAppetit\BonAppetitWeb\BonAppetitApp\BonAppetitWebApp\bin\Debug\net6.0\wwwroot\_framework\StaticData.pdb.gz
+C:\Users\Paulyglot\Desktop\Portoflio\BonAppetit\BonAppetitWeb\BonAppetitApp\BonAppetitWebApp\bin\Debug\net6.0\Blazored.LocalStorage.dll
+C:\Users\Paulyglot\Desktop\Portoflio\BonAppetit\BonAppetitWeb\BonAppetitApp\BonAppetitWebApp\bin\Debug\net6.0\StaticData.dll
+C:\Users\Paulyglot\Desktop\Portoflio\BonAppetit\BonAppetitWeb\BonAppetitApp\BonAppetitWebApp\bin\Debug\net6.0\StaticData.pdb
+C:\Users\Paulyglot\Desktop\Portoflio\BonAppetit\BonAppetitWeb\BonAppetitApp\BonAppetitWebApp\obj\Debug\net6.0\build-gz\gFMm+pDp.gz
+C:\Users\Paulyglot\Desktop\Portoflio\BonAppetit\BonAppetitWeb\BonAppetitApp\BonAppetitWebApp\obj\Debug\net6.0\build-gz\8pqI3DgF.gz
+C:\Users\Paulyglot\Desktop\Portoflio\BonAppetit\BonAppetitWeb\BonAppetitApp\BonAppetitWebApp\obj\Debug\net6.0\build-gz\sCCLQZNQ.gz

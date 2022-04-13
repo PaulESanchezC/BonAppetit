@@ -1,5 +1,4 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using Models.PaymentModels;
 using Services.PaymentServices;
 
@@ -35,6 +34,5 @@ namespace PaymentService.Controllers
             var request = await _paymentServices.ConfirmPaymentIsSuccessful(paymentToConfirm, cancellationToken);
             return StatusCode(request.StatusCode, request);
         }
-
     }
 }

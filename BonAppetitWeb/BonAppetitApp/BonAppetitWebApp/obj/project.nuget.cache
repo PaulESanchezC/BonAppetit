@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "PAPf77GivEzISZg6sPJ3h+Fdq0dkJ7pO4aOsdOOGSW4YLK2lTLJUNaF+C0LNsnFsnF9yLd8td6j8NQVPWf+MuQ==",
+  "dgSpecHash": "CP1GZVnFYXQV7gyBVEpm1mKpUKGtSkRHvIUAmp8WRZ2kSmHBC/KXgdG/VjFdMrSPzfZtp+pRYOQ/94f7c1jF+w==",
   "success": true,
   "projectFilePath": "C:\\Users\\Paulyglot\\Desktop\\Portoflio\\BonAppetit\\BonAppetitWeb\\BonAppetitApp\\BonAppetitWebApp\\BonAppetitWebApp.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Paulyglot\\.nuget\\packages\\blazored.localstorage\\4.2.0\\blazored.localstorage.4.2.0.nupkg.sha512",
     "C:\\Users\\Paulyglot\\.nuget\\packages\\microsoft.aspnetcore.authorization\\6.0.3\\microsoft.aspnetcore.authorization.6.0.3.nupkg.sha512",
     "C:\\Users\\Paulyglot\\.nuget\\packages\\microsoft.aspnetcore.components\\6.0.3\\microsoft.aspnetcore.components.6.0.3.nupkg.sha512",
     "C:\\Users\\Paulyglot\\.nuget\\packages\\microsoft.aspnetcore.components.analyzers\\6.0.3\\microsoft.aspnetcore.components.analyzers.6.0.3.nupkg.sha512",

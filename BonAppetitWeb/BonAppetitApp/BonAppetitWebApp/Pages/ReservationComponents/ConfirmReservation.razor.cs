@@ -1,12 +1,18 @@
-﻿using Microsoft.AspNetCore.Authorization;
+﻿using Blazored.LocalStorage;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Authorization;
+using Microsoft.JSInterop;
+using Models.PaymentModels;
 using Models.ReservationModels;
 using Models.RestaurantModels;
 using Models.TableModels;
+using Services.JsRuntimeServices;
+using Services.PaymentServices;
 using Services.ReservationServices;
 using Services.RestaurantServices;
 using Services.TableServices;
+using StaticData;
 
 namespace BonAppetitWebApp.Pages.ReservationComponents;
 
@@ -23,15 +29,18 @@ public partial class ConfirmReservation
     [Parameter]
     public int ReservationTime { get; set; }
     [Inject]
-    private IReservationServices _reservationServices { get; set; }
-    [Inject]
     private IRestaurantService _restaurantService { get; set; }
     [Inject]
     private ITableService _tableService { get; set; }
     [Inject]
-    private NavigationManager _navigation { get; set; }
+    private IPaymentService _paymentService { get; set; }
+    [Inject]
+    private IJSRuntime _js { get; set; }
+    [Inject]
+    private ILocalStorageService _localStorage { get; set; }
     #endregion
 
+    private PaymentCreateVm PaymentInformation { get; set; } = new();
     private ReservationCreateVm Reservation { get; set; } = new();
     private Restaurant Restaurant { get; set; } = new();
     private Table Table { get; set; } = new();
@@ -50,16 +59,26 @@ public partial class ConfirmReservation
     private async Task MakeReservation()
     {
         if (string.IsNullOrEmpty(Reservation.ApplicationUserId))
+        {
             Reservation.ApplicationUserId = string.Empty;
-
-        Reservation.PaymentTransaction = "here the payment service should execute and give back a transaction number!";
-
+            PaymentInformation.ApplicationUserId = string.Empty;
+        }
         Reservation.DateOfReservation = DateTime.Parse(DateOfRequest);
-        var request = await _reservationServices.MakeReservationAsync(Reservation);
-        if (request.IsSuccessful)
-            _navigation.NavigateTo("/ReservationConfirmed");
-    }
+        await _localStorage.SetItemAsync(LocalStorage.ReservationPendingPayment, Reservation);
 
+        PaymentInformation.RestaurantId = RestaurantId;
+        PaymentInformation.RestaurantName = Restaurant.RestaurantName;
+        PaymentInformation.TableId = TableId;
+        PaymentInformation.TableSeats = Table.AmountOfSeats;
+
+        var request = await _paymentService.CreatePaymentSessionAsync(PaymentInformation);
+        if (request.IsSuccessful)
+            await _localStorage.SetItemAsync(LocalStorage.PaymentInformationPendingPayment,
+                request.ResponseObject!.FirstOrDefault());
+
+        var sessionId = request.ResponseObject!.Select(resp => resp.PaymentSessionId).FirstOrDefault();
+        await _js.StripePayment(sessionId!);
+    }
 
     private async Task GetRestaurantInformationAsync()
     {

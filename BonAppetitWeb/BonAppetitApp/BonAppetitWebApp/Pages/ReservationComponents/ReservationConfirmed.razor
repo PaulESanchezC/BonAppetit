@@ -1,6 +1,26 @@
 ﻿@page "/ReservationConfirmed"
-<h3>THANK YOU</h3>
+<div class="container">
+    <div class="row">
+        <div class="col-12 page-title">
+            <h4>Thank you</h4>
+        </div>
 
-@code {
 
-}
+        <div class="row">
+            <div class="col-12">
+                <span>Your Reference number is: @Reservation.OrderId</span>
+                <br />
+                <span>Reservation Information:</span>
+                <ul>
+                    <li>Restaurant's name: @Restaurant.RestaurantName</li>
+                    <li>Restaurant's Address: @Restaurant.RestaurantAddress</li>
+                    <li>Restaurant's phone: @Restaurant.RestaurantPhone</li>
+
+                    <li>Reserved for: @Reservation.FirstName + @Reservation.LastName</li>
+                    <li>Time: @Reservation.StartTime.ToString()h</li>
+                </ul>
+
+            </div>
+        </div>
+    </div>
+</div>

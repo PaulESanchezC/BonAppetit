@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "ox0lHOCmOKJbbCQAVIYFeZi42P3AMg/6JDVT1xseMK4=",
+  "Hash": "V5EvJ65jPzFE9SAc2qdZAj0TVw2jj+dBXd2MkiMeyZA=",
   "Source": "BonAppetitWebApp",
   "BasePath": "/",
   "Mode": "Root",
@@ -66,6 +66,23 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\Paulyglot\\.nuget\\packages\\microsoft.aspnetcore.components.webassembly\\6.0.3\\build\\net6.0\\blazor.webassembly.js"
+    },
+    {
+      "Identity": "C:\\Users\\Paulyglot\\Desktop\\Portoflio\\BonAppetit\\BonAppetitWeb\\BonAppetitApp\\BonAppetitWebApp\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Blazored.LocalStorage.dll",
+      "SourceId": "BonAppetitWebApp",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\Paulyglot\\Desktop\\Portoflio\\BonAppetit\\BonAppetitWeb\\BonAppetitApp\\BonAppetitWebApp\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Blazored.LocalStorage.dll",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "BlazorWebAssemblyResource",
+      "AssetTraitValue": "runtime",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\Paulyglot\\.nuget\\packages\\blazored.localstorage\\4.2.0\\lib\\net6.0\\Blazored.LocalStorage.dll"
     },
     {
       "Identity": "C:\\Users\\Paulyglot\\Desktop\\Portoflio\\BonAppetit\\BonAppetitWeb\\BonAppetitApp\\BonAppetitWebApp\\bin\\Debug\\net6.0\\wwwroot\\_framework\\BonAppetitWebApp.dll",
@@ -882,6 +899,40 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\Paulyglot\\Desktop\\Portoflio\\BonAppetit\\BonAppetitWeb\\BonAppetitApp\\Services\\bin\\Debug\\net6.0\\Services.pdb"
+    },
+    {
+      "Identity": "C:\\Users\\Paulyglot\\Desktop\\Portoflio\\BonAppetit\\BonAppetitWeb\\BonAppetitApp\\BonAppetitWebApp\\bin\\Debug\\net6.0\\wwwroot\\_framework\\StaticData.dll",
+      "SourceId": "BonAppetitWebApp",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\Paulyglot\\Desktop\\Portoflio\\BonAppetit\\BonAppetitWeb\\BonAppetitApp\\BonAppetitWebApp\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/StaticData.dll",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "BlazorWebAssemblyResource",
+      "AssetTraitValue": "runtime",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\Paulyglot\\Desktop\\Portoflio\\BonAppetit\\BonAppetitWeb\\BonAppetitApp\\StaticData\\bin\\Debug\\net6.0\\StaticData.dll"
+    },
+    {
+      "Identity": "C:\\Users\\Paulyglot\\Desktop\\Portoflio\\BonAppetit\\BonAppetitWeb\\BonAppetitApp\\BonAppetitWebApp\\bin\\Debug\\net6.0\\wwwroot\\_framework\\StaticData.pdb",
+      "SourceId": "BonAppetitWebApp",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\Paulyglot\\Desktop\\Portoflio\\BonAppetit\\BonAppetitWeb\\BonAppetitApp\\BonAppetitWebApp\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/StaticData.pdb",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "BlazorWebAssemblyResource",
+      "AssetTraitValue": "symbol",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\Paulyglot\\Desktop\\Portoflio\\BonAppetit\\BonAppetitWeb\\BonAppetitApp\\StaticData\\bin\\Debug\\net6.0\\StaticData.pdb"
     },
     {
       "Identity": "C:\\Users\\Paulyglot\\Desktop\\Portoflio\\BonAppetit\\BonAppetitWeb\\BonAppetitApp\\BonAppetitWebApp\\bin\\Debug\\net6.0\\wwwroot\\_framework\\System.AppContext.dll",
@@ -4165,6 +4216,23 @@
       "OriginalItemSpec": "C:\\Users\\Paulyglot\\Desktop\\Portoflio\\BonAppetit\\BonAppetitWeb\\BonAppetitApp\\BonAppetitWebApp\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.Extensions.Http.dll"
     },
     {
+      "Identity": "C:\\Users\\Paulyglot\\Desktop\\Portoflio\\BonAppetit\\BonAppetitWeb\\BonAppetitApp\\BonAppetitWebApp\\obj\\Debug\\net6.0\\build-gz\\8pqI3DgF.gz",
+      "SourceId": "BonAppetitWebApp",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\Paulyglot\\Desktop\\Portoflio\\BonAppetit\\BonAppetitWeb\\BonAppetitApp\\BonAppetitWebApp\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/StaticData.dll.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "RelatedAsset": "C:\\Users\\Paulyglot\\Desktop\\Portoflio\\BonAppetit\\BonAppetitWeb\\BonAppetitApp\\BonAppetitWebApp\\bin\\Debug\\net6.0\\wwwroot\\_framework\\StaticData.dll",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\Paulyglot\\Desktop\\Portoflio\\BonAppetit\\BonAppetitWeb\\BonAppetitApp\\BonAppetitWebApp\\bin\\Debug\\net6.0\\wwwroot\\_framework\\StaticData.dll"
+    },
+    {
       "Identity": "C:\\Users\\Paulyglot\\Desktop\\Portoflio\\BonAppetit\\BonAppetitWeb\\BonAppetitApp\\BonAppetitWebApp\\obj\\Debug\\net6.0\\build-gz\\9D7YB7H+.gz",
       "SourceId": "BonAppetitWebApp",
       "SourceType": "Computed",
@@ -4826,6 +4894,23 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\Paulyglot\\Desktop\\Portoflio\\BonAppetit\\BonAppetitWeb\\BonAppetitApp\\BonAppetitWebApp\\bin\\Debug\\net6.0\\wwwroot\\_framework\\System.Security.Claims.dll"
+    },
+    {
+      "Identity": "C:\\Users\\Paulyglot\\Desktop\\Portoflio\\BonAppetit\\BonAppetitWeb\\BonAppetitApp\\BonAppetitWebApp\\obj\\Debug\\net6.0\\build-gz\\gFMm+pDp.gz",
+      "SourceId": "BonAppetitWebApp",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\Paulyglot\\Desktop\\Portoflio\\BonAppetit\\BonAppetitWeb\\BonAppetitApp\\BonAppetitWebApp\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Blazored.LocalStorage.dll.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "RelatedAsset": "C:\\Users\\Paulyglot\\Desktop\\Portoflio\\BonAppetit\\BonAppetitWeb\\BonAppetitApp\\BonAppetitWebApp\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Blazored.LocalStorage.dll",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\Paulyglot\\Desktop\\Portoflio\\BonAppetit\\BonAppetitWeb\\BonAppetitApp\\BonAppetitWebApp\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Blazored.LocalStorage.dll"
     },
     {
       "Identity": "C:\\Users\\Paulyglot\\Desktop\\Portoflio\\BonAppetit\\BonAppetitWeb\\BonAppetitApp\\BonAppetitWebApp\\obj\\Debug\\net6.0\\build-gz\\gNC7uqNf.gz",
@@ -6290,6 +6375,23 @@
       "OriginalItemSpec": "C:\\Users\\Paulyglot\\Desktop\\Portoflio\\BonAppetit\\BonAppetitWeb\\BonAppetitApp\\BonAppetitWebApp\\bin\\Debug\\net6.0\\wwwroot\\_framework\\System.Xml.XmlSerializer.dll"
     },
     {
+      "Identity": "C:\\Users\\Paulyglot\\Desktop\\Portoflio\\BonAppetit\\BonAppetitWeb\\BonAppetitApp\\BonAppetitWebApp\\obj\\Debug\\net6.0\\build-gz\\sCCLQZNQ.gz",
+      "SourceId": "BonAppetitWebApp",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\Paulyglot\\Desktop\\Portoflio\\BonAppetit\\BonAppetitWeb\\BonAppetitApp\\BonAppetitWebApp\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/StaticData.pdb.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "RelatedAsset": "C:\\Users\\Paulyglot\\Desktop\\Portoflio\\BonAppetit\\BonAppetitWeb\\BonAppetitApp\\BonAppetitWebApp\\bin\\Debug\\net6.0\\wwwroot\\_framework\\StaticData.pdb",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\Paulyglot\\Desktop\\Portoflio\\BonAppetit\\BonAppetitWeb\\BonAppetitApp\\BonAppetitWebApp\\bin\\Debug\\net6.0\\wwwroot\\_framework\\StaticData.pdb"
+    },
+    {
       "Identity": "C:\\Users\\Paulyglot\\Desktop\\Portoflio\\BonAppetit\\BonAppetitWeb\\BonAppetitApp\\BonAppetitWebApp\\obj\\Debug\\net6.0\\build-gz\\siU1U7Fw.gz",
       "SourceId": "BonAppetitWebApp",
       "SourceType": "Computed",
@@ -7427,6 +7529,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\index.html"
+    },
+    {
+      "Identity": "C:\\Users\\Paulyglot\\Desktop\\Portoflio\\BonAppetit\\BonAppetitWeb\\BonAppetitApp\\BonAppetitWebApp\\wwwroot\\js\\stripePaymentInvoke.js",
+      "SourceId": "BonAppetitWebApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Paulyglot\\Desktop\\Portoflio\\BonAppetit\\BonAppetitWeb\\BonAppetitApp\\BonAppetitWebApp\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "js/stripePaymentInvoke.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\stripePaymentInvoke.js"
     },
     {
       "Identity": "C:\\Users\\Paulyglot\\Desktop\\Portoflio\\BonAppetit\\BonAppetitWeb\\BonAppetitApp\\BonAppetitWebApp\\wwwroot\\lib\\bootstrap\\css\\bootstrap.min.css",

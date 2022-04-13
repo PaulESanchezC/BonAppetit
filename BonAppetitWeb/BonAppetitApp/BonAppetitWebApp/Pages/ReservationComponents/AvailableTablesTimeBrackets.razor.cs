@@ -1,5 +1,6 @@
 ﻿using BonAppetitWebApp.Pages.ReservationComponents.ViewModel;
 using Microsoft.AspNetCore.Components;
+using Models.PaymentModels;
 using Services.RestaurantServices;
 
 namespace BonAppetitWebApp.Pages.ReservationComponents;

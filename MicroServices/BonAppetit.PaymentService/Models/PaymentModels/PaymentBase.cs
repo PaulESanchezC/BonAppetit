@@ -19,17 +19,13 @@ public class PaymentBase
     [Required]
     public int TableSeats { get; set; }
 
-    [Required]
     public string ReservationId { get; set; }
-
-    [Required]
-    public int ReservationFor { get; set; }
 
     [Required]
     public string ApplicationUserId { get; set; }
 
     [Required]
-    public int Amount { get; set; }
+    public double Amount { get; set; }
 
     public DateTime DateOfPayment { get; set; }
 

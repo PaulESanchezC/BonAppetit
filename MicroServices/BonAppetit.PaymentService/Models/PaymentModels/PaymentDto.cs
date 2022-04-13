@@ -10,7 +10,7 @@ public class PaymentDto
     public string ReservationId { get; set; }
     public int ReservationFor { get; set; }
     public string ApplicationUserId { get; set; }
-    public int Amount { get; set; }
+    public double Amount { get; set; }
     public DateTime DateOfPayment { get; set; }
     public bool IsPayed { get; set; }
 

@@ -27,8 +27,8 @@ namespace Data.Migrations
                     b.Property<string>("PaymentId")
                         .HasColumnType("nvarchar(450)");
 
-                    b.Property<int>("Amount")
-                        .HasColumnType("int");
+                    b.Property<double>("Amount")
+                        .HasColumnType("float");
 
                     b.Property<string>("ApplicationUserId")
                         .IsRequired()
@@ -39,9 +39,6 @@ namespace Data.Migrations
 
                     b.Property<bool>("IsPayed")
                         .HasColumnType("bit");
-
-                    b.Property<int>("ReservationFor")
-                        .HasColumnType("int");
 
                     b.Property<string>("ReservationId")
                         .IsRequired()
