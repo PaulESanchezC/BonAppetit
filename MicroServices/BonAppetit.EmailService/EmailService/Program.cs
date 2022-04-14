@@ -1,25 +1,32 @@
+using Configurations.ConfigurationsHelper;
+using Configurations.CorsConfigurations;
+using Configurations.SwaggerGenConfigurations;
+
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
-
 builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+
+#region Service containers
+//Configuration Helper -ProxyConfiguration-
+ProxyConfiguration.Initialize(builder.Configuration);
+//SwaggerGen Configurations
+builder.Services.AddSwaggerGenConfiguration();
+//Cors Configurations
+builder.Services.AddCorsConfiguration();
+#endregion
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
-{
-    app.UseSwagger();
-    app.UseSwaggerUI();
-}
+#region Http request pipeline
+if (app.Environment.IsDevelopment()) { }
 
+app.UseSwagger();
+app.UseSwaggerUI(options => options.SwaggerEndpoint("/swagger/BonAppetitOpenApi/swagger.json", "Bon Appetit Payment Service"));
+app.UseCors("AllowAnonymous");
 app.UseHttpsRedirection();
-
 app.UseAuthorization();
-
 app.MapControllers();
+#endregion
 
 app.Run();
