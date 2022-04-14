@@ -1,5 +1,6 @@
 using Configurations.ConfigurationsHelper;
 using Configurations.CorsConfigurations;
+using Configurations.ServicesConfigurations;
 using Configurations.SwaggerGenConfigurations;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -14,6 +15,8 @@ ProxyConfiguration.Initialize(builder.Configuration);
 builder.Services.AddSwaggerGenConfiguration();
 //Cors Configurations
 builder.Services.AddCorsConfiguration();
+// Services Configurations
+builder.Services.AddRepositoryServicesConfigurations();
 #endregion
 
 var app = builder.Build();
