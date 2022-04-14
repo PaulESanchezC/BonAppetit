@@ -1,9 +1,13 @@
 ﻿using Mailjet.Client;
 using Mailjet.Client.Resources;
 using Microsoft.Extensions.Options;
+using Models.ApplicationUserModels;
 using Models.EmailModels;
 using Models.EmailSenderOptionsModels;
+using Models.ReservationModels;
 using Models.ResponseModels;
+using Models.RestaurantModels;
+using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using Services.EmailServices.EmailTemplates;
 
@@ -18,7 +22,11 @@ public class EmailSender : IMailJetEmailSender
         _mailjetOptions = options.Value;
         Response = new()
         {
-            StatusCode = 200,IsSuccessful = true,Title = "Ok",Message ="Ok",ResponseObject = new()
+            StatusCode = 200,
+            IsSuccessful = true,
+            Title = "Ok",
+            Message = "Ok",
+            ResponseObject = new()
         };
     }
 
@@ -50,21 +58,67 @@ public class EmailSender : IMailJetEmailSender
 
     public Task<string> CreateHtmlMessageTask(Email email)
     {
-        var messageTemplate = "";
-        switch (email.Template.ToLower().Trim())
+        var response = "";
+        switch (email.Action.ToLower().Trim())
         {
-            case "manager":
-                messageTemplate = EmailTemplate.ManagerTemplate;
+            case "restaurant registration":
+                response = RestaurantRegistrationHtmlBuilder(email.Data);
                 break;
-            case "client":
-                messageTemplate = EmailTemplate.ClientTemplate;
+            case "manager registration":
+                response = ManagerRegistrationHtmlBuilder(email.Data);
                 break;
-            default:
-                messageTemplate = EmailTemplate.RestaurantTemplate;
+            case "worker registration":
+                response = WorkerRegistrationHtmlBuilder(email.Data);
+                break;
+            case "client registration":
+                response = ClientRegistrationHtmlBuilder(email.Data);
+                break;
+            case "reservation manager":
+                response = RestaurantReservationManagerHtmlBuilder(email);
+                break;
+            case "reservation client":
+                response = RestaurantReservationClientHtmlBuilder(email);
                 break;
         }
+        return Task.FromResult(response);
+    }
 
-        var message = string.Format(messageTemplate, email.Message);
-        return Task.FromResult(message);
+    private string RestaurantRegistrationHtmlBuilder(string data)
+    {
+        var restaurant = JsonConvert.DeserializeObject<Restaurant>(data);
+        var response = string.Format(EmailTemplate.RestaurantRegistration, restaurant.RestaurantName, restaurant.RestaurantAddress
+            , restaurant.RestaurantPhone, restaurant.RestaurantWebsite, restaurant.RestaurantCiy, restaurant.RestaurantCuisineType);
+        return response;
+    }
+    private string ManagerRegistrationHtmlBuilder(string data)
+    {
+        var manager = JsonConvert.DeserializeObject<RestaurantManager>(data);
+        var response = string.Format(EmailTemplate.ManagerRegistration, manager.RestaurantName, manager.RestaurantPhone
+            , manager.RestaurantEmail, manager.UserFirstName, manager.UserLastName, manager.UserPhone, manager.UserEmail);
+        return response;
+    }
+    private string WorkerRegistrationHtmlBuilder(string data)
+    {
+        var worker = JsonConvert.DeserializeObject<RestaurantWorker>(data);
+        var response = string.Format(EmailTemplate.WorkerRegistration);
+        return response;
+    }
+    private string ClientRegistrationHtmlBuilder(string data)
+    {
+        var client = JsonConvert.DeserializeObject<Client>(data);
+        var response = string.Format(EmailTemplate.ClientRegistration);
+        return response;
+    }
+    private string RestaurantReservationManagerHtmlBuilder(Email email)
+    {
+        var reservation = JsonConvert.DeserializeObject<Reservation>(email.Data);
+        var response = string.Format(EmailTemplate.ReservationManager);
+        return response;
+    }
+    private string RestaurantReservationClientHtmlBuilder(Email email)
+    {
+        var reservation = JsonConvert.DeserializeObject<Reservation>(email.Data);
+        var response = string.Format(EmailTemplate.ReservationClients);
+        return response;
     }
 }
