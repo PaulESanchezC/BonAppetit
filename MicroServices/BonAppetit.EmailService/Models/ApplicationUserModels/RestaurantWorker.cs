@@ -6,5 +6,6 @@ public class RestaurantWorker
     public string UserLastName { get; set; }
     public string UserPhone { get; set; }
     public string UserEmail { get; set; }
+    public string RestaurantName { get; set; }
     public RestaurantManager RegistrationRestaurantManager { get; set; }
 }

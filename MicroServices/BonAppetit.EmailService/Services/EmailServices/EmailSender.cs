@@ -100,19 +100,24 @@ public class EmailSender : IMailJetEmailSender
     private string WorkerRegistrationHtmlBuilder(string data)
     {
         var worker = JsonConvert.DeserializeObject<RestaurantWorker>(data);
-        var response = string.Format(EmailTemplate.WorkerRegistration);
+        var response = string.Format(EmailTemplate.WorkerRegistration, worker.RegistrationRestaurantManager.RestaurantName, worker.UserFirstName, worker.UserLastName
+        , worker.UserPhone, worker.UserEmail, worker.RegistrationRestaurantManager.UserFirstName, worker.RegistrationRestaurantManager.UserLastName
+        , worker.RegistrationRestaurantManager.UserPhone, worker.RegistrationRestaurantManager.UserEmail, worker.RegistrationRestaurantManager.RestaurantPhone
+        , worker.RegistrationRestaurantManager.RestaurantEmail);
         return response;
     }
     private string ClientRegistrationHtmlBuilder(string data)
     {
         var client = JsonConvert.DeserializeObject<Client>(data);
-        var response = string.Format(EmailTemplate.ClientRegistration);
+        var response = string.Format(EmailTemplate.ClientRegistration, client.UserFirstName, client.UserLastName,
+            client.UserPhone, client.UserEmail, client.Coupon);
         return response;
     }
     private string RestaurantReservationManagerHtmlBuilder(Email email)
     {
         var reservation = JsonConvert.DeserializeObject<Reservation>(email.Data);
-        var response = string.Format(EmailTemplate.ReservationManager);
+        var response = string.Format(EmailTemplate.ReservationManager, reservation.OrderId, reservation.TableName, reservation.DateOfReservation, reservation.StartTime
+            , reservation.ForHowMany, reservation.Client.UserFirstName, reservation.Client.UserLastName,reservation.Client.UserPhone, reservation.Client.UserEmail);
         return response;
     }
     private string RestaurantReservationClientHtmlBuilder(Email email)

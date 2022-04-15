@@ -193,22 +193,27 @@ public static class EmailTemplate
                                         <tr>
                                             <td align = 'center' style='padding: 10px 15px; margin: 15px; font-weight: bold; line-height: 36px;
                                             margin: auto; font-size: 36px;'>
-                                                <span style = 'color: #11a8ab' > Welcome To Bon Appetit Reservation Manager </span>
+                                                <span style = 'color: #11a8ab' > Welcome To {0} Staff </span>
                                             </td>
                                         </tr>
                                         <tr>
                                             <td align='left' height='48px' style='padding: 6px 8px; margin: 10px; margin: auto; color: #292f33; 
                                                 font-size: 24px;'>
-                                                Restaurant: {0} <br/>
-                                                Restaurant Phone: {2} <br/>
-                                                Restaurant Email: {3} <br/>                                                
+                                                <span> Welcome {1} {2}, here is your contact information: </span></br>
+                                                <span> Phone number:  {3},</span></br>
+                                                <span> Email:  {4},</span></br>
+                                                <span> and your manager's your contact information: </span></br>
+                                                <span> Name: {5} {6},</span></br>
+                                                <span> Phone number:  {7},</span></br>
+                                                <span> Email:  {8},</span></br>
                                             </td>                                            
                                             
                                             <td align='left' height='48px' style='padding: 6px 8px; margin: 10px; margin: auto; color: #292f33; 
-                                                Your Name: {4} {5} <br/>
-                                                Your Phone: {6} <br/>
-                                                Your Email: {7} <br/>
-                                                <span>Here: put information about how to use the app as a manager:</span><br/>
+                                                <span> Restauran's information:,</span></br>
+                                                Restauran's Name: {0} <br/>
+                                                Restauran's Phone: {9} <br/>
+                                                Restauran's Email: {10} <br/>
+                                                <span>Here: put information about how to use the app as a worker:</span><br/>
                                             </td>
                                         </tr>
                                         <tr><td height = '20px' style='margin: auto; '> &nbsp; </td></tr>
@@ -270,22 +275,16 @@ public static class EmailTemplate
                                         <tr>
                                             <td align = 'center' style='padding: 10px 15px; margin: 15px; font-weight: bold; line-height: 36px;
                                             margin: auto; font-size: 36px;'>
-                                                <span style = 'color: #11a8ab' > Welcome To Bon Appetit Reservation Manager </span>
+                                                <span style = 'color: #11a8ab' > Welcome To Bon Appetit </span>
                                             </td>
                                         </tr>
-                                        <tr>
+                                        <tr>                                                                                        
                                             <td align='left' height='48px' style='padding: 6px 8px; margin: 10px; margin: auto; color: #292f33; 
-                                                font-size: 24px;'>
-                                                Restaurant: {0} <br/>
-                                                Restaurant Phone: {2} <br/>
-                                                Restaurant Email: {3} <br/>                                                
-                                            </td>                                            
-                                            
-                                            <td align='left' height='48px' style='padding: 6px 8px; margin: 10px; margin: auto; color: #292f33; 
-                                                Your Name: {4} {5} <br/>
-                                                Your Phone: {6} <br/>
-                                                Your Email: {7} <br/>
-                                                <span>Here: put information about how to use the app as a manager:</span><br/>
+                                                Your Name: {0} {1} <br/>
+                                                Your Phone: {2} <br/>
+                                                Your Email: {3} <br/>
+                                                Your Coupon Code: {4} <br/>
+                                                <span>Here: put information about how to use the app as a client:</span><br/>
                                             </td>
                                         </tr>
                                         <tr><td height = '20px' style='margin: auto; '> &nbsp; </td></tr>
@@ -315,12 +314,6 @@ public static class EmailTemplate
 
     public const string ReservationManager = @"
 <head>
-<style>
-    @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap');
-    
- table,tbody,tr,td,span,a{0}font-family: 'Comfortaa', cursive ;{1}
-
-</style>
 </head>
 <table width='100%' height='100%' style='padding:0px;margin:50px auto; min-width:400px;'>
     <tbody>
@@ -335,7 +328,7 @@ public static class EmailTemplate
                                     <tbody>
                                         <tr>
                                             <td align='left' style='margin: auto; font-size:18px;'>
-                                                <a href = 'https://localhost:44304/Home' > AutoSeller </ a >
+                                                <a href = ''> Bon Appetit Restaurant Reservation Manager App Add Href</ a >
                                             </td>
                                         </tr>
                                         <tr>
@@ -347,23 +340,28 @@ public static class EmailTemplate
                                         <tr>
                                             <td align = 'center' style='padding: 10px 15px; margin: 15px; font-weight: bold; line-height: 36px;
                                             margin: auto; font-size: 36px;'>
-                                                <span style = 'color: #11a8ab' > AutoSeller </span>
+                                                <span style = 'color: #11a8ab' > Someone made a reservation </span>
                                             </td>
                                         </tr>
                                         <tr>
                                             <td align='left' height='48px' style='padding: 6px 8px; margin: 10px; margin: auto; color: #292f33; 
                                                 font-size: 24px;'>
-                                                {2}
+                                                <span> Order Number: {0},</span> <br/>
+                                                <span> Table: {1},</span> <br/>
+                                                <span> Date of reservation: {2},</span> <br/>
+                                                <span> Start time: {3},</span> <br/>
+                                                <span> Reservation for: {4},</span> <br/>
                                             </td>
                                         </tr>
                                         <tr><td height = '20px' style='margin: auto; '> &nbsp; </td></tr>
+                                            <td align='left' height='48px' style='padding: 6px 8px; margin: 10px; margin: auto; color: #292f33; 
+                                                font-size: 24px;'>
+                                                <span> Name of : {5} {6},</span> <br/>
+                                                <span> Phone: {7},</span> <br/>
+                                                <span> Email: {8},</span> <br/>
+                                            </td>
                                         <tr>
-                                            <td align = 'center' style='margin:auto; line-height: 18px;'>
-                                                <a href = '{3}' target='_blank'                                                     
-                                                   style='text-decoration: none; border-radius: 50px; padding: 12px 18px;
-                                                      border: 1px solid #11a8ab; display: inline-block; font-size:20px;'>
-                                                    {4}
-                                                </a>
+                                            <td align = 'center' style='margin:auto; line-height: 18px;'>                                            
                                             </td>
                                         </tr>
                                         <tr><td height = '20px' style='margin: auto;'> &nbsp; </td></tr>
