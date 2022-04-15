@@ -7,6 +7,7 @@ public class Reservation
 {
     #region Reservation Properties
     public int OrderId { get; set; }
+    public string RestaurantName { get; set; }
     public string TableName { get; set; }
     public DateTime DateOfReservation { get; set; }
     public int StartTime { get; set; }

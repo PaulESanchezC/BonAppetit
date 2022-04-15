@@ -4,12 +4,6 @@ public static class EmailTemplate
 {
     public const string RestaurantRegistration = @"
 <head>
-<style>
-    @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap');
-    
- table,tbody,tr,td,span,a font-family: 'Comfortaa', cursive ;
-
-</style>
 </head>
 <table width='100%' height='100%' style='padding:0px;margin:50px auto; min-width:400px;'>
     <tbody>
@@ -84,12 +78,6 @@ public static class EmailTemplate
 
     public const string ManagerRegistration = @"
 <head>
-<style>
-    @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap');
-    
- table,tbody,tr,td,span,a font-family: 'Comfortaa', cursive ;
-
-</style>
 </head>
 <table width='100%' height='100%' style='padding:0px;margin:50px auto; min-width:400px;'>
     <tbody>
@@ -161,12 +149,6 @@ public static class EmailTemplate
 
     public const string WorkerRegistration = @"
 <head>
-<style>
-    @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap');
-    
- table,tbody,tr,td,span,a font-family: 'Comfortaa', cursive ;
-
-</style>
 </head>
 <table width='100%' height='100%' style='padding:0px;margin:50px auto; min-width:400px;'>
     <tbody>
@@ -243,12 +225,6 @@ public static class EmailTemplate
 
     public const string ClientRegistration = @"
 <head>
-<style>
-    @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap');
-    
- table,tbody,tr,td,span,a font-family: 'Comfortaa', cursive ;
-
-</style>
 </head>
 <table width='100%' height='100%' style='padding:0px;margin:50px auto; min-width:400px;'>
     <tbody>
@@ -378,12 +354,6 @@ public static class EmailTemplate
 
     public const string ReservationClients = @"
 <head>
-<style>
-    @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap');
-    
- table,tbody,tr,td,span,a{0}font-family: 'Comfortaa', cursive ;{1}
-
-</style>
 </head>
 <table width='100%' height='100%' style='padding:0px;margin:50px auto; min-width:400px;'>
     <tbody>
@@ -398,7 +368,7 @@ public static class EmailTemplate
                                     <tbody>
                                         <tr>
                                             <td align='left' style='margin: auto; font-size:18px;'>
-                                                <a href = 'https://localhost:44304/Home' > AutoSeller </ a >
+                                                <a href = '' > Bon Appetit  add href</ a >
                                             </td>
                                         </tr>
                                         <tr>
@@ -410,16 +380,28 @@ public static class EmailTemplate
                                         <tr>
                                             <td align = 'center' style='padding: 10px 15px; margin: 15px; font-weight: bold; line-height: 36px;
                                             margin: auto; font-size: 36px;'>
-                                                <span style = 'color: #11a8ab' > AutoSeller </span>
+                                                <span style = 'color: #11a8ab' > Bon Appetit Reservation </span>
                                             </td>
                                         </tr>
                                         <tr>
                                             <td align='left' height='48px' style='padding: 6px 8px; margin: 10px; margin: auto; color: #292f33; 
                                                 font-size: 24px;'>
-                                                {2}
+                                                <span> Reservation information: </span> <br/>
+                                                <span> Restaurant: {0} </span> <br/>
+                                                <span> Reservation for: {1} </span> <br/>
+                                                <span> Date of reservation: {2} </span> <br/>
+                                                <span> Start time: {3} </span> <br/>
+                                                <span> Order number: {4} </span> <br/>
                                             </td>
                                         </tr>
                                         <tr><td height = '20px' style='margin: auto; '> &nbsp; </td></tr>
+                                                <td align='left' height='48px' style='padding: 6px 8px; margin: 10px; margin: auto; color: #292f33; 
+                                                font-size: 24px;'>
+                                                <span> Your Information </span> <br/>                                                
+                                                <span> Name: {5} {6} </span> <br/>                                                
+                                                <span> Phone: {7} </span> <br/>                                                
+                                                <span> Email: {8} </span> <br/>                                                
+                                            </td>
                                         <tr>
                                             <td align = 'center' style='margin:auto; line-height: 18px;'>
                                                 <a href = '{3}' target='_blank'                                                     

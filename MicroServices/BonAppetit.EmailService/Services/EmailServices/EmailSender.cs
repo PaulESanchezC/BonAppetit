@@ -117,13 +117,15 @@ public class EmailSender : IMailJetEmailSender
     {
         var reservation = JsonConvert.DeserializeObject<Reservation>(email.Data);
         var response = string.Format(EmailTemplate.ReservationManager, reservation.OrderId, reservation.TableName, reservation.DateOfReservation, reservation.StartTime
-            , reservation.ForHowMany, reservation.Client.UserFirstName, reservation.Client.UserLastName,reservation.Client.UserPhone, reservation.Client.UserEmail);
+            , reservation.ForHowMany, reservation.Client.UserFirstName, reservation.Client.UserLastName, reservation.Client.UserPhone, reservation.Client.UserEmail);
         return response;
     }
     private string RestaurantReservationClientHtmlBuilder(Email email)
     {
         var reservation = JsonConvert.DeserializeObject<Reservation>(email.Data);
-        var response = string.Format(EmailTemplate.ReservationClients);
+        var response = string.Format(EmailTemplate.ReservationClients, reservation.RestaurantName, reservation.ForHowMany, reservation.DateOfReservation
+        , reservation.StartTime, reservation.OrderId, reservation.Client.UserFirstName, reservation.Client.UserLastName, reservation.Client.UserPhone
+        , reservation.Client.UserEmail);
         return response;
     }
 }
