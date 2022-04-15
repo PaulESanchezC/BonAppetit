@@ -21,7 +21,7 @@ namespace EmailService.Controllers
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
 
-            var request = await _emailSender.MailJetMailSender(emails, cancellationToken);
+            var request = await _emailSender.MailJetMailSenderAsync(emails, cancellationToken);
             return StatusCode(request.StatusCode, request);
         }
     }

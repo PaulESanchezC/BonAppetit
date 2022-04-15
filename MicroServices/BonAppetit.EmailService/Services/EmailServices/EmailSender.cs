@@ -17,6 +17,7 @@ public class EmailSender : IMailJetEmailSender
 {
     private readonly MailjetOptions _mailjetOptions;
     private Response<Email> Response { get; }
+    private string Subject { get; set; }
     public EmailSender(IOptions<MailjetOptions> options)
     {
         _mailjetOptions = options.Value;
@@ -43,7 +44,7 @@ public class EmailSender : IMailJetEmailSender
             }
              .Property(Send.FromEmail, _mailjetOptions.FromEmail)
              .Property(Send.FromName, _mailjetOptions.FromName)
-             .Property(Send.Subject, email.Subject)
+             .Property(Send.Subject, Subject)
              .Property(Send.HtmlPart, message)
              .Property(Send.Recipients, new JArray {
                 new JObject {
@@ -63,21 +64,31 @@ public class EmailSender : IMailJetEmailSender
         {
             case "restaurant registration":
                 response = RestaurantRegistrationHtmlBuilder(email.Data);
+                Subject = "Restaurant Registration";
                 break;
             case "manager registration":
                 response = ManagerRegistrationHtmlBuilder(email.Data);
+                Subject = "Manager Registration";
                 break;
             case "worker registration":
                 response = WorkerRegistrationHtmlBuilder(email.Data);
+                Subject = "Worker Registration";
                 break;
             case "client registration":
                 response = ClientRegistrationHtmlBuilder(email.Data);
+                Subject = "Client Registration";
                 break;
             case "reservation manager":
                 response = RestaurantReservationManagerHtmlBuilder(email);
+                Subject = "Reservation Manager";
                 break;
             case "reservation client":
                 response = RestaurantReservationClientHtmlBuilder(email);
+                Subject = "Reservation Client";
+                break;
+            case "test":
+                response = EmailTemplate.Test;
+                Subject = "Test Client";
                 break;
         }
         return Task.FromResult(response);

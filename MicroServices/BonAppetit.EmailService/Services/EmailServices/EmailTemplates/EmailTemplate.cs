@@ -403,12 +403,73 @@ public static class EmailTemplate
                                                 <span> Email: {8} </span> <br/>                                                
                                             </td>
                                         <tr>
-                                            <td align = 'center' style='margin:auto; line-height: 18px;'>
-                                                <a href = '{3}' target='_blank'                                                     
-                                                   style='text-decoration: none; border-radius: 50px; padding: 12px 18px;
-                                                      border: 1px solid #11a8ab; display: inline-block; font-size:20px;'>
-                                                    {4}
-                                                </a>
+                                            <td align = 'center' style='margin:auto; line-height: 18px;'>                                               
+                                            </td>
+                                        </tr>
+                                        <tr><td height = '20px' style='margin: auto;'> &nbsp; </td></tr>
+                                    </tbody>
+                                </table>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+    </tbody>
+</table>";
+
+    public const string Test = @"
+<head>
+</head>
+<table width='100%' height='100%' style='padding:0px;margin:50px auto; min-width:400px;'>
+    <tbody>
+        <tr>
+            <td width = '100%' align='center' style='margin:0px auto;'>
+                <table width = '100%' align='center' style='margin:auto'>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <table align = 'center' width='100%' style='margin: auto;
+                                border-top: 2px solid #11a8ab; border-bottom: 2px solid #11a8ab;'>
+                                    <tbody>
+                                        <tr>
+                                            <td align='left' style='margin: auto; font-size:18px;'>
+                                                <a href = '' > Bon Appetit  add href</ a >
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td align='left' style='margin: auto; border-bottom: 2px solid #11a8ab;font-size: 24px'>
+                                                Developed by: Paul Sanchez.
+                                            </td>
+                                        </tr>
+                                        <tr><td style = 'margin: auto;' > &nbsp;</td></tr>
+                                        <tr>
+                                            <td align = 'center' style='padding: 10px 15px; margin: 15px; font-weight: bold; line-height: 36px;
+                                            margin: auto; font-size: 36px;'>
+                                                <span style = 'color: #11a8ab' > Bon Appetit Reservation </span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td align='left' height='48px' style='padding: 6px 8px; margin: 10px; margin: auto; color: #292f33; 
+                                                font-size: 24px;'>
+                                                <span> Reservation information: </span> <br/>
+                                                <span> Restaurant: ######## </span> <br/>
+                                                <span> Reservation for: # </span> <br/>
+                                                <span> Date of reservation: ##-##-## </span> <br/>
+                                                <span> Start time: ###h </span> <br/>
+                                                <span> Order number: #### </span> <br/>
+                                            </td>
+                                        </tr>
+                                        <tr><td height = '20px' style='margin: auto; '> &nbsp; </td></tr>
+                                                <td align='left' height='48px' style='padding: 6px 8px; margin: 10px; margin: auto; color: #292f33; 
+                                                font-size: 24px;'>
+                                                <span> Your Information </span> <br/>                                                
+                                                <span> Name: ######## ####### </span> <br/>                                                
+                                                <span> Phone: ### ### #### </span> <br/>                                                
+                                                <span> Email: #####@###.### </span> <br/>                                                
+                                            </td>
+                                        <tr>
+                                            <td align = 'center' style='margin:auto; line-height: 18px;'>                                                
                                             </td>
                                         </tr>
                                         <tr><td height = '20px' style='margin: auto;'> &nbsp; </td></tr>

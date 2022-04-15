@@ -1,5 +1,7 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Configurations.ConfigurationsHelper;
+using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
+using Models.EmailSenderOptionsModels;
 using Services.EmailServices;
 
 
@@ -11,6 +13,10 @@ public static class ServicesConfiguration
     {
         //EmailSender Services
         services.AddTransient<IMailJetEmailSender, EmailSender>();
+
+        //MailJet Options Service
+        services.Configure<MailjetOptions>(ProxyConfiguration.Use.GetSection("MailJet"));
+
         return services;
     }
 }
