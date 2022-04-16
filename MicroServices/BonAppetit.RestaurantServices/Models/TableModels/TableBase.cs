@@ -7,7 +7,7 @@ public class TableBase
     #region Table Properties
     public string TableId { get; set; } = Guid.NewGuid().ToString();
     public string TableName { get; set; } = "";
-    public int FrequencyOfReservation { get; set; } = 2;
+    public double FrequencyOfReservation { get; set; } = 2;
     public int AmountOfSeats { get; set; } = 2;
 
     public RestaurantBase Restaurant { get; set; }

@@ -15,7 +15,7 @@ public class Reservation
     [Required]
     public DateTime DateOfReservation { get; set; }
     [Required]
-    public int StartTime { get; set; }
+    public double StartTime { get; set; }
     [Required]
     public int OrderId { get; set; }
     [Required]

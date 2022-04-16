@@ -1,6 +1,6 @@
 ﻿using Models.TableReservationBracketsModels;
 
-namespace BonAppetitWebApp.Pages.ReservationComponents.ViewModel;
+namespace Models.ViewModels;
 
 public class AvailableTablesTimeBracketsVm
 {
@@ -9,6 +9,6 @@ public class AvailableTablesTimeBracketsVm
     public DateTime DateOfRequest { get; set; }
     public string DateOfRequestString { get; set; }
     public List<TableReservationBracket> Brackets { get; set; } = new();
-    public List<int> AvailableBrackets { get; set; } = new();
+    public List<double> AvailableBrackets { get; set; } = new();
     public List<int> SeatsAvailable { get; set; } = new();
 }

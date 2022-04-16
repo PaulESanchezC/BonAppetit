@@ -16,7 +16,7 @@ public class ReservationCreateVm
     public DateTime DateOfReservation { get; set; }
 
     [Required]
-    public int StartTime { get; set; }
+    public double StartTime { get; set; }
 
     public string ApplicationUserId { get; set; }
 

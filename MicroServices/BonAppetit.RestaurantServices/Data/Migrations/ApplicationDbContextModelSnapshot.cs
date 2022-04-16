@@ -220,30 +220,30 @@ namespace Data.Migrations
                         .HasColumnType("bit")
                         .HasDefaultValue(false);
 
-                    b.Property<int>("FridayCloseTime")
+                    b.Property<double>("FridayCloseTime")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasDefaultValue(22);
+                        .HasColumnType("float")
+                        .HasDefaultValue(22.0);
 
-                    b.Property<int>("FridayOpenTime")
+                    b.Property<double>("FridayOpenTime")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasDefaultValue(12);
+                        .HasColumnType("float")
+                        .HasDefaultValue(12.0);
 
                     b.Property<bool>("Monday")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("bit")
                         .HasDefaultValue(false);
 
-                    b.Property<int>("MondayCloseTime")
+                    b.Property<double>("MondayCloseTime")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasDefaultValue(22);
+                        .HasColumnType("float")
+                        .HasDefaultValue(22.0);
 
-                    b.Property<int>("MondayOpenTime")
+                    b.Property<double>("MondayOpenTime")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasDefaultValue(12);
+                        .HasColumnType("float")
+                        .HasDefaultValue(12.0);
 
                     b.Property<string>("RestaurantId")
                         .IsRequired()
@@ -254,75 +254,75 @@ namespace Data.Migrations
                         .HasColumnType("bit")
                         .HasDefaultValue(false);
 
-                    b.Property<int>("SaturdayCloseTime")
+                    b.Property<double>("SaturdayCloseTime")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasDefaultValue(22);
+                        .HasColumnType("float")
+                        .HasDefaultValue(22.0);
 
-                    b.Property<int>("SaturdayOpenTime")
+                    b.Property<double>("SaturdayOpenTime")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasDefaultValue(12);
+                        .HasColumnType("float")
+                        .HasDefaultValue(12.0);
 
                     b.Property<bool>("Sunday")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("bit")
                         .HasDefaultValue(false);
 
-                    b.Property<int>("SundayCloseTime")
+                    b.Property<double>("SundayCloseTime")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasDefaultValue(22);
+                        .HasColumnType("float")
+                        .HasDefaultValue(22.0);
 
-                    b.Property<int>("SundayOpenTime")
+                    b.Property<double>("SundayOpenTime")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasDefaultValue(12);
+                        .HasColumnType("float")
+                        .HasDefaultValue(12.0);
 
                     b.Property<bool>("Thursday")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("bit")
                         .HasDefaultValue(false);
 
-                    b.Property<int>("ThursdayCloseTime")
+                    b.Property<double>("ThursdayCloseTime")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasDefaultValue(22);
+                        .HasColumnType("float")
+                        .HasDefaultValue(22.0);
 
-                    b.Property<int>("ThursdayOpenTime")
+                    b.Property<double>("ThursdayOpenTime")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasDefaultValue(12);
+                        .HasColumnType("float")
+                        .HasDefaultValue(12.0);
 
                     b.Property<bool>("Tuesday")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("bit")
                         .HasDefaultValue(false);
 
-                    b.Property<int>("TuesdayCloseTime")
+                    b.Property<double>("TuesdayCloseTime")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasDefaultValue(22);
+                        .HasColumnType("float")
+                        .HasDefaultValue(22.0);
 
-                    b.Property<int>("TuesdayOpenTime")
+                    b.Property<double>("TuesdayOpenTime")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasDefaultValue(12);
+                        .HasColumnType("float")
+                        .HasDefaultValue(12.0);
 
                     b.Property<bool>("Wednesday")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("bit")
                         .HasDefaultValue(false);
 
-                    b.Property<int>("WednesdayCloseTime")
+                    b.Property<double>("WednesdayCloseTime")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasDefaultValue(22);
+                        .HasColumnType("float")
+                        .HasDefaultValue(22.0);
 
-                    b.Property<int>("WednesdayOpenTime")
+                    b.Property<double>("WednesdayOpenTime")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasDefaultValue(12);
+                        .HasColumnType("float")
+                        .HasDefaultValue(12.0);
 
                     b.HasKey("ScheduleId");
 
@@ -347,10 +347,10 @@ namespace Data.Migrations
                     b.Property<DateTime>("DateCreated")
                         .HasColumnType("datetime2");
 
-                    b.Property<int>("FrequencyOfReservation")
+                    b.Property<double>("FrequencyOfReservation")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasDefaultValue(2);
+                        .HasColumnType("float")
+                        .HasDefaultValue(2.0);
 
                     b.Property<string>("RestaurantId")
                         .IsRequired()

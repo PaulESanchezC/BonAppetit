@@ -10,7 +10,7 @@ public class TableUpdate
     public string TableName { get; set; }
 
     [Required(AllowEmptyStrings = false)]
-    public int FrequencyOfReservation { get; set; }
+    public double FrequencyOfReservation { get; set; }
 
     [Required(AllowEmptyStrings = false)]
     public int AmountOfSeats { get; set; }

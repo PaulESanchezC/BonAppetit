@@ -15,7 +15,7 @@ public class ReservationDto
     
     public DateTime DateOfReservation { get; set; }
     
-    public int StartTime { get; set; }
+    public double StartTime { get; set; }
     
     public int OrderId { get; set; }
     

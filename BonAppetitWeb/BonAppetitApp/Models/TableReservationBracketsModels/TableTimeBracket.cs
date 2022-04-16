@@ -4,6 +4,6 @@ namespace Models.TableReservationBracketsModels;
 
 public class TableTimeBracket
 {
-    public int StartTime { get; set; }
-    public int EndTime { get; set; }
+    public double StartTime { get; set; }
+    public double EndTime { get; set; }
 }

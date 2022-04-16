@@ -62,7 +62,7 @@ public class TableTimeBracketService : ITableTimeBracketService
 
         var restaurantSchedule = restaurant.RestaurantSchedule;
         var (openingHours, closingHours) = await GetDayOfTheWeekOpeningAndClosingHoursAsync(restaurantSchedule, dateOfRequest);
-        var reservationsBracketsDto = await BuildTableReservationBracketDtoAsync(tables, tableReservations, openingHours, closingHours);
+        var reservationsBracketsDto = await BuildTableReservationBracketDtoAsync(tables, tableReservations, openingHours, closingHours, dateOfRequest);
 
         return new Response<TableReservationBracketDto>
         {
@@ -84,14 +84,14 @@ public class TableTimeBracketService : ITableTimeBracketService
         var reservationsResponse = JsonConvert.DeserializeObject<Response<ReservationDto>>(responseString);
         return reservationsResponse!;
     }
-    private static Task<(int openingHour, int closingHour)> GetDayOfTheWeekOpeningAndClosingHoursAsync(ScheduleBase schedule, DateTime dateOfRequest)
+    private static Task<(double openingHour, double closingHour)> GetDayOfTheWeekOpeningAndClosingHoursAsync(ScheduleBase schedule, DateTime dateOfRequest)
     {
         var day = DateTime.Now.Date;
         if (dateOfRequest.Date > day)
             day = dateOfRequest.Date;
 
-        var openingHours = 0;
-        var closingHours = 0;
+        var openingHours = 0.0;
+        var closingHours = 0.0;
         var hours = (openingHours, closingHours);
         switch (day.DayOfWeek)
         {
@@ -126,7 +126,9 @@ public class TableTimeBracketService : ITableTimeBracketService
         }
         return Task.FromResult(hours);
     }
-    private Task<List<TableReservationBracketDto>> BuildTableReservationBracketDtoAsync(List<TableBase> tables, List<ReservationDto>? reservations, int openingHour, int closeHour)
+
+    //Strict Reservations
+    private Task<List<TableReservationBracketDto>> BuildTableReservationBracketDtoAsync(List<TableBase> tables, List<ReservationDto>? reservations, double openingHour, double closeHour, DateTime dateOfRequest)
     {
         var tableBrackets = new List<TableReservationBracketDto>();
         var timeBrackets = new List<TableTimeBracketDto>();
@@ -136,8 +138,9 @@ public class TableTimeBracketService : ITableTimeBracketService
             var freqOfRsvp = table.FrequencyOfReservation;
             for (var i = openingHour; i < closeHour; i += freqOfRsvp)
             {
+                if (DateTime.Now.Date == dateOfRequest.Date && i < DateTime.Now.TimeOfDay.TotalHours) continue;
                 var reservation = reservations?.Where(rsvp => rsvp.StartTime == i
-                                                && rsvp.TableId == table.TableId).FirstOrDefault();
+                                                              && rsvp.TableId == table.TableId).FirstOrDefault();
                 if (reservation is null)
                     timeBrackets.Add(new()
                     {

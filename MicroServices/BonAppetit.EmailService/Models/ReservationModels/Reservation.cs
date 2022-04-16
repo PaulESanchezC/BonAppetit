@@ -10,7 +10,7 @@ public class Reservation
     public string RestaurantName { get; set; }
     public string TableName { get; set; }
     public DateTime DateOfReservation { get; set; }
-    public int StartTime { get; set; }
+    public double StartTime { get; set; }
     public int ForHowMany { get; set; }
     public Client Client { get; set; }
 

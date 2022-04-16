@@ -1,6 +1,5 @@
-﻿using BonAppetitWebApp.Pages.ReservationComponents.ViewModel;
-using Microsoft.AspNetCore.Components;
-using Models.PaymentModels;
+﻿using Microsoft.AspNetCore.Components;
+using Models.ViewModels;
 using Services.RestaurantServices;
 
 namespace BonAppetitWebApp.Pages.ReservationComponents;
@@ -25,6 +24,7 @@ public partial class AvailableTablesTimeBrackets
 
     private async Task GetBracketsAsync()
     {
+        BracketsVm.AvailableBrackets = new();
         BracketsVm.DateOfRequestString = BracketsVm.DateOfRequest.Date.ToString("MM-dd-yyyy");
         BracketsVm.ForHowMany = BracketsVm.ForHowManyTemp;
 
@@ -38,10 +38,11 @@ public partial class AvailableTablesTimeBrackets
 
         foreach (var bracket in tempList.SelectMany(bracket => bracket.TablesTimeBrackets.Where(timeBracket => !BracketsVm.AvailableBrackets.Contains(timeBracket.StartTime))))
             BracketsVm.AvailableBrackets.Add(bracket.StartTime);
+
         BracketsVm.AvailableBrackets.Sort();
     }
 
-    private void ConfirmReservation(int timeBracket)
+    private void ConfirmReservation(double timeBracket)
     {
         var table = BracketsVm.Brackets.FirstOrDefault(table => table.Table.AmountOfSeats == BracketsVm.ForHowMany);
         var restaurantId = RestaurantId;

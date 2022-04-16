@@ -16,7 +16,7 @@ public class ReservationCreate
     public DateTime DateOfReservation { get; set; }
 
     [Required]
-    public int StartTime { get; set; }
+    public double StartTime { get; set; }
 
     public string ApplicationUserId { get; set; }
 
