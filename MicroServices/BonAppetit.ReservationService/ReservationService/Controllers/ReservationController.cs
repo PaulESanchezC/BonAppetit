@@ -128,7 +128,6 @@ namespace ReservationService.Controllers
             return StatusCode(request.StatusCode, request);
         }
 
-        //[Authorize]//TODO: Implement Tests once this endpoint and methods dependent are complete
         [HttpPost("MakeReservation")]
         public async Task<IActionResult> MakeReservation([FromBody] ReservationCreate reservationToMake,
             CancellationToken cancellationToken)

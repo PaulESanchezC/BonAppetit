@@ -51,9 +51,13 @@
               "target": "Package",
               "version": "[11.0.1, )"
             },
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[11.0.0, )"
+            },
             "Microsoft.AspNetCore.Components.WebAssembly.Authentication": {
               "target": "Package",
-              "version": "[6.0.4, )"
+              "version": "[6.0.3, )"
             },
             "Microsoft.Extensions.Http": {
               "target": "Package",

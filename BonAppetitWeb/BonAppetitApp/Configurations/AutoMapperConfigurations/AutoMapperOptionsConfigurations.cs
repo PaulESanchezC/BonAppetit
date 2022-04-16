@@ -7,6 +7,6 @@ public class AutoMapperOptionsConfigurations : Profile
 {
     public AutoMapperOptionsConfigurations()
     {
-        CreateMap<ReservationCreateVm, ConfirmReservationVm >();
+        CreateMap<ReservationCreateVm, ConfirmReservationVm >().ReverseMap();
     }
 }

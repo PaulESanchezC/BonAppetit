@@ -7,6 +7,8 @@
   "linkerEnabled": false,
   "resources": {
     "assembly": {
+      "AutoMapper.dll": "sha256-uNYyaL9rpjmA2uF9zP55k5t9afAfIQUk0oArKTAeAS0=",
+      "AutoMapper.Extensions.Microsoft.DependencyInjection.dll": "sha256-o+ciZOc+lg+enKIuHnXAnocXep\/1rkNZ0wj+RhtAqyI=",
       "Blazored.LocalStorage.dll": "sha256-6RRoYeDP3d0xabXmcCMF66wXeJlXVPem28Trs8sQiis=",
       "Microsoft.AspNetCore.Authorization.dll": "sha256-Ha5fdCPDxEzQSfpAqMldZhxAZGSoQpwYh8Onk\/zR2Bc=",
       "Microsoft.AspNetCore.Components.dll": "sha256-4niu36Ua\/a0Tb++kk0BPETzMKL79X97WKKAHwXyA54M=",
@@ -201,21 +203,21 @@
       "mscorlib.dll": "sha256-tSv6NEbBsHuM5P3AUJGybafS0hxrXlzDmmcyG2eGk3I=",
       "netstandard.dll": "sha256-klcvWVyHimPfDxg6W1A076EKpCB5ySxjtc7sxJEsGgE=",
       "System.Private.CoreLib.dll": "sha256-Y8kdbfPQ0YoYLGbOgzRmoVsnuMYNlA1hvLvDWFTtzrk=",
-      "Configurations.dll": "sha256-AkaOlsrPv7UxwVhupM770368dZYE8DbMDGmdTyJgPdE=",
-      "Models.dll": "sha256-AVwRqCUpy4gjm+tKypeoRdyvH9HGMgEpQRVwDOV2TRs=",
-      "Services.dll": "sha256-KVWFDme5DljzQYHgNnuHZG1MjinSPgr8CasfsDCATSM=",
+      "Configurations.dll": "sha256-ht5v+V3CGd7jo1LGgALBpV2eDNQGylUt0TZRNyrtEzs=",
+      "Models.dll": "sha256-4umscKW1JNY3UsoOM79gSB2hPJJX5bsAuowbU58scqA=",
+      "Services.dll": "sha256-tBS\/kbQ9GaDP6vVieRH6QYkliAxy52A5JNHvHg6SxMM=",
       "StaticData.dll": "sha256-dM+JByCbQL1SCK3Lpa4wZUNNWMI8cFbbCKW2oyD5dNI=",
-      "BonAppetitWebApp.dll": "sha256-I5XaytoWR51ZqJfRbWOUyYabLSDpSz34bHGTYJw6XRk="
+      "BonAppetitWebApp.dll": "sha256-YZXUc6dA+sIqjR59vkuDbeGaiDFaQXDVz0ABaMPvDKk="
     },
     "extensions": null,
     "lazyAssembly": null,
     "libraryInitializers": null,
     "pdb": {
-      "Configurations.pdb": "sha256-ZiNuWDebBqkCH6M72zWY+bBMt5vZ9+AEp1I6NAEeKDY=",
+      "Configurations.pdb": "sha256-uA781FIBFi4fQvZAv31DGZOtBx3SVNDMtrIZe03OMc0=",
       "StaticData.pdb": "sha256-SJt+s6Uc1OLPv40VLud6\/dzFkUf3xH22bqP5XQ05A+4=",
-      "Models.pdb": "sha256-W02Z7lhCZmIi7KmDERpQZiuwNlefRQudXRnxL5Jma94=",
-      "Services.pdb": "sha256-\/bUop7rznijrGtrB1va2AdLJeSeuUCvMJ4aK6wp7O\/0=",
-      "BonAppetitWebApp.pdb": "sha256-1Ja8H6eR\/qFVVPXa8HNpI6Dr1zleI2XnukgXsU3kqro="
+      "Models.pdb": "sha256-TRN6Gbgebix2zwclz0U3egJzJvfbTJIKBKo+kOId8QM=",
+      "Services.pdb": "sha256-tPB+Stm40ttuL3Og4v7zw61BcMlcMHPFtyJAn6TZms0=",
+      "BonAppetitWebApp.pdb": "sha256-TdSdZk4JscZG0uMzGwfx57ZFn2u2FbjCkfIfgd1KslQ="
     },
     "runtime": {
       "dotnet.6.0.3.8671elndkn.js": "sha256-pRmcHKZN4T\/YbX9dj6ITT4sNtkJ9w07OLcwl4645nPg=",

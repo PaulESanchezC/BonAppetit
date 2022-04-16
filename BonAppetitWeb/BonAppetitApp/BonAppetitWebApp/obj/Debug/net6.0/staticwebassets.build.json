@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "V5EvJ65jPzFE9SAc2qdZAj0TVw2jj+dBXd2MkiMeyZA=",
+  "Hash": "2WByexIn6C9XXF8xz3ehzUckmczDwgp4yrffAhGpno8=",
   "Source": "BonAppetitWebApp",
   "BasePath": "/",
   "Mode": "Root",
@@ -32,6 +32,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\Paulyglot\\.nuget\\packages\\microsoft.aspnetcore.components.webassembly.authentication\\6.0.3\\staticwebassets\\AuthenticationService.js"
+    },
+    {
+      "Identity": "C:\\Users\\Paulyglot\\Desktop\\Portoflio\\BonAppetit\\BonAppetitWeb\\BonAppetitApp\\BonAppetitWebApp\\bin\\Debug\\net6.0\\wwwroot\\_framework\\AutoMapper.dll",
+      "SourceId": "BonAppetitWebApp",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\Paulyglot\\Desktop\\Portoflio\\BonAppetit\\BonAppetitWeb\\BonAppetitApp\\BonAppetitWebApp\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/AutoMapper.dll",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "BlazorWebAssemblyResource",
+      "AssetTraitValue": "runtime",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\Paulyglot\\.nuget\\packages\\automapper\\11.0.1\\lib\\netstandard2.1\\AutoMapper.dll"
+    },
+    {
+      "Identity": "C:\\Users\\Paulyglot\\Desktop\\Portoflio\\BonAppetit\\BonAppetitWeb\\BonAppetitApp\\BonAppetitWebApp\\bin\\Debug\\net6.0\\wwwroot\\_framework\\AutoMapper.Extensions.Microsoft.DependencyInjection.dll",
+      "SourceId": "BonAppetitWebApp",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\Paulyglot\\Desktop\\Portoflio\\BonAppetit\\BonAppetitWeb\\BonAppetitApp\\BonAppetitWebApp\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/AutoMapper.Extensions.Microsoft.DependencyInjection.dll",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "BlazorWebAssemblyResource",
+      "AssetTraitValue": "runtime",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\Paulyglot\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\11.0.0\\lib\\netstandard2.1\\AutoMapper.Extensions.Microsoft.DependencyInjection.dll"
     },
     {
       "Identity": "C:\\Users\\Paulyglot\\Desktop\\Portoflio\\BonAppetit\\BonAppetitWeb\\BonAppetitApp\\BonAppetitWebApp\\bin\\Debug\\net6.0\\wwwroot\\_framework\\blazor.boot.json",
@@ -5593,6 +5627,23 @@
       "OriginalItemSpec": "C:\\Users\\Paulyglot\\Desktop\\Portoflio\\BonAppetit\\BonAppetitWeb\\BonAppetitApp\\BonAppetitWebApp\\bin\\Debug\\net6.0\\wwwroot\\_framework\\System.Drawing.dll"
     },
     {
+      "Identity": "C:\\Users\\Paulyglot\\Desktop\\Portoflio\\BonAppetit\\BonAppetitWeb\\BonAppetitApp\\BonAppetitWebApp\\obj\\Debug\\net6.0\\build-gz\\LXNkbDw2.gz",
+      "SourceId": "BonAppetitWebApp",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\Paulyglot\\Desktop\\Portoflio\\BonAppetit\\BonAppetitWeb\\BonAppetitApp\\BonAppetitWebApp\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/AutoMapper.dll.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "RelatedAsset": "C:\\Users\\Paulyglot\\Desktop\\Portoflio\\BonAppetit\\BonAppetitWeb\\BonAppetitApp\\BonAppetitWebApp\\bin\\Debug\\net6.0\\wwwroot\\_framework\\AutoMapper.dll",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\Paulyglot\\Desktop\\Portoflio\\BonAppetit\\BonAppetitWeb\\BonAppetitApp\\BonAppetitWebApp\\bin\\Debug\\net6.0\\wwwroot\\_framework\\AutoMapper.dll"
+    },
+    {
       "Identity": "C:\\Users\\Paulyglot\\Desktop\\Portoflio\\BonAppetit\\BonAppetitWeb\\BonAppetitApp\\BonAppetitWebApp\\obj\\Debug\\net6.0\\build-gz\\lxs5EF46.gz",
       "SourceId": "BonAppetitWebApp",
       "SourceType": "Computed",
@@ -6169,6 +6220,23 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\Paulyglot\\Desktop\\Portoflio\\BonAppetit\\BonAppetitWeb\\BonAppetitApp\\BonAppetitWebApp\\bin\\Debug\\net6.0\\wwwroot\\_framework\\System.ComponentModel.EventBasedAsync.dll"
+    },
+    {
+      "Identity": "C:\\Users\\Paulyglot\\Desktop\\Portoflio\\BonAppetit\\BonAppetitWeb\\BonAppetitApp\\BonAppetitWebApp\\obj\\Debug\\net6.0\\build-gz\\qH5IH+Bz.gz",
+      "SourceId": "BonAppetitWebApp",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\Paulyglot\\Desktop\\Portoflio\\BonAppetit\\BonAppetitWeb\\BonAppetitApp\\BonAppetitWebApp\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/AutoMapper.Extensions.Microsoft.DependencyInjection.dll.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "RelatedAsset": "C:\\Users\\Paulyglot\\Desktop\\Portoflio\\BonAppetit\\BonAppetitWeb\\BonAppetitApp\\BonAppetitWebApp\\bin\\Debug\\net6.0\\wwwroot\\_framework\\AutoMapper.Extensions.Microsoft.DependencyInjection.dll",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\Paulyglot\\Desktop\\Portoflio\\BonAppetit\\BonAppetitWeb\\BonAppetitApp\\BonAppetitWebApp\\bin\\Debug\\net6.0\\wwwroot\\_framework\\AutoMapper.Extensions.Microsoft.DependencyInjection.dll"
     },
     {
       "Identity": "C:\\Users\\Paulyglot\\Desktop\\Portoflio\\BonAppetit\\BonAppetitWeb\\BonAppetitApp\\BonAppetitWebApp\\obj\\Debug\\net6.0\\build-gz\\QhMe3YZy.gz",

@@ -57,16 +57,16 @@
             },
             "Microsoft.AspNetCore.Components.WebAssembly": {
               "target": "Package",
-              "version": "[6.0.4, )"
+              "version": "[6.0.3, )"
             },
             "Microsoft.AspNetCore.Components.WebAssembly.Authentication": {
               "target": "Package",
-              "version": "[6.0.4, )"
+              "version": "[6.0.3, )"
             },
             "Microsoft.AspNetCore.Components.WebAssembly.DevServer": {
               "suppressParent": "All",
               "target": "Package",
-              "version": "[6.0.4, )"
+              "version": "[6.0.3, )"
             },
             "Microsoft.Extensions.Http": {
               "target": "Package",
@@ -154,9 +154,13 @@
               "target": "Package",
               "version": "[11.0.1, )"
             },
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[11.0.0, )"
+            },
             "Microsoft.AspNetCore.Components.WebAssembly.Authentication": {
               "target": "Package",
-              "version": "[6.0.4, )"
+              "version": "[6.0.3, )"
             },
             "Microsoft.Extensions.Http": {
               "target": "Package",

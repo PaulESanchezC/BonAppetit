@@ -31,7 +31,7 @@ public class ReservationService : Repository<ReservationBase, ReservationDto, Re
             return await ResponseSingleBuilderTask(false, 400, "Table Reserved",
                 "The Table is already reserved for the time requested", null);
 
-        var entity = await _db.Reservations.AddAsync(reservationT);
+        var entity = await _db.Reservations.AddAsync(reservationT, cancellationToken);
 
         if (entity.State != EntityState.Added)
             return await ResponseSingleBuilderTask(false, 409, "Operation Failed", $"Could not add the reservation", null);
@@ -46,6 +46,5 @@ public class ReservationService : Repository<ReservationBase, ReservationDto, Re
         }
 
         return await ResponseSingleBuilderTask(true, 201, "Ok", "Ok", reservationT);
-
     }
 }

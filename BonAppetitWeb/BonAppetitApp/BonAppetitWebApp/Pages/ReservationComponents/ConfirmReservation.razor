@@ -8,7 +8,6 @@
 
 
         <EditForm Model="ConfirmReservationVm" OnValidSubmit="MakeReservation">
-            <ValidationSummary/>
             <DataAnnotationsValidator/>
             <div class="row">
                 <div class="col-6">
@@ -52,8 +51,8 @@
                             <label>First name</label>
                         </div>
                         <div class="col-12">
-                            <input type="text" @bind-value="@Reservation.FirstName" placeholder="First name"/>
-                            <ValidationMessage For="() => Reservation.FirstName" style="color: darkred"/>
+                            <input type="text" @bind-value="@ConfirmReservationVm.FirstName" placeholder="First name"/>
+                            <ValidationMessage For="() => ConfirmReservationVm.FirstName" style="color: darkred"/>
                         </div>
                     </div>
                     <div class="row">
@@ -61,8 +60,8 @@
                             <label>Last name</label>
                         </div>
                         <div class="col-12">
-                            <input type="text" @bind-value="@Reservation.LastName" placeholder="Last name"/>
-                            <ValidationMessage For="() => Reservation.LastName" style="color: darkred"/>
+                            <input type="text" @bind-value="@ConfirmReservationVm.LastName" placeholder="Last name"/>
+                            <ValidationMessage For="() => ConfirmReservationVm.LastName" style="color: darkred"/>
                         </div>
                     </div>
                     <div class="row">
@@ -70,8 +69,8 @@
                             <label>Phone</label>
                         </div>
                         <div class="col-12">
-                            <input type="text" @bind-value="@Reservation.Phone" placeholder="Phone"/>
-                            <ValidationMessage For="() => Reservation.Phone" style="color: darkred"/>
+                            <input type="text" @bind-value="@ConfirmReservationVm.Phone" placeholder="Phone"/>
+                            <ValidationMessage For="() => ConfirmReservationVm.Phone" style="color: darkred"/>
                         </div>
                     </div>
                     <div class="row">
@@ -79,8 +78,8 @@
                             <label>Email</label>
                         </div>
                         <div class="col-12">
-                            <input type="email" @bind-value="@Reservation.Email" placeholder="E-mail"/>
-                            <ValidationMessage For="() => Reservation.Email" style="color: darkred"/>
+                            <input type="email" @bind-value="@ConfirmReservationVm.Email" placeholder="E-mail"/>
+                            <ValidationMessage For="() => ConfirmReservationVm.Email" style="color: darkred"/>
                         </div>
                     </div>
 
