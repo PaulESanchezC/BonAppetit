@@ -38,7 +38,6 @@ var app = builder.Build();
 
 if (app.Environment.IsDevelopment())
 { }
-
 app.UseSwagger();
 app.UseSwaggerUI(options=> options.SwaggerEndpoint("/swagger/BonAppetitOpenApi/swagger.json", "Bon Appetit Reservatition Service"));
 

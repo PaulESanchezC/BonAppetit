@@ -25,7 +25,7 @@ var app = builder.Build();
 if (app.Environment.IsDevelopment()) { }
 
 app.UseSwagger();
-app.UseSwaggerUI(options => options.SwaggerEndpoint("/swagger/BonAppetitOpenApi/swagger.json", "Bon Appetit Payment Service"));
+app.UseSwaggerUI(options => options.SwaggerEndpoint("/swagger/BonAppetitOpenApi/swagger.json", "Bon Appetit Email Service"));
 app.UseCors("AllowAnonymous");
 app.UseHttpsRedirection();
 app.UseAuthorization();

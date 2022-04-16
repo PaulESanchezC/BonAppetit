@@ -1,4 +1,5 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
+using Services.EmailServices;
 using Services.PaymentServices;
 using Services.ReservationServices;
 using Services.RestaurantServices;
@@ -14,6 +15,7 @@ public static class ServiceConfigurations
         service.AddScoped<IReservationServices, ReservationServices>();
         service.AddScoped<ITableService, TableService>();
         service.AddScoped<IPaymentService, PaymentService>();
+        service.AddScoped<IEmailSender, EmailSender>();
         return service;
     }
 }
