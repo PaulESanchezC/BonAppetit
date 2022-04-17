@@ -101,7 +101,7 @@ namespace IdentityServer.Pages.Account.Login
             if (result.Succeeded)
             {
                 var user = await _userManager.FindByNameAsync(Input.Username);
-                await _events.RaiseAsync(new UserLoginSuccessEvent(user.UserName, user.Id, user.FristName + " " + user.LastName, clientId: context?.Client.ClientId));
+                await _events.RaiseAsync(new UserLoginSuccessEvent(user.UserName, user.Id, user.FirstName + " " + user.LastName, clientId: context?.Client.ClientId));
 
                 if (context != null)
                     return Redirect(Input.ReturnUrl);

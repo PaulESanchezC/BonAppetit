@@ -33,6 +33,9 @@
               },
               "C:\\Users\\Paulyglot\\Desktop\\Portoflio\\BonAppetit\\MicroServices\\BonAppetit.AuthenticationService\\Models\\Models.csproj": {
                 "projectPath": "C:\\Users\\Paulyglot\\Desktop\\Portoflio\\BonAppetit\\MicroServices\\BonAppetit.AuthenticationService\\Models\\Models.csproj"
+              },
+              "C:\\Users\\Paulyglot\\Desktop\\Portoflio\\BonAppetit\\MicroServices\\BonAppetit.AuthenticationService\\Services\\Services.csproj": {
+                "projectPath": "C:\\Users\\Paulyglot\\Desktop\\Portoflio\\BonAppetit\\MicroServices\\BonAppetit.AuthenticationService\\Services\\Services.csproj"
               }
             }
           }
@@ -127,6 +130,9 @@
               "C:\\Users\\Paulyglot\\Desktop\\Portoflio\\BonAppetit\\MicroServices\\BonAppetit.AuthenticationService\\Data\\Data.csproj": {
                 "projectPath": "C:\\Users\\Paulyglot\\Desktop\\Portoflio\\BonAppetit\\MicroServices\\BonAppetit.AuthenticationService\\Data\\Data.csproj"
               },
+              "C:\\Users\\Paulyglot\\Desktop\\Portoflio\\BonAppetit\\MicroServices\\BonAppetit.AuthenticationService\\Services\\Services.csproj": {
+                "projectPath": "C:\\Users\\Paulyglot\\Desktop\\Portoflio\\BonAppetit\\MicroServices\\BonAppetit.AuthenticationService\\Services\\Services.csproj"
+              },
               "C:\\Users\\Paulyglot\\Desktop\\Portoflio\\BonAppetit\\MicroServices\\BonAppetit.AuthenticationService\\StaticData\\StaticData.csproj": {
                 "projectPath": "C:\\Users\\Paulyglot\\Desktop\\Portoflio\\BonAppetit\\MicroServices\\BonAppetit.AuthenticationService\\StaticData\\StaticData.csproj"
               }
@@ -143,6 +149,10 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[11.0.0, )"
+            },
             "Duende.BFF": {
               "target": "Package",
               "version": "[1.1.0, )"
@@ -337,6 +347,73 @@
             "Microsoft.Extensions.Identity.Stores": {
               "target": "Package",
               "version": "[6.0.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Paulyglot\\Desktop\\Portoflio\\BonAppetit\\MicroServices\\BonAppetit.AuthenticationService\\Services\\Services.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Paulyglot\\Desktop\\Portoflio\\BonAppetit\\MicroServices\\BonAppetit.AuthenticationService\\Services\\Services.csproj",
+        "projectName": "Services",
+        "projectPath": "C:\\Users\\Paulyglot\\Desktop\\Portoflio\\BonAppetit\\MicroServices\\BonAppetit.AuthenticationService\\Services\\Services.csproj",
+        "packagesPath": "C:\\Users\\Paulyglot\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Paulyglot\\Desktop\\Portoflio\\BonAppetit\\MicroServices\\BonAppetit.AuthenticationService\\Services\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Paulyglot\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\Users\\Paulyglot\\Desktop\\Portoflio\\BonAppetit\\MicroServices\\BonAppetit.AuthenticationService\\Data\\Data.csproj": {
+                "projectPath": "C:\\Users\\Paulyglot\\Desktop\\Portoflio\\BonAppetit\\MicroServices\\BonAppetit.AuthenticationService\\Data\\Data.csproj"
+              },
+              "C:\\Users\\Paulyglot\\Desktop\\Portoflio\\BonAppetit\\MicroServices\\BonAppetit.AuthenticationService\\Models\\Models.csproj": {
+                "projectPath": "C:\\Users\\Paulyglot\\Desktop\\Portoflio\\BonAppetit\\MicroServices\\BonAppetit.AuthenticationService\\Models\\Models.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[11.0.1, )"
             }
           },
           "imports": [

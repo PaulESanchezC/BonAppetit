@@ -1,9 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "SnfTgsq8dnKiKdPsET5pkTAVwPFlFTsvSW5rgHsTYjejW8npPIl+Xxj72CCBnFOUobeTbSNYFd6D28vYta0UYQ==",
+  "dgSpecHash": "YhIDZjRrZ6q32Qy4cdyuvhKgjuPs/pzz37YlO0jJUWmC1OCGUErzBDhNsZMN/XmGH7K4iAJ8ONFs7cueUhzVyg==",
   "success": true,
   "projectFilePath": "C:\\Users\\Paulyglot\\Desktop\\Portoflio\\BonAppetit\\MicroServices\\BonAppetit.AuthenticationService\\Configurations\\Configurations.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Paulyglot\\.nuget\\packages\\automapper\\11.0.1\\automapper.11.0.1.nupkg.sha512",
+    "C:\\Users\\Paulyglot\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\11.0.0\\automapper.extensions.microsoft.dependencyinjection.11.0.0.nupkg.sha512",
     "C:\\Users\\Paulyglot\\.nuget\\packages\\duende.bff\\1.1.0\\duende.bff.1.1.0.nupkg.sha512",
     "C:\\Users\\Paulyglot\\.nuget\\packages\\duende.identityserver\\6.0.4\\duende.identityserver.6.0.4.nupkg.sha512",
     "C:\\Users\\Paulyglot\\.nuget\\packages\\duende.identityserver.aspnetidentity\\6.0.4\\duende.identityserver.aspnetidentity.6.0.4.nupkg.sha512",
@@ -29,7 +31,7 @@
     "C:\\Users\\Paulyglot\\.nuget\\packages\\microsoft.aspnetcore.identity.entityframeworkcore\\6.0.3\\microsoft.aspnetcore.identity.entityframeworkcore.6.0.3.nupkg.sha512",
     "C:\\Users\\Paulyglot\\.nuget\\packages\\microsoft.aspnetcore.identity.ui\\6.0.3\\microsoft.aspnetcore.identity.ui.6.0.3.nupkg.sha512",
     "C:\\Users\\Paulyglot\\.nuget\\packages\\microsoft.aspnetcore.webutilities\\2.2.0\\microsoft.aspnetcore.webutilities.2.2.0.nupkg.sha512",
-    "C:\\Users\\Paulyglot\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
+    "C:\\Users\\Paulyglot\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\Paulyglot\\.nuget\\packages\\microsoft.data.sqlclient\\2.1.4\\microsoft.data.sqlclient.2.1.4.nupkg.sha512",
     "C:\\Users\\Paulyglot\\.nuget\\packages\\microsoft.data.sqlclient.sni.runtime\\2.1.1\\microsoft.data.sqlclient.sni.runtime.2.1.1.nupkg.sha512",
     "C:\\Users\\Paulyglot\\.nuget\\packages\\microsoft.entityframeworkcore\\6.0.3\\microsoft.entityframeworkcore.6.0.3.nupkg.sha512",

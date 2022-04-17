@@ -35,6 +35,7 @@ public class AuthenticationClients
                PostLogoutRedirectUris = { PostLogoutRedirectUris },
                AllowedScopes = new List<string>
                {
+                   IdentityServerConstants.LocalApi.ScopeName,
                    IdentityServerConstants.StandardScopes.OpenId,
                    IdentityServerConstants.StandardScopes.Profile,
                    IdentityServerConstants.StandardScopes.Email,

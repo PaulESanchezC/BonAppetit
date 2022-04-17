@@ -4,6 +4,6 @@ namespace Models.ApplicationUserModels;
 
 public class ApplicationUser : IdentityUser
 {
-    public string FristName { get; set; }
+    public string FirstName { get; set; }
     public string LastName { get; set; }
 }
