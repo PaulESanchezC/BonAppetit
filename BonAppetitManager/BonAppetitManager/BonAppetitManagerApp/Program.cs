@@ -11,6 +11,7 @@ builder.RootComponents.Add<App>("#app");
 builder.RootComponents.Add<HeadOutlet>("head::after");
 
 //#region Services Container
+
 ////AutoMapper Configurations
 //builder.Services.AddAutoMapperMapConfigurations();
 ////Blazored Local Storage
@@ -19,7 +20,6 @@ builder.RootComponents.Add<HeadOutlet>("head::after");
 //builder.Services.AddOidcAuthenticationConfigurations();
 ////Services Configurations 
 //builder.Services.AddServicesConfigurations();
-
 
 //#endregion
 
