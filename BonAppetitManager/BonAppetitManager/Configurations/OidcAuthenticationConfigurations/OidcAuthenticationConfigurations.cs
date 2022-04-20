@@ -15,19 +15,20 @@ public static class OidcAuthenticationConfigurations
         services.AddOidcAuthentication(opt =>
         {
             opt.ProviderOptions.Authority = "https://localhost:44352/";
-            opt.ProviderOptions.ClientId = "e3b051597bf7";
+            opt.ProviderOptions.ClientId = "99f64badca86";
             opt.ProviderOptions.ResponseType = "code";
-            opt.ProviderOptions.PostLogoutRedirectUri = "https://localhost:44343/";
-            opt.ProviderOptions.RedirectUri = "https://localhost:44343/";
-            
-            opt.ProviderOptions.AdditionalProviderParameters.Add("ClientSecrets", "ff972fdf-6b37-45ef-aa1b-e3b051597bf7");
+            opt.ProviderOptions.RedirectUri = "https://localhost:44355/";
+            opt.ProviderOptions.PostLogoutRedirectUri = "https://localhost:44355/";
+
+            opt.ProviderOptions.AdditionalProviderParameters.Add("ClientSecrets", "6ed7cdb9-22b3-40e0-88ee-99f64badca86");
 
             opt.ProviderOptions.DefaultScopes.Add("openid");
             opt.ProviderOptions.DefaultScopes.Add("profile");
             opt.ProviderOptions.DefaultScopes.Add("email");
             opt.ProviderOptions.DefaultScopes.Add("phone");
             opt.ProviderOptions.DefaultScopes.Add("BonAppetit");
-            
+            opt.ProviderOptions.DefaultScopes.Add("manager");
+
             opt.UserOptions.NameClaim = "name";
             opt.UserOptions.RoleClaim = "role";
         });

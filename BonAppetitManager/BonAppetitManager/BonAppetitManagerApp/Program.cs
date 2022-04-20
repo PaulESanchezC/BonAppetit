@@ -9,20 +9,19 @@ using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 var builder = WebAssemblyHostBuilder.CreateDefault(args);
 builder.RootComponents.Add<App>("#app");
 builder.RootComponents.Add<HeadOutlet>("head::after");
-
-//#region Services Container
-
-////AutoMapper Configurations
-//builder.Services.AddAutoMapperMapConfigurations();
-////Blazored Local Storage
-//builder.Services.AddBlazoredLocalStorage();
-////Oidc Authentication Configurations
-//builder.Services.AddOidcAuthenticationConfigurations();
-////Services Configurations 
-//builder.Services.AddServicesConfigurations();
-
-//#endregion
-
 builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
+
+#region Services Container
+
+//AutoMapper Configurations
+builder.Services.AddAutoMapperMapConfigurations();
+//Blazored Local Storage
+builder.Services.AddBlazoredLocalStorage();
+//Oidc Authentication Configurations
+builder.Services.AddOidcAuthenticationConfigurations();
+//Services Configurations
+builder.Services.AddServicesConfigurations();
+
+#endregion
 
 await builder.Build().RunAsync();

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "YGoFhtE7PKEU6CJBUlQvCZyQs9RZbEkFdZKzkT4bbGQ=",
+  "Hash": "Sk68PUUtk1XSI59b/lKTnpV2Ibg3Y6QkP/awYp9YXuE=",
   "Source": "BonAppetitManagerApp",
   "BasePath": "/",
   "Mode": "Root",
@@ -7376,23 +7376,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\index.html"
-    },
-    {
-      "Identity": "C:\\Users\\Paulyglot\\Desktop\\Portoflio\\BonAppetit\\BonAppetitManager\\BonAppetitManager\\BonAppetitManagerApp\\wwwroot\\sample-data\\weather.json",
-      "SourceId": "BonAppetitManagerApp",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Paulyglot\\Desktop\\Portoflio\\BonAppetit\\BonAppetitManager\\BonAppetitManager\\BonAppetitManagerApp\\wwwroot\\",
-      "BasePath": "/",
-      "RelativePath": "sample-data/weather.json",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\sample-data\\weather.json"
     }
   ]
 }

@@ -837,7 +837,6 @@ C:\Users\Paulyglot\Desktop\Portoflio\BonAppetit\BonAppetitManager\BonAppetitMana
 C:\Users\Paulyglot\Desktop\Portoflio\BonAppetit\BonAppetitManager\BonAppetitManager\BonAppetitManagerApp\obj\Debug\net6.0\staticwebassets.build.json
 C:\Users\Paulyglot\Desktop\Portoflio\BonAppetit\BonAppetitManager\BonAppetitManager\BonAppetitManagerApp\obj\Debug\net6.0\staticwebassets.development.json
 C:\Users\Paulyglot\Desktop\Portoflio\BonAppetit\BonAppetitManager\BonAppetitManager\BonAppetitManagerApp\obj\Debug\net6.0\scopedcss\Shared\MainLayout.razor.rz.scp.css
-C:\Users\Paulyglot\Desktop\Portoflio\BonAppetit\BonAppetitManager\BonAppetitManager\BonAppetitManagerApp\obj\Debug\net6.0\scopedcss\Shared\NavMenu.razor.rz.scp.css
 C:\Users\Paulyglot\Desktop\Portoflio\BonAppetit\BonAppetitManager\BonAppetitManager\BonAppetitManagerApp\obj\Debug\net6.0\scopedcss\bundle\BonAppetitManagerApp.styles.css
 C:\Users\Paulyglot\Desktop\Portoflio\BonAppetit\BonAppetitManager\BonAppetitManager\BonAppetitManagerApp\obj\Debug\net6.0\scopedcss\projectbundle\BonAppetitManagerApp.bundle.scp.css
 C:\Users\Paulyglot\Desktop\Portoflio\BonAppetit\BonAppetitManager\BonAppetitManager\BonAppetitManagerApp\obj\Debug\net6.0\BonAppetitManagerApp.csproj.CopyComplete
