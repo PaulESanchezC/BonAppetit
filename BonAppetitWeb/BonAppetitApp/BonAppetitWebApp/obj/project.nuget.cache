@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "mIWAeA3mP7jnSqEzFcd1p8gX+OJaM2v49mF8lm7bguzmKOXtuFA6/SETYGlMD3FqNeYi2tugd6kGYrtU3q10tQ==",
+  "dgSpecHash": "kr5y+qqSpiwK7wzvP0G30foWymIXMmF7ZNPSkGEmBrr2PnY7ZNsJPRY9IZwrQdBk5ImmbgfEi0A4jmi4y28fVw==",
   "success": true,
   "projectFilePath": "C:\\Users\\Paulyglot\\Desktop\\Portoflio\\BonAppetit\\BonAppetitWeb\\BonAppetitApp\\BonAppetitWebApp\\BonAppetitWebApp.csproj",
   "expectedPackageFiles": [
@@ -42,7 +42,7 @@
     "C:\\Users\\Paulyglot\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
     "C:\\Users\\Paulyglot\\.nuget\\packages\\system.text.encodings.web\\6.0.0\\system.text.encodings.web.6.0.0.nupkg.sha512",
     "C:\\Users\\Paulyglot\\.nuget\\packages\\system.text.json\\6.0.0\\system.text.json.6.0.0.nupkg.sha512",
-    "C:\\Users\\Paulyglot\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.browser-wasm\\6.0.3\\microsoft.netcore.app.runtime.mono.browser-wasm.6.0.3.nupkg.sha512"
+    "C:\\Users\\Paulyglot\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.browser-wasm\\6.0.4\\microsoft.netcore.app.runtime.mono.browser-wasm.6.0.4.nupkg.sha512"
   ],
   "logs": []
 }
