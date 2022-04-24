@@ -58,7 +58,7 @@ public class RestaurantController : ControllerBase
         return StatusCode(request.StatusCode, request);
     }
 
-    [Authorize(Policy = PolicyAuthNames.ScopeRequirements)]
+    [Authorize]
     [HttpPut("UpdateSingleRestaurant")]
     public async Task<IActionResult> UpdateSingleRestaurant([FromBody] RestaurantUpdate restaurantToUpdate,
         CancellationToken cancellationToken)
@@ -70,7 +70,7 @@ public class RestaurantController : ControllerBase
         return StatusCode(request.StatusCode, request);
     }
 
-    [Authorize(Policy = PolicyAuthNames.ScopeRequirements)]
+    [Authorize]
     [HttpDelete("DeleteSingleRestaurant/{restaurantId}")]
     public async Task<IActionResult> DeleteSingleRestaurant(string restaurantId, CancellationToken cancellationToken)
     {

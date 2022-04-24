@@ -33,7 +33,7 @@ namespace RestaurantApi.Controllers
             return StatusCode(request.StatusCode, request);
         }
 
-        [Authorize(Policy = PolicyAuthNames.ScopeRequirements)]
+        [Authorize]
         [HttpPost("CreateSingleRestaurantSchedule")]
         public async Task<IActionResult> CreateSingleRestaurantSchedule([FromBody] ScheduleCreate scheduleToCreate,
             CancellationToken cancellationToken)
@@ -45,7 +45,7 @@ namespace RestaurantApi.Controllers
             return StatusCode(request.StatusCode, request);
         }
 
-        //[Authorize(Policy = PolicyAuthNames.ScopeRequirements)]
+        [Authorize]
         [HttpPut("UpdateSingleRestaurantSchedule")]
         public async Task<IActionResult> UpdateSingleRestaurantSchedule([FromBody] ScheduleUpdate scheduleToUpdate,
             CancellationToken cancellationToken)
@@ -57,7 +57,7 @@ namespace RestaurantApi.Controllers
             return StatusCode(request.StatusCode, request);
         }
 
-        [Authorize(Policy = PolicyAuthNames.ScopeRequirements)]
+        [Authorize]
         [HttpDelete("DeleteSingleRestaurantSchedule/{scheduleId}")]
         public async Task<IActionResult> DeleteSingleRestaurantSchedule(string scheduleId,
             CancellationToken cancellationToken)

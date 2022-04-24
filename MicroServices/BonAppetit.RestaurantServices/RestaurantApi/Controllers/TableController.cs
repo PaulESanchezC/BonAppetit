@@ -49,7 +49,7 @@ namespace RestaurantApi.Controllers
             return StatusCode(request.StatusCode, request);
         }
 
-        //[Authorize(Policy = PolicyAuthNames.ScopeRequirements)]
+        [Authorize]
         [HttpPost("CreateTable")]
         public async Task<IActionResult> CreateTable([FromBody] TableCreate tableToCreate,
             CancellationToken cancellationToken)
@@ -61,7 +61,7 @@ namespace RestaurantApi.Controllers
             return StatusCode(request.StatusCode, request);
         }
 
-        [Authorize(Policy = PolicyAuthNames.ScopeRequirements)]
+        [Authorize]
         [HttpPut("UpdateTable")]
         public async Task<IActionResult> UpdateTable([FromBody] TableUpdate tableToUpdate,
             CancellationToken cancellationToken)
@@ -73,7 +73,7 @@ namespace RestaurantApi.Controllers
             return StatusCode(request.StatusCode, request);
         }
 
-        [Authorize(Policy = PolicyAuthNames.ScopeRequirements)]
+        [Authorize]
         [HttpDelete("DeleteTable/{tableId}")]
         public async Task<IActionResult> DeleteTable(string tableId, CancellationToken cancellationToken)
         {
