@@ -27,6 +27,7 @@ public static class OidcAuthenticationConfigurations
             opt.ProviderOptions.DefaultScopes.Add("email");
             opt.ProviderOptions.DefaultScopes.Add("phone");
             opt.ProviderOptions.DefaultScopes.Add("BonAppetit");
+            opt.ProviderOptions.DefaultScopes.Add("client");
             
             opt.UserOptions.NameClaim = "name";
             opt.UserOptions.RoleClaim = "role";

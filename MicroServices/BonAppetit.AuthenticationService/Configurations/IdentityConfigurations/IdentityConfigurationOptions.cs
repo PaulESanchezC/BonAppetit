@@ -1,5 +1,8 @@
 ﻿using Configurations.IdentityConfigurations.DuendeAuthenticationData;
+using Configurations.ProfileServiceConfigurations;
 using Data;
+using Duende.IdentityServer.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.DependencyInjection;
 using Models.ApplicationUserModels;
@@ -24,7 +27,9 @@ public static class IdentityConfigurationOptions
                 options.Events.RaiseFailureEvents = true;
                 options.Events.RaiseSuccessEvents = true;
                 options.EmitStaticAudienceClaim = true;
-            }).AddInMemoryIdentityResources(Resources.IdentityResources)
+            })
+            .AddProfileService<ProfileService>()
+            .AddInMemoryIdentityResources(Resources.IdentityResources)
             .AddInMemoryApiScopes(Scopes.ApiScopes)
             .AddInMemoryClients(AuthenticationClients.Clients)
             .AddAspNetIdentity<ApplicationUser>()

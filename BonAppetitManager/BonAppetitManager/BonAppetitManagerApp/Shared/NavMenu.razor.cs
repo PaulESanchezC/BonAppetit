@@ -1,13 +1,18 @@
-﻿namespace BonAppetitManagerApp.Shared;
+﻿using System.Security.Claims;
+using Microsoft.AspNetCore.Components;
+using Microsoft.AspNetCore.Components.Authorization;
+using Microsoft.AspNetCore.Components.WebAssembly.Authentication;
+
+namespace BonAppetitManagerApp.Shared;
 
 public partial class NavMenu
 {
-    private bool collapseNavMenu = true;
+    [Inject] private SignOutSessionStateManager _signOutManager { get; set; }
+    [Inject] private NavigationManager _navigation { get; set; }
 
-    private string? NavMenuCssClass => collapseNavMenu ? "collapse" : null;
-
-    private void ToggleNavMenu()
+    private async Task BeginSignOut()
     {
-        collapseNavMenu = !collapseNavMenu;
+        await _signOutManager.SetSignOutState();
+        _navigation.NavigateTo("authentication/logout");
     }
 }

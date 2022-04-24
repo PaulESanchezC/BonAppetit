@@ -176,6 +176,11 @@ namespace Data.Migrations
                         .HasColumnType("nvarchar(max)")
                         .HasDefaultValue("cuisine type");
 
+                    b.Property<string>("RestaurantEmail")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("nvarchar(max)")
+                        .HasDefaultValue("email");
+
                     b.Property<string>("RestaurantName")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("nvarchar(max)")

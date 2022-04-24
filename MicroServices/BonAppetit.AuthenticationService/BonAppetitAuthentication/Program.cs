@@ -9,11 +9,11 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
-builder.Services.AddControllers();
-builder.Services.AddEndpointsApiExplorer();
 var services = builder.Services;
 
 #region Services Container
+//MapControllers
+services.AddControllers();
 //AutoMapper Configurations
 services.AddAutoMapperMapConfigurations();
 //Configuration Helper
@@ -28,6 +28,8 @@ services.AddRazorPages();
 services.AddCorsConfiguration();
 //Services Configurations
 services.AddServicesConfigurations();
+//Api Authentication
+services.AddLocalApiAuthentication();
 
 #endregion
 
@@ -51,8 +53,9 @@ app.UseAuthentication();
 app.UseAuthorization();
 app.UseAuthorization();
 app.MapRazorPages();
-app.MapControllers();
 
+//MapApi Endpoints
+app.MapControllers();
 #endregion
 
 app.Run();

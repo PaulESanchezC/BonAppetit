@@ -11,7 +11,6 @@ public static class OidcAuthenticationConfigurations
         .AddHttpMessageHandler<CustomAuthenticationMessageHandler>();
         services.AddScoped(sp => sp.GetRequiredService<IHttpClientFactory>().CreateClient("api"));
 
-
         services.AddOidcAuthentication(opt =>
         {
             opt.ProviderOptions.Authority = "https://localhost:44352/";

@@ -1,0 +1,11 @@
+﻿@page "/Dashboard"
+
+
+@if (Request.IsSuccessful)
+{
+    @Restaurant.RestaurantName
+}
+else
+{
+    <p> No Restaurant is Registered to this account! <NavLink class="nav-link bg-transparent lobster" href="/RegisterRestaurant">Register Restaurant</NavLink></p>
+}

@@ -5,13 +5,13 @@ VisualStudioVersion = 17.1.32319.34
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BonAppetitManagerApp", "BonAppetitManagerApp\BonAppetitManagerApp.csproj", "{A5F6342B-9113-41F6-AEE3-593CF7E6E8B9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Configurations", "Configurations\Configurations.csproj", "{6F16AA43-969F-4053-BE0C-852B35F13F5A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Configurations", "Configurations\Configurations.csproj", "{6F16AA43-969F-4053-BE0C-852B35F13F5A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Services", "Services\Services.csproj", "{648A5A73-C60D-4C75-9B0A-A7EB12294EE9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Services", "Services\Services.csproj", "{648A5A73-C60D-4C75-9B0A-A7EB12294EE9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StaticData", "StaticServices\StaticData.csproj", "{2D475BAE-BD4F-4D66-9F24-27391CFA2915}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StaticData", "StaticServices\StaticData.csproj", "{2D475BAE-BD4F-4D66-9F24-27391CFA2915}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Models", "Models\Models.csproj", "{1AD3163F-B8C1-4DAB-8919-96B74E3AF947}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Models", "Models\Models.csproj", "{1AD3163F-B8C1-4DAB-8919-96B74E3AF947}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

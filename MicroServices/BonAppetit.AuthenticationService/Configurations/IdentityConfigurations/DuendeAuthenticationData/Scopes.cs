@@ -13,7 +13,7 @@ public static class Scopes
         new ApiScope(bonAppetit),
         new ApiScope(Role.Manager),
         new ApiScope(Role.Client),
-        new ApiScope(IdentityServerConstants.LocalApi.ScopeName)
+        new ApiScope($"{IdentityServerConstants.LocalApi.ScopeName}/Accounts")
     };
 
 }

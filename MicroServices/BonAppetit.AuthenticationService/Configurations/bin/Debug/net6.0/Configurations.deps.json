@@ -764,6 +764,7 @@
         "dependencies": {
           "AutoMapper": "11.0.1",
           "Data": "1.0.0",
+          "Duende.IdentityServer": "6.0.4",
           "Models": "1.0.0"
         },
         "runtime": {

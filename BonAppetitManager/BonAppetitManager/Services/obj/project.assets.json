@@ -193,6 +193,16 @@
         "build": {
           "buildTransitive/netcoreapp3.1/_._": {}
         }
+      },
+      "Models/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/Models.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Models.dll": {}
+        }
       }
     }
   },
@@ -550,11 +560,17 @@
         "system.runtime.compilerservices.unsafe.nuspec",
         "useSharedDesignerContext.txt"
       ]
+    },
+    "Models/1.0.0": {
+      "type": "project",
+      "path": "../Models/Models.csproj",
+      "msbuildProject": "../Models/Models.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
       "Blazored.LocalStorage >= 4.2.0",
+      "Models >= 1.0.0",
       "Newtonsoft.Json >= 13.0.1"
     ]
   },
@@ -584,7 +600,11 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\Paulyglot\\Desktop\\Portoflio\\BonAppetit\\BonAppetitManager\\BonAppetitManager\\Models\\Models.csproj": {
+              "projectPath": "C:\\Users\\Paulyglot\\Desktop\\Portoflio\\BonAppetit\\BonAppetitManager\\BonAppetitManager\\Models\\Models.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

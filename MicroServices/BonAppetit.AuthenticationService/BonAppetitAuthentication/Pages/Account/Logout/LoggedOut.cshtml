@@ -27,4 +27,11 @@
     {
         <script src="~/js/signout-redirect.js"></script>
     }
+    
+    <script>
+        function logoutReturnUri() {
+            href.location = @Model.View.PostLogoutRedirectUri;
+        }
+
+    </script>
 }

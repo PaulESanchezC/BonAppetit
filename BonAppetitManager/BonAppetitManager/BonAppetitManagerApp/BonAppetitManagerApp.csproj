@@ -18,6 +18,8 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Configurations\Configurations.csproj" />
+    <ProjectReference Include="..\Models\Models.csproj" />
+    <ProjectReference Include="..\StaticServices\StaticData.csproj" />
   </ItemGroup>
 
 </Project>

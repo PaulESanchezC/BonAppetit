@@ -14,6 +14,7 @@ public class RestaurantFluentApi : IEntityTypeConfiguration<RestaurantBase>
 
         builder.Property(p => p.RestaurantName).HasDefaultValue("restaurant name").IsRequired(false);
         builder.Property(p => p.RestaurantPhone).HasDefaultValue("phone number").IsRequired(false);
+        builder.Property(p => p.RestaurantEmail).HasDefaultValue("email").IsRequired(false);
         builder.Property(p => p.RestaurantAddress).HasDefaultValue("address").IsRequired(false);
         builder.Property(p => p.RestaurantWebsite).HasDefaultValue("website").IsRequired(false);
         builder.Property(p => p.RestaurantCiy).HasDefaultValue("city").IsRequired(false);

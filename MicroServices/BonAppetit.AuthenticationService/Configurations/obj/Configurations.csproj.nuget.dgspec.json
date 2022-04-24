@@ -315,6 +315,10 @@
             "AutoMapper": {
               "target": "Package",
               "version": "[11.0.1, )"
+            },
+            "Duende.IdentityServer": {
+              "target": "Package",
+              "version": "[6.0.4, )"
             }
           },
           "imports": [

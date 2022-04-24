@@ -1,6 +1,5 @@
-﻿namespace BonAppetitManagerApp.Pages;
+﻿using Microsoft.AspNetCore.Components;
+using Microsoft.AspNetCore.Components.Authorization;
+using StaticData;
 
-public partial class Index
-{
-    
-}
+namespace BonAppetitManagerApp.Pages;

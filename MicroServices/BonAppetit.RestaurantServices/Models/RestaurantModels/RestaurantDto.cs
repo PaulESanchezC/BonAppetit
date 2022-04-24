@@ -19,6 +19,9 @@ public class RestaurantDto
     public string RestaurantPhone { get; set; }
 
     [Required(AllowEmptyStrings = false)]
+    public string RestaurantEmail { get; set; }
+
+    [Required(AllowEmptyStrings = false)]
     public string RestaurantAddress { get; set; }
 
     [Required(AllowEmptyStrings = false)]

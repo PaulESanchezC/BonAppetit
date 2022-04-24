@@ -8,7 +8,6 @@ namespace Configurations.IdentityConfigurations.DuendeAuthenticationData;
 
 public class AuthenticationClients
 {
-    //App Secrets For Bon Appetit Web App (clients WebApp)
     #region BonAppetitWebApp
 
     private static Secret ClientSecret { get; } = new(ProxyConfiguration.Use.GetSection("BonAppetitWebApp")
@@ -24,7 +23,6 @@ public class AuthenticationClients
 
     #endregion
 
-    //App Secrets For Bon Appetit Manager App (manager WebApp)
     #region BonAppetitManagerApp
 
     private static Secret ManagerSecret { get; } = new(ProxyConfiguration.Use.GetSection("BonAppetitManagerApp")
@@ -53,7 +51,7 @@ public class AuthenticationClients
                PostLogoutRedirectUris = { ClientPostLogoutRedirectUris },
                AllowedScopes = new List<string>
                {
-                   IdentityServerConstants.LocalApi.ScopeName,
+                   $"{IdentityServerConstants.LocalApi.ScopeName}/Accounts",
                    IdentityServerConstants.StandardScopes.OpenId,
                    IdentityServerConstants.StandardScopes.Profile,
                    IdentityServerConstants.StandardScopes.Email,
@@ -73,7 +71,7 @@ public class AuthenticationClients
                 PostLogoutRedirectUris = { ManagerPostLogoutRedirectUris },
                 AllowedScopes = new List<string>
                 {
-                    IdentityServerConstants.LocalApi.ScopeName,
+                    $"{IdentityServerConstants.LocalApi.ScopeName}/Accounts",
                     IdentityServerConstants.StandardScopes.OpenId,
                     IdentityServerConstants.StandardScopes.Profile,
                     IdentityServerConstants.StandardScopes.Email,

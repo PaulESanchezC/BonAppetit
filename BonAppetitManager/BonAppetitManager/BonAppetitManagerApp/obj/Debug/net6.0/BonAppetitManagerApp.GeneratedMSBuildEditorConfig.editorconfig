@@ -26,8 +26,20 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXV0aGVudGljYXRpb24ucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/Paulyglot/Desktop/Portoflio/BonAppetit/BonAppetitManager/BonAppetitManager/BonAppetitManagerApp/Pages/About.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWJvdXQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Paulyglot/Desktop/Portoflio/BonAppetit/BonAppetitManager/BonAppetitManager/BonAppetitManagerApp/Pages/DashboardComponents/Dashboard.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRGFzaGJvYXJkQ29tcG9uZW50c1xEYXNoYm9hcmQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Paulyglot/Desktop/Portoflio/BonAppetit/BonAppetitManager/BonAppetitManager/BonAppetitManagerApp/Pages/Index.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXgucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Paulyglot/Desktop/Portoflio/BonAppetit/BonAppetitManager/BonAppetitManager/BonAppetitManagerApp/Pages/RegistrationComponents/RestaurantRegistration.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmVnaXN0cmF0aW9uQ29tcG9uZW50c1xSZXN0YXVyYW50UmVnaXN0cmF0aW9uLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Paulyglot/Desktop/Portoflio/BonAppetit/BonAppetitManager/BonAppetitManager/BonAppetitManagerApp/Shared/NavMenu.razor]
@@ -41,6 +53,10 @@ build_metadata.AdditionalFiles.CssScope =
 [C:/Users/Paulyglot/Desktop/Portoflio/BonAppetit/BonAppetitManager/BonAppetitManager/BonAppetitManagerApp/_Imports.razor]
 build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Paulyglot/Desktop/Portoflio/BonAppetit/BonAppetitManager/BonAppetitManager/BonAppetitManagerApp/Pages/RegistrationComponents/UserRegistration.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmVnaXN0cmF0aW9uQ29tcG9uZW50c1xVc2VyUmVnaXN0cmF0aW9uLnJhem9y
+build_metadata.AdditionalFiles.CssScope = b-4lfs7e6l3d
 
 [C:/Users/Paulyglot/Desktop/Portoflio/BonAppetit/BonAppetitManager/BonAppetitManager/BonAppetitManagerApp/Shared/MainLayout.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE1haW5MYXlvdXQucmF6b3I=
