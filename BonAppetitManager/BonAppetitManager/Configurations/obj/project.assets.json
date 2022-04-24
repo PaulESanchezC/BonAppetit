@@ -321,14 +321,26 @@
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
           "Blazored.LocalStorage": "4.2.0",
+          "Microsoft.AspNetCore.Components.WebAssembly.Authentication": "6.0.3",
           "Models": "1.0.0",
-          "Newtonsoft.Json": "13.0.1"
+          "Newtonsoft.Json": "13.0.1",
+          "StaticData": "1.0.0"
         },
         "compile": {
           "bin/placeholder/Services.dll": {}
         },
         "runtime": {
           "bin/placeholder/Services.dll": {}
+        }
+      },
+      "StaticData/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/StaticData.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/StaticData.dll": {}
         }
       }
     }
@@ -895,6 +907,11 @@
       "type": "project",
       "path": "../Services/Services.csproj",
       "msbuildProject": "../Services/Services.csproj"
+    },
+    "StaticData/1.0.0": {
+      "type": "project",
+      "path": "../StaticServices/StaticData.csproj",
+      "msbuildProject": "../StaticServices/StaticData.csproj"
     }
   },
   "projectFileDependencyGroups": {

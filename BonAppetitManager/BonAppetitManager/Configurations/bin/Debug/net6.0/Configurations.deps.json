@@ -255,11 +255,18 @@
       "Services/1.0.0": {
         "dependencies": {
           "Blazored.LocalStorage": "4.2.0",
+          "Microsoft.AspNetCore.Components.WebAssembly.Authentication": "6.0.3",
           "Models": "1.0.0",
-          "Newtonsoft.Json": "13.0.1"
+          "Newtonsoft.Json": "13.0.1",
+          "StaticData": "1.0.0"
         },
         "runtime": {
           "Services.dll": {}
+        }
+      },
+      "StaticData/1.0.0": {
+        "runtime": {
+          "StaticData.dll": {}
         }
       }
     }
@@ -444,6 +451,11 @@
       "sha512": ""
     },
     "Services/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "StaticData/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

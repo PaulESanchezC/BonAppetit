@@ -15,3 +15,5 @@ C:\Users\Paulyglot\Desktop\Portoflio\BonAppetit\BonAppetitManager\BonAppetitMana
 C:\Users\Paulyglot\Desktop\Portoflio\BonAppetit\BonAppetitManager\BonAppetitManager\Configurations\bin\Debug\net6.0\Services.pdb
 C:\Users\Paulyglot\Desktop\Portoflio\BonAppetit\BonAppetitManager\BonAppetitManager\Configurations\bin\Debug\net6.0\Models.pdb
 C:\Users\Paulyglot\Desktop\Portoflio\BonAppetit\BonAppetitManager\BonAppetitManager\Configurations\obj\Debug\net6.0\Configurations.csproj.CopyComplete
+C:\Users\Paulyglot\Desktop\Portoflio\BonAppetit\BonAppetitManager\BonAppetitManager\Configurations\bin\Debug\net6.0\StaticData.dll
+C:\Users\Paulyglot\Desktop\Portoflio\BonAppetit\BonAppetitManager\BonAppetitManager\Configurations\bin\Debug\net6.0\StaticData.pdb

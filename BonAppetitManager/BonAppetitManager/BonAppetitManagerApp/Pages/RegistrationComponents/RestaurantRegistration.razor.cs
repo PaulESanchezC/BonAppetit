@@ -15,6 +15,7 @@ public partial class RestaurantRegistration
 
     [Inject] private IRestaurantService _restaurantService { get; set; }
     [Inject] private ILocalStorageService _localStorage { get; set; }
+    [Inject] private NavigationManager _navigationManager { get; set; }
 
     #endregion
 
@@ -31,6 +32,12 @@ public partial class RestaurantRegistration
 
     private async Task CreateRestaurant()
     {
-
+        var request = await _restaurantService.CreateRestaurantAsync(RestaurantCreate);
+        if (request.IsSuccessful)
+        {
+            Restaurant = request.ResponseObject!.FirstOrDefault()!;
+            await _localStorage.SetItemAsync(LocalStorage.RestaurantInformation, Restaurant);
+            _navigationManager.NavigateTo("/Dashboard");
+        }
     }
 }

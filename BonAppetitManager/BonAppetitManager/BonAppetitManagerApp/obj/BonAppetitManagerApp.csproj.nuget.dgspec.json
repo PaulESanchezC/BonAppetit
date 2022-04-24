@@ -266,6 +266,9 @@
             "projectReferences": {
               "C:\\Users\\Paulyglot\\Desktop\\Portoflio\\BonAppetit\\BonAppetitManager\\BonAppetitManager\\Models\\Models.csproj": {
                 "projectPath": "C:\\Users\\Paulyglot\\Desktop\\Portoflio\\BonAppetit\\BonAppetitManager\\BonAppetitManager\\Models\\Models.csproj"
+              },
+              "C:\\Users\\Paulyglot\\Desktop\\Portoflio\\BonAppetit\\BonAppetitManager\\BonAppetitManager\\StaticServices\\StaticData.csproj": {
+                "projectPath": "C:\\Users\\Paulyglot\\Desktop\\Portoflio\\BonAppetit\\BonAppetitManager\\BonAppetitManager\\StaticServices\\StaticData.csproj"
               }
             }
           }
@@ -283,6 +286,10 @@
             "Blazored.LocalStorage": {
               "target": "Package",
               "version": "[4.2.0, )"
+            },
+            "Microsoft.AspNetCore.Components.WebAssembly.Authentication": {
+              "target": "Package",
+              "version": "[6.0.3, )"
             },
             "Newtonsoft.Json": {
               "target": "Package",

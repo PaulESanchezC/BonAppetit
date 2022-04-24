@@ -1,8 +1,8 @@
-﻿using System.Security.Claims;
-using Blazored.LocalStorage;
+﻿using Blazored.LocalStorage;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Authorization;
+using Microsoft.AspNetCore.Components.WebAssembly.Authentication;
 using Models.ResponseModels;
 using Models.RestaurantModels;
 using Services.RestaurantServices;
@@ -17,6 +17,7 @@ public partial class Dashboard
 
     [Inject] private IRestaurantService _restaurantService { get; set; }
     [Inject] private AuthenticationStateProvider _authState { get; set; }
+    [Inject] private IAccessTokenProvider _accessToken { get; set; }
     [Inject] private NavigationManager _navigationManager { get; set; }
     [Inject] private ILocalStorageService _localStorage { get; set; }
 
@@ -33,8 +34,11 @@ public partial class Dashboard
         if (string.IsNullOrEmpty(UserId))
             _navigationManager.NavigateTo("/Authentication/logout");
 
-        await _localStorage.SetItemAsStringAsync(LocalStorage.RestaurantId, UserId);
+        var tokenProvider = await _accessToken.RequestAccessToken();
+        tokenProvider.TryGetToken(out var token);
 
+        await _localStorage.SetItemAsStringAsync(LocalStorage.RestaurantId, UserId);
+        await _localStorage.SetItemAsStringAsync(LocalStorage.AccessToken, token.Value);
         Request = await _restaurantService.GetRestaurantAsync(UserId);
         if (Request.IsSuccessful)
         {

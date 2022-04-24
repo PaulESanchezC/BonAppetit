@@ -70,13 +70,13 @@
                     <label>Restaurant Cuisine type</label>
                 </div>
                 <div class="col-12">
-                    <InputSelect @bind-Value="RestaurantCreate.RestaurantCuisineType">
-                        <option value="none" disabled="">-- Please Select one --</option>
+                    <select @bind="RestaurantCreate.RestaurantCuisineType">
+                        <option value="none" selected="" disabled="">-- Please Select one --</option>
                         @foreach (var type in CuisineTypes.Types)
                         {
                             <option value="@type">@type</option>
                         }
-                    </InputSelect>
+                    </select>
                     <ValidationMessage For="() => RestaurantCreate.RestaurantCuisineType"></ValidationMessage>
                 </div>
             </div>

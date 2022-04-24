@@ -46,7 +46,7 @@ public class RestaurantController : ControllerBase
         return StatusCode(request.StatusCode, request);
     }
 
-    [Authorize(Policy = PolicyAuthNames.ScopeRequirements)]
+    [Authorize]
     [HttpPost("CreateSingleRestaurant")]
     public async Task<IActionResult> CreateSingleRestaurant([FromBody] RestaurantCreate restaurantToCreate,
         CancellationToken cancellationToken)
