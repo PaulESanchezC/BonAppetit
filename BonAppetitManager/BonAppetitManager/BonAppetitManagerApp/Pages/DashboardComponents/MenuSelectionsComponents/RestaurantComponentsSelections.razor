@@ -1,0 +1,27 @@
+﻿<div class="dashboardTopMenu">
+    <ul class="dashboardTopMenu-linklist">
+        @foreach (var menuItem in TopMenuList)
+        {
+            <li class="dashboardTopMenu-link lobster" @onclick="()=> MenuSelectionTask(menuItem)">
+                @menuItem
+            </li>
+        }
+    </ul>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            @{
+                switch (Selection)
+                {
+                    case "Restaurant Information":
+                        <RestaurantInformation/>
+                        break;
+                    case "Restaurant Schedule":
+                        <RestaurantSchedule/>
+                        break;
+                }
+            }
+        </div>
+    </div>
+</div>

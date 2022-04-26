@@ -17,7 +17,7 @@ builder.Services.AddAutoMapperMapConfigurations();
 builder.Services.AddBlazoredLocalStorage();
 //Oidc Authentication Configurations
 builder.Services.AddOidcAuthenticationConfigurations();
-//Services Configurations 
+//Services Configurations
 builder.Services.AddServicesConfigurations();
 
 #endregion

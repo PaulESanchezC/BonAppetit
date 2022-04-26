@@ -19,8 +19,6 @@ public static class OidcAuthenticationConfigurations
             opt.ProviderOptions.RedirectUri = "https://localhost:44355/";
             opt.ProviderOptions.PostLogoutRedirectUri = "https://localhost:44355/";
 
-            opt.ProviderOptions.AdditionalProviderParameters.Add("ClientSecrets", "6ed7cdb9-22b3-40e0-88ee-99f64badca86");
-
             opt.ProviderOptions.DefaultScopes.Add("openid");
             opt.ProviderOptions.DefaultScopes.Add("profile");
             opt.ProviderOptions.DefaultScopes.Add("email");

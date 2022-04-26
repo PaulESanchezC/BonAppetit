@@ -39,6 +39,18 @@
           "lib/net6.0/Blazored.LocalStorage.dll": {}
         }
       },
+      "Blazored.SessionStorage/2.2.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Components.Web": "5.0.5"
+        },
+        "compile": {
+          "lib/net5.0/Blazored.SessionStorage.dll": {}
+        },
+        "runtime": {
+          "lib/net5.0/Blazored.SessionStorage.dll": {}
+        }
+      },
       "Microsoft.AspNetCore.Authorization/6.0.3": {
         "type": "package",
         "dependencies": {
@@ -599,6 +611,18 @@
         },
         "runtime": {
           "lib/net6.0/Blazored.LocalStorage.dll": {}
+        }
+      },
+      "Blazored.SessionStorage/2.2.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Components.Web": "5.0.5"
+        },
+        "compile": {
+          "lib/net5.0/Blazored.SessionStorage.dll": {}
+        },
+        "runtime": {
+          "lib/net5.0/Blazored.SessionStorage.dll": {}
         }
       },
       "Microsoft.AspNetCore.Authorization/6.0.3": {
@@ -1163,6 +1187,20 @@
         "lib/net5.0/Blazored.LocalStorage.dll",
         "lib/net6.0/Blazored.LocalStorage.dll",
         "lib/netstandard2.1/Blazored.LocalStorage.dll"
+      ]
+    },
+    "Blazored.SessionStorage/2.2.0": {
+      "sha512": "2iVrDbv30kuufV0CGjNkQgVReH/aSfDlyqnYTXyoFIFwtrSnMS+pqx5tLFAoigLXn/imSQHPZkVnOArLZYefXg==",
+      "type": "package",
+      "path": "blazored.sessionstorage/2.2.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "blazored.sessionstorage.2.2.0.nupkg.sha512",
+        "blazored.sessionstorage.nuspec",
+        "icon.png",
+        "lib/net5.0/Blazored.SessionStorage.dll",
+        "lib/netstandard2.1/Blazored.SessionStorage.dll"
       ]
     },
     "Microsoft.AspNetCore.Authorization/6.0.3": {
@@ -2124,6 +2162,7 @@
     "net6.0": [
       "AutoMapper >= 11.0.1",
       "Blazored.LocalStorage >= 4.2.0",
+      "Blazored.SessionStorage >= 2.2.0",
       "Configurations >= 1.0.0",
       "Microsoft.AspNetCore.Components.WebAssembly >= 6.0.3",
       "Microsoft.AspNetCore.Components.WebAssembly.Authentication >= 6.0.3",
@@ -2190,6 +2229,10 @@
           "Blazored.LocalStorage": {
             "target": "Package",
             "version": "[4.2.0, )"
+          },
+          "Blazored.SessionStorage": {
+            "target": "Package",
+            "version": "[2.2.0, )"
           },
           "Microsoft.AspNetCore.Components.WebAssembly": {
             "target": "Package",

@@ -1,4 +1,5 @@
 ﻿using Blazored.LocalStorage;
+using Blazored.SessionStorage;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Authorization;
@@ -16,48 +17,78 @@ public partial class Dashboard
     #region Dependencies
 
     [Inject] private IRestaurantService _restaurantService { get; set; }
-    [Inject] private AuthenticationStateProvider _authState { get; set; }
-    [Inject] private IAccessTokenProvider _accessToken { get; set; }
-    [Inject] private NavigationManager _navigationManager { get; set; }
-    [Inject] private ILocalStorageService _localStorage { get; set; }
+    [Inject] private ISessionStorageService _sessionStorage { get; set; }
+    public string Component { get; set; } = "Analytics";
 
     #endregion
 
-    private Restaurant Restaurant { get; set; } = new();
-    private Response<Restaurant> Request { get; set; } = new();
+    #region TopMenuItemLists
+
+    private List<string> RestaurantTopMenuList { get; set; } = new();
+    private List<string> AnalyticsTopMenuList { get; set; } = new();
+    private List<string> TablesTopMenuList { get; set; } = new();
+    private List<string> ReservationsTopMenuList { get; set; } = new();
+    private List<string> MenusTopMenuList { get; set; } = new();
+    private List<string> CouponTopMenuList { get; set; } = new();
+
+    #endregion
+
     private string UserId { get; set; } = "";
 
     protected override async Task OnInitializedAsync()
     {
-        var userClaims = await _authState.GetAuthenticationStateAsync();
-        UserId = userClaims.User.FindFirst(claim => claim.Type == "sub")!.Value;
-        if (string.IsNullOrEmpty(UserId))
-            _navigationManager.NavigateTo("/Authentication/logout");
-
-        var tokenProvider = await _accessToken.RequestAccessToken();
-        tokenProvider.TryGetToken(out var token);
-
-        await _localStorage.SetItemAsStringAsync(LocalStorage.RestaurantId, UserId);
-        await _localStorage.SetItemAsStringAsync(LocalStorage.AccessToken, token.Value);
-        Request = await _restaurantService.GetRestaurantAsync(UserId);
-        if (Request.IsSuccessful)
-        {
-            Restaurant = Request.ResponseObject!.FirstOrDefault()!;
-            await _localStorage.SetItemAsync(LocalStorage.RestaurantInformation, Restaurant);
-        }
-
-        await BuildRestaurantProfileData(userClaims);
+        await BuildRestaurantSessionAsync();
+        await Task.FromResult(BuildTopMenuListsTask()) ;
     }
 
-    private async Task BuildRestaurantProfileData(AuthenticationState userClaims)
+    private void DashboardMenuSelection(string dashboardMenuSelection)
     {
-        var name = userClaims.User.FindFirst(claim => claim.Type == "given_name")!.Value;
-        var phone = userClaims.User.FindFirst(claim => claim.Type == "phone_number")!.Value;
-        var username = userClaims.User.FindFirst(claim => claim.Type == "preferred_username")!.Value;
-
-        await _localStorage.SetItemAsync(LocalStorage.RestaurantName, name);
-        await _localStorage.SetItemAsync(LocalStorage.RestaurantPhone, phone);
-        await _localStorage.SetItemAsync(LocalStorage.RestaurantUsername, username);
+        Component = dashboardMenuSelection;
+    }
+    private async Task BuildRestaurantSessionAsync()
+    {
+        UserId = await _sessionStorage.GetItemAsStringAsync(Storage.RestaurantId);
+        var request = await _restaurantService.GetRestaurantAsync(UserId);
+        if (request.IsSuccessful)
+            await _sessionStorage.SetItemAsync(Storage.RestaurantInformation, request.ResponseObject!.FirstOrDefault()!);
+    }
+    private Task BuildTopMenuListsTask()
+    {
+        RestaurantTopMenuList = new()
+        {
+            "Restaurant Information",
+            "Restaurant Schedule"
+        };
+        AnalyticsTopMenuList= new()
+        {
+            "Reservations Analysis",
+            "Coupon Reservations Analysis",
+            "Menus Analysis Researches"
+        };
+        TablesTopMenuList = new()
+        {
+            "Tables Information",
+            "Add Table"
+        };
+        ReservationsTopMenuList = new()
+        {
+            "Today's Reservations",
+            "Search for Reservation",
+        };
+        MenusTopMenuList = new()
+        {
+            "Active Menus",
+            "Public Menus",
+            "Private Menus",
+            "Add Menu"
+        };
+        CouponTopMenuList = new()
+        {
+            "Coupons Active",
+            "Track Coupon",
+            "Create Coupon"
+        };
+        return Task.CompletedTask;
     }
 
 }

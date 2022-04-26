@@ -27,7 +27,6 @@ public class RestaurantService : IRestaurantService
         var response = JsonConvert.DeserializeObject<Response<Restaurant>>(responseString);
         return response!;
     }
-
     public async Task<Response<Restaurant>> CreateRestaurantAsync(RestaurantCreate restaurantToCreate)
     {
         var request = new HttpRequestMessage(HttpMethod.Post, $"https://localhost:44310/api/Restaurant/CreateSingleRestaurant");
@@ -43,6 +42,7 @@ public class RestaurantService : IRestaurantService
 
         return response!;
     }
+
 
     #region Helper Methods
 

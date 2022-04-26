@@ -1,6 +1,6 @@
 ﻿namespace StaticData;
 
-public static class LocalStorage
+public static class Storage
 {
     public static string AccessToken = "Access Token";
     

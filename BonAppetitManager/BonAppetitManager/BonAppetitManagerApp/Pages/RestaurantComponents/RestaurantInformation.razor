@@ -1,14 +1,13 @@
-﻿@page "/RegisterRestaurant"
-<div class="container">
+﻿<div class="container">
     <div class="row">
         <div class="col-12 page-title">
-            <h4>Restaurant Registration</h4>
+            <h4>Your Restaurant</h4>
         </div>
 
 
         <EditForm Model="RestaurantCreate" OnValidSubmit="CreateRestaurant">
             <DataAnnotationsValidator />
-            <InputText @bind-Value="RestaurantCreate.RestaurantId" hidden />
+            <InputText @bind-Value="@RestaurantCreate.RestaurantId" hidden />
 
 
             <div class="row">
@@ -16,7 +15,7 @@
                     <label>Restaurant Name</label>
                 </div>
                 <div class="col-12">
-                    <InputText @bind-Value="RestaurantCreate.RestaurantName" />
+                    <InputText @bind-Value="@RestaurantCreate.RestaurantName" />
                     <ValidationMessage For="() => RestaurantCreate.RestaurantName"></ValidationMessage>
                 </div>
             </div>
@@ -25,7 +24,7 @@
                     <label>Restaurant Phone</label>
                 </div>
                 <div class="col-12">
-                    <InputText @bind-Value="RestaurantCreate.RestaurantPhone" />
+                    <InputText @bind-Value="@RestaurantCreate.RestaurantPhone" />
                     <ValidationMessage For="() => RestaurantCreate.RestaurantPhone"></ValidationMessage>
                 </div>
             </div>
@@ -34,7 +33,7 @@
                     <label>Restaurant Email</label>
                 </div>
                 <div class="col-12">
-                    <InputText @bind-Value="RestaurantCreate.RestaurantEmail" />
+                    <InputText @bind-Value="@RestaurantCreate.RestaurantEmail" />
                     <ValidationMessage For="() => RestaurantCreate.RestaurantEmail"></ValidationMessage>
                 </div>
             </div>
@@ -43,7 +42,7 @@
                     <label>Restaurant Address</label>
                 </div>
                 <div class="col-12">
-                    <InputText @bind-Value="RestaurantCreate.RestaurantAddress" />
+                    <InputText @bind-Value="@RestaurantCreate.RestaurantAddress" />
                     <ValidationMessage For="() => RestaurantCreate.RestaurantAddress"></ValidationMessage>
                 </div>
             </div>
@@ -52,7 +51,7 @@
                     <label>Restaurant City</label>
                 </div>
                 <div class="col-12">
-                    <InputText @bind-Value="RestaurantCreate.RestaurantCiy" />
+                    <InputText @bind-Value="@RestaurantCreate.RestaurantCiy" />
                     <ValidationMessage For="() => RestaurantCreate.RestaurantCiy"></ValidationMessage>
                 </div>
             </div>
@@ -61,7 +60,7 @@
                     <label>Restaurant Website</label>
                 </div>
                 <div class="col-12">
-                    <InputText @bind-Value="RestaurantCreate.RestaurantWebsite" />
+                    <InputText @bind-Value="@RestaurantCreate.RestaurantWebsite" />
                     <ValidationMessage For="() => RestaurantCreate.RestaurantWebsite"></ValidationMessage>
                 </div>
             </div>
@@ -70,7 +69,7 @@
                     <label>Restaurant Cuisine type</label>
                 </div>
                 <div class="col-12">
-                    <select @bind="RestaurantCreate.RestaurantCuisineType">
+                    <select @bind="@RestaurantCreate.RestaurantCuisineType">
                         <option value="none" selected="" disabled="">-- Please Select one --</option>
                         @foreach (var type in CuisineTypes.Types)
                         {

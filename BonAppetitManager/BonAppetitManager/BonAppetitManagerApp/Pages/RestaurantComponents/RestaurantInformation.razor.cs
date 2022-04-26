@@ -1,20 +1,19 @@
-﻿using Blazored.LocalStorage;
+﻿using Blazored.SessionStorage;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Components;
-using Microsoft.AspNetCore.Components.Authorization;
 using Models.RestaurantModels;
 using Services.RestaurantServices;
 using StaticData;
 
-namespace BonAppetitManagerApp.Pages.RegistrationComponents;
+namespace BonAppetitManagerApp.Pages.RestaurantComponents;
 
 [Authorize(Roles = Role.Manager)]
-public partial class RestaurantRegistration
+public partial class RestaurantInformation
 {
     #region Dependencies
 
     [Inject] private IRestaurantService _restaurantService { get; set; }
-    [Inject] private ILocalStorageService _localStorage { get; set; }
+    [Inject] private ISessionStorageService _sessionStorage { get; set; }
     [Inject] private NavigationManager _navigationManager { get; set; }
 
     #endregion
@@ -24,10 +23,10 @@ public partial class RestaurantRegistration
 
     protected override async Task OnInitializedAsync()
     {
-        RestaurantCreate.RestaurantId = await _localStorage.GetItemAsStringAsync(LocalStorage.RestaurantId);
-        RestaurantCreate.RestaurantName = await _localStorage.GetItemAsStringAsync(LocalStorage.RestaurantName);
-        RestaurantCreate.RestaurantPhone = await _localStorage.GetItemAsStringAsync(LocalStorage.RestaurantPhone);
-        RestaurantCreate.RestaurantEmail = await _localStorage.GetItemAsStringAsync(LocalStorage.RestaurantUsername);
+        RestaurantCreate.RestaurantId = await _sessionStorage.GetItemAsStringAsync(Storage.RestaurantId);
+        RestaurantCreate.RestaurantName = await _sessionStorage.GetItemAsStringAsync(Storage.RestaurantName);
+        RestaurantCreate.RestaurantPhone = await _sessionStorage.GetItemAsStringAsync(Storage.RestaurantPhone);
+        RestaurantCreate.RestaurantEmail = await _sessionStorage.GetItemAsStringAsync(Storage.RestaurantUsername);
     }
 
     private async Task CreateRestaurant()
@@ -36,7 +35,7 @@ public partial class RestaurantRegistration
         if (request.IsSuccessful)
         {
             Restaurant = request.ResponseObject!.FirstOrDefault()!;
-            await _localStorage.SetItemAsync(LocalStorage.RestaurantInformation, Restaurant);
+            await _sessionStorage.SetItemAsync(Storage.RestaurantInformation, Restaurant);
             _navigationManager.NavigateTo("/Dashboard");
         }
     }

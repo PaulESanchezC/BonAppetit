@@ -1,11 +1,42 @@
 ﻿@page "/Dashboard"
+<AuthorizeView>
+    <Authorized>
+        <div class="container-fluid">
 
+            <DashboardMenu  MenuSelectionCallback="DashboardMenuSelection"/>
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        @{
+                            if (Component == "Analytics")
+                            {
+                                <AnalyticComponentsSelections TopMenuList="AnalyticsTopMenuList"/>
+                            }
+                            if (Component == "Restaurant")
+                            {
+                                <RestaurantComponentsSelections TopMenuList="RestaurantTopMenuList"/>
+                            }
+                            if (Component == "Tables")
+                            {
+                                <TablesComponentsSelections TopMenuList="TablesTopMenuList"/>
+                            }
+                            if (Component == "Reservations")
+                            {
+                                <ReservationsComponentsSelections TopMenuList="ReservationsTopMenuList"/>
+                            }
+                            if (Component == "Menus")
+                            {
+                                <MenuComponentsSelections TopMenuList="MenusTopMenuList"/>
+                            }
+                            if (Component == "Coupons")
+                            {
+                                <CouponComponentsSelections TopMenuList="CouponTopMenuList"/>
+                            }
+                        }
+                    </div>
+                </div>
+            </div>
 
-@if (Request.IsSuccessful)
-{
-    @Restaurant.RestaurantName
-}
-else
-{
-    <p> No Restaurant is Registered to this account! <NavLink class="nav-link bg-transparent lobster" href="/RegisterRestaurant">Register Restaurant</NavLink></p>
-}
+        </div>
+    </Authorized>
+</AuthorizeView>

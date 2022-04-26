@@ -19,8 +19,6 @@ public static class OidcAuthenticationConfigurations
             opt.ProviderOptions.ResponseType = "code";
             opt.ProviderOptions.PostLogoutRedirectUri = "https://localhost:44343/";
             opt.ProviderOptions.RedirectUri = "https://localhost:44343/";
-            
-            opt.ProviderOptions.AdditionalProviderParameters.Add("ClientSecrets", "ff972fdf-6b37-45ef-aa1b-e3b051597bf7");
 
             opt.ProviderOptions.DefaultScopes.Add("openid");
             opt.ProviderOptions.DefaultScopes.Add("profile");
@@ -28,7 +26,7 @@ public static class OidcAuthenticationConfigurations
             opt.ProviderOptions.DefaultScopes.Add("phone");
             opt.ProviderOptions.DefaultScopes.Add("BonAppetit");
             opt.ProviderOptions.DefaultScopes.Add("client");
-            
+
             opt.UserOptions.NameClaim = "name";
             opt.UserOptions.RoleClaim = "role";
         });
