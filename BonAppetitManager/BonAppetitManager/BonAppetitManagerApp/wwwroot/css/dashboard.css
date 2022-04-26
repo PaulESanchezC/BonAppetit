@@ -98,3 +98,16 @@
     margin-bottom: 17px;
     width: 500px;
 }
+
+.dashboard-table {
+    padding: 15px;
+    margin: 5px;
+}
+
+.dashboard-table-input {
+    padding: 6px 11px;
+    margin-left: 20px;
+    margin-top: 5px;
+    margin-bottom: 17px;
+    width: 200px;
+}

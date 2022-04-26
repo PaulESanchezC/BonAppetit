@@ -37,7 +37,7 @@ public class TableService : ITableService
 
     public async Task<Response<Table>> CreateTableAsync(TableCreate tableToCreate)
     {
-        var request = new HttpRequestMessage(HttpMethod.Get, "https://localhost:44310/api/Table/CreateTable");
+        var request = new HttpRequestMessage(HttpMethod.Post, "https://localhost:44310/api/Table/CreateTable");
         await GetTokenAsync();
         request.Headers.Authorization = new AuthenticationHeaderValue(JwtBearerOptions.AuthenticationScheme, Token);
         request.Content = new StringContent(JsonConvert.SerializeObject(tableToCreate), Encoding.UTF8, "application/json");
@@ -50,10 +50,22 @@ public class TableService : ITableService
 
     public async Task<Response<Table>> UpdateTableAsync(TableUpdate tableToUpdate)
     {
-        var request = new HttpRequestMessage(HttpMethod.Get, "https://localhost:44310/api/Table/CreateTable");
+        var request = new HttpRequestMessage(HttpMethod.Put, "https://localhost:44310/api/Table/UpdateTable");
         await GetTokenAsync();
         request.Headers.Authorization = new AuthenticationHeaderValue(JwtBearerOptions.AuthenticationScheme, Token);
         request.Content = new StringContent(JsonConvert.SerializeObject(tableToUpdate), Encoding.UTF8, "application/json");
+
+        var client = await _httpClient.SendAsync(request);
+        var responseString = await client.Content.ReadAsStringAsync();
+        var response = JsonConvert.DeserializeObject<Response<Table>>(responseString);
+        return response!;
+    }
+
+    public async Task<Response<Table>> DeleteTableAsync(string tableId)
+    {
+        var request = new HttpRequestMessage(HttpMethod.Delete, $"https://localhost:44310/api/Table/DeleteTable/{tableId}");
+        await GetTokenAsync();
+        request.Headers.Authorization = new AuthenticationHeaderValue(JwtBearerOptions.AuthenticationScheme, Token);
 
         var client = await _httpClient.SendAsync(request);
         var responseString = await client.Content.ReadAsStringAsync();

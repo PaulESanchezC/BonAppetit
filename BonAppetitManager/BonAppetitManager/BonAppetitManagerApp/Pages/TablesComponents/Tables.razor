@@ -1,2 +1,7 @@
-﻿<h3>Tables</h3>
-
+﻿<div class="row">
+    
+    @foreach (var table in TablesList)
+    {
+        <EditTable Table="@table" DeletedTableId="TableDeletedCallback"/>
+    }
+</div>

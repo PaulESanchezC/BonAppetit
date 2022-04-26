@@ -8,5 +8,6 @@ public interface ITableService
     Task<Response<Table>> GetRestaurantTables();
     Task<Response<Table>> CreateTableAsync(TableCreate tableToCreate);
     Task<Response<Table>> UpdateTableAsync(TableUpdate tableToUpdate);
+    Task<Response<Table>> DeleteTableAsync(string tableId);
 
 }

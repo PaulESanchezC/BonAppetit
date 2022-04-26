@@ -103,7 +103,7 @@ public class Repository<T, TDto, TCreate, TUpdate> : IRepository<T, TDto, TCreat
         var entity = _db.Remove(objectToDelete);
         if (entity.State != EntityState.Deleted)
             return await ResponseSingleBuilderTask(false, 409, "Operation Failed", $"Could not remove the {typeof(T).Name}", null);
-        
+
         try
         {
             await _db.SaveChangesAsync(cancellationToken);

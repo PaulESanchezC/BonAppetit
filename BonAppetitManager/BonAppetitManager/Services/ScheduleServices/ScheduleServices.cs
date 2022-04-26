@@ -46,7 +46,7 @@ public class ScheduleServices : IScheduleServices
 
     public async Task<Response<Schedule>> UpdateScheduleAsync(ScheduleUpdate scheduleToUpdate)
     {
-        var request = new HttpRequestMessage(HttpMethod.Post, "https://localhost:44310/api/Schedule/UpdateSingleRestaurantSchedule");
+        var request = new HttpRequestMessage(HttpMethod.Put, "https://localhost:44310/api/Schedule/UpdateSingleRestaurantSchedule");
         request.Content = new StringContent(JsonConvert.SerializeObject(scheduleToUpdate), Encoding.UTF8,
             "Application/json");
 

@@ -2,7 +2,7 @@
     <ul class="dashboardTopMenu-linklist">
         @foreach (var menuItem in TopMenuList)
         {
-            <li class="dashboardTopMenu-link lobster" >
+            <li class="dashboardTopMenu-link lobster" @onclick="()=> MenuSelectionTask(menuItem)">
                 @menuItem
             </li>
         }
