@@ -1,93 +1,84 @@
-﻿<div class="container">
-    <div class="row">
-        <div class="col-12 page-title">
-            <h4>Your Restaurant</h4>
+﻿<div class="row">
+    <EditForm Model="Restaurant" OnValidSubmit="CreateOrUpdateRestaurant">
+        <DataAnnotationsValidator />
+        <InputText @bind-Value="@Restaurant.RestaurantId" hidden />
+        <InputText @bind-Value="@Restaurant.RestaurantEmail" hidden />
+
+
+        <div class="row">
+            <div class="col-12">
+                <label>Restaurant Name</label>
+            </div>
+            <div class="col-12">
+                <InputText @bind-Value="@Restaurant.RestaurantName" class="dashboard-input" />
+                <ValidationMessage For="() => Restaurant.RestaurantName" class="text-error" />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <label>Restaurant Phone</label>
+            </div>
+            <div class="col-12">
+                <InputText @bind-Value="@Restaurant.RestaurantPhone" class="dashboard-input" />
+                <ValidationMessage For="() => Restaurant.RestaurantPhone" class="text-error" />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <label>Restaurant Email</label>
+            </div>
+            <div class="col-12">
+                <input value="@Restaurant.RestaurantEmail" class="dashboard-input" disabled=""/>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <label>Restaurant Address</label>
+            </div>
+            <div class="col-12">
+                <InputText @bind-Value="@Restaurant.RestaurantAddress" class="dashboard-input" />
+                <ValidationMessage For="() => Restaurant.RestaurantAddress" class="text-error" />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <label>Restaurant City</label>
+            </div>
+            <div class="col-12">
+                <InputText @bind-Value="@Restaurant.RestaurantCiy" class="dashboard-input" />
+                <ValidationMessage For="() => Restaurant.RestaurantCiy" class="text-error"/>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <label>Restaurant Website</label>
+            </div>
+            <div class="col-12">
+                <InputText @bind-Value="@Restaurant.RestaurantWebsite" class="dashboard-input" />
+                <ValidationMessage For="() => Restaurant.RestaurantWebsite" class="text-error"/>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <label>Restaurant Cuisine type</label>
+            </div>
+            <div class="col-12">
+                <select @bind="@Restaurant.RestaurantCuisineType" class="dashboard-select">
+                    <option value="none" selected="" disabled="">-- Please Select one --</option>
+                    @foreach (var type in CuisineTypes.Types)
+                    {
+                        <option value="@type">@type</option>
+                    }
+                </select>
+                <ValidationMessage For="() => Restaurant.RestaurantCuisineType" class="text-error"/>
+            </div>
         </div>
 
+        <div class="row">
+            <div class="col-12">
+                <button type="submit" class="">Save!</button>
+            </div>
+        </div>
 
-        <EditForm Model="RestaurantCreate" OnValidSubmit="CreateRestaurant">
-            <DataAnnotationsValidator />
-            <InputText @bind-Value="@RestaurantCreate.RestaurantId" hidden />
-
-
-            <div class="row">
-                <div class="col-12">
-                    <label>Restaurant Name</label>
-                </div>
-                <div class="col-12">
-                    <InputText @bind-Value="@RestaurantCreate.RestaurantName" />
-                    <ValidationMessage For="() => RestaurantCreate.RestaurantName"></ValidationMessage>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-12">
-                    <label>Restaurant Phone</label>
-                </div>
-                <div class="col-12">
-                    <InputText @bind-Value="@RestaurantCreate.RestaurantPhone" />
-                    <ValidationMessage For="() => RestaurantCreate.RestaurantPhone"></ValidationMessage>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-12">
-                    <label>Restaurant Email</label>
-                </div>
-                <div class="col-12">
-                    <InputText @bind-Value="@RestaurantCreate.RestaurantEmail" />
-                    <ValidationMessage For="() => RestaurantCreate.RestaurantEmail"></ValidationMessage>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-12">
-                    <label>Restaurant Address</label>
-                </div>
-                <div class="col-12">
-                    <InputText @bind-Value="@RestaurantCreate.RestaurantAddress" />
-                    <ValidationMessage For="() => RestaurantCreate.RestaurantAddress"></ValidationMessage>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-12">
-                    <label>Restaurant City</label>
-                </div>
-                <div class="col-12">
-                    <InputText @bind-Value="@RestaurantCreate.RestaurantCiy" />
-                    <ValidationMessage For="() => RestaurantCreate.RestaurantCiy"></ValidationMessage>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-12">
-                    <label>Restaurant Website</label>
-                </div>
-                <div class="col-12">
-                    <InputText @bind-Value="@RestaurantCreate.RestaurantWebsite" />
-                    <ValidationMessage For="() => RestaurantCreate.RestaurantWebsite"></ValidationMessage>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-12">
-                    <label>Restaurant Cuisine type</label>
-                </div>
-                <div class="col-12">
-                    <select @bind="@RestaurantCreate.RestaurantCuisineType">
-                        <option value="none" selected="" disabled="">-- Please Select one --</option>
-                        @foreach (var type in CuisineTypes.Types)
-                        {
-                            <option value="@type">@type</option>
-                        }
-                    </select>
-                    <ValidationMessage For="() => RestaurantCreate.RestaurantCuisineType"></ValidationMessage>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-12">
-                    <button type="submit" class="">Save!</button>
-                </div>
-            </div>
-
-        </EditForm>
-    </div>
+    </EditForm>
 </div>
-
-

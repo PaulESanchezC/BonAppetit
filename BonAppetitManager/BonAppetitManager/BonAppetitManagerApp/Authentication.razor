@@ -10,7 +10,6 @@
     #region Dependencies
 
     [Parameter] public string Action { get; set; }
-    [Inject] private AuthenticationStateProvider _authState { get; set; }
     [Inject] private ISessionStorageService _sessionStorage { get; set; }
 
     #endregion
@@ -24,18 +23,7 @@
 
     private async Task BuildSession()
     {
-        var userClaims = await _authState.GetAuthenticationStateAsync();
-        UserId = userClaims.User.FindFirst(claim => claim.Type == "sub")!.Value;
 
-        await _sessionStorage.SetItemAsStringAsync(Storage.RestaurantId, UserId);
-
-        var name = userClaims.User.FindFirst(claim => claim.Type == "given_name")!.Value;
-        var phone = userClaims.User.FindFirst(claim => claim.Type == "phone_number")!.Value;
-        var username = userClaims.User.FindFirst(claim => claim.Type == "preferred_username")!.Value;
-
-        await _sessionStorage.SetItemAsync(Storage.RestaurantName, name);
-        await _sessionStorage.SetItemAsync(Storage.RestaurantPhone, phone);
-        await _sessionStorage.SetItemAsync(Storage.RestaurantUsername, username);
     }
 
     private async Task LogOutSuccessful()

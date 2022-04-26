@@ -8,3 +8,20 @@
         }
     </ul>
 </div>
+<div class="dashboard-page">
+    <div class="row">
+        <div class="col-12">
+            @{
+                switch (Selection)
+                {
+                    case "Tables Information":
+                        <Tables/>
+                        break;
+                    case "Add Table":
+                        <AddTable/>
+                        break;
+                }
+            }
+        </div>
+    </div>
+</div>

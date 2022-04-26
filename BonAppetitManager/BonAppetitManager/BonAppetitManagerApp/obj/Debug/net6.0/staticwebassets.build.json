@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "mDMwVxh/qziUhYLvMhAnfqFxurv8KUdzijgsZEP/7Os=",
+  "Hash": "3iv1plrPSO9cE8h1b2N1HCtH72HwyyQHQiQUPPrOt1o=",
   "Source": "BonAppetitManagerApp",
   "BasePath": "/",
   "Mode": "Root",
@@ -7412,12 +7412,12 @@
       "OriginalItemSpec": "wwwroot\\css\\app.css"
     },
     {
-      "Identity": "C:\\Users\\Paulyglot\\Desktop\\Portoflio\\BonAppetit\\BonAppetitManager\\BonAppetitManager\\BonAppetitManagerApp\\wwwroot\\css\\dashboardmenu.css",
+      "Identity": "C:\\Users\\Paulyglot\\Desktop\\Portoflio\\BonAppetit\\BonAppetitManager\\BonAppetitManager\\BonAppetitManagerApp\\wwwroot\\css\\dashboard.css",
       "SourceId": "BonAppetitManagerApp",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Paulyglot\\Desktop\\Portoflio\\BonAppetit\\BonAppetitManager\\BonAppetitManager\\BonAppetitManagerApp\\wwwroot\\",
       "BasePath": "/",
-      "RelativePath": "css/dashboardmenu.css",
+      "RelativePath": "css/dashboard.css",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -7426,7 +7426,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\css\\dashboardmenu.css"
+      "OriginalItemSpec": "wwwroot\\css\\dashboard.css"
     },
     {
       "Identity": "C:\\Users\\Paulyglot\\Desktop\\Portoflio\\BonAppetit\\BonAppetitManager\\BonAppetitManager\\BonAppetitManagerApp\\wwwroot\\css\\navbar.css",

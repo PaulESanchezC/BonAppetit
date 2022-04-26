@@ -2,9 +2,29 @@
     <ul class="dashboardTopMenu-linklist">
         @foreach (var menuItem in TopMenuList)
         {
-            <li class="dashboardTopMenu-link lobster" >
+            <li class="dashboardTopMenu-link lobster" @onclick="()=> MenuSelectionTask(menuItem)">
                 @menuItem
             </li>
         }
     </ul>
+</div>
+<div class="dashboard-page">
+    <div class="row">
+        <div class="col-12">
+            @{
+                switch (Selection)
+                {
+                    case "Reservations Analysis":
+                        <ReservationsAnalysis />
+                        break;
+                    case "Coupon Reservations Analysis":
+                        <CouponAnalysis />
+                        break;
+                    case "Menus Analysis Researches":
+                        <MenuAnalysis />
+                        break;
+                }
+            }
+        </div>
+    </div>
 </div>

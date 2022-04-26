@@ -1,13 +1,9 @@
-﻿using Blazored.LocalStorage;
-using Blazored.SessionStorage;
+﻿using Blazored.SessionStorage;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Components;
-using Microsoft.AspNetCore.Components.Authorization;
-using Microsoft.AspNetCore.Components.WebAssembly.Authentication;
-using Models.ResponseModels;
-using Models.RestaurantModels;
 using Services.RestaurantServices;
 using StaticData;
+using NavigationMenu = Models.NavigationMenuModels.NavigationMenu;
 
 namespace BonAppetitManagerApp.Pages.DashboardComponents;
 
@@ -15,15 +11,16 @@ namespace BonAppetitManagerApp.Pages.DashboardComponents;
 public partial class Dashboard
 {
     #region Dependencies
-
     [Inject] private IRestaurantService _restaurantService { get; set; }
     [Inject] private ISessionStorageService _sessionStorage { get; set; }
     public string Component { get; set; } = "Analytics";
+    public string TopMenuSelection { get; set; } = "";
 
     #endregion
 
     #region TopMenuItemLists
 
+    public NavigationMenu NavigationMenu { get; set; } = new();
     private List<string> RestaurantTopMenuList { get; set; } = new();
     private List<string> AnalyticsTopMenuList { get; set; } = new();
     private List<string> TablesTopMenuList { get; set; } = new();
@@ -38,7 +35,8 @@ public partial class Dashboard
     protected override async Task OnInitializedAsync()
     {
         await BuildRestaurantSessionAsync();
-        await Task.FromResult(BuildTopMenuListsTask()) ;
+        await Task.FromResult(BuildTopMenuListsTask());
+        await GetSessionNavigationPropertiesAsync();
     }
 
     private void DashboardMenuSelection(string dashboardMenuSelection)
@@ -47,8 +45,7 @@ public partial class Dashboard
     }
     private async Task BuildRestaurantSessionAsync()
     {
-        UserId = await _sessionStorage.GetItemAsStringAsync(Storage.RestaurantId);
-        var request = await _restaurantService.GetRestaurantAsync(UserId);
+        var request = await _restaurantService.GetRestaurantAsync();
         if (request.IsSuccessful)
             await _sessionStorage.SetItemAsync(Storage.RestaurantInformation, request.ResponseObject!.FirstOrDefault()!);
     }
@@ -90,5 +87,14 @@ public partial class Dashboard
         };
         return Task.CompletedTask;
     }
-
+    private async Task GetSessionNavigationPropertiesAsync()
+    {
+        NavigationMenu = await _sessionStorage.GetItemAsync<NavigationMenu>(Storage.NavigationProperties);
+        if (NavigationMenu is not null)
+        {
+            Component = NavigationMenu.DashboardMenuSelection;
+            TopMenuSelection = NavigationMenu.DashboardTopMenuSelection;
+            Console.WriteLine($"Last known navigation properties : {Component} / {TopMenuSelection} ");
+        }
+    }
 }

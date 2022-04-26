@@ -1,1 +1,141 @@
-﻿<h3>RestaurantSchedule</h3>
+﻿
+<EditForm Model="ScheduleVm" OnValidSubmit="UpdateScheduleAsync">
+    <div class="row">
+        <DataAnnotationsValidator />
+        <InputText @bind-Value="@ScheduleVm.RestaurantId" hidden/>  
+        <InputText @bind-Value="@ScheduleVm.ScheduleId" hidden/>  
+
+        <div class="col-4">
+            <div class="dashboard-schedule-day">
+                <label class="text-title">Sunday</label>
+                <div class="col-12">
+                    <label class="dashboard-label">Is open?</label>
+                    <InputCheckbox type="checkbox" @bind-Value="@ScheduleVm.Sunday" class="dashboard-checkbox"/>
+                </div>
+                <div class="col-12">
+                    <label class="dashboard-label">Opening time: (HH:MM)</label>
+                    <InputText type="text" @bind-Value="@ScheduleVm.SundayOpenTime" class="dashboard-time-input" />
+                </div>
+                <div class="col-12 mt-2">
+                    <label class="dashboard-label">Closing time: (HH:MM)</label>
+                    <InputText type="text" @bind-Value="@ScheduleVm.SundayCloseTime" class="dashboard-time-input" />
+                </div>
+            </div>
+        </div>
+
+        <div class="col-4">
+            <div class="dashboard-schedule-day ">
+                <label class="text-title">Monday</label>
+                <div class="col-12">
+                    <label class="dashboard-label">Is open?</label>
+                    <InputCheckbox type="checkbox" @bind-Value="@ScheduleVm.Monday"  class="dashboard-checkbox"/>
+                </div>
+                <div class="col-12">
+                    <label class="dashboard-label">Opening time: (HH:MM)</label>
+                    <InputText type="text" @bind-Value="@ScheduleVm.MondayOpenTime" class="dashboard-time-input" />
+                </div>
+                <div class="col-12 mt-2">
+                    <label class="dashboard-label">Closing time: (HH:MM)</label>
+                    <InputText type="text" @bind-Value="@ScheduleVm.MondayCloseTime" class="dashboard-time-input" />
+                </div>
+            </div>
+        </div>
+
+        <div class="col-4">
+            <div class="dashboard-schedule-day">
+                <label class="text-title">Tuesday</label>
+                <div class="col-12">
+                    <label class="dashboard-label">Is open?</label>
+                    <InputCheckbox type="checkbox" @bind-Value="@ScheduleVm.Tuesday" class="dashboard-checkbox"/>
+                </div>
+                <div class="col-12">
+                    <label class="dashboard-label">Opening time: (HH:MM)</label>
+                    <InputText type="text" @bind-Value="@ScheduleVm.TuesdayOpenTime" class="dashboard-time-input" />
+                </div>
+                <div class="col-12 mt-2">
+                    <label class="dashboard-label"> Closing time: (HH:MM)</label>
+                    <InputText type="text" @bind-Value="@ScheduleVm.TuesdayCloseTime" class="dashboard-time-input" />
+                </div>
+            </div>
+        </div>
+
+
+        <div class="col-4">
+            <div class="dashboard-schedule-day ">
+                <label class="text-title">Wednesday</label>
+                <div class="col-12">
+                    <label class="dashboard-label">Is open?</label>
+                    <InputCheckbox type="checkbox" @bind-Value="@ScheduleVm.Wednesday" class="dashboard-checkbox"/>
+                </div>
+                <div class="col-12">
+                    <label class="dashboard-label">Opening time: (HH:MM)</label>
+                    <InputText type="text" @bind-Value="@ScheduleVm.WednesdayOpenTime" class="dashboard-time-input" />
+                </div>
+                <div class="col-12 mt-2">
+                    <label class="dashboard-label">Closing time: (HH:MM)</label>
+                    <InputText type="text" @bind-Value="@ScheduleVm.WednesdayCloseTime" class="dashboard-time-input" />
+                </div>
+            </div>
+        </div>
+
+        <div class="col-4">
+            <div class="dashboard-schedule-day ">
+                <label class="text-title">Thursday</label>
+                <div class="col-12">
+                    <label class="dashboard-label">Is open?</label>
+                    <InputCheckbox type="checkbox" @bind-Value="@ScheduleVm.Thursday" class="dashboard-checkbox"/>
+                </div>
+                <div class="col-12">
+                    <label class="dashboard-label">Opening time: (HH:MM)</label>
+                    <InputText type="text" @bind-Value="@ScheduleVm.ThursdayOpenTime" class="dashboard-time-input" />
+                </div>
+                <div class="col-12 mt-2">
+                    <label class="dashboard-label">Closing time: (HH:MM)</label>
+                    <InputText type="text" @bind-Value="@ScheduleVm.ThursdayCloseTime" class="dashboard-time-input" />
+                </div>
+            </div>
+        </div>
+
+        <div class="col-4">
+            <div class="dashboard-schedule-day ">
+                <label class="text-title">Friday</label>
+                <div class="col-12">
+                    <label class="dashboard-label">Is open?</label>
+                    <InputCheckbox type="checkbox" @bind-Value="@ScheduleVm.Friday" class="dashboard-checkbox"/>
+                </div>
+                <div class="col-12">
+                    <label class="dashboard-label">Opening time: (HH:MM)</label>
+                    <InputText type="text" @bind-Value="@ScheduleVm.FridayOpenTime" class="dashboard-time-input" />
+                </div>
+                <div class="col-12">
+                    <label class="dashboard-label">Closing time: (HH:MM)</label>
+                    <InputText type="text" @bind-Value="@ScheduleVm.FridayCloseTime" class="dashboard-time-input" />
+                </div>
+            </div>
+        </div>
+
+        <div class="col-4">
+            <div class="dashboard-schedule-day">
+                <label class="text-title">Saturday</label>
+                <div class="col-12">
+                    <label class="dashboard-label">Is open?</label>
+                    <InputCheckbox type="checkbox" @bind-Value="@ScheduleVm.Saturday" class="dashboard-checkbox"/>
+                </div>
+                <div class="col-12">
+                    <label class="dashboard-label">Opening time: (HH:MM)</label>
+                    <InputText type="text" @bind-Value="@ScheduleVm.SaturdayOpenTime" class="dashboard-time-input" />
+                </div>
+                <div class="col-12 mt-2">
+                    <label class="dashboard-label">Closing time: (HH:MM)</label>
+                    <InputText type="text" @bind-Value="@ScheduleVm.SaturdayCloseTime" class="dashboard-time-input" />
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12 align-center">
+                <button type="submit">Save!</button>
+            </div>
+        </div>
+    </div>
+</EditForm>

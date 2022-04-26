@@ -30,8 +30,16 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWJvdXQucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Paulyglot/Desktop/Portoflio/BonAppetit/BonAppetitManager/BonAppetitManager/BonAppetitManagerApp/Pages/AnalyticsComponents/Analytics.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQW5hbHl0aWNzQ29tcG9uZW50c1xBbmFseXRpY3MucmF6b3I=
+[C:/Users/Paulyglot/Desktop/Portoflio/BonAppetit/BonAppetitManager/BonAppetitManager/BonAppetitManagerApp/Pages/AnalyticsComponents/CouponAnalysis.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQW5hbHl0aWNzQ29tcG9uZW50c1xDb3Vwb25BbmFseXNpcy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Paulyglot/Desktop/Portoflio/BonAppetit/BonAppetitManager/BonAppetitManager/BonAppetitManagerApp/Pages/AnalyticsComponents/MenuAnalysis.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQW5hbHl0aWNzQ29tcG9uZW50c1xNZW51QW5hbHlzaXMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Paulyglot/Desktop/Portoflio/BonAppetit/BonAppetitManager/BonAppetitManager/BonAppetitManagerApp/Pages/AnalyticsComponents/ReservationsAnalysis.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQW5hbHl0aWNzQ29tcG9uZW50c1xSZXNlcnZhdGlvbnNBbmFseXNpcy5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Paulyglot/Desktop/Portoflio/BonAppetit/BonAppetitManager/BonAppetitManager/BonAppetitManagerApp/Pages/CouponComponents/Coupons.razor]
@@ -88,6 +96,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/Paulyglot/Desktop/Portoflio/BonAppetit/BonAppetitManager/BonAppetitManager/BonAppetitManagerApp/Pages/RestaurantComponents/RestaurantSchedule.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmVzdGF1cmFudENvbXBvbmVudHNcUmVzdGF1cmFudFNjaGVkdWxlLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Paulyglot/Desktop/Portoflio/BonAppetit/BonAppetitManager/BonAppetitManager/BonAppetitManagerApp/Pages/TablesComponents/AddTable.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVGFibGVzQ29tcG9uZW50c1xBZGRUYWJsZS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Paulyglot/Desktop/Portoflio/BonAppetit/BonAppetitManager/BonAppetitManager/BonAppetitManagerApp/Pages/TablesComponents/Tables.razor]

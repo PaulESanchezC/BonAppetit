@@ -8,6 +8,9 @@ public class RestaurantUpdate
     #region Restaurant Properties
 
     [Required(AllowEmptyStrings = false)]
+    public string RestaurantId { get; set; }
+
+    [Required(AllowEmptyStrings = false)]
     public string RestaurantName { get; set; }
 
     [Required(AllowEmptyStrings = false)]

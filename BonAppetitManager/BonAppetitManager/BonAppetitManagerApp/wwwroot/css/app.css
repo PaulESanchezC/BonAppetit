@@ -22,3 +22,11 @@
 .pointer {
     cursor: pointer !important;
 }
+
+.text-error{
+    color: #700000 !important;
+}
+
+.text-title {
+    font-size: 35px
+}

@@ -552,6 +552,7 @@
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
           "Blazored.LocalStorage": "4.2.0",
+          "Blazored.SessionStorage": "2.2.0",
           "Microsoft.AspNetCore.Components.WebAssembly.Authentication": "6.0.3",
           "Models": "1.0.0",
           "Newtonsoft.Json": "13.0.1",
@@ -1120,6 +1121,7 @@
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
           "Blazored.LocalStorage": "4.2.0",
+          "Blazored.SessionStorage": "2.2.0",
           "Microsoft.AspNetCore.Components.WebAssembly.Authentication": "6.0.3",
           "Models": "1.0.0",
           "Newtonsoft.Json": "13.0.1",
