@@ -11,6 +11,6 @@ public class AutoMapperOptionsConfigurations : Profile
         CreateMap<Restaurant, RestaurantCreate>().ReverseMap();
         CreateMap<Restaurant, RestaurantUpdate>().ReverseMap();
 
-        CreateMap<Schedule, ScheduleCreate>().ReverseMap();
+        CreateMap<Schedule, ScheduleUpdate>().ReverseMap();
     }
 }
