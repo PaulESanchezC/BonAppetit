@@ -149,7 +149,8 @@ public class ScheduleServices : IScheduleServices
 
         hours = time.Split(':')[0];
         minutes = time.Split(':')[1];
-        parsedTime = double.Parse($"{hours},{double.Parse(minutes) / 60}");
+        parsedTime = double.Parse($"{hours}.{double.Parse(minutes) / 60}");
+        
         return parsedTime;
     }
 

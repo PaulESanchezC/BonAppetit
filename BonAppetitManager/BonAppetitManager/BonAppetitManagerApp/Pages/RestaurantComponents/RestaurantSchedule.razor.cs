@@ -43,7 +43,6 @@ public partial class RestaurantSchedule
     private async Task UpdateScheduleAsync()
     {
         Schedule = await _scheduleService.MapScheduleVmToScheduleTask(ScheduleVm);
-
         var scheduleToUpdate = _mapper.Map<ScheduleUpdate>(Schedule);
         var request = await _scheduleService.UpdateScheduleAsync(scheduleToUpdate);
         if (request.IsSuccessful)
@@ -52,7 +51,6 @@ public partial class RestaurantSchedule
             Restaurant.RestaurantSchedule = Schedule;
             await _sessionStorage.SetItemAsync(Storage.RestaurantInformation, Restaurant);
         }
-
     }
 
     private async Task SetNavigationPropertiesAsync()

@@ -206,9 +206,9 @@
       "System.Private.CoreLib.dll": "sha256-KVnZkFos\/ML\/3S2isVijfmFZXO4zEQeCga6BZvGdTbY=",
       "Configurations.dll": "sha256-MmZm6N6Uf37EBYevZqM8A9MMETiUddCYrntuSl8NkYM=",
       "Models.dll": "sha256-swstrFhk57PfUkfUvA0FYxcTWDotLQAuuBP8LShCzwo=",
-      "Services.dll": "sha256-fYuoEszeY1MUDTnjtmIWWeSwR2t2VGPeJTamIrYDdYg=",
+      "Services.dll": "sha256-vHcp2bF2pF7xNYY27OlLT0d\/7Bc+zc1FOmA3uMkfPZU=",
       "StaticData.dll": "sha256-OM9IWDi3AJV53aYQbBKG+xdBmwD2AD7ltFOQ3ms7vxs=",
-      "BonAppetitManagerApp.dll": "sha256-vfCdcvOUnh0bfwoTP3RoO2ttZPQcy272R4VxrdGFA3Q="
+      "BonAppetitManagerApp.dll": "sha256-2BWvy6IuwdiQ\/xph2ZJbiVAZgMoGjqxYgxmub1B8DFY="
     },
     "extensions": null,
     "lazyAssembly": null,
@@ -217,8 +217,8 @@
       "Configurations.pdb": "sha256-0nFwFtHEqXFkCMwm+6pWIXC5\/OBPGjGFk5ex1H9n8Q4=",
       "Models.pdb": "sha256-NVaXxLv9QUgcUlVmWCPXfPaZ1XbbArf7QUwve1ZNSVg=",
       "StaticData.pdb": "sha256-OYermjQp1\/z54l6KzUX1ytL7hoUVeAm7buplR59XKlw=",
-      "Services.pdb": "sha256-\/0cmK8h20Cw6sMoW7E4xCKuwDJyAUGVAd2TrLJHCDZ0=",
-      "BonAppetitManagerApp.pdb": "sha256-y4ZP0VEbPmluoRV\/VIbdF2Wi5SUREH9q36y+LLlPtJM="
+      "Services.pdb": "sha256-c+D+k5+RkLPUee1CJ5DwQrpYXTXUGQF\/IO8LJFH3lTw=",
+      "BonAppetitManagerApp.pdb": "sha256-873FcwS54bFL7xa66U4SdY5RZ4FdytBPdnPjFwN4CH8="
     },
     "runtime": {
       "dotnet.6.0.4.0mdsy8j5fh.js": "sha256-WYno\/cK5MDsl5yi4T\/\/QgUskbBfhLL77i+c0uKzO9+c=",
