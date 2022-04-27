@@ -3,15 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.1.32414.318
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CouponServices", "CouponServices\CouponServices.csproj", "{67EE5101-5291-43C3-AE50-20C7C60CAE95}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CouponServices", "CouponServices\CouponServices.csproj", "{67EE5101-5291-43C3-AE50-20C7C60CAE95}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Configurations", "Configurations\Configurations.csproj", "{DE681390-ADAD-4667-BF70-0F018745F09C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Configurations", "Configurations\Configurations.csproj", "{DE681390-ADAD-4667-BF70-0F018745F09C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Models", "Models\Models.csproj", "{0F8F6A80-21A8-46EE-BAA1-4C71A90C929A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Models", "Models\Models.csproj", "{0F8F6A80-21A8-46EE-BAA1-4C71A90C929A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Services", "Services\Services.csproj", "{CF7C3D4F-C630-4F87-B5E8-0FE73C33618C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Services", "Services\Services.csproj", "{CF7C3D4F-C630-4F87-B5E8-0FE73C33618C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Data", "Data\Data.csproj", "{1F3BABEE-71ED-463D-BEE5-61EFBAC998EE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Data", "Data\Data.csproj", "{1F3BABEE-71ED-463D-BEE5-61EFBAC998EE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StaticData", "StaticData\StaticData.csproj", "{6DB63318-CF41-4886-8A7E-3D47972DB83A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{1F3BABEE-71ED-463D-BEE5-61EFBAC998EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1F3BABEE-71ED-463D-BEE5-61EFBAC998EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1F3BABEE-71ED-463D-BEE5-61EFBAC998EE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6DB63318-CF41-4886-8A7E-3D47972DB83A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6DB63318-CF41-4886-8A7E-3D47972DB83A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6DB63318-CF41-4886-8A7E-3D47972DB83A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6DB63318-CF41-4886-8A7E-3D47972DB83A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
