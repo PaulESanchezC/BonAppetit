@@ -17,3 +17,5 @@ C:\Users\Paulyglot\Desktop\Portoflio\BonAppetit\MicroServices\BonAppetit.CouponS
 C:\Users\Paulyglot\Desktop\Portoflio\BonAppetit\MicroServices\BonAppetit.CouponServices\Configurations\obj\Debug\net6.0\refint\Configurations.dll
 C:\Users\Paulyglot\Desktop\Portoflio\BonAppetit\MicroServices\BonAppetit.CouponServices\Configurations\obj\Debug\net6.0\Configurations.pdb
 C:\Users\Paulyglot\Desktop\Portoflio\BonAppetit\MicroServices\BonAppetit.CouponServices\Configurations\obj\Debug\net6.0\ref\Configurations.dll
+C:\Users\Paulyglot\Desktop\Portoflio\BonAppetit\MicroServices\BonAppetit.CouponServices\Configurations\bin\Debug\net6.0\Services.dll
+C:\Users\Paulyglot\Desktop\Portoflio\BonAppetit\MicroServices\BonAppetit.CouponServices\Configurations\bin\Debug\net6.0\Services.pdb
