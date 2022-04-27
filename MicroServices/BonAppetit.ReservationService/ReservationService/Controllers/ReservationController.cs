@@ -64,6 +64,7 @@ namespace ReservationService.Controllers
             return StatusCode(request.StatusCode, request);
         }
 
+
         [HttpGet("GetAllExpiredReservationsForRestaurant/{restaurantId}")]
         public async Task<IActionResult> GetAllExpiredReservationsForRestaurant(string restaurantId,
             CancellationToken cancellationToken)
@@ -79,6 +80,7 @@ namespace ReservationService.Controllers
                 cancellationToken);
             return StatusCode(request.StatusCode, request);
         }
+
 
         [HttpGet("GetAllValidReservationsForClient/{clientId}")]
         public async Task<IActionResult> GetAllValidReservationsForClient(string clientId,
@@ -96,6 +98,7 @@ namespace ReservationService.Controllers
             return StatusCode(request.StatusCode, request);
         }
 
+
         [HttpGet("GetAllExpiredReservationsForClient/{clientId}")]
         public async Task<IActionResult> GetAllExpiredReservationsForClient(string clientId,
             CancellationToken cancellationToken)
@@ -111,6 +114,7 @@ namespace ReservationService.Controllers
                 cancellationToken);
             return StatusCode(request.StatusCode, request);
         }
+
 
         [HttpGet("GetReservationsForSingleTable/{tableId}")]
         public async Task<IActionResult> GetReservationsForSingleTable(string tableId,
@@ -128,6 +132,7 @@ namespace ReservationService.Controllers
             return StatusCode(request.StatusCode, request);
         }
 
+        [Authorize]
         [HttpPost("MakeReservation")]
         public async Task<IActionResult> MakeReservation([FromBody] ReservationCreate reservationToMake,
             CancellationToken cancellationToken)

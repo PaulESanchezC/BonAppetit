@@ -1,4 +1,5 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
+using Services.ReservationServices;
 using Services.RestaurantServices;
 using Services.ScheduleServices;
 using Services.TableServices;
@@ -14,6 +15,7 @@ public static class ServiceConfigurations
         service.AddScoped<IRestaurantService, RestaurantService>();
         service.AddScoped<IScheduleServices, ScheduleServices>();
         service.AddScoped<ITableService,TableService>();
+        service.AddScoped<IReservationService, ReservationService>();
         return service;
     }
 }

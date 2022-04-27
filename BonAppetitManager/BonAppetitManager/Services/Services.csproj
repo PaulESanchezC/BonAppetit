@@ -14,6 +14,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <Folder Include="ReservationServices\" />
 	  <Folder Include="TableServices\" />
 	  <Folder Include="UserRegistrationServices\" />
 	</ItemGroup>

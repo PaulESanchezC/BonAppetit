@@ -1,3 +1,4 @@
+using Configurations.AuthorizationConfigurations;
 using Configurations.AutoMapperConfigurations;
 using Configurations.ConfigurationsHelper;
 using Configurations.CorsConfigurations;
@@ -26,6 +27,8 @@ builder.Services.AddCorsConfiguration();
 builder.Services.AddJsonConfigurations();
 //Auto Mapper Configurations
 builder.Services.AddAutoMapperMapConfigurations();
+//Authentication Configurations
+builder.Services.AddAuthenticationConfigurations();
 //Services Configurations
 builder.Services.AddServicesConfigurations();
 

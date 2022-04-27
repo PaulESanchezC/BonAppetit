@@ -1,5 +1,32 @@
-﻿<h3>Reservations</h3>
-
-@code {
-
-}
+﻿<div class="row">
+    @if (ReservationsList.Any())
+    {
+        @foreach (var rsvp in ReservationVmsList!)
+        {
+            <div class="col-4">
+                <div class="card">
+                    <div class="card-header" @onclick="ReservationDetails">
+                        Reservation For: @rsvp.Reservation.FirstName @rsvp.Reservation.LastName
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">
+                            Table: @rsvp.Table.TableName
+                        </li>
+                        <li class="list-group-item">
+                            Phone No.: @rsvp.Reservation.Phone
+                        </li>
+                        <li class="list-group-item">
+                            Table seats: @rsvp.Table.AmountOfSeats
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        }
+    }
+    else
+    {
+        <p>
+            There are no reservations for today, Yet!.
+        </p>
+    }
+</div>
