@@ -22,7 +22,8 @@ public class CouponType
     #endregion
 
     #region Bussiness Properties
-    public DateTime DateCreated { get; set; }
+
+    public DateTime DateCreated { get; set; } = DateTime.Now;
     public DateTime DateDiscontinued { get; set; }
 
     #endregion

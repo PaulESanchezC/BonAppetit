@@ -23,7 +23,7 @@ public class RestaurantCoupons
 
     #region Bussiness properties
 
-    public DateTime DateRequested { get; set; }
+    public DateTime DateRequested { get; set; } = DateTime.Now;
 
     #endregion
 }

@@ -45,6 +45,16 @@ namespace CouponServices.Controllers
         [HttpPut("SetRestaurantCouponActivity/{isActive:bool}/{restaurantId}/{couponTypeId}")]
         public async Task<IActionResult> SetRestaurantCouponActivity(bool isActive, string restaurantId, string couponTypeId,CancellationToken cancellationToken)
         {
+            if (string.IsNullOrEmpty(restaurantId))
+            {
+                ModelState.AddModelError("restaurantId", "The restaurantId field is required.");
+                return BadRequest(ModelState);
+            }
+            if (string.IsNullOrEmpty(couponTypeId))
+            {
+                ModelState.AddModelError("couponTypeId", "The couponTypeId field is required.");
+                return BadRequest(ModelState);
+            }
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
 
