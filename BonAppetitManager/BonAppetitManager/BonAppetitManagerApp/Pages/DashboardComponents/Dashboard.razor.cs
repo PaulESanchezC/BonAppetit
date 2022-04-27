@@ -30,8 +30,6 @@ public partial class Dashboard
 
     #endregion
 
-    private string UserId { get; set; } = "";
-
     protected override async Task OnInitializedAsync()
     {
         await BuildRestaurantSessionAsync();
@@ -39,9 +37,10 @@ public partial class Dashboard
         await GetSessionNavigationPropertiesAsync();
     }
 
-    private void DashboardMenuSelection(string dashboardMenuSelection)
+    private void DashboardMenuSelection(NavigationMenu navigationProperties)
     {
-        Component = dashboardMenuSelection;
+        Component = navigationProperties.DashboardMenuSelection;
+        TopMenuSelection = navigationProperties.DashboardTopMenuSelection;
     }
     private async Task BuildRestaurantSessionAsync()
     {

@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Components;
+using Models.NavigationMenuModels;
 using StaticData;
 
 namespace BonAppetitManagerApp.Pages.DashboardComponents;
@@ -8,29 +9,42 @@ namespace BonAppetitManagerApp.Pages.DashboardComponents;
 public partial class DashboardMenu
 {
     [Parameter]
-    public EventCallback<string> MenuSelectionCallback { get; set; }
+    public EventCallback<NavigationMenu> MenuSelectionCallback { get; set; }
 
     protected async Task DashboardMenuSelectEvent(int menuSelected)
     {
+        var navigationProperties = new NavigationMenu();
         switch (menuSelected)
         {
             default:
-                await MenuSelectionCallback.InvokeAsync("Analytics");
+                navigationProperties = new()
+                    { DashboardMenuSelection = "Analytics", DashboardTopMenuSelection = "Reservations Analysis" };
+                await MenuSelectionCallback.InvokeAsync(navigationProperties);
                 break;
             case 2:
-                await MenuSelectionCallback.InvokeAsync("Restaurant");
+                navigationProperties = new()
+                    { DashboardMenuSelection = "Restaurant", DashboardTopMenuSelection = "Restaurant Information" };
+                await MenuSelectionCallback.InvokeAsync(navigationProperties);
                 break;
             case 3:
-                await MenuSelectionCallback.InvokeAsync("Tables");
+                navigationProperties = new()
+                    { DashboardMenuSelection = "Tables", DashboardTopMenuSelection = "Tables Information" };
+                await MenuSelectionCallback.InvokeAsync(navigationProperties);
                 break;
             case 4:
-                await MenuSelectionCallback.InvokeAsync("Reservations");
+                navigationProperties = new()
+                    { DashboardMenuSelection = "Reservations", DashboardTopMenuSelection = "Today's Reservations" };
+                await MenuSelectionCallback.InvokeAsync(navigationProperties);
                 break;
             case 5:
-                await MenuSelectionCallback.InvokeAsync("Menus");
+                navigationProperties = new()
+                    { DashboardMenuSelection = "Menus", DashboardTopMenuSelection = "Active Menus" };
+                await MenuSelectionCallback.InvokeAsync(navigationProperties);
                 break;
             case 6:
-                await MenuSelectionCallback.InvokeAsync("Coupons");
+                navigationProperties = new()
+                    { DashboardMenuSelection = "Coupons", DashboardTopMenuSelection = "Coupons Active" };
+                await MenuSelectionCallback.InvokeAsync(navigationProperties);
                 break;
         }
     }

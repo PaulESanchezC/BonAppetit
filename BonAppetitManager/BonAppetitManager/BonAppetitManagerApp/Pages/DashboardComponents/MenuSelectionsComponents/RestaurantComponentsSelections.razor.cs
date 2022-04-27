@@ -8,17 +8,16 @@ namespace BonAppetitManagerApp.Pages.DashboardComponents.MenuSelectionsComponent
 public partial class RestaurantComponentsSelections
 {
     [Parameter] public List<string> TopMenuList { get; set; } = new();
-    [Parameter] public string Selection { get; set; } = "Restaurant Information";
+    [Parameter] public string Selection { get; set; }
 
-    private Task MenuSelectionTask(string selection)
+    private void MenuSelection(string selection)
     {
         Selection = selection;
-        return Task.CompletedTask;
     }
 
     protected override void OnInitialized()
     {
-        if (string.IsNullOrEmpty(Selection))
+        if (string.IsNullOrEmpty(Selection) || Selection != "Restaurant Information" || Selection != "Restaurant Schedule")
             Selection = "Restaurant Information";
     }
 }

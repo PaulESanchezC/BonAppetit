@@ -5,12 +5,15 @@ namespace BonAppetitManagerApp.Pages.DashboardComponents.MenuSelectionsComponent
 public partial class AnalyticComponentsSelections
 {
     [Parameter] public List<string> TopMenuList { get; set; }
-    private string Selection { get; set; } = "Reservations Analysis";
+    [Parameter] public string Selection { get; set; }
 
-    private Task MenuSelectionTask(string selection)
+    private void MenuSelection(string selection)
     {
         Selection = selection;
-        Console.WriteLine(Selection);
-        return Task.CompletedTask;
+    }
+    protected override void OnInitialized()
+    {
+        if (string.IsNullOrEmpty(Selection) || Selection != "Reservations Analysis" || Selection != "Coupon Reservations Analysis" || Selection != "Menus Analysis Researches")
+            Selection = "Reservations Analysis";
     }
 }

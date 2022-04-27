@@ -6,7 +6,7 @@
         @{
             if (Component == "Analytics")
             {
-                <AnalyticComponentsSelections TopMenuList="@AnalyticsTopMenuList"/>
+                <AnalyticComponentsSelections TopMenuList="@AnalyticsTopMenuList" Selection="@TopMenuSelection"/>
             }
             if (Component == "Restaurant")
             {
@@ -18,7 +18,7 @@
             }
             if (Component == "Reservations")
             {
-                <ReservationsComponentsSelections TopMenuList="@ReservationsTopMenuList" />
+                <ReservationsComponentsSelections TopMenuList="@ReservationsTopMenuList" Selection="@TopMenuSelection"/>
             }
             if (Component == "Menus")
             {
