@@ -21,14 +21,20 @@ public partial class EditTable
 
     private TableUpdate TableUpdate { get; set; } = new();
 
+    protected override void OnInitialized()
+    {
+        Table.FrequencyOfReservation *= 60;
+    }
     private async Task UpdateTableInformationAsync()
     {
+        Table.FrequencyOfReservation /= 60;
         TableUpdate = _mapper.Map<TableUpdate>(Table);
         var request = await _tableService.UpdateTableAsync(TableUpdate);
+
         if (request.IsSuccessful)
             Table = request.ResponseObject!.FirstOrDefault()!;
+        Table.FrequencyOfReservation *= 60;
     }
-
     private async Task DeleteTable()
     {
         var tableId = Table.TableId;
@@ -36,5 +42,4 @@ public partial class EditTable
         if (request.IsSuccessful)
             await DeletedTableId.InvokeAsync(tableId);
     }
-
 }

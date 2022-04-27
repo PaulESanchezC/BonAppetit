@@ -7,6 +7,9 @@ public class TableUpdate
     #region Table Properties
 
     [Required(AllowEmptyStrings = false)]
+    public string TableId { get; set; }
+
+    [Required(AllowEmptyStrings = false)]
     public string TableName { get; set; }
 
     [Required(AllowEmptyStrings = false)]

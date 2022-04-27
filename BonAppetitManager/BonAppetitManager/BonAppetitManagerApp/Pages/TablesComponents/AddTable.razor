@@ -1,1 +1,38 @@
-﻿<h3>AddTable</h3>
+﻿<EditForm Model="TableCreate" OnValidSubmit="CreateTableAsync">
+    <DataAnnotationsValidator/>
+    <InputText @bind-Value="TableCreate.RestaurantId" hidden/>
+
+    <div class="row">
+        <div class="col-12">
+            <label class="dashboard-label">Table name</label>
+        </div>
+        <div class="col-12">
+            <InputText @bind-Value="@TableCreate.TableName" class="dashboard-input" />
+            <ValidationMessage For="() => TableCreate.TableName" style="color:#700000" />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <label class="dashboard-label">Amount of seats</label>
+        </div>
+        <div class="col-12">
+            <InputNumber @bind-Value="@TableCreate.AmountOfSeats" class="dashboard-input" />
+            <ValidationMessage For="() => TableCreate.AmountOfSeats" style="color:#700000" />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <label class="dashboard-label">Frequency of reservations (in minutes)</label>
+        </div>
+        <div class="col-12">
+            <InputNumber @bind-Value="@TableCreate.FrequencyOfReservation" class="dashboard-input" />
+            <ValidationMessage For="() => TableCreate.FrequencyOfReservation" style="color:#700000" />
+        </div>
+    </div>
+
+    <div class="row mt-2">
+        <div class="col-12">
+            <button type="submit">Save!</button>
+        </div>
+    </div>
+</EditForm>

@@ -1,30 +1,36 @@
 ﻿<EditForm Model="Table" OnValidSubmit="UpdateTableInformationAsync">
-    <div class="col-4">
+    <InputText @bind-Value="Table.TableId" hidden />
+    <InputText @bind-Value="Table.RestaurantId" hidden />
 
-        <InputText @bind-Value="Table.TableId" hidden />
-        <InputText @bind-Value="Table.RestaurantId" hidden />
+    <div class="dashboard-table">
 
-        <div class="dashboard-table">
-            <div class="col-12">
-                <label class="dashboard-label">Table Name</label>
-                <InputText @bind-Value="@Table.TableName" class="dashboard-table-input" />
-                <ValidationMessage For="() => Table.TableName" class="text-error" />
-            </div>
-            <div class="col-12">
-                <label class="dashboard-label">Amount of seats</label>
-                <InputNumber @bind-Value="@Table.AmountOfSeats" class="dashboard-table-input" />
-                <ValidationMessage For="() => Table.AmountOfSeats" class="text-error" />
-            </div>
-            <div class="col-12">
-                <label class="dashboard-label">Frequency of reservation(in Minutes)</label>
-                <InputNumber @bind-Value="@Table.FrequencyOfReservation" class="dashboard-table-input" />
-                <ValidationMessage For="() => Table.FrequencyOfReservation" class="text-error" />
-            </div>
-
-            <div class="col-12 mt-2">
-                <button type="submit">Edit!</button>
-            </div>
+        <div class="col-12">
+            <label class="dashboard-label">Table Name</label>
+        </div>
+        <div class="col-12">
+            <InputText @bind-Value="@Table.TableName" class="dashboard-table-input" />
+            <ValidationMessage For="() => Table.TableName" style="color:#700000" />
         </div>
 
+        <div class="col-12">
+            <label class="dashboard-label">Amount of seats</label>
+        </div>
+        <div class="col-12">
+            <InputNumber @bind-Value="@Table.AmountOfSeats" class="dashboard-table-input" />
+            <ValidationMessage For="() => Table.AmountOfSeats" style="color:#700000" />
+        </div>
+
+        <div class="col-12">
+            <label class="dashboard-label">Frequency of reservation(in Minutes)</label>
+        </div>
+        <div class="col-12">
+            <InputNumber @bind-Value="@Table.FrequencyOfReservation" class="dashboard-table-input" />
+            <ValidationMessage For="() => Table.FrequencyOfReservation" style="color:#700000" />
+        </div>
+
+        <div class="col-12 mt-2">
+            <button type="submit" class="m-2">Edit</button>
+            <button @onclick="DeleteTable" class="m-2">Delete</button>
+        </div>
     </div>
 </EditForm>

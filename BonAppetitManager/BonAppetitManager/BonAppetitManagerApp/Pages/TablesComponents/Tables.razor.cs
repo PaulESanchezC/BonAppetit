@@ -19,7 +19,6 @@ public partial class Tables
     [Inject] private IMapper _mapper { get; set; }
 
     #endregion
-
     private List<Table?> TablesList { get; set; } = new();
 
     protected override async Task OnInitializedAsync()
@@ -27,7 +26,6 @@ public partial class Tables
         await SetNavigationPropertiesAsync();
         await GetRestaurantTablesAsync();
     }
-
     private async Task GetRestaurantTablesAsync()
     {
         var request = await _tableService.GetRestaurantTables();

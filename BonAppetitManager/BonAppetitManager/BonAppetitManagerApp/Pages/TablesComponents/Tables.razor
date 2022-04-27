@@ -1,7 +1,8 @@
 ﻿<div class="row">
-    
     @foreach (var table in TablesList)
-    {
-        <EditTable Table="@table" DeletedTableId="TableDeletedCallback"/>
-    }
+        {
+            <div class="col-4">
+                <EditTable Table="@table" DeletedTableId="TableDeletedCallback" />
+            </div>
+        }
 </div>
