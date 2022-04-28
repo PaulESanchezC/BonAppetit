@@ -31,6 +31,6 @@ public class RestaurantCreate
     public string RestaurantCuisineType { get; set; }
 
     [Required(AllowEmptyStrings = false)]
-    public double ReservationFee { get; set; }
+    public double RestaurantReservationFee { get; set; }
     #endregion
 }

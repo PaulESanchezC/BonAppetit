@@ -18,9 +18,7 @@ public class PaymentServices : IPaymentServices
     private readonly ApplicationDbContext _db;
     private readonly IMapper _mapper;
     private readonly IPaymentMessageSender _paymentMessageSender;
-    public string GstTaxId { get; set; }
-    public string PstTaxId { get; set; }
-
+    
     public PaymentServices(ApplicationDbContext db, IMapper mapper, IPaymentMessageSender paymentMessageSender)
     {
         _db = db;
@@ -30,8 +28,7 @@ public class PaymentServices : IPaymentServices
 
     public async Task<Response<StripeSession>> CreateStripePaymentSessionAsync(StripeSessionCreate paymentInformation, CancellationToken cancellationToken)
     {
-        await CreateTaxesOptionsAsync(cancellationToken);
-        var bonAppetitFee = 30;
+        var bonAppetitFee = 15;
 
         var options = new SessionCreateOptions
         {
@@ -47,7 +44,7 @@ public class PaymentServices : IPaymentServices
                     PriceData = new SessionLineItemPriceDataOptions
                     {
                         
-                        UnitAmount = (long)paymentInformation.RestaurantReservationFee,
+                        UnitAmount = (long)paymentInformation.RestaurantReservationFee * 100,
                         Currency="CAD",
                         ProductData= new SessionLineItemPriceDataProductDataOptions
                         {
@@ -55,15 +52,15 @@ public class PaymentServices : IPaymentServices
                             Description = "Restaurant reservation fee"
                         },
                         TaxBehavior = "exclusive"
-                    },
+                    }, 
                     Quantity = paymentInformation.TableSeats,
-                    TaxRates = new(){PstTaxId,GstTaxId}
+                    TaxRates = new(){"txr_1KtbswFJXN6PQCt7GV9LU69h","txr_1KtcHKFJXN6PQCt7zqCXMGnp"}
                 },
                 new()
                 {
                     PriceData = new SessionLineItemPriceDataOptions()
                     {
-                        UnitAmount = bonAppetitFee,
+                        UnitAmount = bonAppetitFee * 100,
                         Currency = "CAD",ProductData= new SessionLineItemPriceDataProductDataOptions
                         {
                             Name = $"Bon Appetit App Reservation fee",
@@ -72,12 +69,8 @@ public class PaymentServices : IPaymentServices
                         TaxBehavior = "exclusive"
                     },
                     Quantity = 1,
-                    TaxRates = new(){PstTaxId,GstTaxId}
+                    TaxRates = new(){"txr_1KtbswFJXN6PQCt7GV9LU69h","txr_1KtcHKFJXN6PQCt7zqCXMGnp"}
                 }
-            },
-            AutomaticTax = new SessionAutomaticTaxOptions()
-            {
-                Enabled = true
             },
             Mode = "payment",
             SuccessUrl = "https://localhost:44343//ReservationConfirmed",
@@ -97,7 +90,7 @@ public class PaymentServices : IPaymentServices
                 ResponseObject = null
             };
 
-        var stripeSession = await Task.FromResult(BuildStripeSessionModel(session.Id,bonAppetitFee,paymentInformation.RestaurantReservationFee,paymentInformation.TableSeats));
+        var stripeSession = await Task.FromResult(BuildStripeSessionModel(session.Id,bonAppetitFee,paymentInformation.RestaurantReservationFee, paymentInformation.TableSeats));
 
         return new Response<StripeSession>
         {
@@ -108,7 +101,6 @@ public class PaymentServices : IPaymentServices
             ResponseObject = new(){ stripeSession }
         };
     }
-
     public async Task<Response<PaymentDto>> ConfirmPaymentIsSuccessful(PaymentCreate paymentToConfirm, PaymentMessage message, CancellationToken cancellationToken)
     {
         var service = new SessionService();
@@ -174,7 +166,6 @@ public class PaymentServices : IPaymentServices
 
         return response;
     }
-
     public async Task<Response<PaymentDto>> GetPaymentInformation(string paymentId, CancellationToken cancellationToken)
     {
         var payment = await _db.Payments.Where(payment => payment.PaymentId == paymentId)
@@ -203,36 +194,6 @@ public class PaymentServices : IPaymentServices
     }
 
     #region Helper Methods
-
-    private async Task CreateTaxesOptionsAsync(CancellationToken cancellationToken)
-    {
-        var pstTaxOptions = new TaxRateCreateOptions
-        {
-            DisplayName = "PST",
-            Inclusive = false,
-            Percentage = 9.975m,
-            Country = "CA",
-            State = "QC",
-            Description = "Provincial Sales Tax",
-        };
-
-        var gstTaxOptions = new TaxRateCreateOptions
-        {
-            DisplayName = "GST",
-            Inclusive = false,
-            Percentage = 5,
-            Country = "CA",
-            Description = "Goods and Services Taxes",
-        };
-        var pstTaxService = new TaxRateService();
-        var pstTax = await pstTaxService.CreateAsync(pstTaxOptions, cancellationToken: cancellationToken);
-
-        var gstTaxService = new TaxRateService();
-        var gstTax = await gstTaxService.CreateAsync(pstTaxOptions, cancellationToken: cancellationToken);
-
-        PstTaxId = pstTax.Id;
-        GstTaxId = gstTax.Id;
-    }
     private StripeSession BuildStripeSessionModel(string sessionId, double restaurantFee, double bonAppetitFee, int tableSeats)
     {
         var amount = tableSeats * restaurantFee + bonAppetitFee;
@@ -245,13 +206,12 @@ public class PaymentServices : IPaymentServices
         return new StripeSession
         {
             SessionId = sessionId,
-            RestaurantFee = restaurantFee,
+            RestaurantReservationFee = restaurantFee,
             BonAppetitFee = bonAppetitFee,
             ProvincialTaxes = pst,
             FederalTaxes = gst,
             Amount = total
         };
     }
-
     #endregion
 }

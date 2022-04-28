@@ -3,7 +3,7 @@
 public class StripeSession
 {
     public string SessionId { get; set; }
-    public double RestaurantFee { get; set; }
+    public double RestaurantReservationFee { get; set; }
     public double BonAppetitFee { get; set; }
     public double ProvincialTaxes { get; set; }
     public double FederalTaxes { get; set; }

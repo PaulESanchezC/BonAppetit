@@ -9,7 +9,7 @@ public class PaymentDto
     public string RestaurantId { get; set; }
     public string TableId { get; set; }
     public string ApplicationUserId { get; set; }
-    public double RestaurantFee { get; set; }
+    public double RestaurantReservationFee { get; set; }
     public double BonAppetitFee { get; set; }
     public double ProvincialTaxes { get; set; }
     public double FederalTaxes { get; set; }

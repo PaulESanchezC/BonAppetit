@@ -15,8 +15,8 @@ public class PaymentCreateVm
     [Required]
     public string ApplicationUserId { get; set; }
     [Required]
-    public double RestaurantFee { get; set; }
-    
+    public double RestaurantReservationFee { get; set; }
+
     [Required]
     public double BonAppetitFee { get; set; }
 

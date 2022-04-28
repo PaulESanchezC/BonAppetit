@@ -33,7 +33,6 @@ public class ReservationCreate
     [Required(AllowEmptyStrings = false)]
     public string LastName { get; set; }
 
-    [Required(AllowEmptyStrings = false)]
     public string PaymentTransaction { get; set; }
     #endregion
 }

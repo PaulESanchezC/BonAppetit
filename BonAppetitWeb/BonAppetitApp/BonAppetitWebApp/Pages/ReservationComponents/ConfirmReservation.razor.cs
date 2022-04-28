@@ -41,8 +41,6 @@ public partial class ConfirmReservation
     private Table Table { get; set; } = new();
     private ConfirmReservationVm ConfirmReservationVm { get; set; } = new();
     private ApplicationUser ApplicationUser { get; set; } = new();
-    private string IsUserLoggedIn { get; set; } = "";
-
 
     protected override async Task OnInitializedAsync()
     {
@@ -57,12 +55,15 @@ public partial class ConfirmReservation
         var authState = await _authStateProvider.GetAuthenticationStateAsync();
         if (authState.User.IsInRole(Role.Client) && authState.User.Identity!.IsAuthenticated)
         {
-            IsUserLoggedIn = "disabled";
             ApplicationUser.Id = authState.User.FindFirst(claim => claim.Type == "sub")!.Value;
             ApplicationUser.FirstName = authState.User.FindFirst(claim => claim.Type == "prefered_name")!.Value;
             ApplicationUser.LastName = authState.User.FindFirst(claim => claim.Type == "family_name")!.Value;
             ApplicationUser.PhoneNumber = authState.User.FindFirst(claim => claim.Type == "phonenumber")!.Value;
             ApplicationUser.UserName = authState.User.FindFirst(claim => claim.Type == "username")!.Value;
+        }
+        else
+        {
+            ApplicationUser.Id = string.Empty;
         }
     }
     private void BuildConfirmReservationVm()
@@ -120,11 +121,11 @@ public partial class ConfirmReservation
     {
         var paymentCreate = new PaymentCreateVm
         {
-            ApplicationUserId = ApplicationUser.Id,
+            ApplicationUserId = ConfirmReservationVm.ApplicationUserId,
             RestaurantId = RestaurantId,
             TableId = TableId,
             BonAppetitFee = session.BonAppetitFee,
-            RestaurantFee = session.RestaurantFee,
+            RestaurantReservationFee = session.RestaurantReservationFee,
             ProvincialTaxes = session.ProvincialTaxes,
             FederalTaxes = session.FederalTaxes,
             Amount = session.Amount,
@@ -136,12 +137,12 @@ public partial class ConfirmReservation
     {
         var reservationCreate = new ReservationCreate
         {
-            ApplicationUserId = ApplicationUser.Id,
+            ApplicationUserId = ConfirmReservationVm.ApplicationUserId,
             DateOfReservation = ConfirmReservationVm.DateOfReservation,
-            Email = ApplicationUser.UserName,
-            FirstName = ApplicationUser.FirstName,
-            LastName = ApplicationUser.LastName,
-            Phone = ApplicationUser.PhoneNumber,
+            Email = ConfirmReservationVm.Email,
+            FirstName = ConfirmReservationVm.FirstName,
+            LastName = ConfirmReservationVm.LastName,
+            Phone = ConfirmReservationVm.Phone,
             RestaurantId = RestaurantId,
             StartTime = ConfirmReservationVm.StartTime,
             TableId = TableId,

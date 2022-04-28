@@ -23,7 +23,6 @@ public partial class ReservationConfirmed
     protected override async Task OnInitializedAsync()
     {
         await ConfirmPaymentAsync();
-        await _localStorage.ClearAsync();
     }
 
     private async Task ConfirmPaymentAsync()
@@ -33,7 +32,10 @@ public partial class ReservationConfirmed
         var message =  await BuildPaymentMessage();
         var confirmPayment = await _paymentServices.ConfirmPaymentAsync(paymentInformation, message);
         if (confirmPayment.IsSuccessful)
+        {
             Request = confirmPayment.IsSuccessful;
+            await _localStorage.ClearAsync();
+        }
     }
     private async Task<PaymentMessage> BuildPaymentMessage()
     {

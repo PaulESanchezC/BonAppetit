@@ -12,7 +12,6 @@ public class PaymentCreate
     [Required]
     public string TableId { get; set; }
 
-    [Required]
     public string ApplicationUserId { get; set; }
     [Required]
     public double RestaurantReservationFee { get; set; }
