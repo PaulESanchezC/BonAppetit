@@ -1,5 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Models.PaymentMessageModels;
 using Models.PaymentModels;
+using Models.StripeSessionModels;
 using Services.PaymentServices;
 
 namespace PaymentService.Controllers
@@ -15,7 +17,7 @@ namespace PaymentService.Controllers
         }
 
         [HttpPost("CreatePaymentSession")]
-        public async Task<IActionResult> CreatePaymentSession([FromBody] PaymentCreate paymentInformation,
+        public async Task<IActionResult> CreatePaymentSession([FromBody] StripeSessionCreate paymentInformation,
             CancellationToken cancellationToken)
         {
             if (!ModelState.IsValid)
@@ -26,12 +28,12 @@ namespace PaymentService.Controllers
         }
 
         [HttpPost("ConfirmPayment")]
-        public async Task<IActionResult> ConfirmPayment([FromBody] PaymentDto paymentToConfirm, CancellationToken cancellationToken)
+        public async Task<IActionResult> ConfirmPayment([FromBody] PaymentCreate paymentToConfirm, [FromBody] PaymentMessage message, CancellationToken cancellationToken)
         {
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
 
-            var request = await _paymentServices.ConfirmPaymentIsSuccessful(paymentToConfirm, cancellationToken);
+            var request = await _paymentServices.ConfirmPaymentIsSuccessful(paymentToConfirm, message, cancellationToken);
             return StatusCode(request.StatusCode, request);
         }
     }

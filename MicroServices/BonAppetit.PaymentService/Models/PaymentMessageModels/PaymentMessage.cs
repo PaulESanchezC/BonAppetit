@@ -1,9 +1,11 @@
-﻿using Models.PaymentModels;
-using Models.ResponseModels;
+﻿using Models.EmailModels;
+using Models.ReservationModels;
 
 namespace Models.PaymentMessageModels;
 
 public class PaymentMessage
 {
-    public Response<PaymentDto> Message { get; set; }
+    public ReservationCreate ReservationCreate { get; set; }
+    public List<Email> Emails { get; set; }
+
 }

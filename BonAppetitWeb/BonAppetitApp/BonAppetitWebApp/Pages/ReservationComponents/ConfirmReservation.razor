@@ -9,6 +9,8 @@
 
         <EditForm Model="ConfirmReservationVm" OnValidSubmit="MakeReservation">
             <DataAnnotationsValidator/>
+            <InputText @bind-value="ConfirmReservationVm.ApplicationUserId" hidden disabled/>
+
             <div class="row">
                 <div class="col-6">
                     <div class="row">
@@ -44,14 +46,14 @@
                         </div>
                     </div>
                 </div>
-
+                
                 <div class="col-6">
                     <div class="row">
                         <div class="col-12">
                             <label>First name</label>
                         </div>
                         <div class="col-12">
-                            <input type="text" @bind-value="@ConfirmReservationVm.FirstName" placeholder="First name"/>
+                            <input @bind-value="@ConfirmReservationVm.FirstName" placeholder="First name" @IsUserLoggedIn/>
                             <ValidationMessage For="() => ConfirmReservationVm.FirstName" style="color: darkred"/>
                         </div>
                     </div>
@@ -60,7 +62,7 @@
                             <label>Last name</label>
                         </div>
                         <div class="col-12">
-                            <input type="text" @bind-value="@ConfirmReservationVm.LastName" placeholder="Last name"/>
+                            <input type="text" @bind-value="@ConfirmReservationVm.LastName" placeholder="Last name" @IsUserLoggedIn/>
                             <ValidationMessage For="() => ConfirmReservationVm.LastName" style="color: darkred"/>
                         </div>
                     </div>
@@ -69,7 +71,7 @@
                             <label>Phone</label>
                         </div>
                         <div class="col-12">
-                            <input type="text" @bind-value="@ConfirmReservationVm.Phone" placeholder="Phone"/>
+                            <input type="text" @bind-value="@ConfirmReservationVm.Phone" placeholder="Phone" @IsUserLoggedIn/>
                             <ValidationMessage For="() => ConfirmReservationVm.Phone" style="color: darkred"/>
                         </div>
                     </div>
@@ -78,7 +80,7 @@
                             <label>Email</label>
                         </div>
                         <div class="col-12">
-                            <input type="email" @bind-value="@ConfirmReservationVm.Email" placeholder="E-mail"/>
+                            <input type="email" @bind-value="@ConfirmReservationVm.Email" placeholder="E-mail" @IsUserLoggedIn/>
                             <ValidationMessage For="() => ConfirmReservationVm.Email" style="color: darkred"/>
                         </div>
                     </div>

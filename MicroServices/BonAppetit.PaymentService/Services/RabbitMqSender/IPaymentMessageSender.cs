@@ -4,5 +4,5 @@ namespace Services.RabbitMqSender;
 
 public interface IPaymentMessageSender
 {
-    void SendMessage(PaymentMessage message, string queueName);
+    void SendMessage(PaymentSuccessMessage message, string queueName);
 }

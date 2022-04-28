@@ -25,7 +25,8 @@ services.AddServicesConfigurations();
 //DataAccessConfigurations
 services.AddDbContextOptions();
 //Cors Configurations
-builder.Services.AddCorsConfiguration();
+services.AddCorsConfiguration();
+
 #endregion
 
 var app = builder.Build();
@@ -40,7 +41,6 @@ app.UseHttpsRedirection();
 app.UseCors("AllowAnonymous");
 
 StripeConfiguration.ApiKey = ProxyConfiguration.Use.GetSection("Stripe:SecretKey").Value;
-
 app.UseAuthorization();
 
 app.MapControllers();

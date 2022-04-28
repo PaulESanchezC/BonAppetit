@@ -5,5 +5,5 @@ namespace Services.ReservationServices;
 
 public interface IReservationServices
 {
-    Task<Response<Reservation>> MakeReservationAsync(ReservationCreateVm reservationToMake);
+    Task<Response<Reservation>> MakeReservationAsync(ReservationCreate reservationToMake);
 }

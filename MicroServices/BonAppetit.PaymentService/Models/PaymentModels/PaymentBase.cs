@@ -4,6 +4,8 @@ namespace Models.PaymentModels;
 
 public class PaymentBase
 {
+    #region Payment properties
+
     [Key]
     public string PaymentId { get; set; } = Guid.NewGuid().ToString();
 
@@ -11,23 +13,31 @@ public class PaymentBase
     public string RestaurantId { get; set; }
 
     [Required]
-    public string RestaurantName { get; set; }
-
-    [Required]
     public string TableId { get; set; }
-
-    [Required]
-    public int TableSeats { get; set; }
-
-    public string ReservationId { get; set; }
 
     [Required]
     public string ApplicationUserId { get; set; }
 
     [Required]
+    public double RestaurantFee { get; set; }
+
+    [Required]
+    public double BonAppetitFee { get; set; }
+
+    [Required]
+    public double ProvincialTaxes { get; set; }
+
+    [Required]
+    public double FederalTaxes { get; set; }
+
+    [Required]
     public double Amount { get; set; }
 
-    public DateTime DateOfPayment { get; set; }
+    [Required]
+    public string SessionId { get; set; }
 
-    public bool IsPayed { get; set; }
+    public DateTime DateOfPayment { get; set; } = DateTime.Now;
+
+    #endregion
+
 }

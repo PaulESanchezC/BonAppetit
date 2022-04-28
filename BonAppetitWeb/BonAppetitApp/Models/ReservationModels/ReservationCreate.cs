@@ -2,7 +2,7 @@
 
 namespace Models.ReservationModels;
 
-public class ReservationCreateVm
+public class ReservationCreate
 {
     #region Reservation Properties
 

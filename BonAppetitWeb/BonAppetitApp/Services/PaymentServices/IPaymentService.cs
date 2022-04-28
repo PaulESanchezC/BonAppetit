@@ -1,10 +1,12 @@
-﻿using Models.PaymentModels;
+﻿using Models.PaymentMessageModels;
+using Models.PaymentModels;
 using Models.ResponseModels;
+using Models.StripeSessionModels;
 
 namespace Services.PaymentServices;
 
 public interface IPaymentService
 {
-    Task<Response<Payment>> CreatePaymentSessionAsync(PaymentCreateVm paymentInformation);
-    Task<Response<Payment>> ConfirmPaymentAsync(Payment paymentInformation);
+    Task<Response<StripeSession>> CreatePaymentSessionAsync(StripeSessionCreate paymentInformation);
+    Task<Response<Payment>> ConfirmPaymentAsync(PaymentCreateVm paymentInformation, PaymentMessage message);
 }

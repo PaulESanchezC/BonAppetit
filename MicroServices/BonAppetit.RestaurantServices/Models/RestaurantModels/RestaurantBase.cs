@@ -12,7 +12,7 @@ public class RestaurantBase
     public string RestaurantId { get; set; } = "";
     public string RestaurantName { get; set; } = "";
     public string RestaurantPhone { get; set; } = "";
-    public string RestaurantEmail { get; set; }
+    public string RestaurantEmail { get; set; } = "";
     public string RestaurantAddress { get; set; } = "";
     public string RestaurantWebsite { get; set; } = "";
     public string RestaurantCiy { get; set; } = "";

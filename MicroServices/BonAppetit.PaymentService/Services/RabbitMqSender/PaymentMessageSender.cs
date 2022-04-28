@@ -12,13 +12,12 @@ public class PaymentMessageSender : IPaymentMessageSender
     private readonly RabbitMqOptions _rabbitMqOptions;
     private IConnection _connection;
 
-    public PaymentMessageSender(IConnection connection, IOptions<RabbitMqOptions> options)
+    public PaymentMessageSender(IOptions<RabbitMqOptions> options)
     {
-        _connection = connection;
         _rabbitMqOptions = options.Value;
     }
 
-    public void SendMessage(PaymentMessage message, string queueName)
+    public void SendMessage(PaymentSuccessMessage message, string queueName)
     {
         var factory = new ConnectionFactory()
         {

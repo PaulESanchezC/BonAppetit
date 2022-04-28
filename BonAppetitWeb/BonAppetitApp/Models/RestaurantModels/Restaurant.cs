@@ -18,11 +18,15 @@ public class Restaurant
 
     public string RestaurantAddress { get; set; }
 
+    public string RestaurantEmail { get; set; }
+
     public string RestaurantWebsite { get; set; }
 
     public string RestaurantCiy { get; set; }
 
     public string RestaurantCuisineType { get; set; }
+
+    public double RestaurantReservationFee { get; set; }
 
     public List<Image> Images { get; set; }
     public List<Menu> RestaurantMenu { get; set; }

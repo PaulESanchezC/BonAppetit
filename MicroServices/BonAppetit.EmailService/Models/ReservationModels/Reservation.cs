@@ -1,5 +1,4 @@
-﻿using System.ComponentModel.DataAnnotations;
-using Models.ApplicationUserModels;
+﻿using Models.ApplicationUserModels;
 
 namespace Models.ReservationModels;
 

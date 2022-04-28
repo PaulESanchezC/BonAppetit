@@ -14,7 +14,7 @@ public class ReservationServices : IReservationServices
         _httpClient = httpClient;
     }
 
-    public async Task<Response<Reservation>> MakeReservationAsync(ReservationCreateVm reservationToMake)
+    public async Task<Response<Reservation>> MakeReservationAsync(ReservationCreate reservationToMake)
     {
         var request = new HttpRequestMessage(HttpMethod.Post, "https://localhost:44314/api/Reservation/MakeReservation");
         request.Content = new StringContent(JsonConvert.SerializeObject(reservationToMake), Encoding.UTF8,

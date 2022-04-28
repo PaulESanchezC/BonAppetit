@@ -2,25 +2,24 @@
 <div class="container">
     <div class="row">
         <div class="col-12 page-title">
-            <h4>Thank you</h4>
-        </div>
-
-
-        <div class="row">
-            <div class="col-12">
-                <span>Your Reference number is: @Reservation.OrderId</span>
+            @if (Request)
+            {
+                <h2 class="lobster">Thank you!</h2>
                 <br />
-                <span>Reservation Information:</span>
-                <ul>
-                    <li>Restaurant's name: @Restaurant.RestaurantName</li>
-                    <li>Restaurant's Address: @Restaurant.RestaurantAddress</li>
-                    <li>Restaurant's phone: @Restaurant.RestaurantPhone</li>
+                <h4 class="lobster link">An email will be sent shortly, with the confirmation of the reservation and more.</h4>
+                <br />
+                <NavLink class="bg-transparent lobster text-black-50 link" href="">Bon Appetit!</NavLink>
+            }
+            else
+            {
+                <h2 class="lobster">Sorry!</h2>
+                <br />
+                <span class="link">An error has occurred, please try again.</span>
+                <p><mark>Payment was not successful</mark></p>
+                <br />
+                <NavLink class="bg-transparent lobster text-black-50 link" href="">Bon Appetit!</NavLink>
 
-                    <li>Reserved for: @Reservation.FirstName @Reservation.LastName</li>
-                    <li>Time: @Reservation.StartTime.ToString()h</li>
-                </ul>
-
-            </div>
+            }
         </div>
     </div>
 </div>

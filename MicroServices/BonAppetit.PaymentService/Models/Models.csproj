@@ -7,8 +7,8 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Folder Include="StripeSessionModels\" />
     <Folder Include="Options\" />
-    <Folder Include="PaymentMessageModels\" />
   </ItemGroup>
 
 </Project>
