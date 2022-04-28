@@ -29,9 +29,12 @@ public class PaymentService : IPaymentService
     public async Task<Response<Payment>> ConfirmPaymentAsync(PaymentCreateVm paymentInformation, PaymentMessage message)
     {
         var request = new HttpRequestMessage(HttpMethod.Post, "https://localhost:44303/api/Payment/ConfirmPayment");
-        request.Content = new StringContent(JsonConvert.SerializeObject(paymentInformation), Encoding.UTF8,
-            "application/json");
-        request.Content = new StringContent(JsonConvert.SerializeObject(message), Encoding.UTF8,
+        var paymentSuccess = new PaymentSuccess
+        {
+            PaymentCreate = paymentInformation,
+            PaymentMessage = message
+        };
+        request.Content = new StringContent(JsonConvert.SerializeObject(paymentSuccess), Encoding.UTF8,
             "application/json");
 
         var client = await _httpClient.SendAsync(request);

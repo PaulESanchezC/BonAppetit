@@ -33,6 +33,9 @@ public class RestaurantDto
     [Required(AllowEmptyStrings = false)]
     public string RestaurantCuisineType { get; set; }
 
+    [Required(AllowEmptyStrings = false)]
+    public double ReservationFee { get; set; }
+
     public List<ImageDto> Images { get; set; }
     public List<MenuDto> RestaurantMenu { get; set; }
     public List<TableDto> RestaurantTables { get; set; }

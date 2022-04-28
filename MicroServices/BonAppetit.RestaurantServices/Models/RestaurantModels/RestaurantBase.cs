@@ -17,6 +17,7 @@ public class RestaurantBase
     public string RestaurantWebsite { get; set; } = "";
     public string RestaurantCiy { get; set; } = "";
     public string RestaurantCuisineType { get; set; } = "";
+    public double ReservationFee { get; set; } = 20;
     public List<ImageBase> RestaurantImages { get; set; }
     public List<MenuBase> RestaurantMenu { get; set; }
     public List<TableBase> RestaurantTables { get; set; }

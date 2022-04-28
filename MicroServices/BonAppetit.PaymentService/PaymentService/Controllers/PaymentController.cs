@@ -28,12 +28,12 @@ namespace PaymentService.Controllers
         }
 
         [HttpPost("ConfirmPayment")]
-        public async Task<IActionResult> ConfirmPayment([FromBody] PaymentCreate paymentToConfirm, [FromBody] PaymentMessage message, CancellationToken cancellationToken)
+        public async Task<IActionResult> ConfirmPayment([FromBody]PaymentSuccess paymentSuccess, CancellationToken cancellationToken)
         {
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
 
-            var request = await _paymentServices.ConfirmPaymentIsSuccessful(paymentToConfirm, message, cancellationToken);
+            var request = await _paymentServices.ConfirmPaymentIsSuccessful(paymentSuccess.PaymentCreate, paymentSuccess.PaymentMessage, cancellationToken);
             return StatusCode(request.StatusCode, request);
         }
     }

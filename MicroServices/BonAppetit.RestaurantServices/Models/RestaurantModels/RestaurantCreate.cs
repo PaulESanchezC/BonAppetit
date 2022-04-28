@@ -29,5 +29,8 @@ public class RestaurantCreate
 
     [Required(AllowEmptyStrings = false)]
     public string RestaurantCuisineType { get; set; }
+
+    [Required(AllowEmptyStrings = false)]
+    public double ReservationFee { get; set; }
     #endregion
 }

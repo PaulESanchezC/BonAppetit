@@ -46,6 +46,7 @@ public class PaymentServices : IPaymentServices
                 {
                     PriceData = new SessionLineItemPriceDataOptions
                     {
+                        
                         UnitAmount = (long)paymentInformation.RestaurantReservationFee,
                         Currency="CAD",
                         ProductData= new SessionLineItemPriceDataProductDataOptions
@@ -63,8 +64,11 @@ public class PaymentServices : IPaymentServices
                     PriceData = new SessionLineItemPriceDataOptions()
                     {
                         UnitAmount = bonAppetitFee,
-                        Currency = "CAD",
-                        Product = "Bon Appetit App Reservation fee",
+                        Currency = "CAD",ProductData= new SessionLineItemPriceDataProductDataOptions
+                        {
+                            Name = $"Bon Appetit App Reservation fee",
+                            Description = "Bon Appetit App Reservation fee"
+                        },
                         TaxBehavior = "exclusive"
                     },
                     Quantity = 1,
