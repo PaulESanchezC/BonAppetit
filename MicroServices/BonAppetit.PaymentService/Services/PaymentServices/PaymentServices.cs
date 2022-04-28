@@ -2,8 +2,12 @@
 using AutoMapper;
 using Data;
 using Microsoft.EntityFrameworkCore;
+using Models.PaymentMessageModels;
 using Models.PaymentModels;
 using Models.ResponseModels;
+using Services.RabbitMqSender;
+using StaticData;
+
 
 namespace Services.PaymentServices;
 
@@ -11,10 +15,12 @@ public class PaymentServices : IPaymentServices
 {
     private readonly ApplicationDbContext _db;
     private readonly IMapper _mapper;
-    public PaymentServices(ApplicationDbContext db, IMapper mapper)
+    private readonly IPaymentMessageSender _paymentMessageSender;
+    public PaymentServices(ApplicationDbContext db, IMapper mapper, IPaymentMessageSender paymentMessageSender)
     {
         _db = db;
         _mapper = mapper;
+        _paymentMessageSender = paymentMessageSender;
     }
 
     public async Task<Response<PaymentDto>> CreateStripePaymentSessionAsync(PaymentCreate paymentInformation, CancellationToken cancellationToken)
@@ -166,7 +172,8 @@ public class PaymentServices : IPaymentServices
         }
 
         var paymentDto = _mapper.Map<PaymentDto>(payment);
-        return new Response<PaymentDto>
+
+        var response = new Response<PaymentDto>
         {
             IsSuccessful = true,
             StatusCode = 200,
@@ -174,5 +181,10 @@ public class PaymentServices : IPaymentServices
             Message = "Ok",
             ResponseObject = new() { paymentDto }
         };
+
+        var paymentMessage = new PaymentMessage { Message = response };
+        _paymentMessageSender.SendMessage(paymentMessage, RabbitMqConstants.QueueName);
+
+        return response;
     }
 }

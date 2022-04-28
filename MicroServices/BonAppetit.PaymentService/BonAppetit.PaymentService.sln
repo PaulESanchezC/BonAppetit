@@ -3,19 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.1.32319.34
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PaymentService", "PaymentService\PaymentService.csproj", "{27C3DE8E-6327-46D5-AE2D-F4C9D9082FBF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PaymentService", "PaymentService\PaymentService.csproj", "{27C3DE8E-6327-46D5-AE2D-F4C9D9082FBF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Models", "Models\Models.csproj", "{1C374B14-0A04-4EEA-BD92-85E4B38FDE81}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Models", "Models\Models.csproj", "{1C374B14-0A04-4EEA-BD92-85E4B38FDE81}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Data", "Data\Data.csproj", "{BA17CD29-A5DE-468D-8B35-CCA6E6855783}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Data", "Data\Data.csproj", "{BA17CD29-A5DE-468D-8B35-CCA6E6855783}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Configurations", "Configurations\Configurations.csproj", "{74024A17-7D6E-46AA-8202-3096400BCFFE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Configurations", "Configurations\Configurations.csproj", "{74024A17-7D6E-46AA-8202-3096400BCFFE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Services", "Services\Services.csproj", "{35D83D0A-1BFC-44D4-8338-624FF38AC524}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Services", "Services\Services.csproj", "{35D83D0A-1BFC-44D4-8338-624FF38AC524}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StaticData", "StaticData\StaticData.csproj", "{F7974988-8EDC-4FAB-9CEF-7FA0F961D8AC}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "Tests\Tests.csproj", "{8644E196-FA61-4F0C-88F9-F1F4B3F0CCC6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StaticData", "StaticData\StaticData.csproj", "{F7974988-8EDC-4FAB-9CEF-7FA0F961D8AC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -47,10 +45,6 @@ Global
 		{F7974988-8EDC-4FAB-9CEF-7FA0F961D8AC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F7974988-8EDC-4FAB-9CEF-7FA0F961D8AC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F7974988-8EDC-4FAB-9CEF-7FA0F961D8AC}.Release|Any CPU.Build.0 = Release|Any CPU
-		{8644E196-FA61-4F0C-88F9-F1F4B3F0CCC6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8644E196-FA61-4F0C-88F9-F1F4B3F0CCC6}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8644E196-FA61-4F0C-88F9-F1F4B3F0CCC6}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8644E196-FA61-4F0C-88F9-F1F4B3F0CCC6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
