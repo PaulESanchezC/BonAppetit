@@ -30,7 +30,6 @@ public partial class ReservationConfirmed
         if (confirmPayment.IsSuccessful)
         {
             Request = confirmPayment.IsSuccessful;
-            await _localStorage.ClearAsync();
         }
     }
     private async Task<PaymentMessage> BuildPaymentMessage()

@@ -11,7 +11,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Services", "Services\Servic
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Models", "Models\Models.csproj", "{67CA8810-FC89-46AA-A48C-FA6FA4D1C87E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StaticData", "StaticData\StaticData.csproj", "{DC98F511-91CE-421C-809A-C3A3E350940A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StaticData", "StaticData\StaticData.csproj", "{DC98F511-91CE-421C-809A-C3A3E350940A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

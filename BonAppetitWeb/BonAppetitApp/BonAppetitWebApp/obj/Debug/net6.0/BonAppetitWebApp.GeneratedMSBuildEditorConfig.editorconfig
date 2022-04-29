@@ -30,6 +30,14 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWJvdXQucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/Paulyglot/Desktop/Portoflio/BonAppetit/BonAppetitWeb/BonAppetitApp/BonAppetitWebApp/Pages/RegistrationComponents/RegistrationConfirmed.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmVnaXN0cmF0aW9uQ29tcG9uZW50c1xSZWdpc3RyYXRpb25Db25maXJtZWQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Paulyglot/Desktop/Portoflio/BonAppetit/BonAppetitWeb/BonAppetitApp/BonAppetitWebApp/Pages/RegistrationComponents/UserRegistration.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmVnaXN0cmF0aW9uQ29tcG9uZW50c1xVc2VyUmVnaXN0cmF0aW9uLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Paulyglot/Desktop/Portoflio/BonAppetit/BonAppetitWeb/BonAppetitApp/BonAppetitWebApp/Pages/ReservationComponents/AvailableTablesTimeBrackets.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmVzZXJ2YXRpb25Db21wb25lbnRzXEF2YWlsYWJsZVRhYmxlc1RpbWVCcmFja2V0cy5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 

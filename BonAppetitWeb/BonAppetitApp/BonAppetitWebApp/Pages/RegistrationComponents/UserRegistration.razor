@@ -1,0 +1,38 @@
+﻿@page "/UserRegistration"
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12 page-title">
+            <h4>Register as a Restaurant</h4>
+        </div>
+        
+        
+        <EditForm Model="ApplicationUserCreate" OnValidSubmit="RegisterUser">
+            <DataAnnotationsValidator/>
+            <ValidationSummary/>
+            <InputText @bind-Value="ApplicationUserCreate.PhoneNumber" hidden/>
+            <InputText @bind-Value="ApplicationUserCreate.LastName" hidden/>
+            <InputText @bind-Value="ApplicationUserCreate.FirstName" hidden/>
+
+            <div class="row">
+                <label>Username</label>
+                <InputText @bind-Value="@ApplicationUserCreate.UserName"  />
+                <ValidationMessage For="() => ApplicationUserCreate.UserName" />
+            </div>
+            <div class="row">
+                <label>Password</label>
+                <InputText @bind-Value="@ApplicationUserCreate.Password"  />
+                <ValidationMessage For="() => ApplicationUserCreate.Password" />
+            </div>
+            <div class="row">
+                <label>Confirm password</label>
+                <InputText @bind-Value="@ApplicationUserCreate.ConfirmPassword"  />
+                <ValidationMessage For="() => ApplicationUserCreate.ConfirmPassword" /> 
+            </div>
+            
+            <div class="row">
+                <button type="submit">Create Account</button>
+            </div>
+        </EditForm>
+    </div>
+</div>

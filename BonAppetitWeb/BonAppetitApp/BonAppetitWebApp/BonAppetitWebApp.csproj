@@ -15,6 +15,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Include="Pages\RegistrationComponents\UserRegistration.razor" />
     <None Include="wwwroot\Fonts\lobster-regular-webfont.woff2" />
     <None Include="wwwroot\Fonts\titilliumweb-light-webfont.woff2" />
     <None Include="wwwroot\lib\bootstrap\js\bootstrap.bundle.min.js" />

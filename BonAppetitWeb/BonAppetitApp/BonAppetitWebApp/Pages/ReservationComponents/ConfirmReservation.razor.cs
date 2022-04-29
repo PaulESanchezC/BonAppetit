@@ -34,7 +34,6 @@ public partial class ConfirmReservation
     [Inject] private NavigationManager _navigationManager { get; set; }
     [Inject] private ILocalStorageService _localStorage { get; set; }
     [Inject] private AuthenticationStateProvider _authStateProvider { get; set; }
-
     #endregion
 
     private Restaurant Restaurant { get; set; } = new();
