@@ -12,7 +12,9 @@ public static class ServiceConfiguration
     {
         services.AddScoped<IReservationService, ReservationService>();
         services.AddScoped<IRabbitMqService, RabbitMqService>();
+        
         services.AddHostedService<RabbitMqService>();
+        
         services.Configure<RabbitMqOptions>(ProxyConfiguration.Use.GetSection("RabbitMq"));
         return services;
     }

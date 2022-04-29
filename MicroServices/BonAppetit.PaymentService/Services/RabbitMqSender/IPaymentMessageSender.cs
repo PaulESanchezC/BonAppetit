@@ -1,8 +1,8 @@
-﻿using Models.PaymentMessageModels;
+﻿using Models.MessageQueueModels.PaymentSuccessMessageModels;
 
 namespace Services.RabbitMqSender;
 
 public interface IPaymentMessageSender
 {
-    void SendMessage(PaymentSuccessMessage message, string queueName);
+    void SendPaymentSuccessMessage(PaymentSuccessMessage message);
 }

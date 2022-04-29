@@ -2,13 +2,11 @@
 using AutoMapper;
 using Data;
 using Microsoft.EntityFrameworkCore;
-using Models.PaymentMessageModels;
+using Models.MessageQueueModels.PaymentSuccessMessageModels;
 using Models.PaymentModels;
 using Models.ResponseModels;
 using Models.StripeSessionModels;
 using Services.RabbitMqSender;
-using StaticData;
-using Stripe;
 
 
 namespace Services.PaymentServices;
@@ -162,7 +160,7 @@ public class PaymentServices : IPaymentServices
         message.ReservationCreate.PaymentTransaction = paymentDto.PaymentId;
         var successMessage = _mapper.Map<PaymentSuccessMessage>(message);
         successMessage.Payment = paymentDto;
-        _paymentMessageSender.SendMessage(successMessage, RabbitMqConstants.QueueName);
+        _paymentMessageSender.SendPaymentSuccessMessage(successMessage);
 
         return response;
     }

@@ -759,6 +759,16 @@
         "runtime": {
           "bin/placeholder/Models.dll": {}
         }
+      },
+      "StaticData/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/StaticData.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/StaticData.dll": {}
+        }
       }
     }
   },
@@ -2136,6 +2146,11 @@
       "type": "project",
       "path": "../Models/Models.csproj",
       "msbuildProject": "../Models/Models.csproj"
+    },
+    "StaticData/1.0.0": {
+      "type": "project",
+      "path": "../StaticData/StaticData.csproj",
+      "msbuildProject": "../StaticData/StaticData.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -2145,7 +2160,8 @@
       "Microsoft.AspNetCore.Hosting.Abstractions >= 2.2.0",
       "Models >= 1.0.0",
       "Newtonsoft.Json >= 13.0.1",
-      "RabbitMQ.Client >= 6.2.4"
+      "RabbitMQ.Client >= 6.2.4",
+      "StaticData >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -2180,6 +2196,9 @@
             },
             "C:\\Users\\Paulyglot\\Desktop\\Portoflio\\BonAppetit\\MicroServices\\BonAppetit.ReservationService\\Models\\Models.csproj": {
               "projectPath": "C:\\Users\\Paulyglot\\Desktop\\Portoflio\\BonAppetit\\MicroServices\\BonAppetit.ReservationService\\Models\\Models.csproj"
+            },
+            "C:\\Users\\Paulyglot\\Desktop\\Portoflio\\BonAppetit\\MicroServices\\BonAppetit.ReservationService\\StaticData\\StaticData.csproj": {
+              "projectPath": "C:\\Users\\Paulyglot\\Desktop\\Portoflio\\BonAppetit\\MicroServices\\BonAppetit.ReservationService\\StaticData\\StaticData.csproj"
             }
           }
         }

@@ -1,5 +1,5 @@
 ﻿using AutoMapper;
-using Models.PaymentMessageModels;
+using Models.MessageQueueModels.PaymentSuccessMessageModels;
 using Models.PaymentModels;
 
 namespace Configurations.AutoMapperConfigurations;

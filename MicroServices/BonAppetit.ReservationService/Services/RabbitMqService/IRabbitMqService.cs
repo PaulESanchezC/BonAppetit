@@ -5,5 +5,5 @@ namespace Services.RabbitMqService;
 
 public interface IRabbitMqService
 {
-    void SendEmailMessage(List<Email> Email);
+    void SendReservationSuccessMessage(List<Email> message);
 }
