@@ -31,6 +31,7 @@ builder.Services.AddAutoMapperMapConfigurations();
 builder.Services.AddAuthenticationConfigurations();
 //Services Configurations
 builder.Services.AddServicesConfigurations();
+builder.Services.AddMessageQueueServicesConfigurations();
 
 #endregion
 

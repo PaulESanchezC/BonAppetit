@@ -15,13 +15,12 @@ namespace Services.RabbitMqService;
 public class RabbitMqService : BackgroundService , IRabbitMqService
 {
     private readonly RabbitMqOptions _rabbitMqOptions;
-    private readonly IMessageQueueHandler _messageQueueHandler;
+    private readonly MessageQueueHandler _messageQueueHandler;
     private IConnection _connection;
     private IModel _channel;
 
-    public RabbitMqService(IConnection connection, IOptions<RabbitMqOptions> options, IMessageQueueHandler messageQueueHandler)
+    public RabbitMqService(IOptions<RabbitMqOptions> options, MessageQueueHandler messageQueueHandler)
     {
-        _connection = connection;
         _messageQueueHandler = messageQueueHandler;
         _rabbitMqOptions = options.Value;
     }
@@ -41,13 +40,13 @@ public class RabbitMqService : BackgroundService , IRabbitMqService
         _channel = _connection.CreateModel();
         _channel.QueueDeclare(RabbitMqConstants.QueuePaymentSuccess, false, false, false);
 
-        var consumer = new AsyncEventingBasicConsumer(_channel);
-        consumer.Received += async (channel, message) =>
+        var consumer = new EventingBasicConsumer(_channel);
+        consumer.Received += (channel, message) =>
         {
             var messageContent = Encoding.UTF8.GetString(message.Body.ToArray());
             var paymentSuccessMessage = JsonConvert.DeserializeObject<PaymentSuccessMessage>(messageContent);
 
-            await _messageQueueHandler.PaymentSuccessMessageHandlerAsync(paymentSuccessMessage, cancellationToken);
+            _messageQueueHandler.PaymentSuccessMessageHandlerAsync(paymentSuccessMessage, cancellationToken).GetAwaiter().GetResult();
             _channel.BasicAck(message.DeliveryTag,false);
         };
         _channel.BasicConsume(RabbitMqConstants.QueuePaymentSuccess, false, consumer);

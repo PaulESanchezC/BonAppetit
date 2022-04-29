@@ -1,4 +1,9 @@
-﻿using Configurations.ConfigurationsHelper;
+﻿using AutoMapper;
+using Configurations.AutoMapperConfigurations;
+using Configurations.ConfigurationsHelper;
+using Data;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Models.Options;
 using Services.MessageQueueHandlerService;
@@ -12,12 +17,6 @@ public static class ServiceConfiguration
     public static IServiceCollection AddServicesConfigurations(this IServiceCollection services)
     {
         services.AddScoped<IReservationService, ReservationService>();
-        services.AddScoped<IRabbitMqService, RabbitMqService>();
-        services.AddScoped<IMessageQueueHandler, MessageQueueHandler>();
-
-        services.AddHostedService<RabbitMqService>();
-        
-        services.Configure<RabbitMqOptions>(ProxyConfiguration.Use.GetSection("RabbitMq"));
         return services;
     }
 }
