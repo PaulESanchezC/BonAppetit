@@ -37,3 +37,4 @@ C:\Users\Paulyglot\Desktop\Portoflio\BonAppetit\MicroServices\BonAppetit.EmailSe
 C:\Users\Paulyglot\Desktop\Portoflio\BonAppetit\MicroServices\BonAppetit.EmailService\EmailService\bin\Debug\net6.0\Services.dll
 C:\Users\Paulyglot\Desktop\Portoflio\BonAppetit\MicroServices\BonAppetit.EmailService\EmailService\bin\Debug\net6.0\Models.pdb
 C:\Users\Paulyglot\Desktop\Portoflio\BonAppetit\MicroServices\BonAppetit.EmailService\EmailService\bin\Debug\net6.0\Services.pdb
+C:\Users\Paulyglot\Desktop\Portoflio\BonAppetit\MicroServices\BonAppetit.EmailService\EmailService\bin\Debug\net6.0\RabbitMQ.Client.dll

@@ -8,13 +8,16 @@
 
 	<ItemGroup>
 		<PackageReference Include="Mailjet.Api" Version="2.0.2" />
+		<PackageReference Include="Microsoft.AspNetCore.Hosting.Abstractions" Version="2.2.0" />
 		<PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="6.0.0" />
 		<PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="6.0.0" />
 		<PackageReference Include="Microsoft.Extensions.Options" Version="6.0.0" />
+		<PackageReference Include="RabbitMQ.Client" Version="6.2.4" />
 	</ItemGroup>
 
 	<ItemGroup>
 	  <ProjectReference Include="..\Models\Models.csproj" />
+	  <ProjectReference Include="..\StaticData\StaticData.csproj" />
 	</ItemGroup>
 
 </Project>

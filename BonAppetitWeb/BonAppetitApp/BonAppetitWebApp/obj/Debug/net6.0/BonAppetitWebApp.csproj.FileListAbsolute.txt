@@ -1495,7 +1495,6 @@ C:\Users\Paulyglot\Desktop\Portoflio\BonAppetit\BonAppetitWeb\BonAppetitApp\BonA
 C:\Users\Paulyglot\Desktop\Portoflio\BonAppetit\BonAppetitWeb\BonAppetitApp\BonAppetitWebApp\obj\Debug\net6.0\build-gz\QkK3+t5m.gz
 C:\Users\Paulyglot\Desktop\Portoflio\BonAppetit\BonAppetitWeb\BonAppetitApp\BonAppetitWebApp\obj\Debug\net6.0\scopedcss\Pages\Index.razor.rz.scp.css
 C:\Users\Paulyglot\Desktop\Portoflio\BonAppetit\BonAppetitWeb\BonAppetitApp\BonAppetitWebApp\obj\Debug\net6.0\scopedcss\Pages\RestaurantComponents\RestaurantDetails.razor.rz.scp.css
-C:\Users\Paulyglot\Desktop\Portoflio\BonAppetit\BonAppetitWeb\BonAppetitApp\BonAppetitWebApp\obj\Debug\net6.0\scopedcss\Pages\ReservationComponents\AvailableTablesTimeBrackets.razor.rz.scp.css
 C:\Users\Paulyglot\Desktop\Portoflio\BonAppetit\BonAppetitWeb\BonAppetitApp\BonAppetitWebApp\obj\Debug\net6.0\scopedcss\Pages\RestaurantComponents\IndexRestaurant.razor.rz.scp.css
 C:\Users\Paulyglot\Desktop\Portoflio\BonAppetit\BonAppetitWeb\BonAppetitApp\BonAppetitWebApp\bin\Debug\net6.0\wwwroot\_framework\Blazored.LocalStorage.dll
 C:\Users\Paulyglot\Desktop\Portoflio\BonAppetit\BonAppetitWeb\BonAppetitApp\BonAppetitWebApp\bin\Debug\net6.0\wwwroot\_framework\StaticData.dll

@@ -203,21 +203,21 @@
       "mscorlib.dll": "sha256-Q4A\/043fz702a7DDbm+JAtMHV3jKAZ9k8khztTMKp2M=",
       "netstandard.dll": "sha256-W9cwgVmBZsddVw3WVFMC5Gya92UufvbVTNR4+u7pnR0=",
       "System.Private.CoreLib.dll": "sha256-KVnZkFos\/ML\/3S2isVijfmFZXO4zEQeCga6BZvGdTbY=",
-      "Configurations.dll": "sha256-Vct37WUkgmlgH7lemTpNpaRp0xTXxBOuFTsg9U9iQxw=",
-      "Models.dll": "sha256-TWP86FShKNkXMLMawhM4urwSCIyJJ0qWetO\/83zKIXo=",
-      "Services.dll": "sha256-n4XaQVz9Mf2VFU2LkNMR1DwAF7MRiLFT2GviJ0No7F8=",
-      "StaticData.dll": "sha256-HRUzqIDwQQtDsbH\/b8KmffgQq25KrXP0aTvV2pT0Pkc=",
-      "BonAppetitWebApp.dll": "sha256-BVSnT4hcMkD\/+rUes7bhsBtQkfz7DhBAaeI5vnaZ+KE="
+      "Configurations.dll": "sha256-bEshbjbC2MjUyclxPxZhP2K+8Ggttj+vwB84emVeQBQ=",
+      "Models.dll": "sha256-j5AYabdMGoMQNwY0TbJQR96LcAKWoJ7oFyoYNsLNwh4=",
+      "Services.dll": "sha256-xj8FWYGunqoMCXY9inT6S66bdxHnv9xZWFdtF8SIrvs=",
+      "StaticData.dll": "sha256-4K0bUSb86p1ExIB8lRbrVMW7lcGybEXrUQ0yWnyMr3I=",
+      "BonAppetitWebApp.dll": "sha256-dAPuU65LxJajTtgg0sGDkFRueZ4X9XsBgh3m4jDp2Ng="
     },
     "extensions": null,
     "lazyAssembly": null,
     "libraryInitializers": null,
     "pdb": {
-      "Configurations.pdb": "sha256-QRRn7mzDsuZT4RC21TWslgb8ATITgUE2URnlF3O+BBw=",
-      "StaticData.pdb": "sha256-Qct2Hgm+DP6o0P0tvMWk9jW3wZmdaJL\/ygipZOhcXtY=",
-      "Models.pdb": "sha256-QzrFCwTX9g64vsEMZXWUxQw0p8AmM2acOKkHLPDm+ZQ=",
-      "Services.pdb": "sha256-V\/W0pPhS3QknPCx4+k0SYLBsHmbHs0ZPr8L+dTQ2SUU=",
-      "BonAppetitWebApp.pdb": "sha256-L6mIMdPE445ss7cUnoxkSjx+lXbS7r1\/YRpdWoDiaHY="
+      "Configurations.pdb": "sha256-cXwxulVVz8TwQQyktrum0ljt9zH37lzP0OGyOT3h\/uo=",
+      "StaticData.pdb": "sha256-M+aAcDoyY8Xfukd92gx9tVtcIbJ5dJbA1Yzy\/+9U9l4=",
+      "Models.pdb": "sha256-Sjl6AYsaHAcqSEDp8bel5S8tm0O073I9m0bk+LKZZbQ=",
+      "Services.pdb": "sha256-wTX77ToCpuvYKt6kNiHvATWi4XVGK3FgyQbt8ZFR8tI=",
+      "BonAppetitWebApp.pdb": "sha256-vEA34UKf0tpbVwa2v7QHGB78fNk1\/tXEJ0xfmlunaEU="
     },
     "runtime": {
       "dotnet.6.0.4.0mdsy8j5fh.js": "sha256-WYno\/cK5MDsl5yi4T\/\/QgUskbBfhLL77i+c0uKzO9+c=",

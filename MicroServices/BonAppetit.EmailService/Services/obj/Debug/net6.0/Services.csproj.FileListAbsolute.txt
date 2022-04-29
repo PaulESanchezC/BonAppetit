@@ -13,3 +13,5 @@ C:\Users\Paulyglot\Desktop\Portoflio\BonAppetit\MicroServices\BonAppetit.EmailSe
 C:\Users\Paulyglot\Desktop\Portoflio\BonAppetit\MicroServices\BonAppetit.EmailService\Services\obj\Debug\net6.0\refint\Services.dll
 C:\Users\Paulyglot\Desktop\Portoflio\BonAppetit\MicroServices\BonAppetit.EmailService\Services\obj\Debug\net6.0\Services.pdb
 C:\Users\Paulyglot\Desktop\Portoflio\BonAppetit\MicroServices\BonAppetit.EmailService\Services\obj\Debug\net6.0\ref\Services.dll
+C:\Users\Paulyglot\Desktop\Portoflio\BonAppetit\MicroServices\BonAppetit.EmailService\Services\bin\Debug\net6.0\StaticData.dll
+C:\Users\Paulyglot\Desktop\Portoflio\BonAppetit\MicroServices\BonAppetit.EmailService\Services\bin\Debug\net6.0\StaticData.pdb

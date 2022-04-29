@@ -7,8 +7,8 @@ namespace BonAppetitWebApp.Pages.ReservationComponents;
 public partial class AvailableTablesTimeBrackets
 {
     #region Dependencies
-    [Inject] private IRestaurantService _restaurantService { get; set; }
     [Parameter] public string RestaurantId { get; set; }
+    [Inject] private IRestaurantService _restaurantService { get; set; }
     [Inject] public NavigationManager _navigation { get; set; }
     #endregion
 
@@ -41,7 +41,6 @@ public partial class AvailableTablesTimeBrackets
 
         BracketsVm.AvailableBrackets.Sort();
     }
-
     private void ConfirmReservation(double timeBracket)
     {
         var table = BracketsVm.Brackets.FirstOrDefault(table => table.Table.AmountOfSeats == BracketsVm.ForHowMany);

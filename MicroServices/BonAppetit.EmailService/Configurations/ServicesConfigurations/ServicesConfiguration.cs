@@ -1,7 +1,7 @@
 ﻿using Configurations.ConfigurationsHelper;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
-using Models.EmailSenderOptionsModels;
+using Models.Options;
 using Services.EmailServices;
 
 

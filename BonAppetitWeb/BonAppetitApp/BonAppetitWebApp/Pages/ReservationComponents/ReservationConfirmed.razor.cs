@@ -1,8 +1,6 @@
 ﻿using Blazored.LocalStorage;
 using Microsoft.AspNetCore.Components;
-using Models.EmailModels;
 using Models.MessageQueueModels.PaymentSuccessMessageModels;
-using Models.PaymentMessageModels;
 using Models.PaymentModels;
 using Models.ReservationModels;
 using Services.PaymentServices;

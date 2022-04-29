@@ -3,7 +3,7 @@ using Mailjet.Client.Resources;
 using Microsoft.Extensions.Options;
 using Models.ApplicationUserModels;
 using Models.EmailModels;
-using Models.EmailSenderOptionsModels;
+using Models.Options;
 using Models.ReservationModels;
 using Models.ResponseModels;
 using Models.RestaurantModels;
@@ -34,7 +34,6 @@ public class EmailSender : IMailJetEmailSender
     public async Task<Response<Email>> MailJetMailSenderAsync(List<Email> emails, CancellationToken cancellationToken)
     {
         var client = new MailjetClient(_mailjetOptions.ApiKey, _mailjetOptions.SecretKey);
-
         foreach (var email in emails)
         {
             var message = await CreateHtmlMessageTask(email);
@@ -52,6 +51,8 @@ public class EmailSender : IMailJetEmailSender
                 }
              });
             var response = await client.PostAsync(request);
+            Console.WriteLine("**********************************************************************************");
+            Console.WriteLine($"response => status:{response.StatusCode}; content: {response.Content}");
             Response.ResponseObject!.Add(email);
         }
         return Response;

@@ -17,6 +17,7 @@ builder.Services.AddSwaggerGenConfiguration();
 builder.Services.AddCorsConfiguration();
 // Services Configurations
 builder.Services.AddRepositoryServicesConfigurations();
+builder.Services.AddMessageQueueServicesConfigurations();
 #endregion
 
 var app = builder.Build();

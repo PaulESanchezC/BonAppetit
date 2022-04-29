@@ -1,4 +1,4 @@
-﻿namespace Models.EmailSenderOptionsModels;
+﻿namespace Models.Options;
 
 public class MailjetOptions
 {
