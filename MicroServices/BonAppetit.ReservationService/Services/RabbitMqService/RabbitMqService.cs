@@ -15,11 +15,11 @@ namespace Services.RabbitMqService;
 public class RabbitMqService : BackgroundService , IRabbitMqService
 {
     private readonly RabbitMqOptions _rabbitMqOptions;
-    private readonly MessageQueueHandler _messageQueueHandler;
+    private readonly IMessageQueueHandler _messageQueueHandler;
     private IConnection _connection;
     private IModel _channel;
 
-    public RabbitMqService(IOptions<RabbitMqOptions> options, MessageQueueHandler messageQueueHandler)
+    public RabbitMqService(IOptions<RabbitMqOptions> options, IMessageQueueHandler messageQueueHandler)
     {
         _messageQueueHandler = messageQueueHandler;
         _rabbitMqOptions = options.Value;

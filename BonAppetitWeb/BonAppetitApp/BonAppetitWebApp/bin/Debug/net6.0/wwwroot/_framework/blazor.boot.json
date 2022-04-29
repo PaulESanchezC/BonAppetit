@@ -207,7 +207,7 @@
       "Models.dll": "sha256-RiuoRE2p84uV4w2nrjZj\/XnjMgSfmWV22RcTx0llBh8=",
       "Services.dll": "sha256-5fPWYYQvPO3UtuNG2bFm\/d6vX2M82EmA2\/t\/MbWYec4=",
       "StaticData.dll": "sha256-HRUzqIDwQQtDsbH\/b8KmffgQq25KrXP0aTvV2pT0Pkc=",
-      "BonAppetitWebApp.dll": "sha256-1\/\/U9j7JbaknqaivuAub\/HYXTMzy5DbFQ1\/xFoTinBw="
+      "BonAppetitWebApp.dll": "sha256-rUt0NX49zxIyJJu5QUcPs52k\/jd1KduvvbhHGiUp7cA="
     },
     "extensions": null,
     "lazyAssembly": null,
@@ -217,7 +217,7 @@
       "StaticData.pdb": "sha256-Qct2Hgm+DP6o0P0tvMWk9jW3wZmdaJL\/ygipZOhcXtY=",
       "Models.pdb": "sha256-j5j8GMPxJwzUeuvyKhXvSK8UsD\/Y0vETdbo9VPM1X8o=",
       "Services.pdb": "sha256-tUDqo8fFN5gSnCwPuOnNWucVQtBsW\/VO87MQZpVOIEQ=",
-      "BonAppetitWebApp.pdb": "sha256-v70HjMpZGF1vKFNgiPsdITd58XnGh4+8Q2PaMI1wCAU="
+      "BonAppetitWebApp.pdb": "sha256-WUu7V0RuGwQ90dwdeo7nwqLdHWyW\/Fx1szvOJxpyHDo="
     },
     "runtime": {
       "dotnet.6.0.4.0mdsy8j5fh.js": "sha256-WYno\/cK5MDsl5yi4T\/\/QgUskbBfhLL77i+c0uKzO9+c=",

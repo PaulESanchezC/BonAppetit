@@ -4,10 +4,7 @@ using Models.EmailModels;
 using Models.PaymentMessageModels;
 using Models.PaymentModels;
 using Models.ReservationModels;
-using Models.ResponseModels;
-using Models.RestaurantModels;
 using Services.PaymentServices;
-using Services.RestaurantServices;
 using StaticData;
 
 namespace BonAppetitWebApp.Pages.ReservationComponents;

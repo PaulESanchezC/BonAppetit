@@ -1,12 +1,8 @@
 ﻿using Configurations.ConfigurationsHelper;
-using Data;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Models.Options;
 using Services.MessageQueueHandlerService;
 using Services.RabbitMqService;
-using Services.Repository.ReservationServices;
 
 namespace Configurations.ServicesConfigurations;
 
@@ -18,7 +14,6 @@ public static class MessageQueueServiceConfiguration
 
         services.AddHostedService<RabbitMqService>();
 
-        services.AddSingleton<MessageQueueHandler>();
         services.AddSingleton<IRabbitMqService, RabbitMqService>();
         services.AddSingleton<IMessageQueueHandler, MessageQueueHandler>();
 
