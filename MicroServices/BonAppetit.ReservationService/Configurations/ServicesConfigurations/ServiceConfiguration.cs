@@ -1,6 +1,7 @@
 ﻿using Configurations.ConfigurationsHelper;
 using Microsoft.Extensions.DependencyInjection;
 using Models.Options;
+using Services.MessageQueueHandlerService;
 using Services.RabbitMqService;
 using Services.Repository.ReservationServices;
 
@@ -12,7 +13,8 @@ public static class ServiceConfiguration
     {
         services.AddScoped<IReservationService, ReservationService>();
         services.AddScoped<IRabbitMqService, RabbitMqService>();
-        
+        services.AddScoped<IMessageQueueHandler, MessageQueueHandler>();
+
         services.AddHostedService<RabbitMqService>();
         
         services.Configure<RabbitMqOptions>(ProxyConfiguration.Use.GetSection("RabbitMq"));
