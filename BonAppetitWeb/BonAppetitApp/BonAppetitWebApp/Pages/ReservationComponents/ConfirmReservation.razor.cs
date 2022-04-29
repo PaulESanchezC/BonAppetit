@@ -150,5 +150,6 @@ public partial class ConfirmReservation
         };
         await _localStorage.SetItemAsync(LocalStorage.ReservationCreateInformation, reservationCreate);
         await _localStorage.SetItemAsync(LocalStorage.RestaurantEmail, Restaurant.RestaurantEmail);
+        await _localStorage.SetItemAsync(LocalStorage.RestaurantName, Restaurant.RestaurantName);
     }
 }

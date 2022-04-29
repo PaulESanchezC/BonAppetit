@@ -158,3 +158,4 @@ C:\Users\Paulyglot\Desktop\Portoflio\BonAppetit\MicroServices\BonAppetit.Reserva
 C:\Users\Paulyglot\Desktop\Portoflio\BonAppetit\MicroServices\BonAppetit.ReservationService\Tests\bin\Debug\net6.0\Models.pdb
 C:\Users\Paulyglot\Desktop\Portoflio\BonAppetit\MicroServices\BonAppetit.ReservationService\Tests\bin\Debug\net6.0\Services.pdb
 C:\Users\Paulyglot\Desktop\Portoflio\BonAppetit\MicroServices\BonAppetit.ReservationService\Tests\bin\Debug\net6.0\StaticData.pdb
+C:\Users\Paulyglot\Desktop\Portoflio\BonAppetit\MicroServices\BonAppetit.ReservationService\Tests\bin\Debug\net6.0\RabbitMQ.Client.dll

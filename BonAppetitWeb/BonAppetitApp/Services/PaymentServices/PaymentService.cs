@@ -1,5 +1,5 @@
 ﻿using System.Text;
-using Models.PaymentMessageModels;
+using Models.MessageQueueModels.PaymentSuccessMessageModels;
 using Models.PaymentModels;
 using Models.ResponseModels;
 using Models.StripeSessionModels;

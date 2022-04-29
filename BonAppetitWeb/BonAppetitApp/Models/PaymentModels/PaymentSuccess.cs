@@ -1,5 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
-using Models.PaymentMessageModels;
+using Models.MessageQueueModels.PaymentSuccessMessageModels;
 
 namespace Models.PaymentModels;
 

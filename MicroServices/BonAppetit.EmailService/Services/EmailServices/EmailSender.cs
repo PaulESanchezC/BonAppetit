@@ -66,10 +66,12 @@ public class EmailSender : IMailJetEmailSender
                 response = RestaurantRegistrationHtmlBuilder(email.Data);
                 Subject = "Restaurant Registration";
                 break;
+            //TODO: is this needed?
             case "manager registration":
                 response = ManagerRegistrationHtmlBuilder(email.Data);
                 Subject = "Manager Registration";
                 break;
+            //TODO: is this needed?
             case "worker registration":
                 response = WorkerRegistrationHtmlBuilder(email.Data);
                 Subject = "Worker Registration";
@@ -86,6 +88,7 @@ public class EmailSender : IMailJetEmailSender
                 response = RestaurantReservationClientHtmlBuilder(email);
                 Subject = "Reservation Client";
                 break;
+            //TODO: is this needed?
             case "test":
                 response = EmailTemplate.Test;
                 Subject = "Test Client";

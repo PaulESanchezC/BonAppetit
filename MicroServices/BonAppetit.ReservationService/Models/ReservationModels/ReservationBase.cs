@@ -18,6 +18,7 @@ public class ReservationBase
     public double StartTime { get; set; }
 
     public int OrderId { get; set; }
+
     public string ApplicationUserId { get; set; }
 
     [Required]

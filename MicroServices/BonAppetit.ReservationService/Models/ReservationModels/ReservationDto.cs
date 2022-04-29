@@ -16,9 +16,11 @@ public class ReservationDto
     public DateTime DateOfReservation { get; set; }
     
     public double StartTime { get; set; }
-    
+
     public int OrderId { get; set; }
     
+    public int ForHowMany { get; set; }
+
     public string ApplicationUserId { get; set; }
 
     public bool IsUserAnonymous { get; set; } = false;

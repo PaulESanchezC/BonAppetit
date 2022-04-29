@@ -1,9 +1,10 @@
 ﻿using Models.MessageQueueModels.PaymentSuccessMessageModels;
 using Models.PaymentModels;
+using Models.ReservationModels;
 
 namespace Services.MessageQueueHandlerService;
 
 public interface IMessageQueueHandler
 {
-    Task PaymentSuccessMessageHandlerAsync(PaymentSuccessMessage paymentSuccess, CancellationToken cancellationToken);
+    Task<ReservationDto> PaymentSuccessMessageHandlerAsync(PaymentSuccessMessage paymentSuccess, CancellationToken cancellationToken);
 }

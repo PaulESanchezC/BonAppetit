@@ -1,6 +1,7 @@
 ﻿using Blazored.LocalStorage;
 using Microsoft.AspNetCore.Components;
 using Models.EmailModels;
+using Models.MessageQueueModels.PaymentSuccessMessageModels;
 using Models.PaymentMessageModels;
 using Models.PaymentModels;
 using Models.ReservationModels;
@@ -38,26 +39,13 @@ public partial class ReservationConfirmed
     {
         var reservationCreate = await _localStorage.GetItemAsync<ReservationCreate>(LocalStorage.ReservationCreateInformation);
         var restaurantEmail = await _localStorage.GetItemAsStringAsync(LocalStorage.RestaurantEmail);
+        var restaurantName = await _localStorage.GetItemAsStringAsync(LocalStorage.RestaurantName);
 
-        var emails = new List<Email>
-        {
-            new()
-            {
-                Action = "reservation client",
-                Recipient = reservationCreate.Email,
-                Data=""
-            },
-            new()
-            {
-                Action = "reservation manager",
-                Recipient = restaurantEmail,
-                Data=""
-            }
-        };
         var paymentMessage = new PaymentMessage
         {
-            Emails = emails,
-            ReservationCreate = reservationCreate
+            RestaurantEmail = restaurantEmail,
+            ReservationCreate = reservationCreate,
+            RestaurantName = restaurantName
         };
         return paymentMessage;
     }

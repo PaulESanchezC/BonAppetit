@@ -1,4 +1,6 @@
 ﻿using Models.EmailModels;
+using Models.MessageQueueModels.PaymentSuccessMessageModels;
+using Models.ReservationModels;
 
 namespace Models.MessageQueueModels.ReservationSuccessModels;
 

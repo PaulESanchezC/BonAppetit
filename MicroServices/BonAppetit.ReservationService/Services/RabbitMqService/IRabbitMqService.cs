@@ -1,10 +1,9 @@
-﻿using Microsoft.Extensions.Hosting;
-using Models.EmailModels;
-using Models.MessageQueueModels.ReservationSuccessModels;
+﻿using Models.MessageQueueModels.PaymentSuccessMessageModels;
+using Models.ReservationModels;
 
 namespace Services.RabbitMqService;
 
 public interface IRabbitMqService
 {
-    void SendReservationSuccessMessage(ReservationSuccessMessage message);
+    void SendReservationSuccessMessage(PaymentSuccessMessage paymentSuccessMessage, ReservationDto reservation);
 }

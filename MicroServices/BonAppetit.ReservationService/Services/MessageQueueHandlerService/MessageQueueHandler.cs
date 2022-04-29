@@ -1,4 +1,5 @@
-﻿using Data;
+﻿using AutoMapper;
+using Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
@@ -10,21 +11,23 @@ namespace Services.MessageQueueHandlerService;
 
 public class MessageQueueHandler : IMessageQueueHandler
 {
-    private readonly IServiceScopeFactory scopeFactory;
-
-    public MessageQueueHandler(IServiceScopeFactory scopeFactory)
+    private readonly IServiceScopeFactory _scopeFactory;
+    private readonly ILogger<MessageQueueHandler> _logger;
+    public MessageQueueHandler(IServiceScopeFactory scopeFactory, ILogger<MessageQueueHandler> logger)
     {
-        this.scopeFactory = scopeFactory;
+        _scopeFactory = scopeFactory;
+        _logger = logger;
     }
 
-    public async Task PaymentSuccessMessageHandlerAsync(PaymentSuccessMessage paymentSuccess, CancellationToken cancellationToken)
+    public async Task<ReservationDto> PaymentSuccessMessageHandlerAsync(PaymentSuccessMessage paymentSuccess, CancellationToken cancellationToken)
     {
-        using var scope = scopeFactory.CreateScope();
+        using var scope = _scopeFactory.CreateScope();
+        var _mapper = scope.ServiceProvider.GetRequiredService<IMapper>();
         var _db = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
 
         var reservationToMake = paymentSuccess.ReservationCreate;
 
-        var reservationT = MapReservationCreateToReservationBase(reservationToMake);
+        var reservationT = _mapper.Map<ReservationBase>(reservationToMake);
 
         if (string.IsNullOrEmpty(reservationToMake.ApplicationUserId))
             reservationT.IsUserAnonymous = true;
@@ -35,16 +38,16 @@ public class MessageQueueHandler : IMessageQueueHandler
 
         if (isAlreadyReserved.Any())
         {
-            Console.WriteLine("The Table is already reserved for the time requested");
-            return;
+            _logger.Log(LogLevel.Critical,"The Table is already reserved for the time requested");
+            return null!;
         }
 
         var entity = await _db.Reservations.AddAsync(reservationT, cancellationToken);
 
         if (entity.State != EntityState.Added)
         {
-            Console.WriteLine("Could not add the reservation");
-            return;
+            _logger.Log(LogLevel.Critical,"Could not add the reservation");
+            return null!;
         }
 
         try
@@ -53,33 +56,12 @@ public class MessageQueueHandler : IMessageQueueHandler
         }
         catch (DbUpdateException e)
         {
-            Console.WriteLine($"Could not save the reservation: Error message {e.Message}, inner exception {e.InnerException.Message}");
-            return;
+            _logger.Log(LogLevel.Critical, $"Could not save the reservation: Error message {e.Message}, inner exception {e.InnerException.Message}");
+            return null!;
         }
 
-        Console.WriteLine($"Reservation made successfully, {reservationT}");
+        _logger.Log(LogLevel.Information, $"Reservation made successfully, {reservationT.ReservationId}");
+        var reservationDto = _mapper.Map<ReservationDto>(reservationT);
+        return reservationDto;
     }
-
-
-    #region Helper Methods
-
-    private ReservationBase MapReservationCreateToReservationBase(ReservationCreate reservationCreate)
-    {
-        var reservation = new ReservationBase
-        {
-            StartTime = reservationCreate.StartTime,
-            TableId = reservationCreate.TableId,
-            DateOfReservation = reservationCreate.DateOfReservation,
-            RestaurantId = reservationCreate.RestaurantId,
-            ApplicationUserId = reservationCreate.ApplicationUserId,
-            Email = reservationCreate.Email,
-            FirstName = reservationCreate.FirstName,
-            LastName = reservationCreate.LastName,
-            Phone = reservationCreate.Phone,
-            PaymentTransaction = reservationCreate.PaymentTransaction
-        };
-        return reservation;
-    }
-
-    #endregion
 }
