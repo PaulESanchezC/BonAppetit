@@ -31,6 +31,7 @@ services.AddJsonConfigurations();
 services.AddSwaggerGenConfiguration();
 //Services Configurations
 services.AddServicesConfigurations();
+services.AddMessageQueueServicesConfigurations();
 //Cors Configurations
 services.AddCorsConfiguration();
 //Authentication Configurations

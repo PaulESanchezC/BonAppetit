@@ -2,7 +2,8 @@
 using Microsoft.Extensions.DependencyInjection;
 using Models.Options;
 using Services.MessageQueueHandlerService;
-using Services.RabbitMqService;
+using Services.RabbitMqSender;
+
 
 namespace Configurations.ServicesConfigurations;
 
@@ -12,9 +13,9 @@ public static class MessageQueueServiceConfiguration
     {
         services.Configure<RabbitMqOptions>(ProxyConfiguration.Use.GetSection("RabbitMq"));
 
-        services.AddHostedService<RabbitMqService>();
+        services.AddHostedService<ReservationMessageSender>();
 
-        services.AddSingleton<IRabbitMqService, RabbitMqService>();
+        services.AddSingleton<ReservationMessageSender>();
         services.AddSingleton<IMessageQueueHandler, MessageQueueHandler>();
 
         return services;
