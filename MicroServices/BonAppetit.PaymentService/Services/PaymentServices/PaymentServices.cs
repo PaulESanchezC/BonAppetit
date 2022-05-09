@@ -2,6 +2,7 @@
 using AutoMapper;
 using Data;
 using Microsoft.EntityFrameworkCore;
+using Models.CouponTypeModels;
 using Models.MessageQueueModels.PaymentSuccessMessageModels;
 using Models.PaymentModels;
 using Models.ResponseModels;
@@ -16,7 +17,7 @@ public class PaymentServices : IPaymentServices
     private readonly ApplicationDbContext _db;
     private readonly IMapper _mapper;
     private readonly IPaymentMessageSender _paymentMessageSender;
-    
+
     public PaymentServices(ApplicationDbContext db, IMapper mapper, IPaymentMessageSender paymentMessageSender)
     {
         _db = db;
@@ -27,21 +28,20 @@ public class PaymentServices : IPaymentServices
     public async Task<Response<StripeSession>> CreateStripePaymentSessionAsync(StripeSessionCreate paymentInformation, CancellationToken cancellationToken)
     {
         var bonAppetitFee = 15;
+        var coupons = CouponOptions(paymentInformation.Coupon, paymentInformation.RestaurantReservationFee);
 
         var options = new SessionCreateOptions
         {
-
             PaymentMethodTypes = new List<string>
             {
                 "card"
             },
-            LineItems = new List<SessionLineItemOptions>
+            LineItems = new List<SessionLineItemOptions>(coupons)
             {
                 new()
                 {
                     PriceData = new SessionLineItemPriceDataOptions
                     {
-                        
                         UnitAmount = (long)paymentInformation.RestaurantReservationFee * 100,
                         Currency="CAD",
                         ProductData= new SessionLineItemPriceDataProductDataOptions
@@ -50,7 +50,7 @@ public class PaymentServices : IPaymentServices
                             Description = "Restaurant reservation fee"
                         },
                         TaxBehavior = "exclusive"
-                    }, 
+                    },
                     Quantity = paymentInformation.TableSeats,
                     TaxRates = new(){"txr_1KtbswFJXN6PQCt7GV9LU69h","txr_1KtcHKFJXN6PQCt7zqCXMGnp"}
                 },
@@ -88,7 +88,7 @@ public class PaymentServices : IPaymentServices
                 ResponseObject = null
             };
 
-        var stripeSession = await Task.FromResult(BuildStripeSessionModel(session.Id,bonAppetitFee,paymentInformation.RestaurantReservationFee, paymentInformation.TableSeats));
+        var stripeSession = await Task.FromResult(BuildStripeSessionModel(session.Id, bonAppetitFee, paymentInformation.RestaurantReservationFee, paymentInformation.TableSeats));
 
         return new Response<StripeSession>
         {
@@ -96,7 +96,7 @@ public class PaymentServices : IPaymentServices
             StatusCode = 200,
             Title = "Ok",
             Message = "Ok",
-            ResponseObject = new(){ stripeSession }
+            ResponseObject = new() { stripeSession }
         };
     }
     public async Task<Response<PaymentDto>> ConfirmPaymentIsSuccessful(PaymentCreate paymentToConfirm, PaymentMessage message, CancellationToken cancellationToken)
@@ -115,7 +115,7 @@ public class PaymentServices : IPaymentServices
 
         var payment = _mapper.Map<PaymentBase>(paymentToConfirm);
 
-        var entity = await _db.Payments.AddAsync(payment,cancellationToken);
+        var entity = await _db.Payments.AddAsync(payment, cancellationToken);
 
         if (entity.State != EntityState.Added)
         {
@@ -210,6 +210,71 @@ public class PaymentServices : IPaymentServices
             FederalTaxes = gst,
             Amount = total
         };
+    }
+
+    private List<SessionLineItemOptions> CouponOptions(List<Coupon>? coupon, double payment)
+    {
+        var result = new List<SessionLineItemOptions>();
+        coupon.ForEach(item =>
+        {
+            switch (item.CouponCode)
+            {
+                case 1:
+                result.Add(
+                    new SessionLineItemOptions
+                    {
+                        PriceData = new SessionLineItemPriceDataOptions
+                        {
+                            UnitAmount = (long?)(-payment * 100 * 0.5),
+                            Currency = "CAD",
+                            ProductData = new SessionLineItemPriceDataProductDataOptions
+                            {
+                                Name = "first reservation : 50%, second reservation : 50%",
+                                Description = "Restaurant promotion"
+                            }
+                        },
+                        Quantity = 1
+                    });
+                break;
+
+                case 2:
+                result.Add(
+                    new SessionLineItemOptions
+                    {
+                        PriceData = new SessionLineItemPriceDataOptions
+                        {
+                            UnitAmount = (long?)(-payment * 100 * 0.5),
+                            Currency = "CAD",
+                            ProductData = new SessionLineItemPriceDataProductDataOptions
+                            {
+                                Name = "first reservation : 100%, second reservation : 50%",
+                                Description = "Restaurant promotion"
+                            }
+                        },
+                        Quantity = 1
+                    });
+                break;
+
+                case 3:
+                result.Add(
+                    new SessionLineItemOptions
+                    {
+                        PriceData = new SessionLineItemPriceDataOptions
+                        {
+                            UnitAmount = (long?)(-payment * 100),
+                            Currency = "CAD",
+                            ProductData = new SessionLineItemPriceDataProductDataOptions
+                            {
+                                Name = "first reservation : only Bon Appetit fee (meaning: The restaurant withdraws their cut for the first reservation only)",
+                                Description = "Restaurant promotion"
+                            }
+                        },
+                        Quantity = 1
+                    });
+                break;
+            }
+        });
+        return result;
     }
     #endregion
 }
