@@ -7,12 +7,15 @@ public class CouponActivity
     #region CouponActivity Properties
 
     [Key]
+    public int CouponActivityId { get; set; }
+
+    [Required]
     public string ApplicationUserId { get; set; }
 
     [Required]
     public string RestaurantId { get; set; }
 
-    [Required] 
+    [Required]
     public int CouponCode { get; set; }
 
     #endregion

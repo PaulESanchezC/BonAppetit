@@ -253,6 +253,9 @@
               },
               "C:\\Users\\Paulyglot\\Desktop\\Portoflio\\BonAppetit\\MicroServices\\BonAppetit.CouponServices\\Models\\Models.csproj": {
                 "projectPath": "C:\\Users\\Paulyglot\\Desktop\\Portoflio\\BonAppetit\\MicroServices\\BonAppetit.CouponServices\\Models\\Models.csproj"
+              },
+              "C:\\Users\\Paulyglot\\Desktop\\Portoflio\\BonAppetit\\MicroServices\\BonAppetit.CouponServices\\StaticData\\StaticData.csproj": {
+                "projectPath": "C:\\Users\\Paulyglot\\Desktop\\Portoflio\\BonAppetit\\MicroServices\\BonAppetit.CouponServices\\StaticData\\StaticData.csproj"
               }
             }
           }
@@ -270,6 +273,18 @@
             "AutoMapper": {
               "target": "Package",
               "version": "[11.0.0, )"
+            },
+            "Microsoft.AspNetCore.Hosting.Abstractions": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.1, )"
+            },
+            "RabbitMQ.Client": {
+              "target": "Package",
+              "version": "[6.3.0, )"
             }
           },
           "imports": [

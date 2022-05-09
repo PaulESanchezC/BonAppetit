@@ -5,5 +5,9 @@ namespace Services.RabbitMqService;
 
 public interface IRabbitMqService
 {
-    void SendProductionQueueMessage(PaymentSuccessMessage paymentSuccessMessage, ReservationDto reservation);
+    void CreateConnection();
+
+    bool ConnectionExists();
+
+    void SendReservationSuccessMessage(PaymentSuccessMessage paymentSuccessMessage, ReservationDto reservation);
 }

@@ -32,16 +32,10 @@ public class RabbitMqService : BackgroundService, IRabbitMqService
     protected override Task ExecuteAsync(CancellationToken cancellationToken)
     {
         cancellationToken.ThrowIfCancellationRequested();
-        var factory = new ConnectionFactory()
-        {
-            HostName = _rabbitMqOptions.Hostname,
-            UserName = _rabbitMqOptions.Username,
-            Password = _rabbitMqOptions.Password
-        };
 
-        _connection = factory.CreateConnection();
+        if (!ConnectionExists())
+            return Task.CompletedTask;
 
-        _channel = _connection.CreateModel();
         _channel.QueueDeclare(RabbitMqConstants.QueuePaymentSuccess, false, false, false);
 
         var consumer = new EventingBasicConsumer(_channel);
@@ -60,24 +54,41 @@ public class RabbitMqService : BackgroundService, IRabbitMqService
         return Task.CompletedTask;
     }
 
-    public void SendReservationSuccessMessage(PaymentSuccessMessage paymentSuccessMessage, ReservationDto reservation)
+    public void CreateConnection()
     {
-        var message = BuildReservationSuccessMessageModel(paymentSuccessMessage, reservation);
-
-        var factory = new ConnectionFactory
+        var factory = new ConnectionFactory()
         {
             HostName = _rabbitMqOptions.Hostname,
             UserName = _rabbitMqOptions.Username,
             Password = _rabbitMqOptions.Password
         };
-
         _connection = factory.CreateConnection();
+        _channel = _connection.CreateModel();
+    }
 
-        using var channel = _connection.CreateModel();
-        channel.QueueDeclare(RabbitMqConstants.QueueReservationSuccess, false, false, false);
+    public bool ConnectionExists()
+    {
+        if (_connection is not null)
+            return true;
+
+        CreateConnection();
+        return true;
+    }
+
+    public void SendReservationSuccessMessage(PaymentSuccessMessage paymentSuccessMessage, ReservationDto reservation)
+    {
+        if (!ConnectionExists())
+            return;
+
+        var message = BuildReservationSuccessMessageModel(paymentSuccessMessage, reservation);
+
+        _channel.ExchangeDeclare(RabbitMqConstants.ExchangeReservationSuccess, ExchangeType.Fanout);
+        var queueName = _channel.QueueDeclare().QueueName;
+
         var jsonContent = JsonConvert.SerializeObject(message);
         var body = Encoding.UTF8.GetBytes(jsonContent);
-        channel.BasicPublish("", RabbitMqConstants.QueueReservationSuccess, null, body);
+
+        _channel.BasicPublish(RabbitMqConstants.ExchangeReservationSuccess, string.Empty, null, body);
     }
     public ReservationSuccessMessage BuildReservationSuccessMessageModel(PaymentSuccessMessage paymentSuccessMessage,
         ReservationDto reservation)
@@ -121,7 +132,7 @@ public class RabbitMqService : BackgroundService, IRabbitMqService
             managerEmail
         };
 
-        var reservationSuccessMessage = new ReservationSuccessMessage 
+        var reservationSuccessMessage = new ReservationSuccessMessage
         {
             Emails = emails
         };

@@ -37,18 +37,13 @@ public class PaymentMessageSender : IPaymentMessageSender
             return true;
 
         CreateConnection();
-        return false;
+        return true;
     }
 
     public void SendPaymentSuccessMessage(PaymentSuccessMessage message)
     {
-        var factory = new ConnectionFactory()
-        {
-            HostName = _rabbitMqOptions.Hostname,
-            UserName = _rabbitMqOptions.Username,
-            Password = _rabbitMqOptions.Password
-        };
-        _connection = factory.CreateConnection();
+        if (!ConnectionExists())
+            return;
 
         using var channel = _connection.CreateModel();
         channel.QueueDeclare(RabbitMqConstants.QueuePaymentSuccess, false, false, false);
