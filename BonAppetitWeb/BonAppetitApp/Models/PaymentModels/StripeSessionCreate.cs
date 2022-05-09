@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using Models.CouponTypeModels;
 
 namespace Models.StripeSessionModels;
 
@@ -15,4 +16,8 @@ public class StripeSessionCreate
 
     [Required]
     public string RestaurantId { get; set; }
+
+    [Required]
+    public List<CouponType> Coupons { get; set; }
+
 }

@@ -63,7 +63,7 @@ namespace Data.Migrations
 
                     b.HasKey("PaymentId");
 
-                    b.ToTable("Payments");
+                    b.ToTable("Payments", (string)null);
                 });
 #pragma warning restore 612, 618
         }

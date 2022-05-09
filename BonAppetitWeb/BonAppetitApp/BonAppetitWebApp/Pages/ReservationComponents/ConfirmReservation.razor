@@ -8,8 +8,9 @@
 
 
         <EditForm Model="ConfirmReservationVm" OnValidSubmit="MakeReservation">
-            <DataAnnotationsValidator/>
-            <input @bind-value="ConfirmReservationVm.ApplicationUserId" hidden disabled/>
+            <DataAnnotationsValidator />
+            <input @bind-value="ConfirmReservationVm.ApplicationUserId" hidden disabled />
+            <input @bind-value="Coupons" hidden disabled />
 
             <div class="row">
                 <div class="col-6">
@@ -18,7 +19,7 @@
                             <label>Restaurant</label>
                         </div>
                         <div class="col-12">
-                            <input type="text" disabled="" value="@Restaurant.RestaurantName"/>
+                            <input type="text" disabled="" value="@Restaurant.RestaurantName" />
                         </div>
                     </div>
                     <div class="row">
@@ -26,7 +27,7 @@
                             <label>Date</label>
                         </div>
                         <div class="col-12">
-                            <input type="text" disabled="" value="@DateOfRequest"/>
+                            <input type="text" disabled="" value="@DateOfRequest" />
                         </div>
                     </div>
                     <div class="row">
@@ -34,7 +35,7 @@
                             <label>Available seats:</label>
                         </div>
                         <div class="col-12">
-                            <input type="text" disabled="" value="@Table.AmountOfSeats"/>
+                            <input type="text" disabled="" value="@Table.AmountOfSeats" />
                         </div>
                     </div>
                     <div class="row">
@@ -42,19 +43,34 @@
                             <label>Time</label>
                         </div>
                         <div class="col-12">
-                            <input type="number" disabled="" value="@ReservationTime"/>
+                            <input type="number" disabled="" value="@ReservationTime" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <label>Coupons</label>
+                        </div>
+                        <div class="col-12">
+                            @foreach (var coupon in Coupons)
+                            {
+                                <input type="number" disabled="" value="@coupon.Description" />
+                            }
+                            else
+                            {
+                                <input type="number" disabled="" value="No Restaurant Coupons were found" />
+                            }
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="col-6">
                     <div class="row">
                         <div class="col-12">
                             <label>First name</label>
                         </div>
                         <div class="col-12">
-                            <input @bind-value="@ConfirmReservationVm.FirstName" placeholder="First name"/>
-                            <ValidationMessage For="() => ConfirmReservationVm.FirstName" style="color: darkred"/>
+                            <input @bind-value="@ConfirmReservationVm.FirstName" placeholder="First name" />
+                            <ValidationMessage For="() => ConfirmReservationVm.FirstName" style="color: darkred" />
                         </div>
                     </div>
                     <div class="row">
@@ -62,8 +78,8 @@
                             <label>Last name</label>
                         </div>
                         <div class="col-12">
-                            <input type="text" @bind-value="@ConfirmReservationVm.LastName" placeholder="Last name"/>
-                            <ValidationMessage For="() => ConfirmReservationVm.LastName" style="color: darkred"/>
+                            <input type="text" @bind-value="@ConfirmReservationVm.LastName" placeholder="Last name" />
+                            <ValidationMessage For="() => ConfirmReservationVm.LastName" style="color: darkred" />
                         </div>
                     </div>
                     <div class="row">
@@ -71,8 +87,8 @@
                             <label>Phone</label>
                         </div>
                         <div class="col-12">
-                            <input type="text" @bind-value="@ConfirmReservationVm.Phone" placeholder="Phone"/>
-                            <ValidationMessage For="() => ConfirmReservationVm.Phone" style="color: darkred"/>
+                            <input type="text" @bind-value="@ConfirmReservationVm.Phone" placeholder="Phone" />
+                            <ValidationMessage For="() => ConfirmReservationVm.Phone" style="color: darkred" />
                         </div>
                     </div>
                     <div class="row">
@@ -80,8 +96,8 @@
                             <label>Email</label>
                         </div>
                         <div class="col-12">
-                            <input type="email" @bind-value="@ConfirmReservationVm.Email" placeholder="E-mail"/>
-                            <ValidationMessage For="() => ConfirmReservationVm.Email" style="color: darkred"/>
+                            <input type="email" @bind-value="@ConfirmReservationVm.Email" placeholder="E-mail" />
+                            <ValidationMessage For="() => ConfirmReservationVm.Email" style="color: darkred" />
                         </div>
                     </div>
 

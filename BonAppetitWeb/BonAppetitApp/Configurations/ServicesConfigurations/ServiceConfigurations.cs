@@ -1,4 +1,5 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
+using Services.CouponServices;
 using Services.EmailServices;
 using Services.PaymentServices;
 using Services.ReservationServices;
@@ -18,6 +19,7 @@ public static class ServiceConfigurations
         service.AddScoped<ITableService, TableService>();
         service.AddScoped<IPaymentService, PaymentService>();
         service.AddScoped<IEmailSender, EmailSender>();
+        service.AddScoped<ICouponServices, CouponServices>();
         return service;
     }
 }

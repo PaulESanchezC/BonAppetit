@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using Models.CouponTypeModels;
 
 namespace Models.PaymentModels;
 
@@ -15,6 +16,7 @@ public class PaymentDto
     public double FederalTaxes { get; set; }
     public double Amount { get; set; }
     public DateTime DateOfPayment { get; set; }
+    public List<CouponType> Coupons { get; set; }
 
     #endregion
 }

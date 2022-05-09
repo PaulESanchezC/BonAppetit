@@ -18,5 +18,5 @@ public class StripeSessionCreate
     public string RestaurantId { get; set; }
 
     [Required]
-    public List<Coupon>? Coupon { get; set; }
+    public List<CouponType>? Coupon { get; set; }
 }

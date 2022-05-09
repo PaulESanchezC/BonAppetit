@@ -1,5 +1,6 @@
 ﻿using Blazored.LocalStorage;
 using Microsoft.AspNetCore.Components;
+using Models.CouponTypeModels;
 using Models.MessageQueueModels.PaymentSuccessMessageModels;
 using Models.PaymentModels;
 using Models.ReservationModels;
@@ -25,14 +26,14 @@ public partial class ReservationConfirmed
     {
         var paymentInformation = await _localStorage.GetItemAsync<PaymentCreateVm>(LocalStorage.PaymentInformationPendingPayment);
 
-        var message =  await BuildPaymentMessage();
+        var message =  await BuildPaymentMessage(paymentInformation.Coupons);
         var confirmPayment = await _paymentServices.ConfirmPaymentAsync(paymentInformation, message);
         if (confirmPayment.IsSuccessful)
         {
             Request = confirmPayment.IsSuccessful;
         }
     }
-    private async Task<PaymentMessage> BuildPaymentMessage()
+    private async Task<PaymentMessage> BuildPaymentMessage(List<CouponType> coupons)
     {
         var reservationCreate = await _localStorage.GetItemAsync<ReservationCreate>(LocalStorage.ReservationCreateInformation);
         var restaurantEmail = await _localStorage.GetItemAsStringAsync(LocalStorage.RestaurantEmail);
@@ -42,7 +43,8 @@ public partial class ReservationConfirmed
         {
             RestaurantEmail = restaurantEmail,
             ReservationCreate = reservationCreate,
-            RestaurantName = restaurantName
+            RestaurantName = restaurantName,
+            Coupons = coupons
         };
         return paymentMessage;
     }

@@ -18,6 +18,7 @@
   <ItemGroup>
     <Folder Include="JsRuntimeServices\" />
     <Folder Include="EmailServices\" />
+    <Folder Include="CouponServices\" />
     <Folder Include="PaymentServices\" />
     <Folder Include="ReservationServices\" />
   </ItemGroup>

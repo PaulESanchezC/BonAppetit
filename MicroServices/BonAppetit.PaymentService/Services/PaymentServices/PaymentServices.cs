@@ -157,6 +157,7 @@ public class PaymentServices : IPaymentServices
             ResponseObject = new() { paymentDto }
         };
 
+
         message.ReservationCreate.PaymentTransaction = paymentDto.PaymentId;
         var successMessage = _mapper.Map<PaymentSuccessMessage>(message);
         successMessage.Payment = paymentDto;
@@ -212,7 +213,7 @@ public class PaymentServices : IPaymentServices
         };
     }
 
-    private List<SessionLineItemOptions> CouponOptions(List<Coupon>? coupon, double payment)
+    private List<SessionLineItemOptions> CouponOptions(List<CouponType>? coupon, double payment)
     {
         var result = new List<SessionLineItemOptions>();
         coupon.ForEach(item =>

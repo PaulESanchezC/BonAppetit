@@ -5,12 +5,14 @@ using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Authorization;
 using Microsoft.JSInterop;
 using Models.ApplicationUserModels;
+using Models.CouponTypeModels;
 using Models.PaymentModels;
 using Models.ReservationModels;
 using Models.RestaurantModels;
 using Models.StripeSessionModels;
 using Models.TableModels;
 using Models.ViewModels;
+using Services.CouponServices;
 using Services.JsRuntimeServices;
 using Services.PaymentServices;
 using Services.RestaurantServices;
@@ -30,6 +32,7 @@ public partial class ConfirmReservation
     [Inject] private IRestaurantService _restaurantService { get; set; }
     [Inject] private ITableService _tableService { get; set; }
     [Inject] private IPaymentService _paymentService { get; set; }
+    [Inject] private ICouponServices _couponServices { get; set; }
     [Inject] private IJSRuntime _js { get; set; }
     [Inject] private NavigationManager _navigationManager { get; set; }
     [Inject] private ILocalStorageService _localStorage { get; set; }
@@ -40,6 +43,7 @@ public partial class ConfirmReservation
     private Table Table { get; set; } = new();
     private ConfirmReservationVm ConfirmReservationVm { get; set; } = new();
     private ApplicationUser ApplicationUser { get; set; } = new();
+    private List<CouponType> Coupons { get; set; } = new();
 
     protected override async Task OnInitializedAsync()
     {
@@ -47,6 +51,7 @@ public partial class ConfirmReservation
         BuildConfirmReservationVm();
         await GetRestaurantInformationAsync();
         await GetTableInformationAsync();
+        await GetCouponInformationAsync();
     }
 
     private async Task GetApplicationUser()
@@ -93,6 +98,15 @@ public partial class ConfirmReservation
 
         Table = request.ResponseObject!.FirstOrDefault()!;
     }
+    private async Task GetCouponInformationAsync()
+    {
+        if (string.IsNullOrEmpty(ApplicationUser.Id))
+            return;
+
+        var request = await _couponServices.VerifyRestaurantCouponsForUserAsync(RestaurantId, ApplicationUser.Id);
+        if (request.IsSuccessful)
+            Coupons = request.ResponseObject!;
+    }
 
     private async Task MakeReservation()
     {
@@ -128,7 +142,8 @@ public partial class ConfirmReservation
             ProvincialTaxes = session.ProvincialTaxes,
             FederalTaxes = session.FederalTaxes,
             Amount = session.Amount,
-            SessionId = session.SessionId
+            SessionId = session.SessionId,
+            Coupons = Coupons
         };
         await _localStorage.SetItemAsync(LocalStorage.PaymentInformationPendingPayment, paymentCreate);
     }
