@@ -16,7 +16,7 @@ public class PaymentDto
     public double FederalTaxes { get; set; }
     public double Amount { get; set; }
     public DateTime DateOfPayment { get; set; }
-    public List<CouponType> Coupons { get; set; }
+    public List<int> CouponCodes { get; set; }
 
     #endregion
 }

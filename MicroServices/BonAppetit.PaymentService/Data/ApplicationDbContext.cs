@@ -10,5 +10,5 @@ public class ApplicationDbContext : DbContext
     { }
 
     public DbSet<PaymentBase> Payments { get; set; }
-    
+
 }

@@ -33,7 +33,7 @@ public class PaymentCreateVm
     [Required]
     public string SessionId { get; set; }
 
-    public List<CouponType> Coupons { get; set; }
+    public List<int> CouponCodes { get; set; }
 
     #endregion
 }

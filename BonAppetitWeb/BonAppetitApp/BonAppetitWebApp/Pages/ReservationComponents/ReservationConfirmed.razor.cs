@@ -25,20 +25,20 @@ public partial class ReservationConfirmed
     private async Task ConfirmPaymentAsync()
     {
         var paymentInformation = await _localStorage.GetItemAsync<PaymentCreateVm>(LocalStorage.PaymentInformationPendingPayment);
-
-        var message =  await BuildPaymentMessage(paymentInformation.Coupons);
+        
+        var message =  await BuildPaymentMessage();
         var confirmPayment = await _paymentServices.ConfirmPaymentAsync(paymentInformation, message);
         if (confirmPayment.IsSuccessful)
         {
             Request = confirmPayment.IsSuccessful;
         }
     }
-    private async Task<PaymentMessage> BuildPaymentMessage(List<CouponType> coupons)
+    private async Task<PaymentMessage> BuildPaymentMessage()
     {
         var reservationCreate = await _localStorage.GetItemAsync<ReservationCreate>(LocalStorage.ReservationCreateInformation);
         var restaurantEmail = await _localStorage.GetItemAsStringAsync(LocalStorage.RestaurantEmail);
         var restaurantName = await _localStorage.GetItemAsStringAsync(LocalStorage.RestaurantName);
-
+        var coupons = await _localStorage.GetItemAsync<List<CouponType>>(LocalStorage.Coupons);
         var paymentMessage = new PaymentMessage
         {
             RestaurantEmail = restaurantEmail,

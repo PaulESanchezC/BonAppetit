@@ -126,12 +126,14 @@ public partial class ConfirmReservation
             RestaurantId = ConfirmReservationVm.RestaurantId,
             RestaurantName = Restaurant.RestaurantName,
             RestaurantReservationFee = Restaurant.RestaurantReservationFee,
-            TableSeats = Table.AmountOfSeats
+            TableSeats = Table.AmountOfSeats,
+            Coupons = Coupons
         };
         return stripeSessionCreate;
     }
     private async Task BuildAndSavePaymentCreateModel(StripeSession session)
     {
+        var couponCodes = Coupons.Select(c => c.CouponCode);
         var paymentCreate = new PaymentCreateVm
         {
             ApplicationUserId = ConfirmReservationVm.ApplicationUserId,
@@ -143,7 +145,7 @@ public partial class ConfirmReservation
             FederalTaxes = session.FederalTaxes,
             Amount = session.Amount,
             SessionId = session.SessionId,
-            Coupons = Coupons
+            CouponCodes = couponCodes.ToList()
         };
         await _localStorage.SetItemAsync(LocalStorage.PaymentInformationPendingPayment, paymentCreate);
     }
@@ -165,5 +167,6 @@ public partial class ConfirmReservation
         await _localStorage.SetItemAsync(LocalStorage.ReservationCreateInformation, reservationCreate);
         await _localStorage.SetItemAsync(LocalStorage.RestaurantEmail, Restaurant.RestaurantEmail);
         await _localStorage.SetItemAsync(LocalStorage.RestaurantName, Restaurant.RestaurantName);
+        await _localStorage.SetItemAsync(LocalStorage.Coupons, Coupons);
     }
 }

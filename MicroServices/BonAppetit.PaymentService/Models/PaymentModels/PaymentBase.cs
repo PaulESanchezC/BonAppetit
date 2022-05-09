@@ -38,7 +38,7 @@ public class PaymentBase
     public string SessionId { get; set; }
     
     [Required]
-    public List<CouponType> Coupons { get; set; }
+    public List<int> CouponCodes { get; set; }
 
     public DateTime DateOfPayment { get; set; } = DateTime.Now;
 
