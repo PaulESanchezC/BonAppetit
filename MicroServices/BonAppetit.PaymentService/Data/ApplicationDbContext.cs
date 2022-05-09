@@ -1,5 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using Models.CouponTypeModels;
+using Models.CouponPaymentModels;
 using Models.PaymentModels;
 
 namespace Data;
@@ -10,5 +10,5 @@ public class ApplicationDbContext : DbContext
     { }
 
     public DbSet<PaymentBase> Payments { get; set; }
-
+    public DbSet<CouponPayments> CouponPayments { get; set; }
 }

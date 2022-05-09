@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using Models.CouponPaymentModels;
 using Models.CouponTypeModels;
 
 namespace Models.PaymentModels;
@@ -36,9 +37,9 @@ public class PaymentBase
 
     [Required]
     public string SessionId { get; set; }
-    
-    [Required]
-    public List<int> CouponCodes { get; set; }
+
+
+    public List<CouponPayments> Coupons { get; set; }
 
     public DateTime DateOfPayment { get; set; } = DateTime.Now;
 

@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Authorization;
 using Microsoft.JSInterop;
 using Models.ApplicationUserModels;
+using Models.CouponPaymentModels;
 using Models.CouponTypeModels;
 using Models.PaymentModels;
 using Models.ReservationModels;
@@ -133,7 +134,12 @@ public partial class ConfirmReservation
     }
     private async Task BuildAndSavePaymentCreateModel(StripeSession session)
     {
-        var couponCodes = Coupons.Select(c => c.CouponCode);
+        var couponPayments = new List<CouponPaymentsCreateVm>();
+        Coupons.ForEach(coupon => couponPayments.Add(new()
+        {
+            CouponCode = coupon.CouponCode
+        }));
+
         var paymentCreate = new PaymentCreateVm
         {
             ApplicationUserId = ConfirmReservationVm.ApplicationUserId,
@@ -145,7 +151,7 @@ public partial class ConfirmReservation
             FederalTaxes = session.FederalTaxes,
             Amount = session.Amount,
             SessionId = session.SessionId,
-            CouponCodes = couponCodes.ToList()
+            Coupons = couponPayments
         };
         await _localStorage.SetItemAsync(LocalStorage.PaymentInformationPendingPayment, paymentCreate);
     }

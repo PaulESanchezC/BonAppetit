@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using Models.CouponPaymentModels;
 using Models.CouponTypeModels;
 
 namespace Models.PaymentModels;
@@ -33,7 +34,7 @@ public class PaymentCreateVm
     [Required]
     public string SessionId { get; set; }
 
-    public List<int> CouponCodes { get; set; }
+    public List<CouponPaymentsCreateVm> Coupons { get; set; }
 
     #endregion
 }
