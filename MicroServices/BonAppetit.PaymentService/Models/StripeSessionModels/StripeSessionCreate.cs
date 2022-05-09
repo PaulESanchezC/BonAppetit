@@ -15,4 +15,7 @@ public class StripeSessionCreate
 
     [Required]
     public string RestaurantId { get; set; }
+
+    [Required]
+    public Coupon? Coupon { get; set; }
 }

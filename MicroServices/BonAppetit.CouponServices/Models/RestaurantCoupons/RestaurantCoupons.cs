@@ -1,6 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using Models.CouponTypeModels;
 
-namespace Models.CouponModels;
+namespace Models.RestaurantCoupons;
 
 public class RestaurantCoupons
 {

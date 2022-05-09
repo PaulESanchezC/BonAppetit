@@ -1,10 +1,14 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using Models.CouponTypeModels;
 
-namespace Models.CouponModels;
+namespace Models.RestaurantCoupons;
 
-public class RestaurantCouponsCreate
+public class RestaurantCouponsDto
 {
     #region Properties
+
+    [Required(AllowEmptyStrings = false)]
+    public string RestaurantCouponsId { get; set; }
 
     [Required(AllowEmptyStrings = false)]
     public string CouponTypeId { get; set; }
@@ -12,6 +16,9 @@ public class RestaurantCouponsCreate
 
     [Required(AllowEmptyStrings = false)]
     public string RestaurantId { get; set; }
+
+    [Required(AllowEmptyStrings = false)]
+    public bool IsActive { get; set; }
 
     #endregion
 }

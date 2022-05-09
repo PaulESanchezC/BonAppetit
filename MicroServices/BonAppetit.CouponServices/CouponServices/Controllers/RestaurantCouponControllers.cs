@@ -1,7 +1,8 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Models.CouponModels;
+using Models.RestaurantCoupons;
+using Services.CouponService;
 using Services.CouponServices;
 using StaticData;
 

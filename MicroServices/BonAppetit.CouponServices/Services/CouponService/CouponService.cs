@@ -1,8 +1,9 @@
 ﻿using AutoMapper;
 using Data;
 using Microsoft.EntityFrameworkCore;
-using Models.CouponModels;
 using Models.ResponseModels;
+using Models.RestaurantCoupons;
+using Services.CouponService;
 
 namespace Services.CouponServices;
 

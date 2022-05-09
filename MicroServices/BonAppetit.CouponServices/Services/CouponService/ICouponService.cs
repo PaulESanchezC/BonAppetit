@@ -1,7 +1,7 @@
-﻿using Models.CouponModels;
-using Models.ResponseModels;
+﻿using Models.ResponseModels;
+using Models.RestaurantCoupons;
 
-namespace Services.CouponServices;
+namespace Services.CouponService;
 
 public interface ICouponService
 {

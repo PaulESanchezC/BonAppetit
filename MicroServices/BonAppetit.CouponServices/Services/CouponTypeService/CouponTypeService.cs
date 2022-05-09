@@ -1,7 +1,7 @@
 ﻿using AutoMapper;
 using Data;
 using Microsoft.EntityFrameworkCore;
-using Models.CouponModels;
+using Models.CouponTypeModels;
 using Models.ResponseModels;
 
 namespace Services.CouponTypeService;

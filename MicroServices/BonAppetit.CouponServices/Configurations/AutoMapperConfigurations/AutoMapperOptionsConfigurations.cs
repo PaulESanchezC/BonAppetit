@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
-using Models.CouponModels;
+using Models.CouponTypeModels;
+using Models.RestaurantCoupons;
 
 
 namespace Configurations.AutoMapperConfigurations;

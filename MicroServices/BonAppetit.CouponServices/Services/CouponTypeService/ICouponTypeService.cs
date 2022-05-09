@@ -1,4 +1,4 @@
-﻿using Models.CouponModels;
+﻿using Models.CouponTypeModels;
 using Models.ResponseModels;
 
 namespace Services.CouponTypeService;
