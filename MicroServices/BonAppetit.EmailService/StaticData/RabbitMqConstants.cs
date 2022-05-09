@@ -3,5 +3,6 @@
 
 public class RabbitMqConstants
 {
-    public const string QueueReservationSuccess = "Reservation Success";
+    public const string QueuePaymentSuccess = "Payment Success";
+    public const string ExchangeReservationSuccess = "Reservation Success";
 }

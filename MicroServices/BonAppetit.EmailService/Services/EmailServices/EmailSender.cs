@@ -51,8 +51,6 @@ public class EmailSender : IMailJetEmailSender
                 }
              });
             var response = await client.PostAsync(request);
-            Console.WriteLine("**********************************************************************************");
-            Console.WriteLine($"response => status:{response.StatusCode}; content: {response.Content}");
             Response.ResponseObject!.Add(email);
         }
         return Response;

@@ -50,7 +50,8 @@ public class ReservationMessageSender : BackgroundService
 
             _channel.BasicAck(message.DeliveryTag, false);
         };
-        _channel.BasicConsume(RabbitMqConstants.QueuePaymentSuccess, false, consumer);
+
+        _channel.BasicConsume(queueName, false, consumer);
         return Task.CompletedTask;
     }
 }

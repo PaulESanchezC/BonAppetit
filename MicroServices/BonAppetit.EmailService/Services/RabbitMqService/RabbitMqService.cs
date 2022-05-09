@@ -37,19 +37,20 @@ public class RabbitMqService : BackgroundService
         _connection = factory.CreateConnection();
 
         _channel = _connection.CreateModel();
-        _channel.QueueDeclare(RabbitMqConstants.QueueReservationSuccess, false, false, false);
+        _channel.ExchangeDeclare(RabbitMqConstants.ExchangeReservationSuccess, ExchangeType.Fanout);
+        var queueName = _channel.QueueDeclare().QueueName;
 
         var consumer = new EventingBasicConsumer(_channel);
         consumer.Received += (channel, message) =>
         {
             var messageContent = Encoding.UTF8.GetString(message.Body.ToArray());
             var reservationSuccessMessage = JsonConvert.DeserializeObject<ReservationSuccessMessage>(messageContent);
-            Console.WriteLine("**********************************************************************************");
             reservationSuccessMessage.Emails.ForEach(email => Console.WriteLine(email.Data));
             _emailSender.MailJetMailSenderAsync(reservationSuccessMessage.Emails, cancellationToken).GetAwaiter().GetResult();
             _channel.BasicAck(message.DeliveryTag, false);
         };
-        _channel.BasicConsume(RabbitMqConstants.QueueReservationSuccess, false, consumer);
+        
+        _channel.BasicConsume(queueName, false, consumer);
         return Task.CompletedTask;
     }
 }
