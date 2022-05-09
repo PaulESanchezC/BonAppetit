@@ -10,5 +10,4 @@ public class PaymentSuccessMessage
     public string RestaurantEmail { get; set; }
     public string RestaurantName { get; set; }
     public string TableName { get; set; }
-    public int CouponCode { get; set; }
 }
