@@ -2,7 +2,7 @@
 
 namespace Models.CouponTypeModels;
 
-public class CouponTypeDto
+public class CouponType
 {
     #region CouponType Properties
 

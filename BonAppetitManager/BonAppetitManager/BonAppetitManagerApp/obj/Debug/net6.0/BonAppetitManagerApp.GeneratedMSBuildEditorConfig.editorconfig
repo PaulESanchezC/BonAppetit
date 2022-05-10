@@ -42,8 +42,12 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQW5hbHl0aWNzQ29tcG9uZW50c1xSZXNlcnZhdGlvbnNBbmFseXNpcy5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Paulyglot/Desktop/Portoflio/BonAppetit/BonAppetitManager/BonAppetitManager/BonAppetitManagerApp/Pages/CouponComponents/Coupons.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ291cG9uQ29tcG9uZW50c1xDb3Vwb25zLnJhem9y
+[C:/Users/Paulyglot/Desktop/Portoflio/BonAppetit/BonAppetitManager/BonAppetitManager/BonAppetitManagerApp/Pages/CouponComponents/CouponsActive.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ291cG9uQ29tcG9uZW50c1xDb3Vwb25zQWN0aXZlLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Paulyglot/Desktop/Portoflio/BonAppetit/BonAppetitManager/BonAppetitManager/BonAppetitManagerApp/Pages/CouponComponents/CreateCoupon.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ291cG9uQ29tcG9uZW50c1xDcmVhdGVDb3Vwb24ucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Paulyglot/Desktop/Portoflio/BonAppetit/BonAppetitManager/BonAppetitManager/BonAppetitManagerApp/Pages/DashboardComponents/Dashboard.razor]

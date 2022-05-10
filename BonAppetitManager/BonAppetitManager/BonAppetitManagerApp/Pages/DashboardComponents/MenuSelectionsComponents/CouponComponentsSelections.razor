@@ -2,9 +2,26 @@
     <ul class="dashboardTopMenu-linklist">
         @foreach (var menuItem in TopMenuList)
         {
-            <li class="dashboardTopMenu-link lobster" >
+            <li class="dashboardTopMenu-link lobster" @onclick="()=> MenuSelection(menuItem)">
                 @menuItem
             </li>
         }
     </ul>
+</div>
+<div class="dashboard-page">
+    <div class="row">
+        <div class="col-12">
+            @{
+                switch (Selection)
+                {
+                    case "Coupons Active":
+                        <CouponsActive/>
+                        break;
+                    case "Create Coupon":
+                        <CreateCoupon/>
+                        break;
+                }
+            }
+        </div>
+    </div>
 </div>

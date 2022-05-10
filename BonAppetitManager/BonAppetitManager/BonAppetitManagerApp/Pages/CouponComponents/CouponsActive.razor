@@ -1,0 +1,23 @@
+﻿<div class="container">
+    <div class="row">
+        <div class="col-12 page-title">
+            <h4>Coupons Active</h4>
+        </div>
+
+        <div class="col-12">
+            @if (RestaurantCoupons!.Any())
+            {
+                foreach (var restaurantCoupon in RestaurantCoupons)
+                {
+                    <div class="row">
+                        <div class="col-4 ">
+                            @restaurantCoupon.IsActive
+                            <br />
+                            @restaurantCoupon.CouponTypeId
+                        </div>
+                    </div>
+                }
+            }
+        </div>
+    </div>
+</div>

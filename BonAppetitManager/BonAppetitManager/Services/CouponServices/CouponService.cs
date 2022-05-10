@@ -61,9 +61,20 @@ public class CouponService : ICouponService
         return response!;
     }
 
-    public async Task<Response<RestaurantCoupons>> SetRestaurantCouponActivity(string restaurantCouponId)
+    public async Task<Response<RestaurantCoupons>> SetRestaurantCouponActivity(bool isActive, string restaurantId, string couponTypeId)
     {
-        throw new NotImplementedException();
+        await GetRestaurantIdAsync();
+        var request = new HttpRequestMessage(HttpMethod.Put,
+            $"https://localhost:44329/api/RestaurantCouponControllers/SetRestaurantCouponActivity/{isActive}/{RestaurantId}/{couponTypeId}");
+
+        await GetTokenAsync();
+        request.Headers.Authorization = new AuthenticationHeaderValue(JwtBearerOptions.AuthenticationScheme, Token);
+
+        var client = await _httpClient.SendAsync(request);
+        var responseString = await client.Content.ReadAsStringAsync();
+        var response = JsonConvert.DeserializeObject<Response<RestaurantCoupons>>(responseString);
+
+        return response!;
     }
 
     #region Helper Method
