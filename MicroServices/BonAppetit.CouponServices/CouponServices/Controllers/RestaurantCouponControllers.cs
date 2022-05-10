@@ -1,9 +1,7 @@
 ﻿using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Models.RestaurantCoupons;
 using Services.CouponService;
-using Services.CouponServices;
 using StaticData;
 
 namespace CouponServices.Controllers
@@ -18,6 +16,7 @@ namespace CouponServices.Controllers
             _couponService = couponService;
         }
 
+        [Authorize(Roles = Role.Manager)]
         [HttpGet("GetRestaurantCoupons/{restaurantId}")]
         public async Task<IActionResult> GetRestaurantCoupons(string restaurantId, CancellationToken cancellationToken)
         {
